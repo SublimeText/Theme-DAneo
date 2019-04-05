@@ -1,0 +1,352 @@
+{
+	"extends": "DAneo Base.hidden-theme",
+	"variables": {
+
+		// Button Controls ///////////////////////////////////////////////////////
+
+		"button_icon_tint-selected-dark": "var(accent)",
+		"button_icon_tint-selected-light": "var(accent)",
+
+		"button_icon_opacity-normal": {
+				"target": 0.45, "speed": 1.12, "interpolation": "smoothstep"
+			},
+
+		// Overlay Controls //////////////////////////////////////////////////////
+
+		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
+		"overlay_bg-light": "color(black blend(var(bg) 7.5%))",
+
+		"overlay_input_tint-dark": "color(white alpha(5%))",
+		"overlay_input_tint-light": "color(black alpha(7.5%))",
+
+		// Side Bar //////////////////////////////////////////////////////////////
+
+		"sidebar_bg-normal-dark": "color(black blend(var(bg) 5%))",
+		"sidebar_bg-normal-light": "color(black blend(var(bg) 5%))",
+
+		"sidebar_bc-dark": "color(white blend(var(sidebar_bg-normal-dark) 2%))",
+		"sidebar_bc-light": "color(black blend(var(sidebar_bg-normal-light) 5%))",
+
+		"sidebar_folder_icon_tint-expanded-dark": "var(accent)",
+		"sidebar_folder_icon_tint-expanded-light": "var(accent)",
+
+		// Tabs //////////////////////////////////////////////////////////////////
+
+		// close button of hovered active tab
+		"active_tab_close_opacity-normal": "var(button_icon_opacity-normal)",
+		// hovered close button on active tab
+		"active_tab_close_opacity-hover": "var(button_icon_opacity-hover)",
+		// close button of hovered inactive tab
+		"inactive_tab_close_opacity-normal": "var(button_icon_opacity-normal)",
+		// hovered close button on inactive tab
+		"inactive_tab_close_opacity-hover": "var(button_icon_opacity-hover)",
+
+		// Grid Layout ///////////////////////////////////////////////////////////
+
+		"grid_border_size": 1,
+
+		"grid_border-dark": "var(sidebar_bc-dark)",
+		"grid_border-light": "var(sidebar_bc-light)",
+
+		// Panel Controls ////////////////////////////////////////////////////////
+
+		"panel_bg-dark": "color(black blend(var(bg) 5%))",
+		"panel_bg-light": "color(black blend(var(bg) 7.5%))",
+
+		"panel_input_bc-dark": "color(white alpha(5%))",
+		"panel_input_bc-light": "color(black alpha(10%))",
+
+		"panel_output_tint-dark": "color(black alpha(5%))",
+		"panel_output_tint-light": "color(black alpha(7.5%))",
+
+		// Status Bar ////////////////////////////////////////////////////////////
+
+		"statusbar_bg-dark": "color(black blend(var(bg) 5%))",
+		"statusbar_bg-light": "color(black blend(var(bg) 7.5%))",
+
+		"statusbar_bc-dark": "var(sidebar_bc-dark)",
+		"statusbar_bc-light": "var(sidebar_bc-light)",
+
+		// Dialogs ///////////////////////////////////////////////////////////////
+
+		"dialog_bg-dark":  "color(black blend(var(bg) 5%))",
+		"dialog_bg-light": "color(black blend(var(bg) 7.5%))"
+
+	},
+	"rules": [
+
+		// Text Line Control /////////////////////////////////////////////////////
+
+		{
+			"class": "text_line_control",
+			"content_margin": [8, 6],
+			"layer0.inner_margin": 6,
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
+			"layer0.tint": "var(bg)",
+			"layer0.opacity": 1.0,
+			"layer1.draw_center": false,
+			"layer1.inner_margin": 6,
+			"layer1.texture": "Theme - DAneo/textures/inputs/input--bw1--br2.png",
+			"layer1.tint": "var(panel_input_bc-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(panel_input_bc-light)"
+		},
+
+		// Scroll Bars ///////////////////////////////////////////////////////////
+
+		// Scroll Track
+
+		{
+			"class": "scroll_track_control",
+			"attributes": ["!horizontal"],
+			"content_margin": 2,
+			"layer0.inner_margin": 2,
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w4--vertical--rounded.png"
+		},
+		{
+			"class": "scroll_track_control",
+			"attributes": ["horizontal"],
+			"content_margin": 2,
+			"layer0.inner_margin": 2,
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w4--horizontal--rounded.png"
+		},
+
+		// Scroll Puck
+
+		{
+			"class": "puck_control",
+			"attributes": ["!horizontal"],
+			"layer0.inner_margin": 2,
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w4--vertical--rounded.png"
+		},
+		{
+			"class": "puck_control",
+			"attributes": ["horizontal"],
+			"layer0.inner_margin": 2,
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w4--horizontal--rounded.png"
+		},
+
+		// Overlay Controls //////////////////////////////////////////////////////
+
+		{
+			"class": "overlay_control",
+			"content_margin": [15, 16, 15, 31],
+			"layer0.inner_margin": [24, 19, 24, 34],
+			"layer0.texture": "Theme - DAneo/textures/overlay/overlay_shadow--mt10.png",
+			"layer1.inner_margin": [20, 15, 20, 30],
+			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png"
+		},
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "overlay_control"}
+			],
+			"content_margin": [52, 9, 13, 13],
+			"color_scheme_tint": "var(overlay_input_tint-dark)",
+			"layer0.draw_center": false,
+			"layer0.inner_margin": [52, 48, 0, 0],
+			"layer0.texture": "Theme - DAneo/textures/inputs/input_search.png",
+			"layer0.tint": "var(accent)",
+			"layer0.opacity": 1.0,
+			"layer1.texture": "",
+			"layer1.opacity": 0.0
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "overlay_control"}
+			],
+			"color_scheme_tint": "var(overlay_input_tint-light)"
+		},
+
+		// Switch Project Window /////////////////////////////////////////////////
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"color_scheme_tint": "var(overlay_input_tint-dark)",
+			"content_margin": [52, 13, 13, 13],
+			"layer0.draw_center": false,
+			"layer0.inner_margin": [52, 48, 0, 0],
+			"layer0.texture": "Theme - DAneo/textures/inputs/input_search.png",
+			"layer0.tint": "var(accent)",
+			"layer0.opacity": 1.0,
+			"layer1.texture": "",
+			"layer1.opacity": 0.0
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "switch_project_window", "attributes": ["file_light"]}
+			],
+			"color_scheme_tint": "var(overlay_input_tint-light)"
+		},
+
+		// Side Bar //////////////////////////////////////////////////////////////
+
+		{
+			"class": "sidebar_container",
+			"content_margin": [0, 0, 1, 0],
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 0, 1, 0],
+			"layer1.tint": "var(sidebar_bc-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "sidebar_container",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(sidebar_bc-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "expanded"]}
+			],
+			"fg": "var(sidebar_fg-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "expanded"]}
+			],
+			"fg": "var(sidebar_fg-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "expanded", "hover"]}
+			],
+			"fg": "var(sidebar_fg-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "expanded", "hover"]}
+			],
+			"fg": "var(sidebar_fg-selected-hover-light)"
+		},
+
+		// Tabs //////////////////////////////////////////////////////////////////
+
+		// Tabset Control
+
+		{
+			"class": "tabset_control",
+			"content_margin": [12, 0, 0, 6],
+			"tab_height": 44,
+			"layer0.tint": "var(tabset_bg-dark)",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "tabset_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "var(tabset_bg-light)"
+		},
+
+		// Tab Control
+
+		{
+			"class": "tab_control",
+			"content_margin": [8, 12, 8, 13],
+			"tint_index": -1,
+			"layer0.tint": "var(tabset_bg-dark)",
+			"layer3.draw_center": false,
+			"layer3.inner_margin": [4, 4],
+			"layer3.texture": "Theme - DAneo/textures/tabs/tab--default--underlined--mb0--bw1--br0.png",
+			"layer3.tint": "var(button_icon_tint-normal-dark)",
+			"layer3.opacity": "var(inactive_tab_close_opacity-clean)"
+		},
+		{
+			"class": "tab_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "var(tabset_bg-light)",
+			"layer3.tint": "var(button_icon_tint-normal-light)"
+		},
+
+		{
+			"class": "tab_control",
+			"attributes": ["hover"],
+			"layer3.opacity": "var(inactive_tab_close_opacity-normal)"
+		},
+
+		{
+			"class": "tab_control",
+			"attributes": ["selected"],
+			"layer3.tint": "var(accent)",
+			"layer3.opacity": "var(active_tab_close_opacity-hover)"
+		},
+
+		// Panel Control /////////////////////////////////////////////////////////
+
+		{
+			"class": "panel_control",
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 1, 0, 0],
+			"layer1.tint": "var(statusbar_bc-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(statusbar_bc-light)"
+		},
+
+		// Output Panel Text Area
+
+		{
+			"class": "text_output_control",
+			"color_scheme_tint": "var(panel_output_tint-dark)"
+		},
+		{
+			"class": "text_output_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"color_scheme_tint": "var(panel_output_tint-light)"
+		},
+
+		// Status Bar ////////////////////////////////////////////////////////////
+
+		{
+			"class": "status_bar",
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 1, 0, 0],
+			"layer1.tint": "var(statusbar_bc-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(statusbar_bc-light)"
+		},
+		{
+			"class": "status_bar",
+			"attributes": ["panel_visible"],
+			"layer1.opacity": 0.0
+		}
+	]
+}

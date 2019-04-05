@@ -1,0 +1,31 @@
+{
+	// Controls whether to show the disclosure buttons in the sidebar
+	"show_disclosure_buttons": true,
+
+	// Controls whether to show folder and file icons in the sidebar
+	"show_sidebar_icons": true,
+
+	// Controls whether to show vcs status badges for collapsed directories
+	// in the side bar if `show_sidebar_vcs_badges` is true.
+	"show_sidebar_closed_dir_badges": true,
+
+	// Controls whether to show vcs status badges for expanded directories
+	// in the side bar if `show_sidebar_vcs_badges` is true.
+	"show_sidebar_opened_dir_badges": false,
+
+	// Controls whether to show vcs status badges in the side bar
+	"show_sidebar_vcs_badges": true,
+
+	// Controls whether to show the tab scroll buttons
+	"show_scroll_tabs_buttons": true,
+
+	// Controls whether to show the tabs dropdown button
+	"show_tabs_dropdown_button": true,
+
+	// Controls whether to show the `show panel button`
+	// in the left corner of the status bar
+	"show_panel_button": true,
+
+	// Controls whether to show the close button of the find and replace panels
+	"show_panel_close_button": false
+}

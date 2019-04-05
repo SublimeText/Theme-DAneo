@@ -1,0 +1,6 @@
+.git*               export-ignore
+
+source/             export-ignore
+tests/              export-ignore
+
+unittesting.json    export-ignore
