@@ -37,7 +37,7 @@ The package is built up from scratch without any runtime code. It uses the new S
 
 ## Installation
 
-This package is not available via Package Control at the moment, so you need to manually clone the repo to your Data/Packages directory.
+This package is not available via Package Control at the moment, so you need to manually clone the repository to your Data/Packages directory.
 
 ##### Mac OS
 
@@ -84,7 +84,7 @@ Setting                            | Default    | Description
 `"overlay_scroll_bars"`            | `"system"` | If `true` scrollbars are displayed only while scrolling. If `false` scrollbars are always visible. The default `"system"` enables overlay scrollbars on MacOS only.
 `"show_tab_close_buttons"`         | `true`     | Show a close button on each tab.
 
-For information about them please refere to the official [Sublime Text 3 Documentation](https://www.sublimetext.com/docs/3/themes.html#settings).
+For information about them please refer to the official [Sublime Text 3 Documentation](https://www.sublimetext.com/docs/3/themes.html#settings).
 
 
 ### Custom Theme Settings
@@ -104,4 +104,4 @@ Setting                            | Default | Description
 
 ### Editing the Theme
 
-Most relevant theme attributes are defined as "variables" in the base theme so the themes can be tweaked just like a normal prefernece file. This project is in early developement state so there is no stable predefined list of variables to be exposed for quick user customization so far. 
+Most relevant theme attributes are defined as "variables" in the base theme so the themes can be tweaked just like a normal preferences file. This project is in early development state so there is no stable predefined list of variables to be exposed for quick user customization so far. 
