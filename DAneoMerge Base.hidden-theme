@@ -1,0 +1,12 @@
+{
+	"extends": "DAneo Base.hidden-theme",
+
+	"variables": {
+		//
+	},
+
+	"rules": [
+		//
+	]
+}
+
