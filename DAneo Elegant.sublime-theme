@@ -1,346 +1,55 @@
 {
-	"extends": "DAneo Base.hidden-theme",
+	"extends": "DAneo Elegant.hidden-theme",
 	"variables": {
 
-		// MacOS Title Bar ///////////////////////////////////////////////////////
+		// Main Settings /////////////////////////////////////////////////////////
 
-		"title_bg-dark": "color(black blend(var(bg) 5%))",
-		"title_bg-light": "color(black blend(var(bg) 5%))",
+		"font_face": "system",
+		"font_size": 12,
 
-		// Label Controls ////////////////////////////////////////////////////////
-
-		"label_fg-normal-dark":  "rgba(255, 255, 255, 0.55)",
-		"label_fg-normal-light": "rgba(000, 000, 000, 0.55)",
-		"label_fg-hover-dark":   "rgba(255, 255, 255, 0.85)",
-		"label_fg-hover-light":  "rgba(000, 000, 000, 0.85)",
+		"accent": "var(--accent)",
 
 		// Button Controls ///////////////////////////////////////////////////////
 
-		"button_icon_tint-selected-dark": "var(accent)",
-		"button_icon_tint-selected-light": "var(accent)",
-
-		"button_icon_opacity-normal": {
-				"target": 0.55, "speed": 0.67, "interpolation": "smoothstep"
-			},
-		"button_icon_opacity-hover": {
-				"target": 0.70, "speed": 0.67, "interpolation": "smoothstep"
-			},
-		"button_icon_opacity-selected": {
-				"target": 1.00, "speed": 0.67, "interpolation": "smoothstep"
-			},
-
-		// Overlay Controls //////////////////////////////////////////////////////
-
-		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
-		"overlay_bg-light": "color(black blend(var(bg) 5%))",
-
-		"overlay_input_tint-dark": "color(white alpha(5%))",
-		"overlay_input_tint-light": "color(black alpha(5%))",
-
-		// Tabs //////////////////////////////////////////////////////////////////
-
-		"tabset_bg-dark": "var(sidebar_bg-normal-dark)",
-		"tabset_bg-light": "var(sidebar_bg-normal-light)",
-
-		// close button of hovered active tab
-		"active_tab_close_opacity-normal": "var(button_icon_opacity-normal)",
-		// hovered close button on active tab
-		"active_tab_close_opacity-hover": "var(button_icon_opacity-hover)",
-		// close button of hovered inactive tab
-		"inactive_tab_close_opacity-normal": "var(button_icon_opacity-normal)",
-		// hovered close button on inactive tab
-		"inactive_tab_close_opacity-hover": "var(button_icon_opacity-hover)",
-
-		// Panel Controls ////////////////////////////////////////////////////////
-
-		"panel_bg-dark": "color(white blend(var(bg) 7.5%))",
-		"panel_bg-light": "color(black blend(var(bg) 7.5%))",
-
-		"panel_input_bg-dark": "color(white blend(var(bg) 5%))",
-		"panel_input_bg-light": "color(black blend(var(bg) 5%))",
-
-		"panel_input_tint-dark": "color(white alpha(5%))",
-		"panel_input_tint-light": "color(black alpha(5%))",
-
-		"panel_input_bc-dark": "color(white alpha(15%))",
-		"panel_input_bc-light": "color(black alpha(10%))",
-
-		"panel_output_tint-dark": "color(white alpha(7.5%))",
-		"panel_output_tint-light": "color(black alpha(7.5%))",
-
-		// Status Bar ////////////////////////////////////////////////////////////
-
-		"statusbar_bg-dark": "color(white blend(var(bg) 7.5%))",
-		"statusbar_bg-light": "color(black blend(var(bg) 7.5%))",
-
-		// Dialogs ///////////////////////////////////////////////////////////////
-
-		"dialog_bg-dark":  "color(white blend(var(bg) 7.5%))",
-		"dialog_bg-light": "color(black blend(var(bg) 7.5%))"
-
-	},
-	"rules": [
-
-		// Text Line Control /////////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"content_margin": [8, 6],
-			"color_scheme_tint": "var(panel_input_tint-dark)",
-			"layer0.inner_margin": 6,
-			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
-			"layer0.tint": "var(panel_input_bg-dark)",
-			"layer0.opacity": 1.0,
-			"layer1.draw_center": false,
-			"layer1.inner_margin": 6,
-			"layer1.texture": "Theme - DAneo/textures/inputs/input--bw1--br2.png",
-			"layer1.tint": "var(panel_input_bc-dark)",
-			"layer1.opacity": 1.0
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(panel_input_tint-light)",
-			"layer0.tint": "var(panel_input_bg-light)",
-			"layer1.tint": "var(panel_input_bc-light)"
-		},
-
-		// Output Panel Text Area
-
-		{
-			"class": "text_output_control",
-			"color_scheme_tint": "var(panel_output_tint-dark)"
-		},
-		{
-			"class": "text_output_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(panel_output_tint-light)"
-		},
-
-		// Overlay Controls //////////////////////////////////////////////////////
-
-		{
-			"class": "overlay_control",
-			"content_margin": [15, 15, 15, 31],
-			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png"
-		},
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "overlay_control"}
-			],
-			"content_margin": [52, 9, 13, 13],
-			"color_scheme_tint": "var(overlay_input_tint-dark)",
-			"layer0.draw_center": false,
-			"layer0.inner_margin": [52, 48, 0, 0],
-			"layer0.texture": "Theme - DAneo/textures/inputs/input_search.png",
-			"layer0.tint": "var(accent)",
-			"layer0.opacity": 1.0,
-			"layer1.texture": "",
-			"layer1.opacity": 0.0
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "overlay_control"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
-		},
-
-		// Switch Project Window /////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window"}
-			],
-			"content_margin": [52, 9, 13, 13],
-			"color_scheme_tint": "var(overlay_input_tint-dark)",
-			"layer0.draw_center": false,
-			"layer0.inner_margin": [52, 48, 0, 0],
-			"layer0.texture": "Theme - DAneo/textures/inputs/input_search.png",
-			"layer0.tint": "var(accent)",
-			"layer0.opacity": 1.0,
-			"layer1.texture": "",
-			"layer1.opacity": 0.0
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
-		},
+		"button_font_face": "var(font_face)",
+		"button_font_size": "var(font_size)",
 
 		// Side Bar //////////////////////////////////////////////////////////////
 
-		{
-				"class": "tree_row",
-				"attributes": ["selectable"],
-				"layer0.draw_center": false,
-				"layer0.inner_margin": [2, 0, 0, 0],
-				"layer0.tint": "var(accent)",
-				"layer0.opacity": 0.0
-		},
-		{
-				"class": "tree_row",
-				"attributes": ["selected"],
-				"layer0.opacity": "var(item_bg-opacity-selected)"
-		},
+		// Headings Text
 
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "tree_row", "attributes": ["expandable", "expanded"]}
-			],
-			"fg": "var(sidebar_fg-selected-dark)"
-		},
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["expandable", "expanded"]}
-			],
-			"fg": "var(sidebar_fg-selected-light)"
-		},
+		"sidebar_heading_font_face": "var(font_face)",
+		"sidebar_heading_font_size": "var(font_size)",
+		"sidebar_heading_font_bold": false,
+		"sidebar_heading_font_italic": false,
 
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "tree_row", "attributes": ["expandable", "expanded", "hover"]}
-			],
-			"fg": "var(sidebar_fg-selected-hover-dark)"
-		},
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["expandable", "expanded", "hover"]}
-			],
-			"fg": "var(sidebar_fg-selected-hover-light)"
-		},
+		// Tree Items Text
+
+		"sidebar_font_face": "var(font_face)",
+		"sidebar_font_size": "var(font_size)",
 
 		// Tabs //////////////////////////////////////////////////////////////////
 
-		// Tabset Control
+		"tab_font_face": "var(font_face)",
+		"tab_font_size": "var(font_size)",
 
-		{
-			"class": "tabset_control",
-			"content_margin": [0, 3, 0, 5],
-			"tab_height": 34,
-			"tint_index": 0,
-			"layer1.draw_center": false,
-			"layer1.inner_margin": [0, 37, 0, 0],
-			"layer1.tint": "var(tabset_bg-dark)",
-			"layer1.opacity": 1.0
-		},
-		{
-			"class": "tabset_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"layer1.tint": "var(tabset_bg-light)"
-		},
+		// Grid Layout ///////////////////////////////////////////////////////////
 
-		// Tab (*)
+		"grid_border_size": 2,
 
-		{
-			"class": "tab_control",
-			"content_margin": [16, 8, 12, 9],
-			"layer0.texture": "Theme - DAneo/textures/tabs/tab--default--mb0--bw0--br4.png",
-			"layer3.draw_center": false,
-			"layer3.inner_margin": [4, 4],
-			"layer3.texture": "Theme - DAneo/textures/tabs/tab--default--prelined--mb0--bw2--br4.png",
-			"layer3.tint": "var(accent)",
-			"layer3.opacity": 0.0
-		},
+		// Tooltips //////////////////////////////////////////////////////////////
 
-		// Tab (selected)
+		"tooltip_font_face": "var(font_face)",
+		"tooltip_font_size": "var(font_size)",
 
-		{
-			"class": "tab_control",
-			"attributes": ["selected"],
-			"layer3.opacity": 1.0
-		},
+		// Status Bar ////////////////////////////////////////////////////////////
 
-		// Panel Control /////////////////////////////////////////////////////////
+		"statusbar_font_face": "var(font_face)",
+		"statusbar_font_size": "var(font_size)",
 
-		// Panal Specific Margins
+		// VCS annotation
 
-		{
-			"class": "panel_control find_panel",
-			"content_margin": [12, 12, 6, 11]
-		},
-		{
-			"class": "panel_control replace_panel",
-			"content_margin": [12, 12, 6, 11]
-		},
-		{
-			"class": "panel_control find_in_files_panel",
-			"content_margin": [12, 12, 12, 11]
-		},
-
-		// Icon Button Group
-
-		{
-			"class": "icon_button_group",
-			"spacing": 0
-		},
-
-		// Icon Button
-
-		{
-			"class": "icon_button_control",
-			"content_margin": 8,
-			// background & hover
-			"layer0.inner_margin": 6,
-			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br0.png",
-			"layer0.tint": "rgba(255, 255, 255, 0.1)",
-			"layer0.opacity": {
-				"target": 0.5, "speed": 2.25, "interpolation": "smoothstep"
-			}
-		},
-		{
-			"class": "icon_button_control",
-			"attributes": ["left"],
-			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2--left.png"
-		},
-		{
-			"class": "icon_button_control",
-			"attributes": ["right"],
-			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2--right.png"
-		},
-		{
-			"class": "icon_button_control",
-			"attributes": ["left", "right"],
-			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png"
-		},
-		{
-			"class": "icon_button_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"layer0.tint": "rgba(0, 0, 0, 0.1)"
-		},
-		{
-			"class": "icon_button_control",
-			"attributes": ["hover"],
-			"layer0.opacity": {
-				"target": 1.0, "speed": 2.25, "interpolation": "smoothstep"
-			}
-		},
-		{
-			"class": "icon_button_control",
-			"attributes": ["pressed"],
-			"layer0.opacity": {
-				"target": 0.75, "speed": 4.5, "interpolation": "smoothstep"
-			}
-		}
-	]
+		"statusbar_vcs_font_face": "var(statusbar_font_face)",
+		"statusbar_vcs_font_size": 10
+	}
 }

@@ -1,0 +1,286 @@
+{
+	"extends": "DAneo Base.hidden-theme",
+	"variables": {
+
+		// Label Controls ////////////////////////////////////////////////////////
+
+		"label_fg-normal-dark":  "rgba(255, 255, 255, 0.55)",
+		"label_fg-normal-light": "rgba(000, 000, 000, 0.55)",
+
+		// List & Tree Items /////////////////////////////////////////////////////
+
+		"item_bg-opacity-hover": {
+				"target": 0.45, "speed": 8.96, "interpolation": "smoothstep"
+			},
+
+		// Button Controls ///////////////////////////////////////////////////////
+
+		"button_icon_tint-selected-dark": "var(accent)",
+		"button_icon_tint-selected-light": "var(accent)",
+
+		"button_icon_opacity-normal": {
+				"target": 0.55, "speed": 0.67, "interpolation": "smoothstep"
+			},
+		"button_icon_opacity-hover": {
+				"target": 0.75, "speed": 0.67, "interpolation": "smoothstep"
+			},
+		"button_icon_opacity-selected": {
+				"target": 0.90, "speed": 0.67, "interpolation": "smoothstep"
+			},
+
+		// Overlay Controls //////////////////////////////////////////////////////
+
+		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
+		"overlay_bg-light": "color(black blend(var(bg) 5%))",
+
+		// Tabs //////////////////////////////////////////////////////////////////
+
+		"tabset_bg-dark": "var(sidebar_bg-normal-dark)",
+		"tabset_bg-light": "var(sidebar_bg-normal-light)",
+
+		"active_tab_close_opacity-clean": {
+				"target": 0.70, "speed": 3.50, "interpolation": "smoothstep"
+			},
+		"active_tab_close_opacity-dirty": {
+				"target": 0.70, "speed": 3.50, "interpolation": "smoothstep"
+			},
+		"active_tab_close_opacity-normal": {
+				"target": 0.70, "speed": 0.67, "interpolation": "smoothstep"
+			},
+		"active_tab_close_opacity-hover": {
+				"target": 1.00, "speed": 0.67, "interpolation": "smoothstep"
+			},
+
+		"inactive_tab_bg-normal-dark": "color(white blend(var(tabset_bg-dark) 6%))",
+		"inactive_tab_bg-normal-light": "color(black blend(var(tabset_bg-light) 6%))",
+		"inactive_tab_bg-hover-dark": "color(white blend(var(tabset_bg-dark) 10%))",
+		"inactive_tab_bg-hover-light": "color(black blend(var(tabset_bg-light) 10%))",
+
+		"inactive_tab_close_opacity-clean": {
+				"target": 0.55, "speed": 3.50, "interpolation": "smoothstep"
+			},
+		"inactive_tab_close_opacity-dirty": {
+				"target": 0.55, "speed": 3.50, "interpolation": "smoothstep"
+			},
+		"inactive_tab_close_opacity-normal": {
+				"target": 0.55, "speed": 0.67, "interpolation": "smoothstep"
+			},
+		"inactive_tab_close_opacity-hover": {
+				"target": 0.75, "speed": 0.67, "interpolation": "smoothstep"
+			},
+
+		// Grid Layout ///////////////////////////////////////////////////////////
+
+		"grid_border_size": 1,
+
+		// Dialogs ///////////////////////////////////////////////////////////////
+
+		"dialog_bg-dark": "color(white blend(var(bg) 5%))",
+		"dialog_bg-light": "color(black blend(var(bg) 7%))"
+
+	},
+	"rules": [
+
+		// Text Line Control /////////////////////////////////////////////////////
+
+		{
+			"class": "text_line_control",
+			"content_margin": [8, 6],
+			"layer0.inner_margin": 6,
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
+			"layer0.tint": "var(bg)",
+			"layer0.opacity": 1.0
+		},
+
+		// Status Bar ////////////////////////////////////////////////////////////
+
+		{
+			"class": "status_bar",
+			"content_margin": [12, 7, 4, 7]
+		},
+
+		// Panel Control /////////////////////////////////////////////////////////
+
+		{
+			"class": "panel_control find_panel",
+			"content_margin": [12, 12, 6, 12]
+		},
+		{
+			"class": "panel_control replace_panel",
+			"content_margin": [12, 12, 6, 12]
+		},
+		{
+			"class": "panel_control find_in_files_panel",
+			"content_margin": 12
+		},
+		{
+			"class": "panel_control input_panel",
+			"content_margin": 12
+		},
+		{
+			"class": "panel_control output_panel",
+			"content_margin": 10
+		},
+		{
+			"class": "panel_control console_panel",
+			"content_margin": 10
+		},
+
+		// Overlay Controls //////////////////////////////////////////////////////
+
+		{
+			"class": "overlay_control",
+			"content_margin": [23, 18, 23, 33],
+			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png"
+		},
+
+		// Quick Panels
+
+		{
+			"class": "quick_panel",
+			"row_padding": [10, 9]
+		},
+
+		// Switch Project Window /////////////////////////////////////////////////
+
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"content_margin": 6
+		},
+
+		// Tabs //////////////////////////////////////////////////////////////////
+
+		// Tabset Control
+
+		{
+			"class": "tabset_control",
+			"content_margin": [0, 4, 0, 5],
+			"tab_height": 34,
+			"tab_overlap": 19,
+			"tint_index": 0,
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 38, 0, 0],
+			"layer1.tint": "var(tabset_bg-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "tabset_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(tabset_bg-light)"
+		},
+
+		// Tab (Common)
+
+		{
+			"class": "tab_control",
+			"content_margin": [24, 8, 20, 9],
+			"max_margin_trim": 11,
+			"layer0.inner_margin": [23, 4],
+			"layer0.texture": "Theme - DAneo/textures/tabs/tab--classic--mb0--bw0.png",
+			"layer1.inner_margin": [23, 4],
+			"layer1.texture": "Theme - DAneo/textures/tabs/tab--classic--mb1--bw1.png",
+			"layer1.tint": "color(black blend(var(tabset_bg-dark) 20%))",
+			"layer1.opacity": 0.1
+		},
+		{
+			"class": "tab_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "color(black blend(var(tabset_bg-light) 20%))",
+			"layer1.opacity": 0.15
+		},
+
+		// Tab (*) -> Modified Indicator
+
+		{
+			"class": "tab_control",
+			"settings": ["highlight_modified_tabs"],
+			"layer3.inner_margin": [23, 4],
+			"layer3.texture": "Theme - DAneo/textures/tabs/tab--classic--overlined--mb0--bw1.png"
+		},
+
+		// Panel Control /////////////////////////////////////////////////////////
+
+		// Icon Button Group
+
+		{
+			"class": "icon_button_group",
+			"spacing": 0
+		},
+
+		// Icon Button
+
+		{
+			"class": "icon_button_control",
+			"content_margin": 8,
+			// background & hover
+			"layer0.inner_margin": 6,
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br0.png",
+			"layer0.tint": "rgba(255, 255, 255, 0.075)",
+			"layer0.opacity": {
+				"target": 0.5, "speed": 2.25, "interpolation": "smoothstep"
+			},
+			// selection
+			"layer2.inner_margin": 6,
+			"layer2.texture": "Theme - DAneo/textures/inputs/input--bw0--br0.png",
+			"layer2.tint": "rgba(255, 255, 255, 0.05)",
+			"layer2.opacity": {
+				"target": 0.0, "speed": 4.5, "interpolation": "smoothstep"
+			}
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["left"],
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2--left.png",
+			"layer2.texture": "Theme - DAneo/textures/inputs/input--bw0--br2--left.png"
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["right"],
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2--right.png",
+			"layer2.texture": "Theme - DAneo/textures/inputs/input--bw0--br2--right.png"
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["left", "right"],
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
+			"layer2.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png"
+		},
+		{
+			"class": "icon_button_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "rgba(0, 0, 0, 0.075)",
+			"layer2.tint": "rgba(0, 0, 0, 0.05)"
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["hover"],
+			"layer0.opacity": {
+				"target": 1.0, "speed": 2.25, "interpolation": "smoothstep"
+			}
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["pressed"],
+			"layer0.opacity": {
+				"target": 0.75, "speed": 4.5, "interpolation": "smoothstep"
+			}
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["selected"],
+			"layer2.opacity": {
+				"target": 1.0, "speed": 4.5, "interpolation": "smoothstep"
+			}
+		}
+	]
+}
+

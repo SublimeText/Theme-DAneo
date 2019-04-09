@@ -1,70 +1,55 @@
 {
-	"extends": "DAneo Classic.sublime-theme",
+	"extends": "DAneo Sublime.hidden-theme",
 	"variables": {
 
-		// Overlay Controls //////////////////////////////////////////////////////
+		// Main Settings /////////////////////////////////////////////////////////
 
-		"overlay_bg-dark": "color(white blend(var(bg) 10%))",
-		"overlay_bg-light": "color(black blend(var(bg) 10%))",
+		"font_face": "system",
+		"font_size": 12,
+
+		"accent": "var(--accent)",
+
+		// Button Controls ///////////////////////////////////////////////////////
+
+		"button_font_face": "var(font_face)",
+		"button_font_size": "var(font_size)",
 
 		// Side Bar //////////////////////////////////////////////////////////////
 
-		"sidebar_bg-normal-dark": "color(white blend(var(bg) 9%))",
-		"sidebar_bg-normal-light": "color(black blend(var(bg) 10%))",
+		// Headings Text
 
-		// Panel Control /////////////////////////////////////////////////////////
+		"sidebar_heading_font_face": "var(font_face)",
+		"sidebar_heading_font_size": "var(font_size)",
+		"sidebar_heading_font_bold": false,
+		"sidebar_heading_font_italic": false,
 
-		"panel_bg-dark": "color(white blend(var(bg) 4%))",
-		"panel_bg-light": "color(black blend(var(bg) 15%))",
+		// Tree Items Text
 
-		// Status Bar ////////////////////////////////////////////////////////////
-
-		"statusbar_bg-dark": "color(white blend(var(bg) 6%))",
-		"statusbar_bg-light": "color(black blend(var(bg) 12%))",
-
-		// Dialogs ///////////////////////////////////////////////////////////////
-
-		"dialog_bg-dark": "color(white blend(var(bg) 20%))",
-		"dialog_bg-light": "color(black blend(var(bg) 20%))"
-
-	},
-	"rules": [
-
-		// Text Line Control /////////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br0.png"
-		},
-
-		// Overlay Controls //////////////////////////////////////////////////////
-
-		{
-			"class": "overlay_control",
-			"content_margin": [23, 18, 23, 33],
-			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br0.png"
-		},
+		"sidebar_font_face": "var(font_face)",
+		"sidebar_font_size": "var(font_size)",
 
 		// Tabs //////////////////////////////////////////////////////////////////
 
-		// Tab Control
+		"tab_font_face": "var(font_face)",
+		"tab_font_size": "var(font_size)",
 
-		{
-			"class": "tab_control",
-			"layer0.inner_margin": [16, 4],
-			"layer0.texture": "Theme - DAneo/textures/tabs/tab--sublime--mb0--bw0.png",
-			"layer1.inner_margin": [16, 4],
-			"layer1.texture": "Theme - DAneo/textures/tabs/tab--sublime--mb1--bw1.png"
-		},
+		// Grid Layout ///////////////////////////////////////////////////////////
 
-		// Tab (*) -> Modified Indicator
+		"grid_border_size": 1,
 
-		{
-			"class": "tab_control",
-			"settings": ["highlight_modified_tabs"],
-			"layer3.inner_margin": [16, 4],
-			"layer3.texture": "Theme - DAneo/textures/tabs/tab--sublime--overlined--mb0--bw1.png"
-		}
-	]
+		// Tooltips //////////////////////////////////////////////////////////////
+
+		"tooltip_font_face": "var(font_face)",
+		"tooltip_font_size": "var(font_size)",
+
+		// Status Bar ////////////////////////////////////////////////////////////
+
+		"statusbar_font_face": "var(font_face)",
+		"statusbar_font_size": "var(font_size)",
+
+		// VCS annotation
+
+		"statusbar_vcs_font_face": "var(statusbar_font_face)",
+		"statusbar_vcs_font_size": 10
+	}
 }
-

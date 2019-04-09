@@ -1,0 +1,70 @@
+{
+	"extends": "DAneo Classic.sublime-theme",
+	"variables": {
+
+		// Overlay Controls //////////////////////////////////////////////////////
+
+		"overlay_bg-dark": "color(white blend(var(bg) 10%))",
+		"overlay_bg-light": "color(black blend(var(bg) 10%))",
+
+		// Side Bar //////////////////////////////////////////////////////////////
+
+		"sidebar_bg-normal-dark": "color(white blend(var(bg) 9%))",
+		"sidebar_bg-normal-light": "color(black blend(var(bg) 10%))",
+
+		// Panel Control /////////////////////////////////////////////////////////
+
+		"panel_bg-dark": "color(white blend(var(bg) 4%))",
+		"panel_bg-light": "color(black blend(var(bg) 15%))",
+
+		// Status Bar ////////////////////////////////////////////////////////////
+
+		"statusbar_bg-dark": "color(white blend(var(bg) 6%))",
+		"statusbar_bg-light": "color(black blend(var(bg) 12%))",
+
+		// Dialogs ///////////////////////////////////////////////////////////////
+
+		"dialog_bg-dark": "color(white blend(var(bg) 20%))",
+		"dialog_bg-light": "color(black blend(var(bg) 20%))"
+
+	},
+	"rules": [
+
+		// Text Line Control /////////////////////////////////////////////////////
+
+		{
+			"class": "text_line_control",
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br0.png"
+		},
+
+		// Overlay Controls //////////////////////////////////////////////////////
+
+		{
+			"class": "overlay_control",
+			"content_margin": [23, 18, 23, 33],
+			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br0.png"
+		},
+
+		// Tabs //////////////////////////////////////////////////////////////////
+
+		// Tab Control
+
+		{
+			"class": "tab_control",
+			"layer0.inner_margin": [16, 4],
+			"layer0.texture": "Theme - DAneo/textures/tabs/tab--sublime--mb0--bw0.png",
+			"layer1.inner_margin": [16, 4],
+			"layer1.texture": "Theme - DAneo/textures/tabs/tab--sublime--mb1--bw1.png"
+		},
+
+		// Tab (*) -> Modified Indicator
+
+		{
+			"class": "tab_control",
+			"settings": ["highlight_modified_tabs"],
+			"layer3.inner_margin": [16, 4],
+			"layer3.texture": "Theme - DAneo/textures/tabs/tab--sublime--overlined--mb0--bw1.png"
+		}
+	]
+}
+

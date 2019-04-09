@@ -1,199 +1,55 @@
 {
-	"extends": "DAneo Base.hidden-theme",
+	"extends": "DAneo Minimal.hidden-theme",
 	"variables": {
 
-		// Overlay Controls //////////////////////////////////////////////////////
+		// Main Settings /////////////////////////////////////////////////////////
 
-		"overlay_bg-dark": "color(black blend(var(bg) 15%))",
-		"overlay_bg-light": "color(black blend(var(bg) 7.5%))",
+		"font_face": "system",
+		"font_size": 12,
 
-		"overlay_input_tint-dark": "color(black alpha(15%))",
-		"overlay_input_tint-light": "color(black alpha(7.5%))",
+		"accent": "var(--accent)",
 
-		// Tabs //////////////////////////////////////////////////////////////////
+		// Button Controls ///////////////////////////////////////////////////////
 
-		"tabset_bg-dark": "var(sidebar_bg-normal-dark)",
-		"tabset_bg-light": "var(sidebar_bg-normal-light)",
-
-		// Panel Control /////////////////////////////////////////////////////////
-
-		"panel_bg-dark": "color(black blend(var(bg) 20%))",
-		"panel_bg-light": "color(black blend(var(bg) 10%))",
-
-		"panel_input_tint-dark": "color(black alpha(20%))",
-		"panel_input_tint-light": "color(black alpha(10%))"
-	},
-
-	"rules": [
-
-		// Text Line Control /////////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"color_scheme_tint": "var(panel_input_tint-dark)"
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(panel_input_tint-light)"
-		},
-
-		// Output Panel Text Area
-
-		{
-			"class": "text_output_control",
-			"color_scheme_tint": "var(panel_input_tint-dark)"
-		},
-		{
-			"class": "text_output_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(panel_input_tint-light)"
-		},
-
-		// Button Control ////////////////////////////////////////////////////////
-
-		{
-			"class": "button_control",
-			"layer0.opacity": 0.0
-		},
-
-		// Scroll Bars ///////////////////////////////////////////////////////////
-
-		{
-			"class": "scroll_bar_control",
-			"content_margin": 0
-		},
-
-		// Scroll Bar -> Panel and Console
-
-		{
-			"class": "scroll_bar_control",
-			"parents": [
-				{"class": "panel_control console_panel"}
-			],
-			"content_margin": [4, 0, 0, 0]
-		},
-
-		// Scroll Track
-
-		{
-			"class": "scroll_track_control",
-			"attributes": ["!horizontal"],
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--square.png"
-		},
-		{
-			"class": "scroll_track_control",
-			"attributes": ["horizontal"],
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--square.png"
-		},
-
-		// Scroll Puck
-
-		{
-			"class": "puck_control",
-			"attributes": ["!horizontal"],
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--square.png"
-		},
-		{
-			"class": "puck_control",
-			"attributes": ["horizontal"],
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--square.png"
-		},
-
-		// Overlay Controls //////////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "overlay_control"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-dark)"
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "overlay_control"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
-		},
-
-		// Switch Project Window /////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-dark)"
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
-		},
+		"button_font_face": "var(font_face)",
+		"button_font_size": "var(font_size)",
 
 		// Side Bar //////////////////////////////////////////////////////////////
 
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "tree_row", "attributes": ["expandable", "expanded"]}
-			],
-			"fg": "var(sidebar_fg-selected-dark)"
-		},
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["expandable", "expanded"]}
-			],
-			"fg": "var(sidebar_fg-selected-light)"
-		},
+		// Headings Text
 
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "tree_row", "attributes": ["expandable", "expanded", "hover"]}
-			],
-			"fg": "var(sidebar_fg-selected-hover-dark)"
-		},
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["expandable", "expanded", "hover"]}
-			],
-			"fg": "var(sidebar_fg-selected-hover-light)"
-		},
+		"sidebar_heading_font_face": "var(font_face)",
+		"sidebar_heading_font_size": "var(font_size)",
+		"sidebar_heading_font_bold": false,
+		"sidebar_heading_font_italic": false,
+
+		// Tree Items Text
+
+		"sidebar_font_face": "var(font_face)",
+		"sidebar_font_size": "var(font_size)",
 
 		// Tabs //////////////////////////////////////////////////////////////////
 
-		// Tabset Control
+		"tab_font_face": "var(font_face)",
+		"tab_font_size": "var(font_size)",
 
-		{
-			"class": "tabset_control",
-			"content_margin": [0, 3, 0, 5],
-			"tab_height": 34,
-			"tint_index": 0,
-			"layer1.draw_center": false,
-			"layer1.inner_margin": [0, 37, 0, 0],
-			"layer1.tint": "var(tabset_bg-dark)",
-			"layer1.opacity": 1.0
-		},
-		{
-			"class": "tabset_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"layer1.tint": "var(tabset_bg-light)"
-		}
-	]
+		// Grid Layout ///////////////////////////////////////////////////////////
+
+		"grid_border_size": 2,
+
+		// Tooltips //////////////////////////////////////////////////////////////
+
+		"tooltip_font_face": "var(font_face)",
+		"tooltip_font_size": "var(font_size)",
+
+		// Status Bar ////////////////////////////////////////////////////////////
+
+		"statusbar_font_face": "var(font_face)",
+		"statusbar_font_size": "var(font_size)",
+
+		// VCS annotation
+
+		"statusbar_vcs_font_face": "var(statusbar_font_face)",
+		"statusbar_vcs_font_size": 10
+	}
 }
-

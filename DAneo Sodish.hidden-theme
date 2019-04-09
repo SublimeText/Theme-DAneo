@@ -1,0 +1,450 @@
+{
+	"extends": "DAneo Base.hidden-theme",
+	"variables": {
+
+		// Button Controls ///////////////////////////////////////////////////////
+
+		"button_icon_tint-selected-dark": "var(accent)",
+		"button_icon_tint-selected-light": "var(accent)",
+
+		"button_icon_opacity-normal": {
+				"target": 0.45, "speed": 1.12, "interpolation": "smoothstep"
+			},
+
+		// Overlay Controls //////////////////////////////////////////////////////
+
+		"overlay_bg-dark": "var(active_tab_bg-dark)",
+		"overlay_bg-light": "var(active_tab_bg-light)",
+
+		"quick_panel_bg-dark": "var(bg)",
+		"quick_panel_bg-light": "var(bg)",
+
+		// Side Bar //////////////////////////////////////////////////////////////
+
+		"sidebar_bg-normal-dark": "color(white blend(var(bg) 3%))",
+		"sidebar_bg-normal-light": "color(black blend(var(bg) 3%))",
+
+		"sidebar_bc-dark": "var(grid_border-dark)",
+		"sidebar_bc-light": "var(grid_border-light)",
+
+		// Tabs //////////////////////////////////////////////////////////////////
+
+		"tabset_bg-dark": "color(white blend(var(bg) 5%))",
+		"tabset_bg-light": "color(black blend(var(bg) 5%))",
+
+		// Active Tabs
+
+		"active_tab_bg-dark": "color(white blend(var(bg) 7%))",
+		"active_tab_bg-light": "color(black blend(var(bg) 7%))",
+
+		"active_tab_bc-dark": "var(grid_border-dark)",
+		"active_tab_bc-light": "var(grid_border-light)",
+
+		// Inactive Tabs
+
+		"inactive_tab_bg-dark": "color(white blend(var(bg) 5%))",
+		"inactive_tab_bg-light": "color(black blend(var(bg) 5%))",
+
+		"inactive_tab_bc-dark": "color(white blend(var(bg) 8%))",
+		"inactive_tab_bc-light": "color(black blend(var(bg) 8%))",
+
+		"inactive_tab_close_opacity-clean": "var(button_icon_opacity-normal)",
+
+		// Grid Layout ///////////////////////////////////////////////////////////
+
+		"grid_border_size": 1,
+
+		"grid_border-dark": "color(white blend(var(bg) 10%))",
+		"grid_border-light": "color(black blend(var(bg) 15%))",
+
+		// Panel Controls ////////////////////////////////////////////////////////
+
+		"panel_bg-dark": "color(white blend(var(bg) 1.5%))",
+		"panel_bg-light": "color(black blend(var(bg) 2.5%))",
+
+		"panel_input_bc-dark": "color(white alpha(7.5%))",
+		"panel_input_bc-light": "color(black alpha(10%))",
+
+		"panel_output_tint-dark": "color(white alpha(1.5%))",
+		"panel_output_tint-light": "color(black alpha(2.5%))",
+
+		// Status Bar ////////////////////////////////////////////////////////////
+
+		"statusbar_bg-dark": "color(black blend(var(bg) 7.5%))",
+		"statusbar_bg-light": "color(black blend(var(bg) 7.5%))",
+
+		"statusbar_bc-dark": "var(grid_border-dark)",
+		"statusbar_bc-light": "var(grid_border-light)",
+
+		// Dialogs ///////////////////////////////////////////////////////////////
+
+		"dialog_bg-dark": "color(black blend(var(bg) 5%))",
+		"dialog_bg-light": "color(black blend(var(bg) 5%))"
+
+	},
+	"rules": [
+
+		// Text Line Control /////////////////////////////////////////////////////
+
+		{
+			"class": "text_line_control",
+			"content_margin": [8, 6],
+			"layer0.inner_margin": 6,
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
+			"layer0.tint": "var(bg)",
+			"layer0.opacity": 1.0,
+			"layer1.draw_center": false,
+			"layer1.inner_margin": 6,
+			"layer1.texture": "Theme - DAneo/textures/inputs/input--bw1--br2.png",
+			"layer1.tint": "var(panel_input_bc-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(panel_input_bc-light)"
+		},
+
+		// Button Control ////////////////////////////////////////////////////////
+
+		{
+			"class": "button_control",
+			"layer3.draw_center": false,
+			"layer3.inner_margin": 6,
+			"layer3.texture": "Theme - DAneo/textures/inputs/input--bw1--br2.png",
+			"layer3.tint": "rgba(255, 255, 255, 0.08)",
+			"layer3.opacity": 1.0
+		},
+		{
+			"class": "button_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer3.tint": "rgba(0, 0, 0, 0.08)"
+		},
+
+		// Overlay Controls //////////////////////////////////////////////////////
+
+		{
+			"class": "overlay_control",
+			"content_margin": [19, 3, 19, 29],
+			"layer0.opacity": 0.5,
+			"layer1.inner_margin": [20, 5, 20, 30],
+			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt0--bw0--br4--dtr.png"
+		},
+		{
+			"class": "overlay_control",
+			"parents": [{"class": "window", "attributes": ["file_light"]}],
+			"layer0.opacity": 0.1
+		},
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "overlay_control"}
+			],
+			"layer1.texture": "",
+			"layer1.opacity": 0.0
+		},
+
+		{
+			"class": "quick_panel",
+			"row_padding": [12, 7],
+			"layer0.opacity": 1.0
+		},
+
+		// Switch Project Window /////////////////////////////////////////////////
+
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"content_margin": 6,
+			"layer0.tint": "var(quick_panel_bg-dark)"
+		},
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "switch_project_window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "var(quick_panel_bg-light)"
+		},
+
+		// Side Bar //////////////////////////////////////////////////////////////
+
+		{
+			"class": "sidebar_container",
+			"content_margin": [0, 0, 1, 0],
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 0, 1, 0],
+			"layer1.tint": "var(sidebar_bc-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "sidebar_container",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(sidebar_bc-light)"
+		},
+
+		// Tabs //////////////////////////////////////////////////////////////////
+
+		// Tabset Control
+
+		{
+			"class": "tabset_control",
+			"content_margin": [0, -1, 0, 4],
+			"tab_height": 34,
+			"tab_overlap": 3,
+			"layer0.draw_center": false,
+			"layer0.inner_margin": [0, 0, 0, 5],
+			"layer0.tint": "var(active_tab_bg-dark)",
+			"layer0.opacity": 1.0,
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 33, 0, 1],
+			"layer1.tint": "var(active_tab_bc-dark)",
+			"layer1.opacity": 1.0,
+			"layer2.draw_center": false,
+			"layer2.inner_margin": [0, 32, 0, 0],
+			"layer2.tint": "var(tabset_bg-dark)",
+			"layer2.opacity": 1.0
+		},
+		{
+			"class": "tabset_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "var(active_tab_bg-light)",
+			"layer1.tint": "var(active_tab_bc-light)",
+			"layer2.tint": "var(tabset_bg-light)"
+		},
+
+		// Tab
+
+		{
+			"class": "tab_control",
+			"content_margin": [16, 6, 12, 5],
+			"max_margin_trim": 0,
+			"layer0.inner_margin": [4, 4],
+			"layer0.opacity": 1.0,
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [4, 4],
+			"layer1.opacity": 1.0
+		},
+
+		// Inctive Tab
+
+		{
+			"class": "tab_control",
+			"attributes": ["!selected"],
+			"layer0.texture": "Theme - DAneo/textures/tabs/tab--default--mb1--bw0--br0.png",
+			"layer0.tint": "var(inactive_tab_bg-dark)",
+			"layer1.texture": "Theme - DAneo/textures/tabs/tab--default--mb1--bw1--br0.png",
+			"layer1.tint": "var(inactive_tab_bc-dark)"
+		},
+		{
+			"class": "tab_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"attributes": ["!selected"],
+			"layer0.tint": "var(inactive_tab_bg-light)",
+			"layer1.tint": "var(inactive_tab_bc-light)"
+		},
+
+		// Active Tab
+
+		{
+			"class": "tab_control",
+			"attributes": ["selected"],
+			"layer0.texture": "Theme - DAneo/textures/tabs/tab--soda--mb0--bw0.png",
+			"layer0.tint": "var(active_tab_bg-dark)",
+			"layer1.texture": "Theme - DAneo/textures/tabs/tab--soda--mb0--bw1.png",
+			"layer1.tint": "var(active_tab_bc-dark)"
+		},
+		{
+			"class": "tab_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"attributes": ["selected"],
+			"layer0.tint": "var(active_tab_bg-light)",
+			"layer1.tint": "var(active_tab_bc-light)"
+		},
+
+		// Panel Control /////////////////////////////////////////////////////////
+
+		{
+			"class": "panel_control",
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 1, 0, 0],
+			"layer1.tint": "var(statusbar_bc-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(statusbar_bc-light)"
+		},
+
+		{
+			"class": "panel_control find_panel",
+			"content_margin": [12, 12, 6, 11]
+		},
+		{
+			"class": "panel_control replace_panel",
+			"content_margin": [12, 12, 6, 11]
+		},
+		{
+			"class": "panel_control find_in_files_panel",
+			"content_margin": [12, 12, 12, 11]
+		},
+
+		// Output Panel Text Area
+
+		{
+			"class": "text_output_control",
+			"color_scheme_tint": "var(panel_output_tint-dark)"
+		},
+		{
+			"class": "text_output_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"color_scheme_tint": "var(panel_output_tint-light)"
+		},
+
+		// Icon Button Group
+
+		{
+			"class": "icon_button_group",
+			"spacing": 0
+		},
+
+		// Icon Button
+
+		{
+			"class": "icon_button_control",
+			"content_margin": 8,
+			// background & hover
+			"layer0.inner_margin": 6,
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br0.png",
+			"layer0.tint": "rgba(255, 255, 255, 0.1)",
+			"layer0.opacity": {
+				"target": 0.5, "speed": 2.25, "interpolation": "smoothstep"
+			},
+			// selection
+			"layer2.inner_margin": 6,
+			"layer2.texture": "Theme - DAneo/textures/inputs/input--bw0--br0.png",
+			"layer2.tint": "rgba(255, 255, 255, 0.05)",
+			"layer2.opacity": {
+				"target": 0.0, "speed": 4.5, "interpolation": "smoothstep"
+			},
+			// border
+			"layer3.draw_center": false,
+			"layer3.inner_margin": [0, 1, 0, 1],
+			"layer3.texture": "Theme - DAneo/textures/inputs/input--bw0--br0.png",
+			"layer3.tint": "rgba(255, 255, 255, 0.08)",
+			"layer3.opacity": 1.0
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["left"],
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2--left.png",
+			"layer2.texture": "Theme - DAneo/textures/inputs/input--bw0--br2--left.png",
+			"layer3.inner_margin": 1,
+			"layer3.texture": "Theme - DAneo/textures/inputs/input--bw1--br2--left.png"
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["right"],
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2--right.png",
+			"layer2.texture": "Theme - DAneo/textures/inputs/input--bw0--br2--right.png",
+			"layer3.inner_margin": 1,
+			"layer3.texture": "Theme - DAneo/textures/inputs/input--bw1--br2--right.png"
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["left", "right"],
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
+			"layer2.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
+			"layer3.inner_margin": 1,
+			"layer3.texture": "Theme - DAneo/textures/inputs/input--bw1--br2.png"
+		},
+		{
+			"class": "icon_button_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "rgba(0, 0, 0, 0.05)",
+			"layer2.tint": "rgba(0, 0, 0, 0.05)",
+			"layer3.tint": "rgba(0, 0, 0, 0.08)"
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["hover"],
+			"layer0.opacity": {
+				"target": 1.0, "speed": 2.25, "interpolation": "smoothstep"
+			}
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["pressed"],
+			"layer0.opacity": {
+				"target": 0.75, "speed": 4.5, "interpolation": "smoothstep"
+			}
+		},
+		{
+			"class": "icon_button_control",
+			"attributes": ["selected"],
+			"layer2.opacity": {
+				"target": 1.0, "speed": 4.5, "interpolation": "smoothstep"
+			}
+		},
+
+		// Status Bar ////////////////////////////////////////////////////////////
+
+		{
+			"class": "status_bar",
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 1, 0, 0],
+			"layer1.tint": "var(statusbar_bc-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "status_bar",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(statusbar_bc-light)"
+		},
+
+		// Status Button
+
+		{
+			"class": "status_button",
+			"content_margin": [13, 0, 12, 0],
+			"min_size": [20, 0]
+		},
+		{
+			"class": "status_button",
+			"layer0.inner_margin": [1, 0, 0, 0],
+			"layer0.draw_center": false,
+			"layer0.tint": "rgba(255, 255, 255, 0.075)",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "status_button",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "rgba(0, 0, 0, 0.075)"
+		}
+	]
+}
