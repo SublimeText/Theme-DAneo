@@ -2,7 +2,41 @@
 	"extends": "DAneo Base.hidden-theme",
 
 	"variables": {
-		//
+        "orange": "hsl(32, 80%, 50%)",
+        "yellow": "hsl(44, 100%, 60%)",
+        "green": "hsl(114, 50%, 40%)",
+        "teal": "hsl(180, 100%, 30%)",
+        "blue": "hsl(210, 100%, 40%)",
+        "purple": "hsl(260, 60%, 55%)",
+        "magenta": "hsl(330, 80%, 60%)",
+
+        "commit_edge_0": "var(blue)",
+        "commit_edge_1": "var(purple)",
+        "commit_edge_2": "var(magenta)",
+        "commit_edge_3": "color(var(orange) l(- 10%))",
+        "commit_edge_4": "var(yellow)",
+        "commit_edge_5": "color(var(teal) l(50%))",
+
+        "dark_gray": "hsl(210, 10%, 10%)",
+        "text": "#aaa",
+
+        "head_ann_fg": "var(dark_gray)",
+        "head_ann_bg": "var(purple)",
+
+        "branch_ann_fg": "var(dark_gray)",
+        "branch_ann_bg": "var(blue)",
+
+        "remote_ann_fg": "var(dark_gray)",
+        "remote_ann_bg": "var(teal)",
+
+        "tag_ann_fg": "var(dark_gray)",
+        "tag_ann_bg": "var(yellow)",
+
+        "stash_ann_fg": "var(dark_gray)",
+        "stash_ann_bg": "var(orange)",
+
+        "file_ann_fg": "var(text)",
+        "file_ann_bg": "color(var(file_ann_fg) a(0.3))",
 	},
 
 	"rules": [
