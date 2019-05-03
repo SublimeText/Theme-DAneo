@@ -51,5 +51,6 @@
 
 		"statusbar_vcs_font_face": "var(statusbar_font_face)",
 		"statusbar_vcs_font_size": 10
-	}
+	},
+	"rules": []
 }
