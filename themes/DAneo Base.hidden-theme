@@ -117,23 +117,23 @@
 
 		"quick_panel_fg-normal-dark": "var(label_fg-normal-dark)",
 		"quick_panel_fg-normal-light": "var(label_fg-normal-light)",
-		"quick_panel_fg-normal-match-dark": "color(var(accent) blend(var(quick_panel_fg-normal-dark) 55%)",
-		"quick_panel_fg-normal-match-light": "color(var(accent) blend(var(quick_panel_fg-normal-light) 55%)",
+		"quick_panel_fg-normal-match-dark": "color(var(quick_panel_fg-normal-dark) a(+ 0.1))",
+		"quick_panel_fg-normal-match-light": "color(var(quick_panel_fg-normal-light) a(+ 0.1))",
 
 		"quick_panel_fg-hover-dark": "var(label_fg-hover-dark)",
 		"quick_panel_fg-hover-light": "var(label_fg-hover-light)",
-		"quick_panel_fg-hover-match-dark": "color(var(accent) blend(var(label_fg-hover-dark) 75%)",
-		"quick_panel_fg-hover-match-light": "color(var(accent) blend(var(label_fg-hover-light) 75%)",
+		"quick_panel_fg-hover-match-dark": "color(var(quick_panel_fg-hover-dark) a(+ 0.1))",
+		"quick_panel_fg-hover-match-light": "color(var(quick_panel_fg-hover-light) a(+ 0.1))",
 
 		"quick_panel_fg-selected-dark": "var(label_fg-selected-dark)",
 		"quick_panel_fg-selected-light": "var(label_fg-selected-light)",
-		"quick_panel_fg-selected-match-dark": "color(var(accent) blend(var(quick_panel_fg-selected-dark) 90%)",
-		"quick_panel_fg-selected-match-light": "color(var(accent) blend(var(quick_panel_fg-selected-light) 90%)",
+		"quick_panel_fg-selected-match-dark": "color(var(accent) blend(var(quick_panel_fg-selected-dark) 90%))",
+		"quick_panel_fg-selected-match-light": "color(var(accent) blend(var(quick_panel_fg-selected-light) 90%))",
 
 		"quick_panel_fg-selected-hover-dark": "var(label_fg-selected-hover-dark)",
 		"quick_panel_fg-selected-hover-light": "var(label_fg-selected-hover-light)",
-		"quick_panel_fg-selected-hover-match-dark": "color(var(accent) blend(var(quick_panel_fg-selected-hover-dark) 90%)",
-		"quick_panel_fg-selected-hover-match-light": "color(var(accent) blend(var(quick_panel_fg-selected-hover-light) 90%)",
+		"quick_panel_fg-selected-hover-match-dark": "color(var(accent) blend(var(quick_panel_fg-selected-hover-dark) 90%))",
+		"quick_panel_fg-selected-hover-match-light": "color(var(accent) blend(var(quick_panel_fg-selected-hover-light) 90%))",
 
 		// Quick Panel Description Text
 
@@ -326,23 +326,23 @@
 
 		"auto_complete_fg-normal-dark": "var(label_fg-normal-dark)",
 		"auto_complete_fg-normal-light": "var(label_fg-normal-light)",
-		"auto_complete_fg-normal-match-dark": "color(var(accent) blend(var(auto_complete_fg-normal-dark) 55%)",
-		"auto_complete_fg-normal-match-light": "color(var(accent) blend(var(auto_complete_fg-normal-light) 55%)",
+		"auto_complete_fg-normal-match-dark": "color(var(auto_complete_fg-normal-dark) a(+ 0.1))",
+		"auto_complete_fg-normal-match-light": "color(var(auto_complete_fg-normal-light) a(+ 0.1))",
 
 		"auto_complete_fg-hover-dark": "var(label_fg-hover-dark)",
 		"auto_complete_fg-hover-light": "var(label_fg-hover-light)",
-		"auto_complete_fg-hover-match-dark": "color(var(accent) blend(var(auto_complete_fg-hover-dark) 75%)",
-		"auto_complete_fg-hover-match-light": "color(var(accent) blend(var(auto_complete_fg-hover-light) 75%)",
+		"auto_complete_fg-hover-match-dark": "color(var(auto_complete_fg-hover-dark) a(+ 0.1))",
+		"auto_complete_fg-hover-match-light": "color(var(auto_complete_fg-hover-light) a(+ 0.1))",
 
 		"auto_complete_fg-selected-dark": "var(label_fg-selected-dark)",
 		"auto_complete_fg-selected-light": "var(label_fg-selected-light)",
-		"auto_complete_fg-selected-match-dark": "color(var(accent) blend(var(auto_complete_fg-selected-dark) 90%)",
+		"auto_complete_fg-selected-match-dark": "color(var(accent) blend(var(auto_complete_fg-selected-dark) 90%))",
 		"auto_complete_fg-selected-match-light": "color(var(accent) blend(var(auto_complete_fg-selected-light) 90%)",
 
 		"auto_complete_fg-selected-hover-dark": "var(label_fg-selected-hover-dark)",
 		"auto_complete_fg-selected-hover-light": "var(label_fg-selected-hover-light)",
-		"auto_complete_fg-selected-hover-match-dark": "color(var(accent) blend(var(auto_complete_fg-selected-hover-dark) 90%)",
-		"auto_complete_fg-selected-hover-match-light": "color(var(accent) blend(var(auto_complete_fg-selected-hover-light) 90%)",
+		"auto_complete_fg-selected-hover-match-dark": "color(var(accent) blend(var(auto_complete_fg-selected-hover-dark) 90%))",
+		"auto_complete_fg-selected-hover-match-light": "color(var(accent) blend(var(auto_complete_fg-selected-hover-light) 90%))",
 
 		// Tooltips //////////////////////////////////////////////////////////////
 
@@ -1697,7 +1697,7 @@
 			"selected_fg": "var(quick_panel_fg-selected-dark)",
 			"selected_match_fg": "var(quick_panel_fg-selected-match-dark)",
 			"font.face": "var(quick_panel_text_font_face)",
-			"font.size": "var(quick_panel_text_font_size)"
+			"font.size": "var(quick_panel_text_font_size)",
 		},
 		{
 			"class": "quick_panel_label",
