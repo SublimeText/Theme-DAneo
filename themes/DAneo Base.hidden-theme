@@ -1717,7 +1717,7 @@
 			"selected_fg": "var(quick_panel_fg-selected-dark)",
 			"selected_match_fg": "var(quick_panel_fg-selected-match-dark)",
 			"font.face": "var(quick_panel_text_font_face)",
-			"font.size": "var(quick_panel_text_font_size)",
+			"font.size": "var(quick_panel_text_font_size)"
 		},
 		{
 			"class": "quick_panel_label",
