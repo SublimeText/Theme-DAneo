@@ -152,6 +152,14 @@
 			],
 			"color_scheme_tint": "var(overlay_input_tint-light)"
 		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "overlay_control"}
+			],
+			"platforms": ["osx"],
+			"content_margin": [52, 11, 14, 14],
+		},
 
 		// Switch Project Window /////////////////////////////////////////////////
 
@@ -176,6 +184,14 @@
 				{"class": "switch_project_window", "attributes": ["file_light"]}
 			],
 			"color_scheme_tint": "var(overlay_input_tint-light)"
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"platforms": ["osx"],
+			"content_margin": [52, 11, 14, 14],
 		},
 
 		// Side Bar //////////////////////////////////////////////////////////////
