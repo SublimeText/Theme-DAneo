@@ -203,6 +203,28 @@
 		"sidebar_fg-selected-hover-dark": "var(label_fg-selected-hover-dark)",
 		"sidebar_fg-selected-hover-light": "var(label_fg-selected-hover-light)",
 
+		// Tree Items Text Colors (Added Files)
+
+		"sidebar_fg-added-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_added) 30%)",
+		"sidebar_fg-added-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_added) 30%)",
+		"sidebar_fg-added-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_added) 30%)",
+		"sidebar_fg-added-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_added) 30%)",
+		"sidebar_fg-added-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_added) 30%)",
+		"sidebar_fg-added-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_added) 30%)",
+		"sidebar_fg-added-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_added) 30%)",
+		"sidebar_fg-added-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_added) 30%)",
+
+		// Tree Items Text Colors (Added & Modified Files)
+
+		"sidebar_fg-added_modified-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_staged_modified) 30%)",
+		"sidebar_fg-added_modified-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_staged_modified) 30%)",
+		"sidebar_fg-added_modified-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_staged_modified) 30%)",
+		"sidebar_fg-added_modified-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_staged_modified) 30%)",
+		"sidebar_fg-added_modified-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_staged_modified) 30%)",
+		"sidebar_fg-added_modified-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_staged_modified) 30%)",
+		"sidebar_fg-added_modified-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_staged_modified) 30%)",
+		"sidebar_fg-added_modified-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_staged_modified) 30%)",
+
 		// Tree Items Text Colors (Ignored Files)
 
 		"sidebar_fg-ignored-normal-dark": "color(var(sidebar_fg-normal-dark) a(- 0.25))",
@@ -2812,6 +2834,154 @@
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-modified-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Added Files)
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Added & Modified Files)
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-selected-hover-light)"
 		},
 
 		// Side Bar Tree Item Text (Staged Files)
