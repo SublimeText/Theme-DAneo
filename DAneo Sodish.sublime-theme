@@ -11,14 +11,14 @@
 
 		// Version Control State Colors
 
-		"vsc_added": "var(--greenish)",
-		"vsc_added_modified": "var(--orangish)",
-		"vsc_deleted": "var(--redish)",
-		"vsc_modified": "var(--orangish)",
-		"vsc_staged": "var(--yellowish)",
-		"vsc_staged_modified": "var(--orangish)",
-		"vsc_unmerged": "var(--redish)",
-		"vsc_untracked": "grey",
+		"vcs_added": "var(--greenish)",
+		"vcs_added_modified": "var(--orangish)",
+		"vcs_deleted": "var(--redish)",
+		"vcs_modified": "var(--orangish)",
+		"vcs_staged": "var(--yellowish)",
+		"vcs_staged_modified": "var(--orangish)",
+		"vcs_unmerged": "var(--redish)",
+		"vcs_untracked": "grey",
 
 		// Button Controls ///////////////////////////////////////////////////////
 

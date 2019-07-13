@@ -10,14 +10,14 @@
 
 		// Version Control State Colors
 
-		"vsc_added": "var(--greenish)",
-		"vsc_added_modified": "var(--orangish)",
-		"vsc_deleted": "var(--redish)",
-		"vsc_modified": "var(--orangish)",
-		"vsc_staged": "var(--yellowish)",
-		"vsc_staged_modified": "var(--orangish)",
-		"vsc_unmerged": "var(--redish)",
-		"vsc_untracked": "grey",
+		"vcs_added": "var(--greenish)",
+		"vcs_added_modified": "var(--orangish)",
+		"vcs_deleted": "var(--redish)",
+		"vcs_modified": "var(--orangish)",
+		"vcs_staged": "var(--yellowish)",
+		"vcs_staged_modified": "var(--orangish)",
+		"vcs_unmerged": "var(--redish)",
+		"vcs_untracked": "grey",
 
 		// MacOS Title Bar ///////////////////////////////////////////////////////
 
@@ -205,36 +205,36 @@
 
 		// Tree Items Text Colors (Added Files)
 
-		"sidebar_fg-added-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_added) 30%)",
-		"sidebar_fg-added-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_added) 30%)",
-		"sidebar_fg-added-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_added) 30%)",
-		"sidebar_fg-added-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_added) 30%)",
-		"sidebar_fg-added-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_added) 30%)",
-		"sidebar_fg-added-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_added) 30%)",
-		"sidebar_fg-added-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_added) 30%)",
-		"sidebar_fg-added-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_added) 30%)",
+		"sidebar_fg-added-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vcs_added) 30%)",
+		"sidebar_fg-added-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vcs_added) 30%)",
+		"sidebar_fg-added-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vcs_added) 30%)",
+		"sidebar_fg-added-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vcs_added) 30%)",
+		"sidebar_fg-added-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vcs_added) 30%)",
+		"sidebar_fg-added-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vcs_added) 30%)",
+		"sidebar_fg-added-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vcs_added) 30%)",
+		"sidebar_fg-added-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vcs_added) 30%)",
 
 		// Tree Items Text Colors (Added & Modified Files)
 
-		"sidebar_fg-added_modified-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-added_modified-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-added_modified-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-added_modified-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-added_modified-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-added_modified-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-added_modified-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-added_modified-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_staged_modified) 30%)",
+		"sidebar_fg-added_modified-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-added_modified-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-added_modified-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-added_modified-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-added_modified-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-added_modified-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-added_modified-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-added_modified-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vcs_staged_modified) 30%)",
 
 		// Tree Items Text Colors (Deleted Files)
 
-		"sidebar_fg-deleted-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_deleted) 30%)",
-		"sidebar_fg-deleted-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_deleted) 30%)",
-		"sidebar_fg-deleted-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_deleted) 30%)",
-		"sidebar_fg-deleted-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_deleted) 30%)",
-		"sidebar_fg-deleted-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_deleted) 30%)",
-		"sidebar_fg-deleted-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_deleted) 30%)",
-		"sidebar_fg-deleted-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_deleted) 30%)",
-		"sidebar_fg-deleted-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_deleted) 30%)",
+		"sidebar_fg-deleted-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vcs_deleted) 30%)",
+		"sidebar_fg-deleted-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vcs_deleted) 30%)",
+		"sidebar_fg-deleted-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vcs_deleted) 30%)",
+		"sidebar_fg-deleted-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vcs_deleted) 30%)",
+		"sidebar_fg-deleted-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vcs_deleted) 30%)",
+		"sidebar_fg-deleted-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vcs_deleted) 30%)",
+		"sidebar_fg-deleted-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vcs_deleted) 30%)",
+		"sidebar_fg-deleted-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vcs_deleted) 30%)",
 
 		// Tree Items Text Colors (Ignored Files)
 
@@ -249,58 +249,58 @@
 
 		// Tree Items Text Colors (Modified Files)
 
-		"sidebar_fg-modified-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_modified) 30%)",
-		"sidebar_fg-modified-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_modified) 30%)",
-		"sidebar_fg-modified-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_modified) 30%)",
-		"sidebar_fg-modified-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_modified) 30%)",
-		"sidebar_fg-modified-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_modified) 30%)",
-		"sidebar_fg-modified-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_modified) 30%)",
-		"sidebar_fg-modified-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_modified) 30%)",
-		"sidebar_fg-modified-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_modified) 30%)",
+		"sidebar_fg-modified-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vcs_modified) 30%)",
+		"sidebar_fg-modified-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vcs_modified) 30%)",
+		"sidebar_fg-modified-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vcs_modified) 30%)",
+		"sidebar_fg-modified-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vcs_modified) 30%)",
+		"sidebar_fg-modified-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vcs_modified) 30%)",
+		"sidebar_fg-modified-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vcs_modified) 30%)",
+		"sidebar_fg-modified-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vcs_modified) 30%)",
+		"sidebar_fg-modified-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vcs_modified) 30%)",
 
 		// Tree Items Text Colors (Staged Files)
 
-		"sidebar_fg-staged-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_staged) 30%)",
-		"sidebar_fg-staged-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_staged) 30%)",
-		"sidebar_fg-staged-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_staged) 30%)",
-		"sidebar_fg-staged-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_staged) 30%)",
-		"sidebar_fg-staged-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_staged) 30%)",
-		"sidebar_fg-staged-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_staged) 30%)",
-		"sidebar_fg-staged-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_staged) 30%)",
-		"sidebar_fg-staged-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_staged) 30%)",
+		"sidebar_fg-staged-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vcs_staged) 30%)",
+		"sidebar_fg-staged-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vcs_staged) 30%)",
+		"sidebar_fg-staged-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vcs_staged) 30%)",
+		"sidebar_fg-staged-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vcs_staged) 30%)",
+		"sidebar_fg-staged-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vcs_staged) 30%)",
+		"sidebar_fg-staged-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vcs_staged) 30%)",
+		"sidebar_fg-staged-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vcs_staged) 30%)",
+		"sidebar_fg-staged-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vcs_staged) 30%)",
 
 		// Tree Items Text Colors (Staged & Modified Files)
 
-		"sidebar_fg-staged_modified-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-staged_modified-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-staged_modified-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-staged_modified-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-staged_modified-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-staged_modified-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-staged_modified-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_staged_modified) 30%)",
-		"sidebar_fg-staged_modified-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_staged_modified) 30%)",
+		"sidebar_fg-staged_modified-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-staged_modified-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-staged_modified-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-staged_modified-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-staged_modified-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-staged_modified-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-staged_modified-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vcs_staged_modified) 30%)",
+		"sidebar_fg-staged_modified-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vcs_staged_modified) 30%)",
 
 		// Tree Items Text Colors (Unmerged Files)
 
-		"sidebar_fg-unmerged-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_unmerged) 30%)",
-		"sidebar_fg-unmerged-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_unmerged) 30%)",
-		"sidebar_fg-unmerged-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_unmerged) 30%)",
-		"sidebar_fg-unmerged-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_unmerged) 30%)",
-		"sidebar_fg-unmerged-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_unmerged) 30%)",
-		"sidebar_fg-unmerged-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_unmerged) 30%)",
-		"sidebar_fg-unmerged-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_unmerged) 30%)",
-		"sidebar_fg-unmerged-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_unmerged) 30%)",
+		"sidebar_fg-unmerged-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vcs_unmerged) 30%)",
+		"sidebar_fg-unmerged-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vcs_unmerged) 30%)",
+		"sidebar_fg-unmerged-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vcs_unmerged) 30%)",
+		"sidebar_fg-unmerged-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vcs_unmerged) 30%)",
+		"sidebar_fg-unmerged-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vcs_unmerged) 30%)",
+		"sidebar_fg-unmerged-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vcs_unmerged) 30%)",
+		"sidebar_fg-unmerged-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vcs_unmerged) 30%)",
+		"sidebar_fg-unmerged-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vcs_unmerged) 30%)",
 
 		// Tree Items Text Colors (Untracked Files)
 
-		"sidebar_fg-untracked-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_untracked) 30%)",
-		"sidebar_fg-untracked-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_untracked) 30%)",
-		"sidebar_fg-untracked-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_untracked) 30%)",
-		"sidebar_fg-untracked-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_untracked) 30%)",
-		"sidebar_fg-untracked-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_untracked) 30%)",
-		"sidebar_fg-untracked-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_untracked) 30%)",
-		"sidebar_fg-untracked-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_untracked) 30%)",
-		"sidebar_fg-untracked-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_untracked) 30%)",
+		"sidebar_fg-untracked-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vcs_untracked) 30%)",
+		"sidebar_fg-untracked-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vcs_untracked) 30%)",
+		"sidebar_fg-untracked-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vcs_untracked) 30%)",
+		"sidebar_fg-untracked-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vcs_untracked) 30%)",
+		"sidebar_fg-untracked-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vcs_untracked) 30%)",
+		"sidebar_fg-untracked-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vcs_untracked) 30%)",
+		"sidebar_fg-untracked-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vcs_untracked) 30%)",
+		"sidebar_fg-untracked-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vcs_untracked) 30%)",
 
 		// Folder Icon Colors
 
@@ -3909,7 +3909,7 @@
 		//     {"class": "tree_row", "attributes": ["!expanded"]},
 		//     {"class": "file_system_entry", "attributes": ["modified"]},
 		//   ],
-		//   "layer0.tint": "var(vsc_modified)",
+		//   "layer0.tint": "var(vcs_modified)",
 		//   "layer0.opacity": 1.0
 		// },
 		// {
@@ -3918,7 +3918,7 @@
 		//     {"class": "tree_row", "attributes": ["!expanded"]},
 		//     {"class": "file_system_entry", "attributes": ["added"]},
 		//   ],
-		//   "layer0.tint": "var(vsc_added)",
+		//   "layer0.tint": "var(vcs_added)",
 		//   "layer0.opacity": 1.0
 		// },
 
@@ -4144,7 +4144,7 @@
 			"parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
 			"content_margin": 8,
 			"layer0.texture": "Theme - DAneo/icons/status_untracked.png",
-			"layer0.tint": "var(vsc_untracked)",
+			"layer0.tint": "var(vcs_untracked)",
 			"layer0.opacity": 1.0
 		},
 		{
@@ -4153,7 +4153,7 @@
 			"parents": [{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}],
 			"content_margin": 8,
 			"layer0.texture": "Theme - DAneo/icons/status_modified.png",
-			"layer0.tint": "var(vsc_modified)",
+			"layer0.tint": "var(vcs_modified)",
 			"layer0.opacity": 1.0
 		},
 		{
@@ -4162,7 +4162,7 @@
 			"parents": [{"class": "file_system_entry", "attributes": ["added", "!modified"]}],
 			"content_margin": 8,
 			"layer0.texture": "Theme - DAneo/icons/status_added.png",
-			"layer0.tint": "var(vsc_added)",
+			"layer0.tint": "var(vcs_added)",
 			"layer0.opacity": 1.0
 		},
 		{
@@ -4171,7 +4171,7 @@
 			"parents": [{"class": "file_system_entry", "attributes": ["added", "modified"]}],
 			"content_margin": 8,
 			"layer0.texture": "Theme - DAneo/icons/status_added.png",
-			"layer0.tint": "var(vsc_added_modified)",
+			"layer0.tint": "var(vcs_added_modified)",
 			"layer0.opacity": 1.0
 		},
 		{
@@ -4180,7 +4180,7 @@
 			"parents": [{"class": "file_system_entry", "attributes": ["staged", "!modified"]}],
 			"content_margin": 8,
 			"layer0.texture": "Theme - DAneo/icons/status_staged.png",
-			"layer0.tint": "var(vsc_staged)",
+			"layer0.tint": "var(vcs_staged)",
 			"layer0.opacity": 1.0
 		},
 		{
@@ -4189,7 +4189,7 @@
 			"parents": [{"class": "file_system_entry", "attributes": ["staged", "modified"]}],
 			"content_margin": 8,
 			"layer0.texture": "Theme - DAneo/icons/status_staged.png",
-			"layer0.tint": "var(vsc_staged_modified)",
+			"layer0.tint": "var(vcs_staged_modified)",
 			"layer0.opacity": 1.0
 		},
 		{
@@ -4198,7 +4198,7 @@
 			"parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
 			"content_margin": 8,
 			"layer0.texture": "Theme - DAneo/icons/status_deleted.png",
-			"layer0.tint": "var(vsc_deleted)",
+			"layer0.tint": "var(vcs_deleted)",
 			"layer0.opacity": 1.0
 		},
 		{
@@ -4207,7 +4207,7 @@
 			"parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
 			"content_margin": 8,
 			"layer0.texture": "Theme - DAneo/icons/status_modified.png",
-			"layer0.tint": "var(vsc_deleted)",
+			"layer0.tint": "var(vcs_deleted)",
 			"layer0.opacity": 1.0
 		},
 		{
@@ -4216,7 +4216,7 @@
 			"parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
 			"content_margin": 6,
 			"layer0.texture": "Theme - DAneo/icons/status_unmerged.png",
-			"layer0.tint": "var(vsc_unmerged)",
+			"layer0.tint": "var(vcs_unmerged)",
 			"layer0.opacity": 1.0
 		},
 
