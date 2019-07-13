@@ -214,6 +214,17 @@
 		"sidebar_fg-ignored-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) a(- 0.25))",
 		"sidebar_fg-ignored-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) a(- 0.25))",
 
+		// Tree Items Text Colors (Modified Files)
+
+		"sidebar_fg-modified-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_modified) 30%)",
+		"sidebar_fg-modified-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_modified) 30%)",
+		"sidebar_fg-modified-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_modified) 30%)",
+		"sidebar_fg-modified-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_modified) 30%)",
+		"sidebar_fg-modified-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_modified) 30%)",
+		"sidebar_fg-modified-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_modified) 30%)",
+		"sidebar_fg-modified-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_modified) 30%)",
+		"sidebar_fg-modified-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_modified) 30%)",
+
 		// Tree Items Text Colors (Untracked Files)
 
 		"sidebar_fg-untracked-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_untracked) 30%)",
@@ -2705,6 +2716,80 @@
 				{"class": "file_system_entry", "attributes": ["ignored"]}
 			],
 			"fg": "var(sidebar_fg-ignored-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Modified Files)
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-selected-hover-light)"
 		},
 
 		// Side Bar Tree Item Text (folders)
