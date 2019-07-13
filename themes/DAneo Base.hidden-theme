@@ -1,7 +1,7 @@
 {
 	"variables": {
 
-		// Color Scheme Alias
+		// Color Scheme Alias ////////////////////////////////////////////////////
 
 		"bg": "var(--background)",
 		"fg": "var(--foreground)",
