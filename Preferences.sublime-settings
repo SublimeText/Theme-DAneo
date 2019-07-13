@@ -5,6 +5,9 @@
 	// Controls whether to show folder and file icons in the sidebar
 	"show_sidebar_icons": true,
 
+	// Controls whether to show vcs status badges in the side bar
+	"show_sidebar_vcs_badges": true,
+
 	// Controls whether to show vcs status badges for collapsed directories
 	// in the side bar if `show_sidebar_vcs_badges` is true.
 	"show_sidebar_closed_dir_badges": true,
@@ -13,8 +16,17 @@
 	// in the side bar if `show_sidebar_vcs_badges` is true.
 	"show_sidebar_opened_dir_badges": false,
 
-	// Controls whether to show vcs status badges in the side bar
-	"show_sidebar_vcs_badges": true,
+	// Controls whether to show vcs status of ignored files and folders
+	// by the color of their labels in the sidebar.
+	"show_sidebar_ignored_label_colors": true,
+
+	// Controls whether to show vcs status of tracked files and folders
+	// by the color of their labels in the sidebar.
+	"show_sidebar_tracked_label_colors": true,
+
+	// Controls whether to show vcs status of untracked files and folders
+	// by the color of their labels in the sidebar.
+	"show_sidebar_untracked_label_colors": true,
 
 	// Controls whether to show the tab scroll buttons
 	"show_scroll_tabs_buttons": true,

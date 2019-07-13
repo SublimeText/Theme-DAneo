@@ -2640,6 +2640,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
@@ -2648,6 +2649,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
@@ -2658,6 +2660,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
@@ -2666,6 +2669,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
@@ -2676,6 +2680,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
@@ -2684,6 +2689,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
@@ -2694,6 +2700,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
@@ -2702,6 +2709,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
@@ -2714,6 +2722,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
@@ -2722,6 +2731,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
@@ -2732,6 +2742,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
@@ -2740,6 +2751,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
@@ -2750,6 +2762,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
@@ -2758,6 +2771,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
@@ -2768,6 +2782,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
@@ -2776,6 +2791,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
@@ -2788,6 +2804,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
@@ -2796,6 +2813,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
@@ -2806,6 +2824,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
@@ -2814,6 +2833,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
@@ -2824,6 +2844,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
@@ -2832,6 +2853,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
@@ -2842,6 +2864,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
@@ -2850,6 +2873,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
@@ -2862,6 +2886,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
@@ -2870,6 +2895,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
@@ -2880,6 +2906,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
@@ -2888,6 +2915,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
@@ -2898,6 +2926,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
@@ -2906,6 +2935,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
@@ -2916,6 +2946,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
@@ -2924,6 +2955,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
@@ -2936,6 +2968,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
@@ -2944,6 +2977,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
@@ -2954,6 +2988,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
@@ -2962,6 +2997,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
@@ -2972,6 +3008,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
@@ -2980,6 +3017,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
@@ -2990,6 +3028,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
@@ -2998,6 +3037,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
@@ -3010,6 +3050,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
@@ -3018,6 +3059,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
@@ -3028,6 +3070,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
@@ -3036,6 +3079,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
@@ -3046,6 +3090,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
@@ -3054,6 +3099,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
@@ -3064,6 +3110,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
@@ -3072,6 +3119,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
@@ -3084,6 +3132,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
@@ -3092,6 +3141,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
@@ -3102,6 +3152,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
@@ -3110,6 +3161,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
@@ -3120,6 +3172,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
@@ -3128,6 +3181,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
@@ -3138,6 +3192,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
@@ -3146,6 +3201,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
@@ -3158,6 +3214,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
@@ -3166,6 +3223,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
@@ -3176,6 +3234,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
@@ -3184,6 +3243,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
@@ -3194,6 +3254,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
@@ -3202,6 +3263,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
@@ -3212,6 +3274,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
@@ -3220,6 +3283,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
@@ -3232,6 +3296,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["missing"]}
@@ -3240,6 +3305,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
@@ -3250,6 +3316,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["missing"]}
@@ -3258,6 +3325,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
@@ -3268,6 +3336,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["missing"]}
@@ -3276,6 +3345,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
@@ -3286,6 +3356,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["missing"]}
@@ -3294,6 +3365,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
@@ -3306,6 +3378,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
@@ -3314,6 +3387,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
@@ -3324,6 +3398,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
@@ -3332,6 +3407,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
@@ -3342,6 +3418,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
@@ -3350,6 +3427,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
@@ -3360,6 +3438,7 @@
 
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
@@ -3368,6 +3447,7 @@
 		},
 		{
 			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},

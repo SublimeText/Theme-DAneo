@@ -89,17 +89,20 @@ For information about them please refer to the official [Sublime Text 3 Document
 
 ### Custom Theme Settings
 
-Setting                            | Default | Description
------------------------------------|---------|-------------------------------------------------------------------
-`"show_disclosure_buttons"`        | `true`  | Controls whether to show the disclosure buttons in the sidebar
-`"show_sidebar_icons"`             | `true`  | Controls whether to show folder and file icons in the sidebar
-`"show_sidebar_closed_dir_badges"` | `true`  | Controls whether to show vcs status badges for collapsed directories in the side bar if `show_sidebar_vcs_badges` is `true`
-`"show_sidebar_opened_dir_badges"` | `false` | Controls whether to show vcs status badges for expanded directories in the side bar if `show_sidebar_vcs_badges` is `true`
-`"show_sidebar_vcs_badges"`        | `true`  | Controls whether to show vcs status badges in the side bar
-`"show_scroll_tabs_buttons"`       | `true`  | Controls whether to show the tab scroll buttons
-`"show_tabs_dropdown_button"`      | `true`  | Controls whether to show the tabs dropdown button
-`"show_panel_button"`              | `true`  | Controls whether to show the _show panel button_ in the left corner of the status bar
-`"show_panel_close_button"`        | `false` | Controls whether to show the close button of the find and replace panels
+Setting                                 | Default | Description
+----------------------------------------|---------|-------------------------------------------------------------------
+`"show_disclosure_buttons"`             | `true`  | Controls whether to show the disclosure buttons in the sidebar
+`"show_sidebar_icons"`                  | `true`  | Controls whether to show folder and file icons in the sidebar
+`"show_sidebar_vcs_badges"`             | `true`  | Controls whether to show vcs status badges in the side bar
+`"show_sidebar_closed_dir_badges"`      | `true`  | Controls whether to show vcs status badges for collapsed directories in the side bar if `show_sidebar_vcs_badges` is `true`
+`"show_sidebar_opened_dir_badges"`      | `false` | Controls whether to show vcs status badges for expanded directories in the side bar if `show_sidebar_vcs_badges` is `true`
+`"show_sidebar_ignored_label_colors"`   | `true`  | Controls whether to show vcs status of ignored files and folders by the color of their labels in the sidebar.
+`"show_sidebar_tracked_label_colors"`   | `true`  | Controls whether to show vcs status of tracked files and folders by the color of their labels in the sidebar.
+`"show_sidebar_untracked_label_colors"` | `true`  | Controls whether to show vcs status of untracked files and folders by the color of their labels in the sidebar.
+`"show_scroll_tabs_buttons"`            | `true`  | Controls whether to show the tab scroll buttons
+`"show_tabs_dropdown_button"`           | `true`  | Controls whether to show the tabs dropdown button
+`"show_panel_button"`                   | `true`  | Controls whether to show the _show panel button_ in the left corner of the status bar
+`"show_panel_close_button"`             | `false` | Controls whether to show the close button of the find and replace panels
 
 
 ### Editing the Theme
