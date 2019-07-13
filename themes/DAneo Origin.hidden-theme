@@ -172,7 +172,7 @@
 				{"class": "overlay_control"}
 			],
 			"platforms": ["osx"],
-			"content_margin": [52, 11, 14, 14],
+			"content_margin": [52, 11, 14, 14]
 		},
 
 		// Switch Project Window /////////////////////////////////////////////////
@@ -205,7 +205,7 @@
 				{"class": "switch_project_window"}
 			],
 			"platforms": ["osx"],
-			"content_margin": [52, 11, 14, 14],
+			"content_margin": [52, 11, 14, 14]
 		},
 
 		// Side Bar //////////////////////////////////////////////////////////////
