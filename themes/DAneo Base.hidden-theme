@@ -192,6 +192,8 @@
 		"sidebar_font_face": "var(font_face)",
 		"sidebar_font_size": "var(font_size)",
 
+		// Tree Items Text Colors
+
 		"sidebar_fg-normal-dark": "var(label_fg-normal-dark)",
 		"sidebar_fg-normal-light": "var(label_fg-normal-light)",
 		"sidebar_fg-hover-dark": "var(label_fg-hover-dark)",
@@ -200,6 +202,17 @@
 		"sidebar_fg-selected-light": "var(label_fg-selected-light)",
 		"sidebar_fg-selected-hover-dark": "var(label_fg-selected-hover-dark)",
 		"sidebar_fg-selected-hover-light": "var(label_fg-selected-hover-light)",
+
+		// Tree Items Text Colors (Ignored Files)
+
+		"sidebar_fg-ignored-normal-dark": "color(var(sidebar_fg-normal-dark) a(- 0.25))",
+		"sidebar_fg-ignored-normal-light": "color(var(sidebar_fg-normal-light) a(- 0.25))",
+		"sidebar_fg-ignored-hover-dark": "color(var(sidebar_fg-hover-dark) a(- 0.25))",
+		"sidebar_fg-ignored-hover-light": "color(var(sidebar_fg-hover-light) a(- 0.25))",
+		"sidebar_fg-ignored-selected-dark": "color(var(sidebar_fg-selected-dark) a(- 0.25))",
+		"sidebar_fg-ignored-selected-light": "color(var(sidebar_fg-selected-light) a(- 0.25))",
+		"sidebar_fg-ignored-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) a(- 0.25))",
+		"sidebar_fg-ignored-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) a(- 0.25))",
 
 		// Folder Icon Colors
 
@@ -2534,6 +2547,82 @@
 			],
 			"fg": "var(sidebar_fg-selected-hover-light)"
 		},
+
+		// Side Bar Tree Item Text (Ignored Files)
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (folders)
 
 		{
 			"class": "sidebar_label",
