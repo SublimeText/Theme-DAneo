@@ -225,6 +225,17 @@
 		"sidebar_fg-added_modified-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_staged_modified) 30%)",
 		"sidebar_fg-added_modified-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_staged_modified) 30%)",
 
+		// Tree Items Text Colors (Deleted Files)
+
+		"sidebar_fg-deleted-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_deleted) 30%)",
+		"sidebar_fg-deleted-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_deleted) 30%)",
+		"sidebar_fg-deleted-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_deleted) 30%)",
+		"sidebar_fg-deleted-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_deleted) 30%)",
+		"sidebar_fg-deleted-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_deleted) 30%)",
+		"sidebar_fg-deleted-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_deleted) 30%)",
+		"sidebar_fg-deleted-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_deleted) 30%)",
+		"sidebar_fg-deleted-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_deleted) 30%)",
+
 		// Tree Items Text Colors (Ignored Files)
 
 		"sidebar_fg-ignored-normal-dark": "color(var(sidebar_fg-normal-dark) a(- 0.25))",
@@ -3141,6 +3152,154 @@
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-staged_modified-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Deleted Files)
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Folder With Deleted Files)
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-hover-light)"
 		},
 
 		// Side Bar Tree Item Text (Unmerged Files)
