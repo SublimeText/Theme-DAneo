@@ -269,6 +269,17 @@
 		"sidebar_fg-staged_modified-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_staged_modified) 30%)",
 		"sidebar_fg-staged_modified-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_staged_modified) 30%)",
 
+		// Tree Items Text Colors (Unmerged Files)
+
+		"sidebar_fg-unmerged-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_unmerged) 30%)",
+		"sidebar_fg-unmerged-normal-light": "color(var(sidebar_fg-normal-light) blend(var(vsc_unmerged) 30%)",
+		"sidebar_fg-unmerged-hover-dark": "color(var(sidebar_fg-hover-dark) blend(var(vsc_unmerged) 30%)",
+		"sidebar_fg-unmerged-hover-light": "color(var(sidebar_fg-hover-light) blend(var(vsc_unmerged) 30%)",
+		"sidebar_fg-unmerged-selected-dark": "color(var(sidebar_fg-selected-dark) blend(var(vsc_unmerged) 30%)",
+		"sidebar_fg-unmerged-selected-light": "color(var(sidebar_fg-selected-light) blend(var(vsc_unmerged) 30%)",
+		"sidebar_fg-unmerged-selected-hover-dark": "color(var(sidebar_fg-selected-hover-dark) blend(var(vsc_unmerged) 30%)",
+		"sidebar_fg-unmerged-selected-hover-light": "color(var(sidebar_fg-selected-hover-light) blend(var(vsc_unmerged) 30%)",
+
 		// Tree Items Text Colors (Untracked Files)
 
 		"sidebar_fg-untracked-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vsc_untracked) 30%)",
@@ -3130,6 +3141,80 @@
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-staged_modified-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Unmerged Files)
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-selected-hover-light)"
 		},
 
 		// Side Bar Tree Item Text (folders)
