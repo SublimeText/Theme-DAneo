@@ -2487,7 +2487,7 @@
 		{
 			"class": "sidebar_label",
 			"parents": [
-				{"class": "tree_row", "attributes": ["!selected", "hover"]}
+				{"class": "tree_row", "attributes": ["selectable", "!selected", "hover"]}
 			],
 			"fg": "var(sidebar_fg-hover-dark)"
 		},
@@ -2495,7 +2495,7 @@
 			"class": "sidebar_label",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["!selected", "hover"]}
+				{"class": "tree_row", "attributes": ["selectable", "!selected", "hover"]}
 			],
 			"fg": "var(sidebar_fg-hover-light)"
 		},
@@ -2503,7 +2503,7 @@
 		{
 			"class": "sidebar_label",
 			"parents": [
-				{"class": "tree_row", "attributes": ["selected", "!hover"]}
+				{"class": "tree_row", "attributes": ["selectable", "selected", "!hover"]}
 			],
 			"fg": "var(sidebar_fg-selected-dark)"
 		},
@@ -2511,7 +2511,7 @@
 			"class": "sidebar_label",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selected", "!hover"]}
+				{"class": "tree_row", "attributes": ["selectable", "selected", "!hover"]}
 			],
 			"fg": "var(sidebar_fg-selected-light)"
 		},
@@ -2519,7 +2519,7 @@
 		{
 			"class": "sidebar_label",
 			"parents": [
-				{"class": "tree_row", "attributes": ["selected", "hover"]}
+				{"class": "tree_row", "attributes": ["selectable", "selected", "hover"]}
 			],
 			"fg": "var(sidebar_fg-selected-hover-dark)"
 		},
@@ -2527,7 +2527,7 @@
 			"class": "sidebar_label",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selected", "hover"]}
+				{"class": "tree_row", "attributes": ["selectable", "selected", "hover"]}
 			],
 			"fg": "var(sidebar_fg-selected-hover-light)"
 		},
@@ -2535,7 +2535,7 @@
 		{
 			"class": "sidebar_label",
 			"parents": [
-				{"class": "tree_row", "attributes": ["expandable"]}
+				{"class": "tree_row", "attributes": ["selectable", "expandable"]}
 			],
 			"settings": ["bold_folder_labels"],
 			"font.bold": true
