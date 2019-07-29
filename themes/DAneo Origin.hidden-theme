@@ -312,6 +312,106 @@
 			"layer3.opacity": "var(active_tab_close_opacity-hover)"
 		},
 
+		// Active Tab Label (Normal)
+
+		{
+			"class": "tab_label",
+			"parents": [
+				{"class": "tab_control", "attributes": ["selected"]}
+			],
+			"fg": "var(active_tab_fg-normal-dark)"
+		},
+		{
+			"class": "tab_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tab_control", "attributes": ["selected"]}
+			],
+			"fg": "var(active_tab_fg-normal-light)"
+		},
+
+		// Active Tab Label (Hover)
+
+		{
+			"class": "tab_label",
+			"parents": [
+				{"class": "tab_control", "attributes": ["selected", "hover"]}
+			],
+			"fg": "var(active_tab_fg-hover-dark)"
+		},
+		{
+			"class": "tab_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tab_control", "attributes": ["selected", "hover"]}
+			],
+			"fg": "var(active_tab_fg-hover-light)"
+		},
+
+		// Active Tab (Clean) -> Close Button (Normal)
+
+		{
+			"class": "tab_close_button",
+			"settings": ["show_tab_close_buttons"],
+			"parents": [
+				{"class": "tab_control", "attributes": ["selected", "!dirty"]}
+			],
+			"layer0.tint": "var(button_icon_tint-normal-dark)",
+			"layer0.opacity": "var(active_tab_close_opacity-clean)"
+		},
+		{
+			"class": "tab_close_button",
+			"settings": ["show_tab_close_buttons"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tab_control", "attributes": ["selected", "!dirty"]}
+			],
+			"layer0.tint": "var(button_icon_tint-normal-light)"
+		},
+
+		// Active Tab (Dirty) -> Close Button (Normal)
+
+		{
+			"class": "tab_close_button",
+			"settings": ["show_tab_close_buttons"],
+			"parents": [
+				{"class": "tab_control", "attributes": ["selected", "dirty"]}
+			],
+			"layer0.tint": "var(button_icon_tint-dirty-dark)",
+			"layer0.opacity": "var(active_tab_close_opacity-dirty)"
+		},
+		{
+			"class": "tab_close_button",
+			"settings": ["show_tab_close_buttons"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tab_control", "attributes": ["selected", "dirty"]}
+			],
+			"layer0.tint": "var(button_icon_tint-dirty-light)"
+		},
+
+		// Active Tab (Clean) -> Close Button (Hover)
+
+		{
+			"class": "tab_close_button",
+			"settings": ["show_tab_close_buttons"],
+			"parents": [
+				{"class": "tab_control", "attributes": ["selected", "!dirty"]}
+			],
+			"attributes": ["hover"],
+			"layer0.tint": "var(button_icon_tint-hover-dark)"
+		},
+		{
+			"class": "tab_close_button",
+			"settings": ["show_tab_close_buttons"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tab_control", "attributes": ["selected", "!dirty"]}
+			],
+			"attributes": ["hover"],
+			"layer0.tint": "var(button_icon_tint-hover-light)"
+		},
+
 		// Panel Control /////////////////////////////////////////////////////////
 
 		{
