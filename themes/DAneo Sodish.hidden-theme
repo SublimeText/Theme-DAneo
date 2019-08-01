@@ -233,7 +233,10 @@
 			"layer0.opacity": 1.0,
 			"layer1.draw_center": false,
 			"layer1.inner_margin": [4, 4],
-			"layer1.opacity": 1.0
+			"layer1.opacity": 1.0,
+			"layer3.inner_margin": 0,
+			"layer3.opacity": 0.0,
+			"layer3.texture": null
 		},
 
 		// Inctive Tab
