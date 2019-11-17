@@ -1063,6 +1063,54 @@
 			"color": "var(statusbar_vcs_fg-hover-light)"
 		},
 
+		// Status Bar Sidebar Button /////////////////////////////////////////////
+
+		{
+			"class": "sidebar_button_control",
+			"settings": ["!show_panel_button"],
+			"content_margin": 0,
+			"layer0.texture": "",
+			"layer0.opacity": 0.0
+		},
+
+		// Status Bar Sidebar Button (Normal)
+
+		{
+			"class": "sidebar_button_control",
+			"settings": ["show_panel_button"],
+			"layer0.texture": "Theme - Default/common/sidebar_button.png",
+			"content_margin": [10, 11],
+			"layer0.tint": "var(button_icon_tint-normal-dark)",
+			"layer0.opacity": "var(button_icon_opacity-normal)"
+		},
+		{
+			"class": "sidebar_button_control",
+			"settings": ["show_panel_button"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "var(button_icon_tint-normal-light)"
+		},
+
+		// Status Bar Sidebar Button (Hover)
+
+		{
+			"class": "sidebar_button_control",
+			"settings": ["show_panel_button"],
+			"attributes": ["hover"],
+			"layer0.tint": "var(button_icon_tint-hover-dark)",
+			"layer0.opacity": "var(button_icon_opacity-hover)"
+		},
+		{
+			"class": "sidebar_button_control",
+			"settings": ["show_panel_button"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"attributes": ["hover"],
+			"layer0.tint": "var(button_icon_tint-hover-light)"
+		},
+
 		// Status Bar Panel Button ///////////////////////////////////////////////
 
 		// Status Bar Panel Button (Normal)
