@@ -1,7 +1,7 @@
 {
 	"variables": {
 
-		// Color Scheme Alias ////////////////////////////////////////////////////
+	////// Color Scheme Alias ////////////////////////////////////////////////////
 
 		"bg": "var(--background)",
 		"fg": "var(--foreground)",
@@ -19,7 +19,7 @@
 		"vcs_unmerged": "var(--redish)",
 		"vcs_untracked": "grey",
 
-		// MacOS Title Bar ///////////////////////////////////////////////////////
+	////// MacOS Title Bar ///////////////////////////////////////////////////////
 
 		"title_bg-dark": "color(black blend(var(bg) 7.5%))",
 		"title_bg-light": "color(black blend(var(bg) 10%))",
@@ -27,7 +27,7 @@
 		"title_fg-dark": "color(white blend(var(bg) 65%))",
 		"title_fg-light": "color(black blend(var(bg) 65%))",
 
-		// Label Controls ////////////////////////////////////////////////////////
+	////// Label Controls ////////////////////////////////////////////////////////
 
 		"font_face": "system",
 		"font_size": 12,
@@ -41,7 +41,7 @@
 		"label_fg-selected-hover-dark":  "rgba(255, 255, 255, 0.95)",
 		"label_fg-selected-hover-light": "rgba(000, 000, 000, 0.95)",
 
-		// List & Tree Items /////////////////////////////////////////////////////
+	////// List & Tree Items /////////////////////////////////////////////////////
 
 		"item_bg-dark": "rgba(255, 255, 255, 0.05)",
 		"item_bg-light": "rgba(0, 0, 0, 0.075)",
@@ -65,7 +65,7 @@
 				"target": 1.0, "speed": 7.0, "interpolation": "smoothstep"
 			},
 
-		// Button Controls ///////////////////////////////////////////////////////
+	////// Button Controls ///////////////////////////////////////////////////////
 
 		"button_font_face": "var(font_face)",
 		"button_font_size": "var(font_size)",
@@ -96,7 +96,7 @@
 				"target": 1.00, "speed": 1.12, "interpolation": "smoothstep"
 			},
 
-		// Overlay Controls //////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
 		"overlay_bg-dark": "color(black blend(var(bg) 15%))",
 		"overlay_bg-light": "color(black blend(var(bg) 7.5%))",
@@ -164,7 +164,7 @@
 		"quick_panel_path_fg-selected-hover-match-dark": "color(var(quick_panel_fg-selected-hover-match-dark) a(- 0.3))",
 		"quick_panel_path_fg-selected-hover-match-light": "color(var(quick_panel_fg-selected-hover-match-light) a(- 0.3))",
 
-		// Side Bar //////////////////////////////////////////////////////////////
+	////// Side Bar //////////////////////////////////////////////////////////////
 
 		// Background Colors
 
@@ -349,7 +349,7 @@
 		"disclosure_fg-expanded-selected-hover-dark": "var(accent)",
 		"disclosure_fg-expanded-selected-hover-light": "var(accent)",
 
-		// Tabs //////////////////////////////////////////////////////////////////
+	////// Tabs //////////////////////////////////////////////////////////////////
 
 		"tab_font_face": "var(font_face)",
 		"tab_font_size": "var(font_size)",
@@ -410,14 +410,14 @@
 				"target": 0.70, "speed": 1.12, "interpolation": "smoothstep"
 			},
 
-		// Grid Layout ///////////////////////////////////////////////////////////
+	////// Grid Layout ///////////////////////////////////////////////////////////
 
 		"grid_border_size": 2,
 
 		"grid_border-dark": "var(tabset_bg-dark)",
 		"grid_border-light": "var(tabset_bg-light)",
 
-		// Fold Buttons //////////////////////////////////////////////////////////
+	////// Fold Buttons //////////////////////////////////////////////////////////
 
 		"fold_fg-collapsed-normal-dark": "var(button_icon_tint-normal-dark)",
 		"fold_fg-collapsed-normal-light": "var(button_icon_tint-normal-light)",
@@ -432,7 +432,7 @@
 		"fold_opacity-normal": "var(button_icon_opacity-normal)",
 		"fold_opacity-hover": "var(button_icon_opacity-hover)",
 
-		// Auto Completion ///////////////////////////////////////////////////////
+	////// Auto Completion ///////////////////////////////////////////////////////
 
 		// Background Colors
 
@@ -468,7 +468,7 @@
 		"auto_complete_fg-selected-hover-match-dark": "color(var(accent) blend(var(auto_complete_fg-selected-hover-dark) 90%))",
 		"auto_complete_fg-selected-hover-match-light": "color(var(accent) blend(var(auto_complete_fg-selected-hover-light) 90%))",
 
-		// Tooltips //////////////////////////////////////////////////////////////
+	////// Tooltips //////////////////////////////////////////////////////////////
 
 		"tooltip_font_face": "var(font_face)",
 		"tooltip_font_size": "var(font_size)",
@@ -477,12 +477,12 @@
 		"tooltip_bc": "color(white blend(var(--yellowish) 15%))",
 		"tooltip_fg": "color(black blend(var(--yellowish) 66%))",
 
-		// Panel Control /////////////////////////////////////////////////////////
+	////// Panel Control /////////////////////////////////////////////////////////
 
 		"panel_bg-dark": "color(black blend(var(bg) 20%))",
 		"panel_bg-light": "color(black blend(var(bg) 10%))",
 
-		// Status Bar ////////////////////////////////////////////////////////////
+	////// Status Bar ////////////////////////////////////////////////////////////
 
 		"statusbar_font_face": "var(font_face)",
 		"statusbar_font_size": "var(font_size)",
@@ -513,7 +513,7 @@
 		"statusbar_vcs_bc-hover-dark": "color(var(statusbar_vcs_bc-dark) alpha(+ 40%))",
 		"statusbar_vcs_bc-hover-light": "color(var(statusbar_vcs_bc-light) alpha(+ 40%))",
 
-		// Dialogs ///////////////////////////////////////////////////////////////
+	////// Dialogs ///////////////////////////////////////////////////////////////
 
 		"dialog_bg-dark":  "color(black blend(var(bg) 20%))",
 		"dialog_bg-light": "color(black blend(var(bg) 10%))",
@@ -533,7 +533,7 @@
 
 	"rules": [
 
-		// Title Bar (MacOS) /////////////////////////////////////////////////////
+	////// Title Bar (MacOS) /////////////////////////////////////////////////////
 
 		{
 			"class": "title_bar",
@@ -547,7 +547,7 @@
 			"fg": "var(title_fg-light)"
 		},
 
-		// Labels ////////////////////////////////////////////////////////////////
+	////// Labels ////////////////////////////////////////////////////////////////
 
 		{
 			"class": "label_control",
@@ -563,14 +563,14 @@
 			"fg": "var(label_fg-normal-light)"
 		},
 
-		// Text Line Control /////////////////////////////////////////////////////
+	////// Text Line Control /////////////////////////////////////////////////////
 
 		{
 			"class": "text_line_control",
 			"content_margin": [8, 6]
 		},
 
-		// Button Control ////////////////////////////////////////////////////////
+	////// Button Control ////////////////////////////////////////////////////////
 
 		// Button (Normal)
 
@@ -674,7 +674,7 @@
 			"fg": "var(button_fg-selected-light)"
 		},
 
-		// Dropdown Button Control ///////////////////////////////////////////////
+	////// Dropdown Button Control ///////////////////////////////////////////////
 
 		// Dropdown Button (Normal)
 
@@ -710,7 +710,7 @@
 			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
-		// Scroll Bars ///////////////////////////////////////////////////////////
+	////// Scroll Bars ///////////////////////////////////////////////////////////
 
 		// Scroll Areas
 
@@ -896,7 +896,7 @@
 			"layer0.tint": "rgba(0, 0, 0, 0.1)"
 		},
 
-		// Status Bar ////////////////////////////////////////////////////////////
+	////// Status Bar ////////////////////////////////////////////////////////////
 
 		{
 			"class": "status_bar",
@@ -922,7 +922,7 @@
 			"content_margin": [8, 0, 0, 0]
 		},
 
-		// Status Message Label //////////////////////////////////////////////////
+	////// Status Message Label //////////////////////////////////////////////////
 
 		{
 			"class": "label_control",
@@ -942,7 +942,7 @@
 			"fg": "var(statusbar_label_fg-normal-light)"
 		},
 
-		// Status Button /////////////////////////////////////////////////////////
+	////// Status Button /////////////////////////////////////////////////////////
 
 		{
 			"class": "status_button",
@@ -1063,7 +1063,7 @@
 			"color": "var(statusbar_vcs_fg-hover-light)"
 		},
 
-		// Status Bar Panel Button ///////////////////////////////////////////////
+	////// Status Bar Sidebar Button /////////////////////////////////////////////
 
 		// Status Bar Panel Button (Normal)
 
@@ -1110,7 +1110,7 @@
 			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
-		// Panel Control /////////////////////////////////////////////////////////
+	////// Panel Control /////////////////////////////////////////////////////////
 
 		{
 			"class": "panel_control",
@@ -1658,7 +1658,7 @@
 			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
-		// Overlay Controls //////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
 		{
 			"class": "overlay_control",
@@ -1947,7 +1947,7 @@
 			"selected_match_fg": "var(quick_panel_path_fg-selected-hover-match-light)"
 		},
 
-		// Switch Project Window /////////////////////////////////////////////////
+	////// Switch Project Window /////////////////////////////////////////////////
 
 		// Switch Project Panel Control
 
@@ -1997,7 +1997,7 @@
 			"layer0.tint": "var(quick_panel_bg-light)"
 		},
 
-		// Tabs //////////////////////////////////////////////////////////////////
+	////// Tabs //////////////////////////////////////////////////////////////////
 
 		// Tabset Control
 
@@ -2458,7 +2458,7 @@
 			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
-		// Side Bar //////////////////////////////////////////////////////////////
+	////// Side Bar //////////////////////////////////////////////////////////////
 
 		// Side Bar Container
 
@@ -3467,7 +3467,7 @@
 			"font.bold": true
 		},
 
-		// Side Bar / Open Files / Close Buttons /////////////////////////////////
+	////// Side Bar / Open Files / Close Buttons /////////////////////////////////
 
 		// Tree Item (Normal) -> Close Button (Normal)
 
@@ -3583,7 +3583,7 @@
 			"layer0.tint": "var(button_icon_tint-dirty-light)"
 		},
 
-		// Side Bar / Folders / Disclosure Buttons ///////////////////////////////
+	////// Side Bar / Folders / Disclosure Buttons ///////////////////////////////
 
 		// Disclosure Button (Hidden)
 
@@ -3824,7 +3824,7 @@
 			"layer0.opacity": "var(sidebar_icon_opacity-hidden)"
 		},
 
-		// Side Bar / Folders / Folder Icons /////////////////////////////////////
+	////// Side Bar / Folders / Folder Icons /////////////////////////////////////
 
 		// Normal Folder Icon
 
@@ -4074,7 +4074,7 @@
 			"layer1.opacity": "var(sidebar_icon_opacity-selected-hover)"
 		},
 
-		// Side Bar / Folders / File Icons ///////////////////////////////////////
+	////// Side Bar / Folders / File Icons ///////////////////////////////////////
 
 		{
 			"class": "icon_file_type",
@@ -4113,7 +4113,7 @@
 			"layer0.opacity": "var(sidebar_icon_opacity-selected-hover)"
 		},
 
-		// Side Bar / VCS badges /////////////////////////////////////////////////
+	////// Side Bar / VCS badges /////////////////////////////////////////////////
 
 		// add right hand padding to vcs badges depending on scroll bar visibility
 		// in order to keep the badges horizontal position fixed
@@ -4237,7 +4237,7 @@
 			"layer0.opacity": 0.0
 		},
 
-		// Layout Control ////////////////////////////////////////////////////////
+	////// Layout Control ////////////////////////////////////////////////////////
 
 		{
 			"class": "grid_layout_control",
@@ -4252,7 +4252,7 @@
 			"border_color": "var(grid_border-light)"
 		},
 
-		// Fold Buttons //////////////////////////////////////////////////////////
+	////// Fold Buttons //////////////////////////////////////////////////////////
 
 		// Fold Button (Collapsed, Normal)
 
@@ -4330,7 +4330,7 @@
 			"layer0.tint": "var(fold_fg-expanded-hover-light)"
 		},
 
-		// Minimap Control ///////////////////////////////////////////////////////
+	////// Minimap Control ///////////////////////////////////////////////////////
 
 		{
 			"class": "minimap_control",
@@ -4367,7 +4367,7 @@
 			}
 		},
 
-		// Popup Control /////////////////////////////////////////////////////////
+	////// Popup Control /////////////////////////////////////////////////////////
 
 		{
 			"class": "popup_control",
@@ -4518,7 +4518,7 @@
 			"font.size": "var(tooltip_font_size)"
 		},
 
-		// Dialogs ///////////////////////////////////////////////////////////////
+	////// Dialogs ///////////////////////////////////////////////////////////////
 
 		{
 			"class": "dialog",

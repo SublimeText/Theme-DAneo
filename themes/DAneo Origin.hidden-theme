@@ -2,7 +2,7 @@
 	"extends": "DAneo Base.hidden-theme",
 	"variables": {
 
-		// Button Controls ///////////////////////////////////////////////////////
+	////// Button Controls ///////////////////////////////////////////////////////
 
 		"button_icon_tint-selected-dark": "var(accent)",
 		"button_icon_tint-selected-light": "var(accent)",
@@ -11,7 +11,7 @@
 				"target": 0.45, "speed": 1.12, "interpolation": "smoothstep"
 			},
 
-		// Overlay Controls //////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
 		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
 		"overlay_bg-light": "color(black blend(var(bg) 7.5%))",
@@ -19,7 +19,7 @@
 		"overlay_input_tint-dark": "color(white alpha(5%))",
 		"overlay_input_tint-light": "color(black alpha(7.5%))",
 
-		// Side Bar //////////////////////////////////////////////////////////////
+	////// Side Bar //////////////////////////////////////////////////////////////
 
 		"sidebar_bg-normal-dark": "color(black blend(var(bg) 5%))",
 		"sidebar_bg-normal-light": "color(black blend(var(bg) 5%))",
@@ -30,7 +30,7 @@
 		"sidebar_folder_icon_tint-expanded-dark": "var(accent)",
 		"sidebar_folder_icon_tint-expanded-light": "var(accent)",
 
-		// Tabs //////////////////////////////////////////////////////////////////
+	////// Tabs //////////////////////////////////////////////////////////////////
 
 		// close button of hovered active tab
 		"active_tab_close_opacity-normal": "var(button_icon_opacity-normal)",
@@ -41,14 +41,14 @@
 		// hovered close button on inactive tab
 		"inactive_tab_close_opacity-hover": "var(button_icon_opacity-hover)",
 
-		// Grid Layout ///////////////////////////////////////////////////////////
+	////// Grid Layout ///////////////////////////////////////////////////////////
 
 		"grid_border_size": 1,
 
 		"grid_border-dark": "var(sidebar_bc-dark)",
 		"grid_border-light": "var(sidebar_bc-light)",
 
-		// Panel Controls ////////////////////////////////////////////////////////
+	////// Panel Controls ////////////////////////////////////////////////////////
 
 		"panel_bg-dark": "color(black blend(var(bg) 5%))",
 		"panel_bg-light": "color(black blend(var(bg) 7.5%))",
@@ -59,7 +59,7 @@
 		"panel_output_tint-dark": "color(black alpha(5%))",
 		"panel_output_tint-light": "color(black alpha(7.5%))",
 
-		// Status Bar ////////////////////////////////////////////////////////////
+	////// Status Bar ////////////////////////////////////////////////////////////
 
 		"statusbar_bg-dark": "color(black blend(var(bg) 5%))",
 		"statusbar_bg-light": "color(black blend(var(bg) 7.5%))",
@@ -67,7 +67,7 @@
 		"statusbar_bc-dark": "var(sidebar_bc-dark)",
 		"statusbar_bc-light": "var(sidebar_bc-light)",
 
-		// Dialogs ///////////////////////////////////////////////////////////////
+	////// Dialogs ///////////////////////////////////////////////////////////////
 
 		"dialog_bg-dark":  "color(black blend(var(bg) 5%))",
 		"dialog_bg-light": "color(black blend(var(bg) 7.5%))"
@@ -75,7 +75,7 @@
 	},
 	"rules": [
 
-		// Text Line Control /////////////////////////////////////////////////////
+	////// Text Line Control /////////////////////////////////////////////////////
 
 		{
 			"class": "text_line_control",
@@ -98,7 +98,7 @@
 			"layer1.tint": "var(panel_input_bc-light)"
 		},
 
-		// Scroll Bars ///////////////////////////////////////////////////////////
+	////// Scroll Bars ///////////////////////////////////////////////////////////
 
 		// Scroll Track
 
@@ -132,7 +132,7 @@
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w4--horizontal--rounded.png"
 		},
 
-		// Overlay Controls //////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
 		{
 			"class": "overlay_control",
@@ -175,7 +175,7 @@
 			"content_margin": [52, 11, 14, 14]
 		},
 
-		// Switch Project Window /////////////////////////////////////////////////
+	////// Switch Project Window /////////////////////////////////////////////////
 
 		{
 			"class": "text_line_control",
@@ -208,7 +208,7 @@
 			"content_margin": [52, 11, 14, 14]
 		},
 
-		// Side Bar //////////////////////////////////////////////////////////////
+	////// Side Bar //////////////////////////////////////////////////////////////
 
 		{
 			"class": "sidebar_container",
@@ -258,7 +258,7 @@
 			"fg": "var(sidebar_fg-selected-hover-light)"
 		},
 
-		// Tabs //////////////////////////////////////////////////////////////////
+	////// Tabs //////////////////////////////////////////////////////////////////
 
 		// Tabset Control
 
@@ -412,7 +412,7 @@
 			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
-		// Panel Control /////////////////////////////////////////////////////////
+	////// Panel Control /////////////////////////////////////////////////////////
 
 		{
 			"class": "panel_control",
@@ -443,7 +443,7 @@
 			"color_scheme_tint": "var(panel_output_tint-light)"
 		},
 
-		// Status Bar ////////////////////////////////////////////////////////////
+	////// Status Bar ////////////////////////////////////////////////////////////
 
 		{
 			"class": "status_bar",

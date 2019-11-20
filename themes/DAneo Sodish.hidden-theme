@@ -2,7 +2,7 @@
 	"extends": "DAneo Base.hidden-theme",
 	"variables": {
 
-		// Button Controls ///////////////////////////////////////////////////////
+	////// Button Controls ///////////////////////////////////////////////////////
 
 		"button_icon_tint-selected-dark": "var(accent)",
 		"button_icon_tint-selected-light": "var(accent)",
@@ -11,7 +11,7 @@
 				"target": 0.45, "speed": 1.12, "interpolation": "smoothstep"
 			},
 
-		// Overlay Controls //////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
 		"overlay_bg-dark": "var(active_tab_bg-dark)",
 		"overlay_bg-light": "var(active_tab_bg-light)",
@@ -19,7 +19,7 @@
 		"quick_panel_bg-dark": "var(bg)",
 		"quick_panel_bg-light": "var(bg)",
 
-		// Side Bar //////////////////////////////////////////////////////////////
+	////// Side Bar //////////////////////////////////////////////////////////////
 
 		"sidebar_bg-normal-dark": "color(white blend(var(bg) 3%))",
 		"sidebar_bg-normal-light": "color(black blend(var(bg) 3%))",
@@ -27,7 +27,7 @@
 		"sidebar_bc-dark": "var(grid_border-dark)",
 		"sidebar_bc-light": "var(grid_border-light)",
 
-		// Tabs //////////////////////////////////////////////////////////////////
+	////// Tabs //////////////////////////////////////////////////////////////////
 
 		"tabset_bg-dark": "color(white blend(var(bg) 5%))",
 		"tabset_bg-light": "color(black blend(var(bg) 5%))",
@@ -50,14 +50,14 @@
 
 		"inactive_tab_close_opacity-clean": "var(button_icon_opacity-normal)",
 
-		// Grid Layout ///////////////////////////////////////////////////////////
+	////// Grid Layout ///////////////////////////////////////////////////////////
 
 		"grid_border_size": 1,
 
 		"grid_border-dark": "color(white blend(var(bg) 10%))",
 		"grid_border-light": "color(black blend(var(bg) 15%))",
 
-		// Panel Controls ////////////////////////////////////////////////////////
+	////// Panel Controls ////////////////////////////////////////////////////////
 
 		"panel_bg-dark": "color(white blend(var(bg) 1.5%))",
 		"panel_bg-light": "color(black blend(var(bg) 2.5%))",
@@ -68,7 +68,7 @@
 		"panel_output_tint-dark": "color(white alpha(1.5%))",
 		"panel_output_tint-light": "color(black alpha(2.5%))",
 
-		// Status Bar ////////////////////////////////////////////////////////////
+	////// Status Bar ////////////////////////////////////////////////////////////
 
 		"statusbar_bg-dark": "color(black blend(var(bg) 7.5%))",
 		"statusbar_bg-light": "color(black blend(var(bg) 7.5%))",
@@ -76,7 +76,7 @@
 		"statusbar_bc-dark": "var(grid_border-dark)",
 		"statusbar_bc-light": "var(grid_border-light)",
 
-		// Dialogs ///////////////////////////////////////////////////////////////
+	////// Dialogs ///////////////////////////////////////////////////////////////
 
 		"dialog_bg-dark": "color(black blend(var(bg) 5%))",
 		"dialog_bg-light": "color(black blend(var(bg) 5%))"
@@ -84,7 +84,7 @@
 	},
 	"rules": [
 
-		// Text Line Control /////////////////////////////////////////////////////
+	////// Text Line Control /////////////////////////////////////////////////////
 
 		{
 			"class": "text_line_control",
@@ -107,7 +107,7 @@
 			"layer1.tint": "var(panel_input_bc-light)"
 		},
 
-		// Button Control ////////////////////////////////////////////////////////
+	////// Button Control ////////////////////////////////////////////////////////
 
 		{
 			"class": "button_control",
@@ -125,7 +125,7 @@
 			"layer3.tint": "rgba(0, 0, 0, 0.08)"
 		},
 
-		// Overlay Controls //////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
 		{
 			"class": "overlay_control",
@@ -155,7 +155,7 @@
 			"layer0.opacity": 1.0
 		},
 
-		// Switch Project Window /////////////////////////////////////////////////
+	////// Switch Project Window /////////////////////////////////////////////////
 
 		{
 			"class": "panel_control",
@@ -173,7 +173,7 @@
 			"layer0.tint": "var(quick_panel_bg-light)"
 		},
 
-		// Side Bar //////////////////////////////////////////////////////////////
+	////// Side Bar //////////////////////////////////////////////////////////////
 
 		{
 			"class": "sidebar_container",
@@ -191,7 +191,7 @@
 			"layer1.tint": "var(sidebar_bc-light)"
 		},
 
-		// Tabs //////////////////////////////////////////////////////////////////
+	////// Tabs //////////////////////////////////////////////////////////////////
 
 		// Tabset Control
 
@@ -379,7 +379,7 @@
 			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
-		// Panel Control /////////////////////////////////////////////////////////
+	////// Panel Control /////////////////////////////////////////////////////////
 
 		{
 			"class": "panel_control",
@@ -511,7 +511,7 @@
 			}
 		},
 
-		// Status Bar ////////////////////////////////////////////////////////////
+	////// Status Bar ////////////////////////////////////////////////////////////
 
 		{
 			"class": "status_bar",
