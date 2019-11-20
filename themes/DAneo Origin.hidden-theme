@@ -11,14 +11,6 @@
 				"target": 0.45, "speed": 1.12, "interpolation": "smoothstep"
 			},
 
-	////// Overlay Controls //////////////////////////////////////////////////////
-
-		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
-		"overlay_bg-light": "color(black blend(var(bg) 7.5%))",
-
-		"overlay_input_tint-dark": "color(white alpha(5%))",
-		"overlay_input_tint-light": "color(black alpha(7.5%))",
-
 	////// Side Bar //////////////////////////////////////////////////////////////
 
 		"sidebar_bg-normal-dark": "color(black blend(var(bg) 5%))",
@@ -29,6 +21,13 @@
 
 		"sidebar_folder_icon_tint-expanded-dark": "var(accent)",
 		"sidebar_folder_icon_tint-expanded-light": "var(accent)",
+
+	////// Grid Layout ///////////////////////////////////////////////////////////
+
+		"grid_border_size": 1,
+
+		"grid_border-dark": "var(sidebar_bc-dark)",
+		"grid_border-light": "var(sidebar_bc-light)",
 
 	////// Tabs //////////////////////////////////////////////////////////////////
 
@@ -41,12 +40,13 @@
 		// hovered close button on inactive tab
 		"inactive_tab_close_opacity-hover": "var(button_icon_opacity-hover)",
 
-	////// Grid Layout ///////////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
-		"grid_border_size": 1,
+		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
+		"overlay_bg-light": "color(black blend(var(bg) 7.5%))",
 
-		"grid_border-dark": "var(sidebar_bc-dark)",
-		"grid_border-light": "var(sidebar_bc-light)",
+		"overlay_input_tint-dark": "color(white alpha(5%))",
+		"overlay_input_tint-light": "color(black alpha(7.5%))",
 
 	////// Panel Controls ////////////////////////////////////////////////////////
 
@@ -130,82 +130,6 @@
 			"attributes": ["horizontal"],
 			"layer0.inner_margin": 2,
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w4--horizontal--rounded.png"
-		},
-
-	////// Overlay Controls //////////////////////////////////////////////////////
-
-		{
-			"class": "overlay_control",
-			"content_margin": [15, 16, 15, 31],
-			"layer0.inner_margin": [24, 19, 24, 34],
-			"layer0.texture": "Theme - DAneo/textures/overlay/overlay_shadow--mt10.png",
-			"layer1.inner_margin": [20, 15, 20, 30],
-			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png"
-		},
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "overlay_control"}
-			],
-			"content_margin": [52, 9, 13, 13],
-			"color_scheme_tint": "var(overlay_input_tint-dark)",
-			"layer0.draw_center": false,
-			"layer0.inner_margin": [52, 48, 0, 0],
-			"layer0.texture": "Theme - DAneo/textures/inputs/input_search.png",
-			"layer0.tint": "var(accent)",
-			"layer0.opacity": 1.0,
-			"layer1.texture": "",
-			"layer1.opacity": 0.0
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "overlay_control"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "overlay_control"}
-			],
-			"platforms": ["osx"],
-			"content_margin": [52, 11, 14, 14]
-		},
-
-	////// Switch Project Window /////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-dark)",
-			"content_margin": [52, 9, 13, 13],
-			"layer0.draw_center": false,
-			"layer0.inner_margin": [52, 48, 0, 0],
-			"layer0.texture": "Theme - DAneo/textures/inputs/input_search.png",
-			"layer0.tint": "var(accent)",
-			"layer0.opacity": 1.0,
-			"layer1.texture": "",
-			"layer1.opacity": 0.0
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window"}
-			],
-			"platforms": ["osx"],
-			"content_margin": [52, 11, 14, 14]
 		},
 
 	////// Side Bar //////////////////////////////////////////////////////////////
@@ -412,6 +336,49 @@
 			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
+	////// Overlay Controls //////////////////////////////////////////////////////
+
+		{
+			"class": "overlay_control",
+			"content_margin": [15, 16, 15, 31],
+			"layer0.inner_margin": [24, 19, 24, 34],
+			"layer0.texture": "Theme - DAneo/textures/overlay/overlay_shadow--mt10.png",
+			"layer1.inner_margin": [20, 15, 20, 30],
+			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png"
+		},
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "overlay_control"}
+			],
+			"content_margin": [52, 9, 13, 13],
+			"color_scheme_tint": "var(overlay_input_tint-dark)",
+			"layer0.draw_center": false,
+			"layer0.inner_margin": [52, 48, 0, 0],
+			"layer0.texture": "Theme - DAneo/textures/inputs/input_search.png",
+			"layer0.tint": "var(accent)",
+			"layer0.opacity": 1.0,
+			"layer1.texture": "",
+			"layer1.opacity": 0.0
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "overlay_control"}
+			],
+			"color_scheme_tint": "var(overlay_input_tint-light)"
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "overlay_control"}
+			],
+			"platforms": ["osx"],
+			"content_margin": [52, 11, 14, 14]
+		},
+
 	////// Panel Control /////////////////////////////////////////////////////////
 
 		{
@@ -463,6 +430,39 @@
 			"class": "status_bar",
 			"attributes": ["panel_visible"],
 			"layer1.opacity": 0.0
+		},
+
+	////// Switch Project Window /////////////////////////////////////////////////
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"color_scheme_tint": "var(overlay_input_tint-dark)",
+			"content_margin": [52, 9, 13, 13],
+			"layer0.draw_center": false,
+			"layer0.inner_margin": [52, 48, 0, 0],
+			"layer0.texture": "Theme - DAneo/textures/inputs/input_search.png",
+			"layer0.tint": "var(accent)",
+			"layer0.opacity": 1.0,
+			"layer1.texture": "",
+			"layer1.opacity": 0.0
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "switch_project_window", "attributes": ["file_light"]}
+			],
+			"color_scheme_tint": "var(overlay_input_tint-light)"
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"platforms": ["osx"],
+			"content_margin": [52, 11, 14, 14]
 		}
 	]
 }
