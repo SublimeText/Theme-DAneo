@@ -11,14 +11,6 @@
 				"target": 0.45, "speed": 1.12, "interpolation": "smoothstep"
 			},
 
-	////// Overlay Controls //////////////////////////////////////////////////////
-
-		"overlay_bg-dark": "var(active_tab_bg-dark)",
-		"overlay_bg-light": "var(active_tab_bg-light)",
-
-		"quick_panel_bg-dark": "var(bg)",
-		"quick_panel_bg-light": "var(bg)",
-
 	////// Side Bar //////////////////////////////////////////////////////////////
 
 		"sidebar_bg-normal-dark": "color(white blend(var(bg) 3%))",
@@ -26,6 +18,13 @@
 
 		"sidebar_bc-dark": "var(grid_border-dark)",
 		"sidebar_bc-light": "var(grid_border-light)",
+
+	////// Grid Layout ///////////////////////////////////////////////////////////
+
+		"grid_border_size": 1,
+
+		"grid_border-dark": "color(white blend(var(bg) 10%))",
+		"grid_border-light": "color(black blend(var(bg) 15%))",
 
 	////// Tabs //////////////////////////////////////////////////////////////////
 
@@ -50,12 +49,13 @@
 
 		"inactive_tab_close_opacity-clean": "var(button_icon_opacity-normal)",
 
-	////// Grid Layout ///////////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
-		"grid_border_size": 1,
+		"overlay_bg-dark": "var(active_tab_bg-dark)",
+		"overlay_bg-light": "var(active_tab_bg-light)",
 
-		"grid_border-dark": "color(white blend(var(bg) 10%))",
-		"grid_border-light": "color(black blend(var(bg) 15%))",
+		"quick_panel_bg-dark": "var(bg)",
+		"quick_panel_bg-light": "var(bg)",
 
 	////// Panel Controls ////////////////////////////////////////////////////////
 
@@ -123,54 +123,6 @@
 				{"class": "window", "attributes": ["file_light"]}
 			],
 			"layer3.tint": "rgba(0, 0, 0, 0.08)"
-		},
-
-	////// Overlay Controls //////////////////////////////////////////////////////
-
-		{
-			"class": "overlay_control",
-			"content_margin": [19, 3, 19, 29],
-			"layer0.opacity": 0.5,
-			"layer1.inner_margin": [20, 5, 20, 30],
-			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt0--bw0--br4--dtr.png"
-		},
-		{
-			"class": "overlay_control",
-			"parents": [{"class": "window", "attributes": ["file_light"]}],
-			"layer0.opacity": 0.1
-		},
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "overlay_control"}
-			],
-			"layer1.texture": "",
-			"layer1.opacity": 0.0
-		},
-
-		{
-			"class": "quick_panel",
-			"row_padding": [12, 7],
-			"layer0.opacity": 1.0
-		},
-
-	////// Switch Project Window /////////////////////////////////////////////////
-
-		{
-			"class": "panel_control",
-			"parents": [
-				{"class": "switch_project_window"}
-			],
-			"content_margin": 6,
-			"layer0.tint": "var(quick_panel_bg-dark)"
-		},
-		{
-			"class": "panel_control",
-			"parents": [
-				{"class": "switch_project_window", "attributes": ["file_light"]}
-			],
-			"layer0.tint": "var(quick_panel_bg-light)"
 		},
 
 	////// Side Bar //////////////////////////////////////////////////////////////
@@ -379,6 +331,36 @@
 			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
+	////// Overlay Controls //////////////////////////////////////////////////////
+
+		{
+			"class": "overlay_control",
+			"content_margin": [19, 3, 19, 29],
+			"layer0.opacity": 0.5,
+			"layer1.inner_margin": [20, 5, 20, 30],
+			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt0--bw0--br4--dtr.png"
+		},
+		{
+			"class": "overlay_control",
+			"parents": [{"class": "window", "attributes": ["file_light"]}],
+			"layer0.opacity": 0.1
+		},
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "overlay_control"}
+			],
+			"layer1.texture": "",
+			"layer1.opacity": 0.0
+		},
+
+		{
+			"class": "quick_panel",
+			"row_padding": [12, 7],
+			"layer0.opacity": 1.0
+		},
+
 	////// Panel Control /////////////////////////////////////////////////////////
 
 		{
@@ -548,6 +530,24 @@
 				{"class": "window", "attributes": ["file_light"]}
 			],
 			"layer0.tint": "rgba(0, 0, 0, 0.075)"
+		},
+
+	////// Switch Project Window /////////////////////////////////////////////////
+
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"content_margin": 6,
+			"layer0.tint": "var(quick_panel_bg-dark)"
+		},
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "switch_project_window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "var(quick_panel_bg-light)"
 		}
 	]
 }

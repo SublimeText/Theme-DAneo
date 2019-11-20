@@ -28,10 +28,9 @@
 				"target": 0.90, "speed": 0.67, "interpolation": "smoothstep"
 			},
 
-	////// Overlay Controls //////////////////////////////////////////////////////
+	////// Grid Layout ///////////////////////////////////////////////////////////
 
-		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
-		"overlay_bg-light": "color(black blend(var(bg) 5%))",
+		"grid_border_size": 1,
 
 	////// Tabs //////////////////////////////////////////////////////////////////
 
@@ -69,9 +68,10 @@
 				"target": 0.75, "speed": 0.67, "interpolation": "smoothstep"
 			},
 
-	////// Grid Layout ///////////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
-		"grid_border_size": 1,
+		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
+		"overlay_bg-light": "color(black blend(var(bg) 5%))",
 
 	////// Dialogs ///////////////////////////////////////////////////////////////
 
@@ -90,65 +90,6 @@
 			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
 			"layer0.tint": "var(bg)",
 			"layer0.opacity": 1.0
-		},
-
-	////// Status Bar ////////////////////////////////////////////////////////////
-
-		{
-			"class": "status_bar",
-			"content_margin": [12, 7, 4, 7]
-		},
-
-	////// Panel Control /////////////////////////////////////////////////////////
-
-		{
-			"class": "panel_control find_panel",
-			"content_margin": [12, 12, 6, 12]
-		},
-		{
-			"class": "panel_control replace_panel",
-			"content_margin": [12, 12, 6, 12]
-		},
-		{
-			"class": "panel_control find_in_files_panel",
-			"content_margin": 12
-		},
-		{
-			"class": "panel_control input_panel",
-			"content_margin": 12
-		},
-		{
-			"class": "panel_control output_panel",
-			"content_margin": 10
-		},
-		{
-			"class": "panel_control console_panel",
-			"content_margin": 10
-		},
-
-	////// Overlay Controls //////////////////////////////////////////////////////
-
-		{
-			"class": "overlay_control",
-			"content_margin": [23, 18, 23, 33],
-			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png"
-		},
-
-		// Quick Panels
-
-		{
-			"class": "quick_panel",
-			"row_padding": [10, 9]
-		},
-
-	////// Switch Project Window /////////////////////////////////////////////////
-
-		{
-			"class": "panel_control",
-			"parents": [
-				{"class": "switch_project_window"}
-			],
-			"content_margin": 6
 		},
 
 	////// Tabs //////////////////////////////////////////////////////////////////
@@ -205,7 +146,49 @@
 			"layer3.texture": "Theme - DAneo/textures/tabs/tab--classic--overlined--mb0--bw1.png"
 		},
 
+	////// Overlay Controls //////////////////////////////////////////////////////
+
+		{
+			"class": "overlay_control",
+			"content_margin": [23, 18, 23, 33],
+			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png"
+		},
+
+		// Quick Panels
+
+		{
+			"class": "quick_panel",
+			"row_padding": [10, 9]
+		},
+
 	////// Panel Control /////////////////////////////////////////////////////////
+
+		// Panal Specific Margins
+
+		{
+			"class": "panel_control find_panel",
+			"content_margin": [12, 12, 6, 12]
+		},
+		{
+			"class": "panel_control replace_panel",
+			"content_margin": [12, 12, 6, 12]
+		},
+		{
+			"class": "panel_control find_in_files_panel",
+			"content_margin": 12
+		},
+		{
+			"class": "panel_control input_panel",
+			"content_margin": 12
+		},
+		{
+			"class": "panel_control output_panel",
+			"content_margin": 10
+		},
+		{
+			"class": "panel_control console_panel",
+			"content_margin": 10
+		},
 
 		// Icon Button Group
 
@@ -280,6 +263,23 @@
 			"layer2.opacity": {
 				"target": 1.0, "speed": 4.5, "interpolation": "smoothstep"
 			}
+		},
+
+	////// Status Bar ////////////////////////////////////////////////////////////
+
+		{
+			"class": "status_bar",
+			"content_margin": [12, 7, 4, 7]
+		},
+
+	////// Switch Project Window /////////////////////////////////////////////////
+
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"content_margin": 6
 		}
 	]
 }

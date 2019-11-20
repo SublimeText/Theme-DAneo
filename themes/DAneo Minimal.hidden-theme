@@ -2,6 +2,11 @@
 	"extends": "DAneo Base.hidden-theme",
 	"variables": {
 
+	////// Tabs //////////////////////////////////////////////////////////////////
+
+		"tabset_bg-dark": "var(sidebar_bg-normal-dark)",
+		"tabset_bg-light": "var(sidebar_bg-normal-light)",
+
 	////// Overlay Controls //////////////////////////////////////////////////////
 
 		"overlay_bg-dark": "color(black blend(var(bg) 15%))",
@@ -9,11 +14,6 @@
 
 		"overlay_input_tint-dark": "color(black alpha(15%))",
 		"overlay_input_tint-light": "color(black alpha(7.5%))",
-
-	////// Tabs //////////////////////////////////////////////////////////////////
-
-		"tabset_bg-dark": "var(sidebar_bg-normal-dark)",
-		"tabset_bg-light": "var(sidebar_bg-normal-light)",
 
 	////// Panel Control /////////////////////////////////////////////////////////
 
@@ -104,41 +104,6 @@
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--square.png"
 		},
 
-	////// Overlay Controls //////////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "overlay_control"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-dark)"
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "overlay_control"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
-		},
-
-	////// Switch Project Window /////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-dark)"
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
-		},
-
 	////// Side Bar //////////////////////////////////////////////////////////////
 
 		{
@@ -193,6 +158,41 @@
 				{"class": "window", "attributes": ["file_light"]}
 			],
 			"layer1.tint": "var(tabset_bg-light)"
+		},
+
+	////// Overlay Controls //////////////////////////////////////////////////////
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "overlay_control"}
+			],
+			"color_scheme_tint": "var(overlay_input_tint-dark)"
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "overlay_control"}
+			],
+			"color_scheme_tint": "var(overlay_input_tint-light)"
+		},
+
+	////// Switch Project Window /////////////////////////////////////////////////
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"color_scheme_tint": "var(overlay_input_tint-dark)"
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "switch_project_window", "attributes": ["file_light"]}
+			],
+			"color_scheme_tint": "var(overlay_input_tint-light)"
 		}
 	]
 }
