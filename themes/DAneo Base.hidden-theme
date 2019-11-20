@@ -41,6 +41,12 @@
 		"label_fg-selected-hover-dark":  "rgba(255, 255, 255, 0.95)",
 		"label_fg-selected-hover-light": "rgba(000, 000, 000, 0.95)",
 
+	////// Kind Controls /////////////////////////////////////////////////////////
+
+		"kind_font_face": "monospace",
+		"kind_font_size": "1.1rem",
+
+
 	////// Tooltips //////////////////////////////////////////////////////////////
 
 		"tooltip_font_face": "var(font_face)",
@@ -844,6 +850,147 @@
 			"match_fg": "var(quick_panel_path_fg-hover-match-light)",
 			"selected_fg": "var(quick_panel_path_fg-selected-hover-light)",
 			"selected_match_fg": "var(quick_panel_path_fg-selected-hover-match-light)"
+		},
+
+	////// Kind Containers ///////////////////////////////////////////////////////
+
+		// Kind Container (All)
+
+		{
+			"class": "kind_container",
+			"layer0.tint": "white",
+			"layer0.opacity": 0.0,
+			"layer1.tint": "white",
+			"layer1.opacity": 0.0,
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 0, 1, 0],
+		},
+		{
+			"class": "kind_label",
+			"font.face": "var(kind_font_face)",
+			"font.size": "var(kind_font_size)",
+			"font.bold": false,
+			"font.italic": true,
+		},
+
+		// Kind Container (Function)
+
+		{
+			"class": "kind_container kind_function",
+			"layer0.tint": "var(--redish)",
+			"layer1.tint": "var(--redish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_function"}
+			],
+			"color": "var(--redish)"
+		},
+
+		// Kind Container (Keyword)
+
+		{
+			"class": "kind_container kind_keyword",
+			"layer0.tint": "var(--pinkish)",
+			"layer1.tint": "var(--pinkish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_keyword"}
+			],
+			"color": "var(--pinkish)"
+		},
+
+		// Kind Container (Markup)
+
+		{
+			"class": "kind_container kind_markup",
+			"layer0.tint": "var(--orangish)",
+			"layer1.tint": "var(--orangish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_markup"}
+			],
+			"color": "var(--orangish)"
+		},
+
+		// Kind Container (Namespace)
+
+		{
+			"class": "kind_container kind_namespace",
+			"layer0.tint": "var(--bluish)",
+			"layer1.tint": "var(--bluish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_namespace"}
+			],
+			"color": "var(--bluish)"
+		},
+
+		// Kind Container (Navigation)
+
+		{
+			"class": "kind_container kind_navigation",
+			"layer0.tint": "var(--yellowish)",
+			"layer1.tint": "var(--yellowish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_navigation"}
+			],
+			"color": "var(--yellowish)"
+		},
+
+		// Kind Container (Snippet)
+
+		{
+			"class": "kind_container kind_snippet",
+			"layer0.tint": "var(--greenish)",
+			"layer1.tint": "var(--greenish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_snippet"}
+			],
+			"color": "var(--greenish)"
+		},
+
+		// Kind Container (Type)
+
+		{
+			"class": "kind_container kind_type",
+			"layer0.tint": "var(--purplish)",
+			"layer1.tint": "var(--purplish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_type"}
+			],
+			"color": "var(--purplish)"
+		},
+
+		// Kind Container (Variable)
+
+		{
+			"class": "kind_container kind_variable",
+			"layer0.tint": "var(--cyanish)",
+			"layer1.tint": "var(--cyanish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_variable"}
+			],
+			"color": "var(--cyanish)"
 		},
 
 	////// Button Controls ///////////////////////////////////////////////////////
@@ -3542,7 +3689,7 @@
 			}
 		},
 
-	////// Overlay Controls //////////////////////////////////////////////////////
+	////// Common Overlay Control ////////////////////////////////////////////////
 
 		{
 			"class": "overlay_control",
@@ -3574,12 +3721,75 @@
 			"content_margin": [16, 8]
 		},
 
+    ////// Goto Symbol Overlay Control ///////////////////////////////////////////
+
+        {
+            "class": "quick_panel",
+            "parents": [
+                {"class": "overlay_control goto_symbol"}
+            ],
+            "row_padding": [0, 0, 0, 0],
+        },
+
+        {
+            "class": "quick_panel",
+            "parents": [
+                {"class": "overlay_control goto_symbol_in_project"}
+            ],
+            "row_padding": [0, 0, 0, 0],
+        },
+
+		// Quick Panel Kind Container
+
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "quick_panel"},
+			],
+			"content_margin": [6, 0, 6, 0],
+		},
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "mini_quick_panel_row", "attributes": ["selected"]}
+			],
+			"layer0.opacity": 0.08,
+			"layer1.opacity": 0.20,
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "quick_panel"},
+			],
+			"font.size": "var(quick_panel_text_font_size)",
+		},
+
+		// Quick Panel Symbol Container
+
+		{
+			"class": "symbol_container",
+			"parents": [
+				{"class": "quick_panel"},
+			],
+			"content_margin": [3, 7, 6, 7]
+		},
+
+		// Quick Panel Trigger Container
+
+		{
+			"class": "trigger_container",
+			"parents": [
+				{"class": "quick_panel"},
+			],
+			"content_margin": [3, 7, 2, 7]
+		},
+
 	////// Auto Complete /////////////////////////////////////////////////////////
 
 		{
 			"class": "auto_complete",
 			"dark_content": true,
-			"row_padding": [9, 6],
+			"row_padding": 0,
 			"layer0.tint":  "var(overlay_bg-dark)",
 			"layer0.opacity": 1.0
 		},
@@ -3594,7 +3804,6 @@
 
 		{
 			"class": "table_row",
-			"attributes": ["!selected", "!hover"],
 			"layer0.opacity": "var(item_bg-opacity-normal)"
 		},
 
@@ -3695,6 +3904,80 @@
 			"match_fg": "var(auto_complete_fg-hover-match-light)",
 			"selected_fg": "var(auto_complete_fg-selected-hover-light)",
 			"selected_match_fg": "var(auto_complete_fg-selected-hover-match-light)"
+		},
+
+		// Autocomplete Kind Container
+
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "auto_complete"},
+			],
+			// Extra margin on the left makes the
+			// italic kind_label look visually centered
+			"content_margin": [7, 0, 6, 0],
+		},
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "auto_complete", "attributes": ["file_light"]},
+			],
+			"layer1.tint": "black",
+		},
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "auto_complete"},
+				{"class": "table_row", "attributes": ["selected"]}
+			],
+			"layer0.opacity": 0.1,
+			"layer1.opacity": 0.2,
+		},
+
+		{
+			"class": "symbol_container",
+			"parents": [
+				{"class": "auto_complete"}
+			],
+			"content_margin": [6, 7, 6, 7]
+		},
+
+		{
+			"class": "trigger_container",
+			"parents": [
+				{"class": "auto_complete"}
+			],
+			"content_margin": [6, 7, 2, 7]
+		},
+
+		// Autocomplete Details
+
+		{
+			"class": "auto_complete_details",
+			"tint_index": 0,
+			"layer0.opacity": 1.0,
+			"tint_modifier": [0, 0, 0, 0.1],
+			"content_margin": [8, 5, 8, 5]
+		},
+		{
+			"class": "auto_complete_details",
+			"attributes": ["file_dark"],
+			"tint_modifier": [255, 255, 255, 0.1],
+		},
+		{
+			"class": "auto_complete_info",
+			"spacing": 8,
+		},
+		{
+			"class": "auto_complete_kind_name_label",
+			"font.size": "0.9rem",
+			"font.italic": true,
+			"border_color": "color(var(--accent) a(0.8))"
+		},
+		{
+			"class": "auto_complete_description_label",
+			"font.size": "0.9rem",
+			"font.italic": true
 		},
 
 	////// Popup Control /////////////////////////////////////////////////////////
