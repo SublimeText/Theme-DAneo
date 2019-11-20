@@ -2,19 +2,19 @@
 	"extends": "DAneo Base.hidden-theme",
 	"variables": {
 
-		// MacOS Title Bar ///////////////////////////////////////////////////////
+	////// MacOS Title Bar ///////////////////////////////////////////////////////
 
 		"title_bg-dark": "color(black blend(var(bg) 5%))",
 		"title_bg-light": "color(black blend(var(bg) 5%))",
 
-		// Label Controls ////////////////////////////////////////////////////////
+	////// Label Controls ////////////////////////////////////////////////////////
 
 		"label_fg-normal-dark":  "rgba(255, 255, 255, 0.55)",
 		"label_fg-normal-light": "rgba(000, 000, 000, 0.55)",
 		"label_fg-hover-dark":   "rgba(255, 255, 255, 0.85)",
 		"label_fg-hover-light":  "rgba(000, 000, 000, 0.85)",
 
-		// Button Controls ///////////////////////////////////////////////////////
+	////// Button Controls ///////////////////////////////////////////////////////
 
 		"button_icon_tint-selected-dark": "var(accent)",
 		"button_icon_tint-selected-light": "var(accent)",
@@ -29,7 +29,7 @@
 				"target": 1.00, "speed": 0.67, "interpolation": "smoothstep"
 			},
 
-		// Overlay Controls //////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
 		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
 		"overlay_bg-light": "color(black blend(var(bg) 5%))",
@@ -37,7 +37,7 @@
 		"overlay_input_tint-dark": "color(white alpha(5%))",
 		"overlay_input_tint-light": "color(black alpha(5%))",
 
-		// Tabs //////////////////////////////////////////////////////////////////
+	////// Tabs //////////////////////////////////////////////////////////////////
 
 		"tabset_bg-dark": "var(sidebar_bg-normal-dark)",
 		"tabset_bg-light": "var(sidebar_bg-normal-light)",
@@ -51,7 +51,7 @@
 		// hovered close button on inactive tab
 		"inactive_tab_close_opacity-hover": "var(button_icon_opacity-hover)",
 
-		// Panel Controls ////////////////////////////////////////////////////////
+	////// Panel Controls ////////////////////////////////////////////////////////
 
 		"panel_bg-dark": "color(white blend(var(bg) 7.5%))",
 		"panel_bg-light": "color(black blend(var(bg) 7.5%))",
@@ -68,12 +68,12 @@
 		"panel_output_tint-dark": "color(white alpha(7.5%))",
 		"panel_output_tint-light": "color(black alpha(7.5%))",
 
-		// Status Bar ////////////////////////////////////////////////////////////
+	////// Status Bar ////////////////////////////////////////////////////////////
 
 		"statusbar_bg-dark": "color(white blend(var(bg) 7.5%))",
 		"statusbar_bg-light": "color(black blend(var(bg) 7.5%))",
 
-		// Dialogs ///////////////////////////////////////////////////////////////
+	////// Dialogs ///////////////////////////////////////////////////////////////
 
 		"dialog_bg-dark":  "color(white blend(var(bg) 7.5%))",
 		"dialog_bg-light": "color(black blend(var(bg) 7.5%))"
@@ -81,7 +81,7 @@
 	},
 	"rules": [
 
-		// Text Line Control /////////////////////////////////////////////////////
+	////// Text Line Control /////////////////////////////////////////////////////
 
 		{
 			"class": "text_line_control",
@@ -121,7 +121,7 @@
 			"color_scheme_tint": "var(panel_output_tint-light)"
 		},
 
-		// Overlay Controls //////////////////////////////////////////////////////
+	////// Overlay Controls //////////////////////////////////////////////////////
 
 		{
 			"class": "overlay_control",
@@ -161,7 +161,7 @@
 			"content_margin": [52, 11, 14, 14]
 		},
 
-		// Switch Project Window /////////////////////////////////////////////////
+	////// Switch Project Window /////////////////////////////////////////////////
 
 		{
 			"class": "text_line_control",
@@ -194,7 +194,7 @@
 			"content_margin": [52, 11, 14, 14]
 		},
 
-		// Side Bar //////////////////////////////////////////////////////////////
+	////// Side Bar //////////////////////////////////////////////////////////////
 
 		{
 				"class": "tree_row",
@@ -242,7 +242,7 @@
 			"fg": "var(sidebar_fg-selected-hover-light)"
 		},
 
-		// Tabs //////////////////////////////////////////////////////////////////
+	////// Tabs //////////////////////////////////////////////////////////////////
 
 		// Tabset Control
 
@@ -285,7 +285,7 @@
 			"layer3.opacity": 1.0
 		},
 
-		// Panel Control /////////////////////////////////////////////////////////
+	////// Panel Control /////////////////////////////////////////////////////////
 
 		// Panal Specific Margins
 
