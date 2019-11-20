@@ -28,15 +28,15 @@
 	// by the color of their labels in the sidebar.
 	"show_sidebar_untracked_label_colors": true,
 
+    // Controls whether to show the `show sidebar button`
+    // in the left corner of the status bar
+    "show_sidebar_button": true,
+
 	// Controls whether to show the tab scroll buttons
 	"show_scroll_tabs_buttons": true,
 
 	// Controls whether to show the tabs dropdown button
 	"show_tabs_dropdown_button": true,
-
-	// Controls whether to show the `show panel button`
-	// in the left corner of the status bar
-	"show_panel_button": true,
 
 	// Controls whether to show the close button of the find and replace panels
 	"show_panel_close_button": false
