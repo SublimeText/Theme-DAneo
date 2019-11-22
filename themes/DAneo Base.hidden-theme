@@ -46,6 +46,25 @@
 		"kind_font_face": "monospace",
 		"kind_font_size": "1.1rem",
 
+		"kind_bg_ambigious": "color(var(kind_fg_ambigious) a(0.15))",
+		"kind_bg_function": "color(var(kind_fg_function) a(0.15))",
+		"kind_bg_keyword": "color(var(kind_fg_keyword) a(0.15))",
+		"kind_bg_markup": "color(var(kind_fg_markup) a(0.15))",
+		"kind_bg_namespace": "color(var(kind_fg_namespace) a(0.15))",
+		"kind_bg_navigation": "color(var(kind_fg_navigation) a(0.15))",
+		"kind_bg_snippet": "color(var(kind_fg_snippet) a(0.15))",
+		"kind_bg_type": "color(var(kind_fg_type) a(0.15))",
+		"kind_bg_variable": "color(var(kind_fg_variable) a(0.15))",
+
+		"kind_fg_ambigious": "var(--foreground)",
+		"kind_fg_function": "var(--redish)",
+		"kind_fg_keyword": "var(--pinkish)",
+		"kind_fg_markup": "var(--orangish)",
+		"kind_fg_namespace": "var(--bluish)",
+		"kind_fg_navigation": "var(--yellowish)",
+		"kind_fg_snippet": "var(--greenish)",
+		"kind_fg_type": "var(--purplish)",
+		"kind_fg_variable": "var(--cyanish)",
 
 	////// Tooltips //////////////////////////////////////////////////////////////
 
@@ -858,15 +877,17 @@
 
 		{
 			"class": "kind_container",
-			"layer0.tint": "white",
-			"layer0.opacity": 0.0,
-			"layer1.tint": "white",
-			"layer1.opacity": 0.0,
+			"content_margin": [7, 0, 6, 0],
+			"layer0.tint": "var(kind_bg_ambigious)",
+			"layer0.opacity": "var(item_bg-opacity-normal)",
+			"layer1.tint": "var(kind_bg_ambigious)",
+			"layer1.opacity": "var(item_bg-opacity-normal)",
 			"layer1.draw_center": false,
 			"layer1.inner_margin": [0, 0, 1, 0],
 		},
 		{
 			"class": "kind_label",
+			"color": "var(kind_fg_ambigious)",
 			"font.face": "var(kind_font_face)",
 			"font.size": "var(kind_font_size)",
 			"font.bold": false,
@@ -877,120 +898,120 @@
 
 		{
 			"class": "kind_container kind_function",
-			"layer0.tint": "var(--redish)",
-			"layer1.tint": "var(--redish)",
+			"layer0.tint": "var(kind_bg_function)",
+			"layer1.tint": "var(kind_bg_function)",
 		},
 		{
 			"class": "kind_label",
 			"parents": [
 				{"class": "kind_container kind_function"}
 			],
-			"color": "var(--redish)"
+			"color": "var(kind_fg_function)"
 		},
 
 		// Kind Container (Keyword)
 
 		{
 			"class": "kind_container kind_keyword",
-			"layer0.tint": "var(--pinkish)",
-			"layer1.tint": "var(--pinkish)",
+			"layer0.tint": "var(kind_bg_keyword)",
+			"layer1.tint": "var(kind_bg_keyword)",
 		},
 		{
 			"class": "kind_label",
 			"parents": [
 				{"class": "kind_container kind_keyword"}
 			],
-			"color": "var(--pinkish)"
+			"color": "var(kind_fg_keyword)"
 		},
 
 		// Kind Container (Markup)
 
 		{
 			"class": "kind_container kind_markup",
-			"layer0.tint": "var(--orangish)",
-			"layer1.tint": "var(--orangish)",
+			"layer0.tint": "var(kind_bg_markup)",
+			"layer1.tint": "var(kind_bg_markup)",
 		},
 		{
 			"class": "kind_label",
 			"parents": [
 				{"class": "kind_container kind_markup"}
 			],
-			"color": "var(--orangish)"
+			"color": "var(kind_fg_markup)"
 		},
 
 		// Kind Container (Namespace)
 
 		{
 			"class": "kind_container kind_namespace",
-			"layer0.tint": "var(--bluish)",
-			"layer1.tint": "var(--bluish)",
+			"layer0.tint": "var(kind_bg_namespace)",
+			"layer1.tint": "var(kind_bg_namespace)",
 		},
 		{
 			"class": "kind_label",
 			"parents": [
 				{"class": "kind_container kind_namespace"}
 			],
-			"color": "var(--bluish)"
+			"color": "var(kind_fg_namespace)"
 		},
 
 		// Kind Container (Navigation)
 
 		{
 			"class": "kind_container kind_navigation",
-			"layer0.tint": "var(--yellowish)",
-			"layer1.tint": "var(--yellowish)",
+			"layer0.tint": "var(kind_bg_navigation)",
+			"layer1.tint": "var(kind_bg_navigation)",
 		},
 		{
 			"class": "kind_label",
 			"parents": [
 				{"class": "kind_container kind_navigation"}
 			],
-			"color": "var(--yellowish)"
+			"color": "var(kind_fg_navigation)"
 		},
 
 		// Kind Container (Snippet)
 
 		{
 			"class": "kind_container kind_snippet",
-			"layer0.tint": "var(--greenish)",
-			"layer1.tint": "var(--greenish)",
+			"layer0.tint": "var(kind_bg_snippet)",
+			"layer1.tint": "var(kind_bg_snippet)",
 		},
 		{
 			"class": "kind_label",
 			"parents": [
 				{"class": "kind_container kind_snippet"}
 			],
-			"color": "var(--greenish)"
+			"color": "var(kind_fg_snippet)"
 		},
 
 		// Kind Container (Type)
 
 		{
 			"class": "kind_container kind_type",
-			"layer0.tint": "var(--purplish)",
-			"layer1.tint": "var(--purplish)",
+			"layer0.tint": "var(kind_fg_type)",
+			"layer1.tint": "var(kind_fg_type)",
 		},
 		{
 			"class": "kind_label",
 			"parents": [
 				{"class": "kind_container kind_type"}
 			],
-			"color": "var(--purplish)"
+			"color": "var(kind_fg_snippet)"
 		},
 
 		// Kind Container (Variable)
 
 		{
 			"class": "kind_container kind_variable",
-			"layer0.tint": "var(--cyanish)",
-			"layer1.tint": "var(--cyanish)",
+			"layer0.tint": "var(kind_bg_variable)",
+			"layer1.tint": "var(kind_bg_variable)",
 		},
 		{
 			"class": "kind_label",
 			"parents": [
 				{"class": "kind_container kind_variable"}
 			],
-			"color": "var(--cyanish)"
+			"color": "var(kind_fg_variable)"
 		},
 
 	////// Button Controls ///////////////////////////////////////////////////////
@@ -3744,18 +3765,30 @@
 		{
 			"class": "kind_container",
 			"parents": [
-				{"class": "quick_panel"},
+				{"class": "mini_quick_panel_row", "attributes": ["!selected", "hover"]}
 			],
-			"content_margin": [6, 0, 6, 0],
+			"layer0.opacity": "var(item_bg-opacity-hover)",
+			"layer1.opacity": "var(item_bg-opacity-hover)",
 		},
+
 		{
 			"class": "kind_container",
 			"parents": [
-				{"class": "mini_quick_panel_row", "attributes": ["selected"]}
+				{"class": "mini_quick_panel_row", "attributes": ["selected", "!hover"]}
 			],
-			"layer0.opacity": 0.08,
-			"layer1.opacity": 0.20,
+			"layer0.opacity": "var(item_bg-opacity-selected)",
+			"layer1.opacity": "var(item_bg-opacity-selected)",
 		},
+
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "mini_quick_panel_row", "attributes": ["selected", "hover"]}
+			],
+			"layer0.opacity": "var(item_bg-opacity-selected-hover)",
+			"layer1.opacity": "var(item_bg-opacity-selected-hover)",
+		},
+
 		{
 			"class": "kind_label",
 			"parents": [
@@ -3768,20 +3801,7 @@
 
 		{
 			"class": "symbol_container",
-			"parents": [
-				{"class": "quick_panel"},
-			],
 			"content_margin": [3, 7, 6, 7]
-		},
-
-		// Quick Panel Trigger Container
-
-		{
-			"class": "trigger_container",
-			"parents": [
-				{"class": "quick_panel"},
-			],
-			"content_margin": [3, 7, 2, 7]
 		},
 
 	////// Auto Complete /////////////////////////////////////////////////////////
@@ -3858,6 +3878,45 @@
 			"layer0.tint": "var(auto_complete_bg-selected-hover-light)"
 		},
 
+		// Autocomplete Kind Container
+
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "auto_complete"},
+				{"class": "table_row", "attributes": ["!selected", "hover"]}
+			],
+			"layer0.opacity": "var(item_bg-opacity-hover)",
+			"layer1.opacity": "var(item_bg-opacity-hover)",
+		},
+
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "auto_complete"},
+				{"class": "table_row", "attributes": ["selected", "!hover"]}
+			],
+			"layer0.opacity": "var(item_bg-opacity-selected)",
+			"layer1.opacity": "var(item_bg-opacity-selected)",
+		},
+
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "auto_complete"},
+				{"class": "table_row", "attributes": ["selected", "hover"]}
+			],
+			"layer0.opacity": "var(item_bg-opacity-selected-hover)",
+			"layer1.opacity": "var(item_bg-opacity-selected-hover)",
+		},
+
+		// Auto Complete Symbol Container
+
+		{
+			"class": "trigger_container",
+			"content_margin": [3, 4, 0, 3],
+		},
+
 		// Auto Complete Row (Normal) -> Label
 
 		{
@@ -3904,50 +3963,6 @@
 			"match_fg": "var(auto_complete_fg-hover-match-light)",
 			"selected_fg": "var(auto_complete_fg-selected-hover-light)",
 			"selected_match_fg": "var(auto_complete_fg-selected-hover-match-light)"
-		},
-
-		// Autocomplete Kind Container
-
-		{
-			"class": "kind_container",
-			"parents": [
-				{"class": "auto_complete"},
-			],
-			// Extra margin on the left makes the
-			// italic kind_label look visually centered
-			"content_margin": [7, 0, 6, 0],
-		},
-		{
-			"class": "kind_container",
-			"parents": [
-				{"class": "auto_complete", "attributes": ["file_light"]},
-			],
-			"layer1.tint": "black",
-		},
-		{
-			"class": "kind_container",
-			"parents": [
-				{"class": "auto_complete"},
-				{"class": "table_row", "attributes": ["selected"]}
-			],
-			"layer0.opacity": 0.1,
-			"layer1.opacity": 0.2,
-		},
-
-		{
-			"class": "symbol_container",
-			"parents": [
-				{"class": "auto_complete"}
-			],
-			"content_margin": [6, 7, 6, 7]
-		},
-
-		{
-			"class": "trigger_container",
-			"parents": [
-				{"class": "auto_complete"}
-			],
-			"content_margin": [6, 7, 2, 7]
 		},
 
 		// Autocomplete Details
