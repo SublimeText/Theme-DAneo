@@ -2,6 +2,10 @@
 	// Controls whether to show the disclosure buttons in the sidebar
 	"show_disclosure_buttons": true,
 
+	// Controls whether to align the disclosure buttons with the file icons.
+	// This setting has only effect if `show_disclosure_buttons` is true.
+	"align_disclosure_buttons": false,
+
 	// Controls whether to show folder and file icons in the sidebar
 	"show_sidebar_icons": true,
 
