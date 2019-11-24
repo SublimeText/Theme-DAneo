@@ -4811,7 +4811,7 @@
 		{
 			"class": "sidebar_button_control",
 			"settings": ["show_sidebar_button"],
-			"layer0.texture": "Theme - Default/common/sidebar_button.png",
+			"layer0.texture": "Theme - DAneo/icons/sidebar_button.png",
 			"content_margin": [10, 11],
 			"layer0.tint": "var(button_icon_tint-normal-dark)",
 			"layer0.opacity": "var(button_icon_opacity-normal)"
