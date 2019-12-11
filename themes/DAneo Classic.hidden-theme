@@ -158,7 +158,12 @@
 
 		{
 			"class": "quick_panel",
-			"row_padding": [10, 9]
+			"row_padding": [10, 9, 10, 9]
+		},
+		{
+			"class": "quick_panel",
+			"platforms": ["windows"],
+			"row_padding": [10, 9, 10, 8]
 		},
 
 	////// Goto Symbol Overlay Control ///////////////////////////////////////////
