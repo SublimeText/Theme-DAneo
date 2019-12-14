@@ -988,15 +988,15 @@
 
 		{
 			"class": "kind_container kind_type",
-			"layer0.tint": "var(kind_fg_type)",
-			"layer1.tint": "var(kind_fg_type)",
+			"layer0.tint": "var(kind_bg_type)",
+			"layer1.tint": "var(kind_bg_type)",
 		},
 		{
 			"class": "kind_label",
 			"parents": [
 				{"class": "kind_container kind_type"}
 			],
-			"color": "var(kind_fg_snippet)"
+			"color": "var(kind_fg_type)"
 		},
 
 		// Kind Container (Variable)
