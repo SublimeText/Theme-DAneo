@@ -497,6 +497,7 @@
 
 		{
 			"class": "status_bar",
+			"content_margin": [12, 6, 0, 5],
 			"layer1.draw_center": false,
 			"layer1.inner_margin": [0, 1, 0, 0],
 			"layer1.tint": "var(statusbar_bc-dark)",
@@ -510,26 +511,26 @@
 			"layer1.tint": "var(statusbar_bc-light)"
 		},
 
-		// Status Button
+	////// Status Button /////////////////////////////////////////////////////////
 
 		{
 			"class": "status_button",
 			"content_margin": [13, 0, 12, 0],
-			"min_size": [20, 0]
+			"min_size": [20, 22]
 		},
 		{
 			"class": "status_button",
 			"layer0.inner_margin": [1, 0, 0, 0],
 			"layer0.draw_center": false,
-			"layer0.tint": "rgba(255, 255, 255, 0.075)",
-			"layer0.opacity": 1.0
+			"layer0.tint": "white",
+			"layer0.opacity": 0.075
 		},
 		{
 			"class": "status_button",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]}
 			],
-			"layer0.tint": "rgba(0, 0, 0, 0.075)"
+			"layer0.tint": "black"
 		},
 
 	////// Switch Project Window /////////////////////////////////////////////////

@@ -269,7 +269,7 @@
 
 		{
 			"class": "status_bar",
-			"content_margin": [12, 7, 4, 7]
+			"content_margin": [12, 5, 4, 5]
 		},
 
 	////// Switch Project Window /////////////////////////////////////////////////
