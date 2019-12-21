@@ -20,6 +20,11 @@
 		"vcs_unmerged": "var(--redish)",
 		"vcs_untracked": "grey",
 
+	////// Kind Controls /////////////////////////////////////////////////////////
+
+		"kind_font_face": "monospace",
+		"kind_font_size": "1.1rem",
+
 	////// Button Controls ///////////////////////////////////////////////////////
 
 		"button_font_face": "var(font_face)",
