@@ -4784,7 +4784,7 @@
 
 		{
 			"class": "status_bar",
-			"content_margin": [12, 8, 4, 7],
+			"content_margin": [10, 6, 0, 5],
 			"layer0.tint": "var(statusbar_bg-dark)",
 			"layer0.opacity": 1.0
 		},
@@ -4798,12 +4798,12 @@
 		{
 			"class": "status_container",
 			"settings": ["!show_sidebar_button"],
-			"content_margin": 0
+			"content_margin": [0, 1, 0, 0]
 		},
 		{
 			"class": "status_container",
 			"settings": ["show_sidebar_button"],
-			"content_margin": [8, 0, 0, 0]
+			"content_margin": [8, 1, 0, 0]
 		},
 
 	////// Sidebar Button ////////////////////////////////////////////////////////
@@ -4878,8 +4878,8 @@
 
 		{
 			"class": "status_button",
-			"content_margin": [10, 0],
-			"min_size": [40, 0]
+			"content_margin": [10, 2, 10, 2],
+			"min_size": [40, 22]
 		},
 
 		// Status Button Label (Normal)

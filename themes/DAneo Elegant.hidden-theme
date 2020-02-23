@@ -73,6 +73,9 @@
 		"statusbar_bg-dark": "color(white blend(var(bg) 7.5%))",
 		"statusbar_bg-light": "color(black blend(var(bg) 7.5%))",
 
+		"statusbar_bc-dark": "color(black blend(var(tabset_bg-dark) 4%)",
+		"statusbar_bc-light": "color(black blend(var(tabset_bg-light) 4%)",
+
 	////// Dialogs ///////////////////////////////////////////////////////////////
 
 		"dialog_bg-dark":  "color(white blend(var(bg) 7.5%))",
@@ -254,6 +257,21 @@
 
 	////// Panel Control /////////////////////////////////////////////////////////
 
+		{
+			"class": "panel_control",
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 1, 0, 0],
+			"layer1.tint": "var(statusbar_bc-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(statusbar_bc-light)"
+		},
+
 		// Panal Specific Margins
 
 		{
@@ -324,6 +342,36 @@
 			"layer0.opacity": {
 				"target": 0.75, "speed": 4.5, "interpolation": "smoothstep"
 			}
+		},
+
+	////// Status Bar ////////////////////////////////////////////////////////////
+
+		{
+			"class": "status_bar",
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 1, 0, 0],
+			"layer1.tint": "var(statusbar_bc-dark)",
+			"layer1.opacity": 1.0
+		},
+		{
+			"class": "panel_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer1.tint": "var(statusbar_bc-light)"
+		},
+		{
+			"class": "status_bar",
+			"attributes": ["panel_visible"],
+			"layer1.opacity": 0.0
+		},
+
+	////// Status Button /////////////////////////////////////////////////////////
+
+		{
+			"class": "status_button",
+			"layer0.tint": "var(bg)",
+			"layer0.opacity": 1.0
 		},
 
 	////// Switch Project Window /////////////////////////////////////////////////
