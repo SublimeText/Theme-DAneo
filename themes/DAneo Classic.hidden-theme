@@ -173,7 +173,7 @@
 			"parents": [
 				{"class": "overlay_control goto_symbol"}
 			],
-			"row_padding": [0, 0, 0, 0],
+			"row_padding": [0, 0, 0, 0]
 		},
 
 		{
@@ -181,7 +181,7 @@
 			"parents": [
 				{"class": "overlay_control goto_symbol_in_project"}
 			],
-			"row_padding": [0, 0, 0, 0],
+			"row_padding": [0, 0, 0, 0]
 		},
 
 	////// Panel Control /////////////////////////////////////////////////////////
