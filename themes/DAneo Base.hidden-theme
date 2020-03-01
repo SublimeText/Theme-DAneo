@@ -270,10 +270,10 @@
 
 		// Folder Icon Colors
 
-		"sidebar_folder_icon_tint-collapsed-dark": "rgba(255, 255, 255, 0.6)",
-		"sidebar_folder_icon_tint-collapsed-light": "rgba(0, 0, 0, 0.6)",
-		"sidebar_folder_icon_tint-expanded-dark": "rgba(255, 255, 255, 0.6)",
-		"sidebar_folder_icon_tint-expanded-light": "rgba(0, 0, 0, 0.6)",
+        "sidebar_folder_icon_tint-collapsed-dark": "color(var(--yellowish) alpha(0.8))",
+        "sidebar_folder_icon_tint-collapsed-light": "var(--yellowish)",
+        "sidebar_folder_icon_tint-expanded-dark": "color(var(--yellowish) alpha(0.8))",
+        "sidebar_folder_icon_tint-expanded-light": "var(--yellowish)",
 		"sidebar_folder_icon_overlay-dark": "rgba(255, 255, 255, 0.3)",
 		"sidebar_folder_icon_overlay-light": "rgba(0, 0, 0, 0.3)",
 
