@@ -4112,10 +4112,20 @@
 			"class": "kind_container",
 			"parents": [
 				{"class": "auto_complete"},
+				{"class": "table_row", "attributes": ["!selected", "!hover"]}
+			],
+			"layer0.opacity": "var(auto_complete_bg-opacity-normal)",
+			"layer1.opacity": "var(auto_complete_bg-opacity-normal)"
+		},
+
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "auto_complete"},
 				{"class": "table_row", "attributes": ["!selected", "hover"]}
 			],
-			"layer0.opacity": "var(item_bg-opacity-hover)",
-			"layer1.opacity": "var(item_bg-opacity-hover)"
+			"layer0.opacity": "var(auto_complete_bg-opacity-hover)",
+			"layer1.opacity": "var(auto_complete_bg-opacity-hover)"
 		},
 
 		{
@@ -4124,8 +4134,8 @@
 				{"class": "auto_complete"},
 				{"class": "table_row", "attributes": ["selected", "!hover"]}
 			],
-			"layer0.opacity": "var(item_bg-opacity-selected)",
-			"layer1.opacity": "var(item_bg-opacity-selected)"
+			"layer0.opacity": "var(auto_complete_bg-opacity-selected)",
+			"layer1.opacity": "var(auto_complete_bg-opacity-selected)"
 		},
 
 		{
@@ -4134,8 +4144,8 @@
 				{"class": "auto_complete"},
 				{"class": "table_row", "attributes": ["selected", "hover"]}
 			],
-			"layer0.opacity": "var(item_bg-opacity-selected-hover)",
-			"layer1.opacity": "var(item_bg-opacity-selected-hover)"
+			"layer0.opacity": "var(auto_complete_bg-opacity-selected-hover)",
+			"layer1.opacity": "var(auto_complete_bg-opacity-selected-hover)"
 		},
 
 		// Auto Complete Symbol Container
