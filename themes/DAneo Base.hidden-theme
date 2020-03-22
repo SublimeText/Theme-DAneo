@@ -3918,8 +3918,8 @@
 
 		{
 			"class": "popup_control",
-			"content_margin": 0,
-			"layer0.tint": "white",
+			"content_margin": 1,
+			"layer0.tint": "color(black blend(var(bg) 15%))",
 			"layer0.opacity": 1.0
 		},
 
