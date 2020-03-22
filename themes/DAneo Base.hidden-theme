@@ -3788,14 +3788,15 @@
 			"class": "auto_complete",
 			"dark_content": true,
 			"row_padding": [9, 6],
-			"layer0.tint":  "var(auto_complete_bg-normal-dark)",
+			"tint_index": 0,
+			"tint_modifier": "color(white alpha(0.05))",
 			"layer0.opacity": 1.0
 		},
 		{
 			"class": "auto_complete",
 			"attributes": ["file_light"],
 			"dark_content": false,
-			"layer0.tint":  "var(auto_complete_bg-normal-light)"
+			"tint_modifier": "color(black alpha(0.05))",
 		},
 
 		// Auto Complete Row (Unselected, Normal)
