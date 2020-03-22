@@ -445,8 +445,8 @@
 
 		// Background Colors
 
-		"auto_complete_bg-dark": "var(overlay_bg-dark)",
-		"auto_complete_bg-light": "var(overlay_bg-light)",
+		"auto_complete_bg-normal-dark": "var(overlay_bg-dark)",
+		"auto_complete_bg-normal-light": "var(overlay_bg-light)",
 		"auto_complete_bg-hover-dark": "var(item_bg-hover-dark)",
 		"auto_complete_bg-hover-light": "var(item_bg-hover-light)",
 
@@ -454,6 +454,11 @@
 		"auto_complete_bg-selected-light": "var(item_bg-selected-light)",
 		"auto_complete_bg-selected-hover-dark": "var(item_bg-selected-hover-dark)",
 		"auto_complete_bg-selected-hover-light": "var(item_bg-selected-hover-light)",
+
+		"auto_complete_bg-opacity-normal": 0.0,
+		"auto_complete_bg-opacity-hover": "var(item_bg-opacity-hover)",
+		"auto_complete_bg-opacity-selected": 0.9,
+		"auto_complete_bg-opacity-selected-hover": "var(item_bg-opacity-selected-hover)",
 
 		// Text Colors
 
@@ -3783,14 +3788,14 @@
 			"class": "auto_complete",
 			"dark_content": true,
 			"row_padding": [9, 6],
-			"layer0.tint":  "var(overlay_bg-dark)",
+			"layer0.tint":  "var(auto_complete_bg-normal-dark)",
 			"layer0.opacity": 1.0
 		},
 		{
 			"class": "auto_complete",
 			"attributes": ["file_light"],
 			"dark_content": false,
-			"layer0.tint":  "var(overlay_bg-light)"
+			"layer0.tint":  "var(auto_complete_bg-normal-light)"
 		},
 
 		// Auto Complete Row (Unselected, Normal)
@@ -3798,7 +3803,16 @@
 		{
 			"class": "table_row",
 			"attributes": ["!selected", "!hover"],
-			"layer0.opacity": "var(item_bg-opacity-normal)"
+			"layer0.tint": "var(auto_complete_bg-normal-dark)",
+			"layer0.opacity": "var(auto_complete_bg-opacity-normal)"
+		},
+		{
+			"class": "table_row",
+			"parents": [
+				{"class": "auto_complete", "attributes": ["file_light"]}
+			],
+			"attributes": ["!selected", "!hover"],
+			"layer0.tint": "var(auto_complete_bg-normal-light)"
 		},
 
 		// Auto Complete Row (Unselected, Hover)
@@ -3807,7 +3821,7 @@
 			"class": "table_row",
 			"attributes": ["!selected", "hover"],
 			"layer0.tint": "var(auto_complete_bg-hover-dark)",
-			"layer0.opacity": "var(item_bg-opacity-hover)"
+			"layer0.opacity": "var(auto_complete_bg-opacity-hover)"
 		},
 		{
 			"class": "table_row",
@@ -3824,7 +3838,7 @@
 			"class": "table_row",
 			"attributes": ["selected", "!hover"],
 			"layer0.tint": "var(auto_complete_bg-selected-dark)",
-			"layer0.opacity": "var(item_bg-opacity-selected)"
+			"layer0.opacity": "var(auto_complete_bg-opacity-selected)"
 		},
 		{
 			"class": "table_row",
@@ -3841,7 +3855,7 @@
 			"class": "table_row",
 			"attributes": ["selected", "hover"],
 			"layer0.tint": "var(auto_complete_bg-selected-hover-dark)",
-			"layer0.opacity": "var(item_bg-opacity-selected-hover)"
+			"layer0.opacity": "var(auto_complete_bg-opacity-selected-hover)"
 		},
 		{
 			"class": "table_row",
