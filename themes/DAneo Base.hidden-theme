@@ -887,13 +887,9 @@
 
 		{
 			"class": "kind_container",
-			"content_margin": [7, 0, 6, 0],
+			"content_margin": [6, 0, 7, 0],
 			"layer0.tint": "var(kind_bg_ambigious)",
-			"layer0.opacity": "var(item_bg-opacity-normal)",
-			"layer1.tint": "var(kind_bg_ambigious)",
-			"layer1.opacity": "var(item_bg-opacity-normal)",
-			"layer1.draw_center": false,
-			"layer1.inner_margin": [0, 0, 1, 0]
+			"layer0.opacity": "var(item_bg-opacity-normal)"
 		},
 		{
 			"class": "kind_label",
@@ -901,15 +897,14 @@
 			"font.face": "var(kind_font_face)",
 			"font.size": "var(kind_font_size)",
 			"font.bold": false,
-			"font.italic": true
+			"font.italic": false
 		},
 
 		// Kind Container (Function)
 
 		{
 			"class": "kind_container kind_function",
-			"layer0.tint": "var(kind_bg_function)",
-			"layer1.tint": "var(kind_bg_function)"
+			"layer0.tint": "var(kind_bg_function)"
 		},
 		{
 			"class": "kind_label",
@@ -923,8 +918,7 @@
 
 		{
 			"class": "kind_container kind_keyword",
-			"layer0.tint": "var(kind_bg_keyword)",
-			"layer1.tint": "var(kind_bg_keyword)"
+			"layer0.tint": "var(kind_bg_keyword)"
 		},
 		{
 			"class": "kind_label",
@@ -938,8 +932,7 @@
 
 		{
 			"class": "kind_container kind_markup",
-			"layer0.tint": "var(kind_bg_markup)",
-			"layer1.tint": "var(kind_bg_markup)"
+			"layer0.tint": "var(kind_bg_markup)"
 		},
 		{
 			"class": "kind_label",
@@ -953,8 +946,7 @@
 
 		{
 			"class": "kind_container kind_namespace",
-			"layer0.tint": "var(kind_bg_namespace)",
-			"layer1.tint": "var(kind_bg_namespace)"
+			"layer0.tint": "var(kind_bg_namespace)"
 		},
 		{
 			"class": "kind_label",
@@ -968,8 +960,7 @@
 
 		{
 			"class": "kind_container kind_navigation",
-			"layer0.tint": "var(kind_bg_navigation)",
-			"layer1.tint": "var(kind_bg_navigation)"
+			"layer0.tint": "var(kind_bg_navigation)"
 		},
 		{
 			"class": "kind_label",
@@ -983,8 +974,7 @@
 
 		{
 			"class": "kind_container kind_snippet",
-			"layer0.tint": "var(kind_bg_snippet)",
-			"layer1.tint": "var(kind_bg_snippet)"
+			"layer0.tint": "var(kind_bg_snippet)"
 		},
 		{
 			"class": "kind_label",
@@ -998,8 +988,7 @@
 
 		{
 			"class": "kind_container kind_type",
-			"layer0.tint": "var(kind_bg_type)",
-			"layer1.tint": "var(kind_bg_type)"
+			"layer0.tint": "var(kind_bg_type)"
 		},
 		{
 			"class": "kind_label",
@@ -1013,8 +1002,7 @@
 
 		{
 			"class": "kind_container kind_variable",
-			"layer0.tint": "var(kind_bg_variable)",
-			"layer1.tint": "var(kind_bg_variable)"
+			"layer0.tint": "var(kind_bg_variable)"
 		},
 		{
 			"class": "kind_label",
@@ -3980,8 +3968,7 @@
 			"parents": [
 				{"class": "mini_quick_panel_row", "attributes": ["!selected", "hover"]}
 			],
-			"layer0.opacity": "var(item_bg-opacity-hover)",
-			"layer1.opacity": "var(item_bg-opacity-hover)"
+			"layer0.opacity": "var(item_bg-opacity-hover)"
 		},
 
 		{
@@ -3989,8 +3976,7 @@
 			"parents": [
 				{"class": "mini_quick_panel_row", "attributes": ["selected", "!hover"]}
 			],
-			"layer0.opacity": "var(item_bg-opacity-selected)",
-			"layer1.opacity": "var(item_bg-opacity-selected)"
+			"layer0.opacity": "var(item_bg-opacity-selected)"
 		},
 
 		{
@@ -3998,8 +3984,7 @@
 			"parents": [
 				{"class": "mini_quick_panel_row", "attributes": ["selected", "hover"]}
 			],
-			"layer0.opacity": "var(item_bg-opacity-selected-hover)",
-			"layer1.opacity": "var(item_bg-opacity-selected-hover)"
+			"layer0.opacity": "var(item_bg-opacity-selected-hover)"
 		},
 
 		{
@@ -4115,7 +4100,6 @@
 				{"class": "table_row", "attributes": ["!selected", "!hover"]}
 			],
 			"layer0.opacity": "var(auto_complete_bg-opacity-normal)",
-			"layer1.opacity": "var(auto_complete_bg-opacity-normal)"
 		},
 
 		{
@@ -4125,7 +4109,6 @@
 				{"class": "table_row", "attributes": ["!selected", "hover"]}
 			],
 			"layer0.opacity": "var(auto_complete_bg-opacity-hover)",
-			"layer1.opacity": "var(auto_complete_bg-opacity-hover)"
 		},
 
 		{
@@ -4135,7 +4118,6 @@
 				{"class": "table_row", "attributes": ["selected", "!hover"]}
 			],
 			"layer0.opacity": "var(auto_complete_bg-opacity-selected)",
-			"layer1.opacity": "var(auto_complete_bg-opacity-selected)"
 		},
 
 		{
@@ -4145,14 +4127,13 @@
 				{"class": "table_row", "attributes": ["selected", "hover"]}
 			],
 			"layer0.opacity": "var(auto_complete_bg-opacity-selected-hover)",
-			"layer1.opacity": "var(auto_complete_bg-opacity-selected-hover)"
 		},
 
 		// Auto Complete Symbol Container
 
 		{
 			"class": "trigger_container",
-			"content_margin": [3, 4, 0, 2]
+			"content_margin": [2, 4, 0, 2]
 		},
 
 		// Auto Complete Row (Normal) -> Label
