@@ -44,8 +44,8 @@
 		"sidebar_font_face": "var(font_face)",
 		"sidebar_font_size": "var(font_size)",
 
-        "sidebar_folder_icon_tint-collapsed-dark": "color(var(--yellowish) alpha(0.8))",
-        "sidebar_folder_icon_tint-collapsed-light": "var(--yellowish)",
+		"sidebar_folder_icon_tint-collapsed-dark": "color(var(--yellowish) alpha(0.8))",
+		"sidebar_folder_icon_tint-collapsed-light": "var(--yellowish)",
 		"sidebar_folder_icon_tint-expanded-dark": "var(accent)",
 		"sidebar_folder_icon_tint-expanded-light": "var(accent)",
 

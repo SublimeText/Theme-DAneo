@@ -270,10 +270,10 @@
 
 		// Folder Icon Colors
 
-        "sidebar_folder_icon_tint-collapsed-dark": "color(var(--yellowish) alpha(0.8))",
-        "sidebar_folder_icon_tint-collapsed-light": "var(--yellowish)",
-        "sidebar_folder_icon_tint-expanded-dark": "color(var(--yellowish) alpha(0.8))",
-        "sidebar_folder_icon_tint-expanded-light": "var(--yellowish)",
+		"sidebar_folder_icon_tint-collapsed-dark": "color(var(--yellowish) alpha(0.8))",
+		"sidebar_folder_icon_tint-collapsed-light": "var(--yellowish)",
+		"sidebar_folder_icon_tint-expanded-dark": "color(var(--yellowish) alpha(0.8))",
+		"sidebar_folder_icon_tint-expanded-light": "var(--yellowish)",
 		"sidebar_folder_icon_overlay-dark": "rgba(255, 255, 255, 0.3)",
 		"sidebar_folder_icon_overlay-light": "rgba(0, 0, 0, 0.3)",
 
@@ -4013,14 +4013,15 @@
 			"class": "auto_complete",
 			"dark_content": true,
 			"row_padding": [0, 0, 0, 0],
-			"layer0.tint":  "var(auto_complete_bg-normal-dark)",
+			"tint_index": 0,
+			"tint_modifier": "color(white alpha(0.05))",
 			"layer0.opacity": 1.0
 		},
 		{
 			"class": "auto_complete",
 			"attributes": ["file_light"],
 			"dark_content": false,
-			"layer0.tint":  "var(auto_complete_bg-normal-light)"
+			"tint_modifier": "color(black alpha(0.05))",
 		},
 
 		// Auto Complete Row (Unselected, Normal)
@@ -4218,8 +4219,8 @@
 
 		{
 			"class": "popup_control",
-			"content_margin": 0,
-			"layer0.tint": "white",
+			"content_margin": 1,
+			"layer0.tint": "color(black blend(var(bg) 15%))",
 			"layer0.opacity": 1.0
 		},
 
