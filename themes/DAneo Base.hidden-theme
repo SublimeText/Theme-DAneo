@@ -4188,10 +4188,10 @@
 
 		{
 			"class": "auto_complete_details",
+			"content_margin": [8, 5, 8, 5],
 			"tint_index": 0,
-			"layer0.opacity": 1.0,
 			"tint_modifier": [0, 0, 0, 0.1],
-			"content_margin": [8, 5, 8, 5]
+			"layer0.opacity": 1.0
 		},
 		{
 			"class": "auto_complete_details",
