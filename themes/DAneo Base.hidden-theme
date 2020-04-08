@@ -4743,6 +4743,55 @@
 			"layer0.tint": "var(button_icon_tint-selected-light)"
 		},
 
+		// Icon Button -> Use Git Icon
+
+		{
+			"class": "icon_use_gitignore",
+			"content_margin": 8,
+			"layer0.texture": "Theme - DAneo/icons/icon_use_gitignore.png",
+			"layer0.tint": "var(button_icon_tint-normal-dark)",
+			"layer0.opacity": "var(button_icon_opacity-normal)"
+		},
+		{
+			"class": "icon_use_gitignore",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "var(button_icon_tint-normal-light)"
+		},
+		{
+			"class": "icon_use_gitignore",
+			"parents": [
+				{"class": "icon_button_control", "attributes": ["hover"]}
+			],
+			"layer0.tint": "var(button_icon_tint-hover-dark)",
+			"layer0.opacity": "var(button_icon_opacity-hover)"
+		},
+		{
+			"class": "icon_use_gitignore",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "icon_button_control", "attributes": ["hover"]}
+			],
+			"layer0.tint": "var(button_icon_tint-hover-light)"
+		},
+		{
+			"class": "icon_use_gitignore",
+			"parents": [
+				{"class": "icon_button_control", "attributes": ["selected"]}
+			],
+			"layer0.tint": "var(button_icon_tint-selected-dark)",
+			"layer0.opacity": "var(button_icon_opacity-selected)"
+		},
+		{
+			"class": "icon_use_gitignore",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "icon_button_control", "attributes": ["selected"]}
+			],
+			"layer0.tint": "var(button_icon_tint-selected-light)"
+		},
+
 		// Panel Close Button (Normal)
 
 		{
