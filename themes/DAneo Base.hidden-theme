@@ -4636,8 +4636,8 @@
 
 		{
 			"class": "vcs_branch_icon",
-			"content_margin": [6, 11],
-			"layer0.texture": "Theme - Default/common/branch.png",
+			"content_margin": 8,
+			"layer0.texture": "Theme - DAneo/icons/branch.png",
 			"layer0.tint": "var(statusbar_button_fg-normal-dark)",
 			"layer0.opacity": 1.0
 		},
