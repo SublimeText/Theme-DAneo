@@ -4229,6 +4229,12 @@
 			"content_margin": 1,
 		},
 
+		{
+			"class": "popup_control annotation_popup",
+			"platforms": ["windows"],
+			"content_margin": [0, 0, 0, 1]
+		},
+
 	////// Annotations ///////////////////////////////////////////////////////////
 
 		{
