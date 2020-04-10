@@ -46,7 +46,7 @@
 		"kind_font_face": "monospace",
 		"kind_font_size": "1.1rem",
 
-		"kind_bg_ambigious": "color(var(kind_fg_ambigious) a(0.15))",
+		"kind_bg_ambigious": "color(var(kind_fg_ambigious) a(0.05))",
 		"kind_bg_function": "color(var(kind_fg_function) a(0.15))",
 		"kind_bg_keyword": "color(var(kind_fg_keyword) a(0.15))",
 		"kind_bg_markup": "color(var(kind_fg_markup) a(0.15))",
