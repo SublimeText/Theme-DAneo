@@ -3181,10 +3181,11 @@
 		{
 			"class": "tabset_control",
 			"content_margin": [0, 0, 0, 5],
-			"tab_height": 38,
+			"tab_height": 34,
 			"tab_width": 128,
 			"tab_overlap": 0,
 			"tab_min_width": 64,
+			"tint_index": 0,
 			"layer0.opacity": 1.0
 		},
 

@@ -201,6 +201,14 @@
 			"layer0.tint": "var(tabset_bg-light)"
 		},
 
+		// Tabset Control (Small)
+
+		{
+			"class": "tabset_control",
+			"settings": ["tabset_size_small"],
+			"tab_height": 31
+		},
+
 		// Tab Control
 
 		{
@@ -223,11 +231,23 @@
 			"layer3.tint": "var(button_icon_tint-normal-light)"
 		},
 
+		// Tab Control (Small)
+
+		{
+			"class": "tab_control",
+			"settings": ["tabset_size_small"],
+			"content_margin": [8, 6, 8, 7]
+		},
+
+		// Tab Control (Hover)
+
 		{
 			"class": "tab_control",
 			"attributes": ["hover"],
 			"layer3.opacity": "var(inactive_tab_close_opacity-normal)"
 		},
+
+		// Tab Control (Selected)
 
 		{
 			"class": "tab_control",

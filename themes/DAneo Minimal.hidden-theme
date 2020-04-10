@@ -160,6 +160,23 @@
 			"layer1.tint": "var(tabset_bg-light)"
 		},
 
+		// Tabset Control (Small)
+
+		{
+			"class": "tabset_control",
+			"settings": ["tabset_size_small"],
+			"tab_height": 28,
+			"layer1.inner_margin": [0, 31, 0, 0]
+		},
+
+		// Tab Control (Small)
+
+		{
+			"class": "tab_control",
+			"settings": ["tabset_size_small"],
+			"content_margin": [16, 5, 10, 5]
+		},
+
 	////// Overlay Controls //////////////////////////////////////////////////////
 
 		{

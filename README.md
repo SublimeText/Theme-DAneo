@@ -103,6 +103,7 @@ Setting                                 | Default | Description
 `"show_tabs_dropdown_button"`           | `true`  | Controls whether to show the tabs dropdown button
 `"show_panel_button"`                   | `true`  | Controls whether to show the _show panel button_ in the left corner of the status bar
 `"show_panel_close_button"`             | `false` | Controls whether to show the close button of the find and replace panels
+`"tabset_size_small"`                   | `false` | Controls whether to render a smaller tabset variant
 
 
 ### Editing the Theme

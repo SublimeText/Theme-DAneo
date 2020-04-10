@@ -49,7 +49,7 @@
 			"layer1.texture": "Theme - DAneo/textures/tabs/tab--sublime--mb1--bw1.png"
 		},
 
-		// Tab (*) -> Modified Indicator
+		// Tab Control (Modified)
 
 		{
 			"class": "tab_control",
