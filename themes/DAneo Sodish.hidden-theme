@@ -175,7 +175,18 @@
 			"layer2.tint": "var(tabset_bg-light)"
 		},
 
-		// Tab
+		// Tabset Control (Small)
+
+		{
+			"class": "tabset_control",
+			"settings": ["tabset_size_small"],
+			"tab_height": 28,
+			"layer0.inner_margin": [0, 0, 0, 5],
+			"layer1.inner_margin": [0, 27, 0, 1],
+			"layer2.inner_margin": [0, 26, 0, 0]
+		},
+
+		// Tab Control
 
 		{
 			"class": "tab_control",
@@ -191,7 +202,15 @@
 			"layer3.texture": null
 		},
 
-		// Inctive Tab
+		// Tab Control (Small)
+
+		{
+			"class": "tab_control",
+			"settings": ["tabset_size_small"],
+			"content_margin": [16, 4, 10, 3]
+		},
+
+		// Inctive Tab Control
 
 		{
 			"class": "tab_control",
@@ -211,7 +230,7 @@
 			"layer1.tint": "var(inactive_tab_bc-light)"
 		},
 
-		// Active Tab
+		// Active Tab Control
 
 		{
 			"class": "tab_control",

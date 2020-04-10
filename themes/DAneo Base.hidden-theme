@@ -3342,10 +3342,11 @@
 		{
 			"class": "tabset_control",
 			"content_margin": [0, 0, 0, 5],
-			"tab_height": 38,
+			"tab_height": 34,
 			"tab_width": 128,
 			"tab_overlap": 0,
 			"tab_min_width": 64,
+			"tint_index": 0,
 			"layer0.opacity": 1.0
 		},
 
@@ -4864,7 +4865,7 @@
 
 		{
 			"class": "status_bar",
-			"content_margin": [10, 6, 0, 5],
+			"content_margin": [10, 5, 0, 5],
 			"layer0.tint": "var(statusbar_bg-dark)",
 			"layer0.opacity": 1.0
 		},
@@ -4958,7 +4959,7 @@
 
 		{
 			"class": "status_button",
-			"content_margin": [10, 2, 10, 2],
+			"content_margin": [10, 0],
 			"min_size": [40, 22]
 		},
 
