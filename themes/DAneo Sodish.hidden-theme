@@ -152,6 +152,7 @@
 			"content_margin": [0, -1, 0, 4],
 			"tab_height": 34,
 			"tab_overlap": 3,
+			"tint_index": -1,
 			"layer0.draw_center": false,
 			"layer0.inner_margin": [0, 0, 0, 5],
 			"layer0.tint": "var(active_tab_bg-dark)",
