@@ -73,8 +73,8 @@
 		"statusbar_bg-dark": "color(white blend(var(bg) 7.5%))",
 		"statusbar_bg-light": "color(black blend(var(bg) 7.5%))",
 
-		"statusbar_bc-dark": "color(black blend(var(tabset_bg-dark) 4%)",
-		"statusbar_bc-light": "color(black blend(var(tabset_bg-light) 4%)",
+		"statusbar_bc-dark": "color(black blend(var(sidebar_bg-normal-dark) 7.5%)",
+		"statusbar_bc-light": "color(black blend(var(sidebar_bg-normal-light) 7.5%)",
 
 	////// Dialogs ///////////////////////////////////////////////////////////////
 
@@ -348,13 +348,14 @@
 
 		{
 			"class": "status_bar",
+			"content_margin": [10, 6, 0, 5],
 			"layer1.draw_center": false,
 			"layer1.inner_margin": [0, 1, 0, 0],
 			"layer1.tint": "var(statusbar_bc-dark)",
 			"layer1.opacity": 1.0
 		},
 		{
-			"class": "panel_control",
+			"class": "status_bar",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]}
 			],

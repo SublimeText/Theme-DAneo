@@ -16,7 +16,7 @@
 		"sidebar_bg-normal-dark": "color(black blend(var(bg) 5%))",
 		"sidebar_bg-normal-light": "color(black blend(var(bg) 5%))",
 
-		"sidebar_bc-dark": "color(white blend(var(sidebar_bg-normal-dark) 2%))",
+		"sidebar_bc-dark": "color(white blend(var(sidebar_bg-normal-dark) 3%))",
 		"sidebar_bc-light": "color(black blend(var(sidebar_bg-normal-light) 5%))",
 
 		"sidebar_folder_icon_tint-expanded-dark": "var(accent)",
@@ -414,13 +414,14 @@
 
 		{
 			"class": "status_bar",
+			"content_margin": [10, 6, 0, 5],
 			"layer1.draw_center": false,
 			"layer1.inner_margin": [0, 1, 0, 0],
 			"layer1.tint": "var(statusbar_bc-dark)",
 			"layer1.opacity": 1.0
 		},
 		{
-			"class": "panel_control",
+			"class": "status_bar",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]}
 			],

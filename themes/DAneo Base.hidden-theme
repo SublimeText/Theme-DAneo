@@ -4496,7 +4496,7 @@
 
 		{
 			"class": "status_bar",
-			"content_margin": [10, 6, 0, 5],
+			"content_margin": [10, 5, 0, 5],
 			"layer0.tint": "var(statusbar_bg-dark)",
 			"layer0.opacity": 1.0
 		},
@@ -4590,7 +4590,7 @@
 
 		{
 			"class": "status_button",
-			"content_margin": [10, 2, 10, 2],
+			"content_margin": [10, 0],
 			"min_size": [40, 22]
 		},
 
