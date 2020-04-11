@@ -507,6 +507,25 @@
 		"auto_complete_fg-selected-hover-match-dark": "color(var(accent) blend(var(auto_complete_fg-selected-hover-dark) 90%))",
 		"auto_complete_fg-selected-hover-match-light": "color(var(accent) blend(var(auto_complete_fg-selected-hover-light) 90%))",
 
+		// Hint Colors
+
+		"auto_complete_hints_font_face": "var(font_face)",
+
+		"auto_complete_hints_font_size-normal": "0.8rem",
+		"auto_complete_hints_font_size-selected": "0.9rem",
+
+		"auto_complete_hints_fg-normal-dark": "color(var(auto_complete_fg-normal-dark) a(- 0.3))",
+		"auto_complete_hints_fg-normal-light": "color(var(auto_complete_fg-normal-light) a(- 0.3))",
+
+		"auto_complete_hints_fg-hover-dark": "color(var(auto_complete_fg-hover-dark) a(- 0.3))",
+		"auto_complete_hints_fg-hover-light": "color(var(auto_complete_fg-hover-light) a(- 0.3))",
+
+		"auto_complete_hints_fg-selected-dark": "color(var(auto_complete_fg-selected-dark) a(- 0.3))",
+		"auto_complete_hints_fg-selected-light": "color(var(auto_complete_fg-selected-light) a(- 0.3))",
+
+		"auto_complete_hints_fg-selected-hover-dark": "color(var(auto_complete_fg-selected-hover-dark) a(- 0.3))",
+		"auto_complete_hints_fg-selected-hover-light": "color(var(auto_complete_fg-selected-hover-light) a(- 0.3))",
+
 	////// Panel Control /////////////////////////////////////////////////////////
 
 		"panel_bg-dark": "color(black blend(var(bg) 20%))",
@@ -4184,6 +4203,84 @@
 			"match_fg": "var(auto_complete_fg-hover-match-light)",
 			"selected_fg": "var(auto_complete_fg-selected-hover-light)",
 			"selected_match_fg": "var(auto_complete_fg-selected-hover-match-light)"
+		},
+
+		// Autocomplete Hints (Normal)
+
+		{
+			"class": "auto_complete_label auto_complete_hint",
+			"color": "var(auto_complete_hints_fg-normal-dark)",
+			"font.face": "var(auto_complete_hints_font_face)",
+			"font.size": "var(auto_complete_hints_font_size-normal)",
+			"font.italic": true
+		},
+		{
+			"class": "auto_complete_label auto_complete_hint",
+			"parents": [
+				{"class": "auto_complete", "attributes": ["file_light"]}
+			],
+			"color": "var(auto_complete_hints_fg-normal-light)"
+		},
+
+		// Autocomplete Hints (Hover)
+
+		{
+			"class": "auto_complete_label auto_complete_hint",
+			"parents": [
+				{"class": "table_row", "attributes": ["!selected", "hover"]}
+			],
+			"color": "var(auto_complete_hints_fg-hover-dark)"
+		},
+		{
+			"class": "auto_complete_label auto_complete_hint",
+			"parents": [
+				{"class": "auto_complete", "attributes": ["file_light"]},
+				{"class": "table_row", "attributes": ["!selected", "hover"]}
+			],
+			"color": "var(auto_complete_hints_fg-hover-light)"
+		},
+
+		// Autocomplete Hints (Selected)
+
+		{
+			"class": "auto_complete_label auto_complete_hint",
+			"parents": [
+				{"class": "table_row", "attributes": ["selected"]}
+			],
+			"font.size": "var(auto_complete_hints_font_size-selected)"
+		},
+		{
+			"class": "auto_complete_label auto_complete_hint",
+			"parents": [
+				{"class": "table_row", "attributes": ["selected", "!hover"]}
+			],
+			"color": "var(auto_complete_hints_fg-selected-dark)"
+		},
+		{
+			"class": "auto_complete_label auto_complete_hint",
+			"parents": [
+				{"class": "auto_complete", "attributes": ["file_light"]},
+				{"class": "table_row", "attributes": ["selected", "!hover"]}
+			],
+			"color": "var(auto_complete_hints_fg-selected-light)"
+		},
+
+		// Autocomplete Hints (Selected, Hover)
+
+		{
+			"class": "auto_complete_label auto_complete_hint",
+			"parents": [
+				{"class": "table_row", "attributes": ["selected", "hover"]}
+			],
+			"color": "var(auto_complete_hints_fg-selected-hover-dark)"
+		},
+		{
+			"class": "auto_complete_label auto_complete_hint",
+			"parents": [
+				{"class": "auto_complete", "attributes": ["file_light"]},
+				{"class": "table_row", "attributes": ["selected", "hover"]}
+			],
+			"color": "var(auto_complete_hints_fg-selected-hover-light)"
 		},
 
 		// Autocomplete Details
