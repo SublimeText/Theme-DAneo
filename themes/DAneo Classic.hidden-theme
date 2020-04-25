@@ -171,16 +171,26 @@
 			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png"
 		},
 
+		// Scroll Bar Control
+
+		{
+			"class": "scroll_bar_control",
+			"parents": [
+				{"class": "overlay_control"}
+			],
+			"content_margin": [4, 0, 0, 0]
+		},
+
 		// Quick Panels
 
 		{
 			"class": "quick_panel",
-			"row_padding": [10, 9, 10, 9]
+			"row_padding": [8, 7, 8, 7]
 		},
 		{
 			"class": "quick_panel",
 			"platforms": ["windows"],
-			"row_padding": [10, 9, 10, 8]
+			"row_padding": [8, 7, 8, 6]
 		},
 
 	////// Goto Symbol Overlay Control ///////////////////////////////////////////

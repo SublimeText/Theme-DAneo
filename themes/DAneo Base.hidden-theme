@@ -1173,133 +1173,46 @@
 
 	////// Scroll Bars ///////////////////////////////////////////////////////////
 
-		// Scroll Areas
+		// Scroll Area Control
 
+		{
+			"class": "scroll_area_control",
+			"overlay": false
+		},
 		{
 			"class": "scroll_area_control",
 			"settings": ["overlay_scroll_bars"],
 			"overlay": true
 		},
-		{
-			"class": "scroll_area_control",
-			"settings": ["!overlay_scroll_bars"],
-			"overlay": false
-		},
 
-		// Scroll Area -> Side Bar
-
-		{
-			"class": "scroll_area_control",
-			"parents": [
-				{"class": "sidebar_container"}
-			],
-			"content_margin": [0, 8],
-			"top_shadow_size": 4,
-			"top_shadow": "var(sidebar_bg-normal-dark)"
-		},
-		{
-			"class": "scroll_area_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "sidebar_container"}
-			],
-			"top_shadow": "var(sidebar_bg-normal-light)"
-		},
-
-		// Scroll Bar
+		// Scroll Bar Control
 
 		{
 			"class": "scroll_bar_control",
 			"content_margin": 4,
-			"tint_index": 0
+			"tint_index": 0,
+			"layer0.opacity": 1.0
 		},
 		{
 			"class": "scroll_bar_control",
 			"settings": ["overlay_scroll_bars"],
 			"layer0.opacity": 0.0
 		},
-		{
-			"class": "scroll_bar_control",
-			"settings": ["!overlay_scroll_bars"],
-			"layer0.opacity": 1.0
-		},
 
-		// Scroll Bar -> Overlays
-
-		{
-			"class": "scroll_bar_control",
-			"parents": [
-				{"class": "overlay_control"}
-			],
-			"content_margin": [4, 0],
-			"layer0.opacity": 0.0
-		},
-
-		// Scroll Bar -> Side Bar
-
-		{
-			"class": "scroll_bar_control",
-			"parents": [
-				{"class": "sidebar_container"}
-			],
-			"layer0.opacity": 0.0
-		},
-
-		// Scroll Bar -> Popup and Completion
-
-		{
-			"class": "scroll_bar_control",
-			"attributes": ["dark"],
-			"parents": [
-				{"class": "popup_control auto_complete_popup"}
-			],
-			"tint_modifier": "rgba(255, 255, 255, 0.05)"
-		},
-		{
-			"class": "scroll_bar_control",
-			"attributes": ["!dark"],
-			"parents": [
-				{"class": "popup_control auto_complete_popup"}
-			],
-			"tint_modifier": "rgba(0, 0, 0, 0.05)"
-		},
-
-		// Scroll Bar -> Project Window
-
-		{
-			"class": "scroll_bar_control",
-			"parents": [
-				{"class": "switch_project_window"}
-			],
-			"content_margin": [4, 0, 4, 4],
-			"tint_index": -1,
-			"layer0.tint": "var(overlay_bg-dark)"
-		},
-		{
-			"class": "scroll_bar_control",
-			"parents": [
-				{"class": "switch_project_window", "attributes": ["file_light"]}
-			],
-			"layer0.tint": "var(overlay_bg-light)"
-		},
-
-		// Scroll Corner
+		// Scroll Corner Control
 
 		{
 			"class": "scroll_corner_control",
 			"tint_index": 0,
 			"layer0.opacity": 1.0
 		},
-
-		// Scroll Corner -> Side Bar
-
 		{
 			"class": "scroll_corner_control",
-			"parents": [{"class": "sidebar_container"}],
+			"settings": ["overlay_scroll_bars"],
 			"layer0.opacity": 0.0
 		},
 
-		// Scroll Track
+		// Scroll Track Control
 
 		{
 			"class": "scroll_track_control",
@@ -1328,7 +1241,7 @@
 			"layer0.tint": "rgba(0, 0, 0, 0.05)"
 		},
 
-		// Scroll Puck
+		// Scroll Puck Control
 
 		{
 			"class": "puck_control",
@@ -1357,9 +1270,7 @@
 			"layer0.tint": "rgba(0, 0, 0, 0.1)"
 		},
 
-	////// Side Bar //////////////////////////////////////////////////////////////
-
-		// Side Bar Container
+	////// Side Bar / Container //////////////////////////////////////////////////
 
 		{
 			"class": "sidebar_container",
@@ -1375,7 +1286,51 @@
 			"layer0.tint": "var(sidebar_bg-normal-light)"
 		},
 
-		// Side Bar Tree
+	////// Side Bar / Scroll Bars ////////////////////////////////////////////////
+
+		// Scroll Area Control
+
+		{
+			"class": "scroll_area_control",
+			"parents": [
+				{"class": "sidebar_container"}
+			],
+			"content_margin": [0, 8],
+			"top_shadow_size": 4,
+			"top_shadow": "var(sidebar_bg-normal-dark)",
+		},
+		{
+			"class": "scroll_area_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "sidebar_container"}
+			],
+			"top_shadow": "var(sidebar_bg-normal-light)",
+		},
+
+		// Scroll Bar Control
+
+		{
+			"class": "scroll_bar_control",
+			"parents": [
+				{"class": "sidebar_container"}
+			],
+			"tint_index": -1,
+			"layer0.opacity": 0.0
+		},
+
+		// Scroll Corner Control
+
+		{
+			"class": "scroll_corner_control",
+			"parents": [
+				{"class": "sidebar_container"}
+			],
+			"tint_index": -1,
+			"layer0.opacity": 0.0
+		},
+
+	////// Side Bar / Tree ///////////////////////////////////////////////////////
 
 		{
 			"class": "sidebar_tree",
@@ -1404,7 +1359,7 @@
 			"dark_content": false
 		},
 
-		// Side Bar Tree Item Background
+	////// Side Bar / Tree Items / Background ////////////////////////////////////
 
 		{
 			"class": "tree_row",
@@ -1458,7 +1413,7 @@
 			"layer0.tint": "var(sidebar_bg-selected-hover-light)"
 		},
 
-		// Side Bar Heading
+	////// Side Bar / Tree Items / Headings //////////////////////////////////////
 
 		{
 			"class": "sidebar_heading",
@@ -1476,7 +1431,7 @@
 			"fg": "var(sidebar_heading_fg-light)"
 		},
 
-		// Side Bar Tree Item Text
+	////// Side Bar / Tree Items / Labels ////////////////////////////////////////
 
 		{
 			"class": "sidebar_label",
@@ -3953,7 +3908,7 @@
 			"layer1.tint": "var(overlay_bg-light)"
 		},
 
-		// Overlay Control -> Input Control
+		// Text Line Control
 
 		{
 			"class": "text_line_control",
@@ -3961,6 +3916,25 @@
 				{"class": "overlay_control"}
 			],
 			"content_margin": [16, 8]
+		},
+
+		// Scroll Bar Control
+
+		{
+			"class": "scroll_bar_control",
+			"parents": [
+				{"class": "overlay_control"}
+			],
+			"tint_index": -1,
+			"layer0.tint": "var(quick_panel_bg-dark)"
+		},
+		{
+			"class": "scroll_bar_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "overlay_control"}
+			],
+			"layer0.tint": "var(quick_panel_bg-light)"
 		},
 
 	////// Goto Symbol Overlay Control ///////////////////////////////////////////
@@ -4028,6 +4002,27 @@
 		},
 
 	////// Auto Complete /////////////////////////////////////////////////////////
+
+		// Scroll Bar Control
+
+		{
+			"class": "scroll_bar_control",
+			"parents": [
+				{"class": "popup_control auto_complete_popup"}
+			],
+			"attributes": ["dark"],
+			"tint_modifier": "color(white alpha(0.05))",
+		},
+		{
+			"class": "scroll_bar_control",
+			"parents": [
+				{"class": "popup_control auto_complete_popup"}
+			],
+			"attributes": ["!dark"],
+			"tint_modifier": "color(black alpha(0.05))",
+		},
+
+		// Auto Complete Table Control
 
 		{
 			"class": "auto_complete",
@@ -5175,7 +5170,7 @@
 
 	////// Switch Project Window /////////////////////////////////////////////////
 
-		// Switch Project Panel Control
+		// Panel Control
 
 		{
 			"class": "panel_control",
@@ -5193,7 +5188,7 @@
 			"layer0.tint": "var(overlay_bg-dark)"
 		},
 
-		// Switch Project Text Input Control
+		// Text Input Control
 
 		{
 			"class": "text_line_control",
@@ -5201,6 +5196,25 @@
 				{"class": "switch_project_window"}
 			],
 			"content_margin": [16, 8]
+		},
+
+		// Scroll Bar Control
+
+		{
+			"class": "scroll_bar_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"content_margin": [4, 0, 4, 4],
+			"tint_index": -1,
+			"layer0.tint": "var(quick_panel_bg-dark)"
+		},
+		{
+			"class": "scroll_bar_control",
+			"parents": [
+				{"class": "switch_project_window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "var(quick_panel_bg-light)"
 		},
 
 		// Quick Panel

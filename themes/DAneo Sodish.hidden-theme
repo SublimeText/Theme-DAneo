@@ -33,8 +33,8 @@
 
 		// Active Tabs
 
-		"active_tab_bg-dark": "color(white blend(var(bg) 7%))",
-		"active_tab_bg-light": "color(black blend(var(bg) 7%))",
+		"active_tab_bg-dark": "color(white blend(var(bg) 7.5%))",
+		"active_tab_bg-light": "color(black blend(var(bg) 10%))",
 
 		"active_tab_bc-dark": "var(grid_border-dark)",
 		"active_tab_bc-light": "var(grid_border-light)",
@@ -59,8 +59,8 @@
 
 	////// Panel Controls ////////////////////////////////////////////////////////
 
-		"panel_bg-dark": "color(white blend(var(bg) 1.5%))",
-		"panel_bg-light": "color(black blend(var(bg) 2.5%))",
+		"panel_bg-dark": "color(white blend(var(bg) 5%))",
+		"panel_bg-light": "color(black blend(var(bg) 7.5%))",
 
 		"panel_input_bc-dark": "color(white alpha(7.5%))",
 		"panel_input_bc-light": "color(black alpha(10%))",
@@ -70,8 +70,8 @@
 
 	////// Status Bar ////////////////////////////////////////////////////////////
 
-		"statusbar_bg-dark": "color(black blend(var(bg) 7.5%))",
-		"statusbar_bg-light": "color(black blend(var(bg) 7.5%))",
+		"statusbar_bg-dark": "color(white blend(var(bg) 7%))",
+		"statusbar_bg-light": "color(black blend(var(bg) 10%))",
 
 		"statusbar_bc-dark": "var(grid_border-dark)",
 		"statusbar_bc-light": "var(grid_border-light)",
