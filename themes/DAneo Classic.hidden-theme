@@ -171,6 +171,16 @@
 			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png"
 		},
 
+		// Scroll Bar Control
+
+		{
+			"class": "scroll_bar_control",
+			"parents": [
+				{"class": "overlay_control"}
+			],
+			"content_margin": [4, 0, 0, 0]
+		},
+
 		// Quick Panels
 
 		{
