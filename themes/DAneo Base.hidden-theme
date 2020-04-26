@@ -105,6 +105,38 @@
 				"target": 1.00, "speed": 1.12, "interpolation": "smoothstep"
 			},
 
+	////// Scroll Bars ////////7//////////////////////////////////////////////////
+
+		// Scroll Track Control
+
+		"scroll_track_fg-normal-dark": "rgba(255, 255, 255, 0.2)",
+		"scroll_track_fg-normal-light": "rgba(0, 0, 0, 0.2)",
+
+		"scroll_track_opacity-inactive": {
+				"target": 0.20, "speed": 1.12, "interpolation": "smoothstep"
+			},
+		"scroll_track_opacity-active": {
+				"target": 0.25, "speed": 1.12, "interpolation": "smoothstep"
+			},
+		"scroll_track_opacity-hover": {
+				"target": 0.25, "speed": 1.12, "interpolation": "smoothstep"
+			},
+
+		// Scroll Puck Control
+
+		"scroll_puck_fg-normal-dark": "rgba(255, 255, 255, 0.3)",
+		"scroll_puck_fg-normal-light": "rgba(0, 0, 0, 0.3)",
+
+		"scroll_puck_opacity-inactive": {
+				"target": 0.40, "speed": 1.12, "interpolation": "smoothstep"
+			},
+		"scroll_puck_opacity-active": {
+				"target": 0.65, "speed": 1.12, "interpolation": "smoothstep"
+			},
+		"scroll_puck_opacity-hover": {
+				"target": 1.00, "speed": 1.12, "interpolation": "smoothstep"
+			},
+
 	////// Side Bar //////////////////////////////////////////////////////////////
 
 		// Background Colors
@@ -1040,7 +1072,6 @@
 			"content_margin": 3,
 			"layer0.inner_margin": 3,
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png",
-			"layer0.opacity": 1.0
 		},
 		{
 			"class": "scroll_track_control",
@@ -1048,17 +1079,25 @@
 			"content_margin": 3,
 			"layer0.inner_margin": 3,
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png",
-			"layer0.opacity": 1.0
 		},
 		{
 			"class": "scroll_track_control",
 			"attributes": ["dark"],
-			"layer0.tint": "rgba(255, 255, 255, 0.05)"
+			"layer0.tint": "var(scroll_track_fg-normal-dark)"
 		},
 		{
 			"class": "scroll_track_control",
 			"attributes": ["!dark"],
-			"layer0.tint": "rgba(0, 0, 0, 0.05)"
+			"layer0.tint": "var(scroll_track_fg-normal-light)"
+		},
+		{
+			"class": "scroll_track_control",
+			"layer0.opacity": "var(scroll_track_opacity-inactive)",
+		},
+		{
+			"class": "scroll_track_control",
+			"attributes": ["hover"],
+			"layer0.opacity": "var(scroll_track_opacity-hover)"
 		},
 
 		// Scroll Puck Control
@@ -1069,7 +1108,6 @@
 			"content_margin": [0, 12],
 			"layer0.inner_margin": 3,
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png",
-			"layer0.opacity": 1.0
 		},
 		{
 			"class": "puck_control",
@@ -1077,17 +1115,27 @@
 			"content_margin": [12, 0],
 			"layer0.inner_margin": 3,
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png",
-			"layer0.opacity": 1.0
 		},
 		{
 			"class": "puck_control",
 			"attributes": ["dark"],
-			"layer0.tint": "rgba(255, 255, 255, 0.1)"
+			"layer0.tint": "var(scroll_puck_fg-normal-dark)"
 		},
 		{
 			"class": "puck_control",
 			"attributes": ["!dark"],
-			"layer0.tint": "rgba(0, 0, 0, 0.1)"
+			"layer0.tint": "var(scroll_puck_fg-normal-light)"
+		},
+		{
+			"class": "puck_control",
+			"layer0.opacity": "var(scroll_puck_opacity-inactive)",
+		},
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "scroll_track_control", "attributes": ["hover"]}
+			],
+			"layer0.opacity": "var(scroll_puck_opacity-hover)"
 		},
 
 	////// Side Bar / Container //////////////////////////////////////////////////
@@ -1148,6 +1196,28 @@
 			],
 			"tint_index": -1,
 			"layer0.opacity": 0.0
+		},
+
+		// Scroll Track Control
+
+		{
+			"class": "scroll_track_control",
+			"parents": [
+				{"class": "sidebar_container", "attributes": ["hover"]},
+			],
+			"attributes": ["!hover"],
+			"layer0.opacity": "var(scroll_track_opacity-active)"
+		},
+
+		// Scroll Puck Control
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "sidebar_container", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
 		},
 
 	////// Side Bar / Tree ///////////////////////////////////////////////////////
@@ -3129,6 +3199,30 @@
 			"border_color": "var(grid_border-light)"
 		},
 
+	////// Sheet Container Control ///////////////////////////////////////////////
+
+		// Scroll Track Control
+
+		{
+			"class": "scroll_track_control",
+			"parents": [
+				{"class": "sheet_container_control", "attributes": ["hover"]},
+			],
+			"attributes": ["!hover"],
+			"layer0.opacity": "var(scroll_track_opacity-active)"
+		},
+
+		// Scroll Puck Control
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "sheet_container_control", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
+		},
+
 	////// Tabs //////////////////////////////////////////////////////////////////
 
 		// Tabset Control
@@ -3757,6 +3851,28 @@
 			"layer0.tint": "var(quick_panel_bg-light)"
 		},
 
+		// Scroll Track Control
+
+		{
+			"class": "scroll_track_control",
+			"parents": [
+				{"class": "overlay_control", "attributes": ["hover"]},
+			],
+			"attributes": ["!hover"],
+			"layer0.opacity": "var(scroll_track_opacity-active)"
+		},
+
+		// Scroll Puck Control
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "overlay_control", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
+		},
+
 	////// Auto Complete /////////////////////////////////////////////////////////
 
 		// Scroll Bar Control
@@ -3987,6 +4103,29 @@
 		{
 			"class": "panel_control console_panel",
 			"content_margin": 12
+		},
+
+
+		// Scroll Track Control
+
+		{
+			"class": "scroll_track_control",
+			"parents": [
+				{"class": "panel_control", "attributes": ["hover"]},
+			],
+			"attributes": ["!hover"],
+			"layer0.opacity": "var(scroll_track_opacity-active)"
+		},
+
+		// Scroll Puck Control
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "panel_control", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
 		},
 
 		// Icon Button Group
