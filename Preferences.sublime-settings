@@ -32,9 +32,9 @@
 	// by the color of their labels in the sidebar.
 	"show_sidebar_untracked_label_colors": true,
 
-    // Controls whether to show the `show sidebar button`
-    // in the left corner of the status bar
-    "show_sidebar_button": true,
+	// Controls whether to show the `show sidebar button`
+	// in the left corner of the status bar
+	"show_sidebar_button": true,
 
 	// Controls whether to show the tab scroll buttons
 	"show_scroll_tabs_buttons": true,

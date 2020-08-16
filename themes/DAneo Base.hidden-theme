@@ -5090,7 +5090,7 @@
 				{"class": "auto_complete"},
 				{"class": "table_row", "attributes": ["!selected", "!hover"]}
 			],
-			"layer0.opacity": "var(auto_complete_bg-opacity-normal)",
+			"layer0.opacity": "var(auto_complete_bg-opacity-normal)"
 		},
 
 		{
@@ -5099,7 +5099,7 @@
 				{"class": "auto_complete"},
 				{"class": "table_row", "attributes": ["!selected", "hover"]}
 			],
-			"layer0.opacity": "var(auto_complete_bg-opacity-hover)",
+			"layer0.opacity": "var(auto_complete_bg-opacity-hover)"
 		},
 
 		{
@@ -5108,7 +5108,7 @@
 				{"class": "auto_complete"},
 				{"class": "table_row", "attributes": ["selected", "!hover"]}
 			],
-			"layer0.opacity": "var(auto_complete_bg-opacity-selected)",
+			"layer0.opacity": "var(auto_complete_bg-opacity-selected)"
 		},
 
 		{
@@ -5117,7 +5117,7 @@
 				{"class": "auto_complete"},
 				{"class": "table_row", "attributes": ["selected", "hover"]}
 			],
-			"layer0.opacity": "var(auto_complete_bg-opacity-selected-hover)",
+			"layer0.opacity": "var(auto_complete_bg-opacity-selected-hover)"
 		},
 
 		// Auto Complete Symbol Container
@@ -5268,17 +5268,17 @@
 			"tint_modifier": "rgba(255, 255, 255, 0.1)"
 		},
 
-        {
-            "class": "auto_complete_details",
-            "monospace_background_color": "rgba(255, 255, 255, 0.07)"
-        },
-        {
-            "class": "auto_complete_details",
-            "parents": [
-                {"class": "auto_complete_detail_pane", "attributes": ["file_light"] }
-            ],
-            "monospace_background_color": "rgba(0, 0, 0, 0.05)"
-        },
+		{
+			"class": "auto_complete_details",
+			"monospace_background_color": "rgba(255, 255, 255, 0.07)"
+		},
+		{
+			"class": "auto_complete_details",
+			"parents": [
+				{"class": "auto_complete_detail_pane", "attributes": ["file_light"] }
+			],
+			"monospace_background_color": "rgba(0, 0, 0, 0.05)"
+		},
 
 		{
 			"class": "auto_complete_info",
