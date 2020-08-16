@@ -5316,6 +5316,39 @@
 			"content_margin": [0, 0, 0, 1]
 		},
 
+		// Popup Shadow
+
+		{
+			"class": "popup_shadow",
+			"settings": ["popup_shadows"],
+			"platforms": ["linux"],
+			"layer0.texture": "Theme - DAneo/textures/popups/popup_shadow--br0--linux.png",
+			"layer0.inner_margin": [24, 20, 24, 28],
+			"layer0.draw_center": false,
+			"layer0.opacity": 1.0,
+			"content_margin": [24, 20, 24, 28]
+		},
+		{
+			"class": "popup_shadow",
+			"settings": ["popup_shadows"],
+			"platforms": ["osx"],
+			"layer0.texture": "Theme - DAneo/textures/popups/popup_shadow--br0--osx.png",
+			"layer0.inner_margin": [24, 20, 24, 28],
+			"layer0.draw_center": false,
+			"layer0.opacity": 1.0,
+			"content_margin": [24, 20, 24, 28]
+		},
+		{
+			"class": "popup_shadow",
+			"settings": ["popup_shadows"],
+			"platforms": ["windows"],
+			"layer0.texture": "Theme - DAneo/textures/popups/popup_shadow--br0--windows.png",
+			"layer0.inner_margin": [15, 14, 15, 16],
+			"layer0.draw_center": false,
+			"layer0.opacity": 1.0,
+			"content_margin": [15, 14, 15, 16]
+		},
+
 	////// Annotations ///////////////////////////////////////////////////////////
 
 		{
