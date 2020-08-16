@@ -1071,14 +1071,14 @@
 			"attributes": ["!horizontal"],
 			"content_margin": 3,
 			"layer0.inner_margin": 3,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png",
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png"
 		},
 		{
 			"class": "scroll_track_control",
 			"attributes": ["horizontal"],
 			"content_margin": 3,
 			"layer0.inner_margin": 3,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png",
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png"
 		},
 		{
 			"class": "scroll_track_control",
@@ -1092,7 +1092,7 @@
 		},
 		{
 			"class": "scroll_track_control",
-			"layer0.opacity": "var(scroll_track_opacity-inactive)",
+			"layer0.opacity": "var(scroll_track_opacity-inactive)"
 		},
 		{
 			"class": "scroll_track_control",
@@ -1107,14 +1107,14 @@
 			"attributes": ["!horizontal"],
 			"content_margin": [0, 12],
 			"layer0.inner_margin": 3,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png",
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png"
 		},
 		{
 			"class": "puck_control",
 			"attributes": ["horizontal"],
 			"content_margin": [12, 0],
 			"layer0.inner_margin": 3,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png",
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png"
 		},
 		{
 			"class": "puck_control",
@@ -1128,7 +1128,7 @@
 		},
 		{
 			"class": "puck_control",
-			"layer0.opacity": "var(scroll_puck_opacity-inactive)",
+			"layer0.opacity": "var(scroll_puck_opacity-inactive)"
 		},
 		{
 			"class": "puck_control",
@@ -1165,7 +1165,7 @@
 			],
 			"content_margin": [0, 8],
 			"top_shadow_size": 4,
-			"top_shadow": "var(sidebar_bg-normal-dark)",
+			"top_shadow": "var(sidebar_bg-normal-dark)"
 		},
 		{
 			"class": "scroll_area_control",
@@ -1173,7 +1173,7 @@
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "sidebar_container"}
 			],
-			"top_shadow": "var(sidebar_bg-normal-light)",
+			"top_shadow": "var(sidebar_bg-normal-light)"
 		},
 
 		// Scroll Bar Control
@@ -1203,7 +1203,7 @@
 		{
 			"class": "scroll_track_control",
 			"parents": [
-				{"class": "sidebar_container", "attributes": ["hover"]},
+				{"class": "sidebar_container", "attributes": ["hover"]}
 			],
 			"attributes": ["!hover"],
 			"layer0.opacity": "var(scroll_track_opacity-active)"
@@ -3950,7 +3950,7 @@
 		{
 			"class": "scroll_track_control",
 			"parents": [
-				{"class": "sheet_container_control", "attributes": ["hover"]},
+				{"class": "sheet_container_control", "attributes": ["hover"]}
 			],
 			"attributes": ["!hover"],
 			"layer0.opacity": "var(scroll_track_opacity-active)"
@@ -4600,7 +4600,7 @@
 		{
 			"class": "scroll_track_control",
 			"parents": [
-				{"class": "overlay_control", "attributes": ["hover"]},
+				{"class": "overlay_control", "attributes": ["hover"]}
 			],
 			"attributes": ["!hover"],
 			"layer0.opacity": "var(scroll_track_opacity-active)"
@@ -4627,7 +4627,7 @@
 				{"class": "popup_control auto_complete_popup"}
 			],
 			"attributes": ["dark"],
-			"tint_modifier": "color(white alpha(0.05))",
+			"tint_modifier": "color(white alpha(0.05))"
 		},
 		{
 			"class": "scroll_bar_control",
@@ -4635,7 +4635,7 @@
 				{"class": "popup_control auto_complete_popup"}
 			],
 			"attributes": ["!dark"],
-			"tint_modifier": "color(black alpha(0.05))",
+			"tint_modifier": "color(black alpha(0.05))"
 		},
 
 		// Auto Complete Table Control
@@ -4652,7 +4652,7 @@
 			"class": "auto_complete",
 			"attributes": ["file_light"],
 			"dark_content": false,
-			"tint_modifier": "color(black alpha(0.05))",
+			"tint_modifier": "color(black alpha(0.05))"
 		},
 
 		// Auto Complete Row (Unselected, Normal)
@@ -4782,7 +4782,7 @@
 		{
 			"class": "popup_control",
 			"platforms": ["windows"],
-			"content_margin": 1,
+			"content_margin": 1
 		},
 
 	////// Annotations ///////////////////////////////////////////////////////////
@@ -4855,7 +4855,7 @@
 		{
 			"class": "scroll_track_control",
 			"parents": [
-				{"class": "panel_control", "attributes": ["hover"]},
+				{"class": "panel_control", "attributes": ["hover"]}
 			],
 			"attributes": ["!hover"],
 			"layer0.opacity": "var(scroll_track_opacity-active)"
