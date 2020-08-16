@@ -41,7 +41,7 @@ This package is not available via Package Control at the moment, so you need to 
 
 ##### Mac OS
 
-```shell
+```sh
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 ```
@@ -49,7 +49,7 @@ git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 
 ##### Linux
 
-```shell
+```sh
 cd ~/.config/sublime-text-3/Packages
 git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 ```
@@ -57,7 +57,7 @@ git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 
 ##### Windows
 
-```shell
+```sh
 cd "%APPDATA%\Sublime Text 3\Packages"
 git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 ```
