@@ -145,13 +145,23 @@
 			"layer1.tint": "color(black blend(var(tabset_bg-light) 20%))",
 			"layer1.opacity": 0.25
 		},
+		{
+			"class": "tab_control",
+			"settings": ["!tabset_size_small", "show_tab_close_buttons_on_left"],
+			"content_margin": [18, 8, 24, 9]
+		},
 
 		// Tab Control (Small)
 
 		{
 			"class": "tab_control",
-			"settings": ["tabset_size_small"],
+			"settings": ["tabset_size_small", "!show_tab_close_buttons_on_left"],
 			"content_margin": [24, 4, 20, 6]
+		},
+		{
+			"class": "tab_control",
+			"settings": ["tabset_size_small", "show_tab_close_buttons_on_left"],
+			"content_margin": [18, 4, 24, 6]
 		},
 
 		// Tab Control (Modified)

@@ -190,14 +190,6 @@
 			"layer1.inner_margin": [0, 31, 0, 0]
 		},
 
-		// Tab Control (Small)
-
-		{
-			"class": "tab_control",
-			"settings": ["tabset_size_small"],
-			"content_margin": [16, 5, 10, 5]
-		},
-
 	////// Overlay Controls //////////////////////////////////////////////////////
 
 		{

@@ -217,7 +217,7 @@
 
 		{
 			"class": "tab_control",
-			"content_margin": [16, 8, 12, 9],
+			"content_margin": [16, 8, 10, 9],
 			"layer0.texture": "Theme - DAneo/textures/tabs/tab--default--mb0--bw0--br4.png",
 			"layer1.draw_center": false,
 			"layer1.inner_margin": [0, 0, 0, 1],
@@ -229,13 +229,23 @@
 			"layer3.tint": "var(accent)",
 			"layer3.opacity": 0.0
 		},
+		{
+			"class": "tab_control",
+			"settings": ["!tabset_size_small", "show_tab_close_buttons_on_left"],
+			"content_margin": [10, 8, 16, 9]
+		},
 
 		// Tab Control (Small)
 
 		{
 			"class": "tab_control",
-			"settings": ["tabset_size_small"],
-			"content_margin": [16, 4, 12, 5]
+			"settings": ["tabset_size_small", "!show_tab_close_buttons_on_left"],
+			"content_margin": [16, 4, 10, 5]
+		},
+		{
+			"class": "tab_control",
+			"settings": ["tabset_size_small", "show_tab_close_buttons_on_left"],
+			"content_margin": [10, 4, 16, 5]
 		},
 
 		// Tab Control (Selected)

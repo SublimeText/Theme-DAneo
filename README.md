@@ -83,6 +83,7 @@ Setting                            | Default    | Description
 `"mouse_wheel_switches_tabs"`      | `false`    | Use mouse wheel to change tabs, if `enable_tab_scrolling` is `false`
 `"overlay_scroll_bars"`            | `"system"` | If `true` scrollbars are displayed only while scrolling. If `false` scrollbars are always visible. The default `"system"` enables overlay scrollbars on MacOS only.
 `"show_tab_close_buttons"`         | `true`     | Show a close button on each tab.
+`"show_tab_close_buttons_on_left"` | `false`    | Show a close button on the left of the tab label _(ST 4075+)_
 
 For information about them please refer to the official [Sublime Text 3 Documentation](https://www.sublimetext.com/docs/3/themes.html#settings).
 

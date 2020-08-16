@@ -203,13 +203,23 @@
 			"layer3.opacity": 0.0,
 			"layer3.texture": null
 		},
+		{
+			"class": "tab_control",
+			"settings": ["!tabset_size_small", "show_tab_close_buttons_on_left"],
+			"content_margin": [12, 4, 16, 5]
+		},
 
 		// Tab Control (Small)
 
 		{
 			"class": "tab_control",
-			"settings": ["tabset_size_small"],
+			"settings": ["tabset_size_small", "!show_tab_close_buttons_on_left"],
 			"content_margin": [16, 3, 10, 3]
+		},
+		{
+			"class": "tab_control",
+			"settings": ["tabset_size_small", "show_tab_close_buttons_on_left"],
+			"content_margin": [10, 3, 16, 3]
 		},
 
 		// Inctive Tab Control

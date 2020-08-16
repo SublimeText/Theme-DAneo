@@ -4275,6 +4275,25 @@
 			"attributes": ["!selected"],
 			"layer0.tint": "var(inactive_tab_bg-normal-light)"
 		},
+		{
+			"class": "tab_control",
+			"settings": ["show_tab_close_buttons_on_left"],
+			"close_button_side": "left",
+			"content_margin": [10, 8, 16, 7]
+		},
+
+		// Tab Control (Small)
+
+		{
+			"class": "tab_control",
+			"settings": ["tabset_size_small", "!show_tab_close_buttons_on_left"],
+			"content_margin": [16, 5, 10, 5]
+		},
+		{
+			"class": "tab_control",
+			"settings": ["tabset_size_small", "show_tab_close_buttons_on_left"],
+			"content_margin": [10, 5, 16, 5]
+		},
 
 		// Inactive Tab Control (Hover)
 
