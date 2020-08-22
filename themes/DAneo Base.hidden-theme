@@ -112,6 +112,9 @@
 		"scroll_track_fg-normal-dark": "rgba(255, 255, 255, 0.2)",
 		"scroll_track_fg-normal-light": "rgba(0, 0, 0, 0.2)",
 
+		"scroll_track_opacity-invisible": {
+				"target": 0.00, "speed": 2.12, "interpolation": "smoothstep"
+			},
 		"scroll_track_opacity-inactive": {
 				"target": 0.20, "speed": 1.12, "interpolation": "smoothstep"
 			},
@@ -126,6 +129,12 @@
 
 		"scroll_puck_fg-normal-dark": "rgba(255, 255, 255, 0.3)",
 		"scroll_puck_fg-normal-light": "rgba(0, 0, 0, 0.3)",
+
+		"scroll_puck_fg-active-dark": "rgba(255, 255, 255, 0.3)",
+		"scroll_puck_fg-active-light": "rgba(0, 0, 0, 0.3)",
+
+		"scroll_puck_fg-hover-dark": "rgba(255, 255, 255, 0.3)",
+		"scroll_puck_fg-hover-light": "rgba(0, 0, 0, 0.3)",
 
 		"scroll_puck_opacity-inactive": {
 				"target": 0.40, "speed": 1.12, "interpolation": "smoothstep"
@@ -1050,6 +1059,11 @@
 			"settings": ["overlay_scroll_bars"],
 			"layer0.opacity": 0.0
 		},
+		{
+			"class": "scroll_bar_control",
+			"settings": ["thin_scroll_bars"],
+			"content_margin": 2,
+		},
 
 		// Scroll Corner Control
 
@@ -1092,7 +1106,13 @@
 		},
 		{
 			"class": "scroll_track_control",
+			"settings": ["!thin_scroll_bars"],
 			"layer0.opacity": "var(scroll_track_opacity-inactive)"
+		},
+		{
+			"class": "scroll_track_control",
+			"settings": ["thin_scroll_bars"],
+			"layer0.opacity": "var(scroll_track_opacity-invisible)"
 		},
 		{
 			"class": "scroll_track_control",
@@ -1111,11 +1131,33 @@
 		},
 		{
 			"class": "puck_control",
+			"settings": ["thin_scroll_bars"],
+			"parents": [
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!horizontal"],
+			"layer0.inner_margin": [0, 0, 2, 0],
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w2--vertical--square.png"
+		},
+
+		{
+			"class": "puck_control",
 			"attributes": ["horizontal"],
 			"content_margin": [12, 0],
 			"layer0.inner_margin": 3,
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png"
 		},
+		{
+			"class": "puck_control",
+			"settings": ["thin_scroll_bars"],
+			"attributes": ["horizontal"],
+			"parents": [
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"layer0.inner_margin": [0, 0, 0, 2],
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w2--horizontal--square.png"
+		},
+
 		{
 			"class": "puck_control",
 			"attributes": ["dark"],
@@ -1130,11 +1172,23 @@
 			"class": "puck_control",
 			"layer0.opacity": "var(scroll_puck_opacity-inactive)"
 		},
+
 		{
 			"class": "puck_control",
 			"parents": [
 				{"class": "scroll_track_control", "attributes": ["hover"]}
 			],
+			"attributes": ["dark"],
+			"layer0.tint": "var(scroll_puck_fg-hover-dark)",
+			"layer0.opacity": "var(scroll_puck_opacity-hover)"
+		},
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "scroll_track_control", "attributes": ["hover"]}
+			],
+			"attributes": ["!dark"],
+			"layer0.tint": "var(scroll_puck_fg-hover-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-hover)"
 		},
 
@@ -1202,6 +1256,7 @@
 
 		{
 			"class": "scroll_track_control",
+			"settings": ["!thin_scroll_bars"],
 			"parents": [
 				{"class": "sidebar_container", "attributes": ["hover"]}
 			],
@@ -1217,6 +1272,19 @@
 				{"class": "sidebar_container", "attributes": ["hover"]},
 				{"class": "scroll_track_control", "attributes": ["!hover"]}
 			],
+			"attributes": ["dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-dark)",
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
+		},
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "sidebar_container", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-active)"
 		},
 
@@ -3949,6 +4017,7 @@
 
 		{
 			"class": "scroll_track_control",
+			"settings": ["!thin_scroll_bars"],
 			"parents": [
 				{"class": "sheet_container_control", "attributes": ["hover"]}
 			],
@@ -3964,6 +4033,19 @@
 				{"class": "sheet_container_control", "attributes": ["hover"]},
 				{"class": "scroll_track_control", "attributes": ["!hover"]}
 			],
+			"attributes": ["dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-dark)",
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
+		},
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "sheet_container_control", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-active)"
 		},
 
@@ -4599,6 +4681,7 @@
 
 		{
 			"class": "scroll_track_control",
+			"settings": ["!thin_scroll_bars"],
 			"parents": [
 				{"class": "overlay_control", "attributes": ["hover"]}
 			],
@@ -4614,6 +4697,19 @@
 				{"class": "overlay_control", "attributes": ["hover"]},
 				{"class": "scroll_track_control", "attributes": ["!hover"]}
 			],
+			"attributes": ["dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-dark)",
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
+		},
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "overlay_control", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-active)"
 		},
 
@@ -4854,6 +4950,7 @@
 
 		{
 			"class": "scroll_track_control",
+			"settings": ["!thin_scroll_bars"],
 			"parents": [
 				{"class": "panel_control", "attributes": ["hover"]}
 			],
@@ -4869,6 +4966,19 @@
 				{"class": "panel_control", "attributes": ["hover"]},
 				{"class": "scroll_track_control", "attributes": ["!hover"]}
 			],
+			"attributes": ["dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-dark)",
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
+		},
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "panel_control", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-active)"
 		},
 

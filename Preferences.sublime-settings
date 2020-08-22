@@ -46,5 +46,8 @@
 	"show_panel_close_button": false,
 
 	// Controls whether to render a smaller tabset variant
-	"tabset_size_small": false
+	"tabset_size_small": false,
+
+	// Controls whether to render thin scroll bar puck when scrolling via mouse
+	"thin_scroll_bars": false,
 }

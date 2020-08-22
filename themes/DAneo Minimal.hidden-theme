@@ -100,8 +100,29 @@
 		},
 		{
 			"class": "puck_control",
+			"settings": ["thin_scroll_bars"],
+			"parents": [
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!horizontal"],
+			"layer0.inner_margin": [0, 0, 2, 0],
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w2--vertical--square.png"
+		},
+
+		{
+			"class": "puck_control",
 			"attributes": ["horizontal"],
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--square.png"
+		},
+		{
+			"class": "puck_control",
+			"settings": ["thin_scroll_bars"],
+			"attributes": ["horizontal"],
+			"parents": [
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"layer0.inner_margin": [0, 0, 0, 2],
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w2--horizontal--square.png"
 		},
 
 	////// Side Bar //////////////////////////////////////////////////////////////

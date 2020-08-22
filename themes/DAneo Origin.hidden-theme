@@ -98,40 +98,6 @@
 			"layer1.tint": "var(panel_input_bc-light)"
 		},
 
-	////// Scroll Bars ///////////////////////////////////////////////////////////
-
-		// Scroll Track
-
-		{
-			"class": "scroll_track_control",
-			"attributes": ["!horizontal"],
-			"content_margin": 2,
-			"layer0.inner_margin": 2,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w4--vertical--rounded.png"
-		},
-		{
-			"class": "scroll_track_control",
-			"attributes": ["horizontal"],
-			"content_margin": 2,
-			"layer0.inner_margin": 2,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w4--horizontal--rounded.png"
-		},
-
-		// Scroll Puck
-
-		{
-			"class": "puck_control",
-			"attributes": ["!horizontal"],
-			"layer0.inner_margin": 2,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w4--vertical--rounded.png"
-		},
-		{
-			"class": "puck_control",
-			"attributes": ["horizontal"],
-			"layer0.inner_margin": 2,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w4--horizontal--rounded.png"
-		},
-
 	////// Side Bar //////////////////////////////////////////////////////////////
 
 		{
