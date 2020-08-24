@@ -690,11 +690,6 @@
 		},
 		{
 			"class": "quick_panel",
-			"platforms": ["windows"],
-			"row_padding": [17, 7, 17, 6]
-		},
-		{
-			"class": "quick_panel",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]}
 			],
@@ -4969,11 +4964,6 @@
 		{
 			"class": "symbol_container",
 			"content_margin": [3, 7, 6, 7]
-		},
-		{
-			"class": "symbol_container",
-			"platforms": ["windows"],
-			"content_margin": [3, 7, 6, 6]
 		},
 
 	////// Auto Complete /////////////////////////////////////////////////////////
