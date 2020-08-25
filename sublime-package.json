@@ -1,0 +1,63 @@
+{
+	"contributions": {
+		"settings": [
+			{
+				"schema": {
+				    "$id": "sublime://schemas/preferences.sublime-settings",
+					"properties": {
+						"show_disclosure_buttons": {
+							"type": "boolean",
+							"default": true,
+							"markdownDescription": "Controls whether to show the disclosure buttons in the sidebar"
+						},
+						"align_disclosure_buttons": {
+							"type": "boolean",
+							"default": false,
+							"markdownDescription": "Controls whether to align the disclosure buttons with the file icons.\nThis setting has only effect if `show_disclosure_buttons` is `true`."
+						},
+						"show_sidebar_icons": {
+							"type": "boolean",
+							"default": true,
+							"markdownDescription": "Controls whether to show folder and file icons in the sidebar"
+						},
+						"show_sidebar_vcs_badges": {
+							"type": "boolean",
+							"default": true,
+							"markdownDescription": "Controls whether to show vcs status badges in the side bar"
+						},
+						"show_sidebar_closed_dir_badges": {
+							"type": "boolean",
+							"default": true,
+							"markdownDescription": "Controls whether to show vcs status badges for collapsed directories in the side bar if `show_sidebar_vcs_badges` is `true`."
+						},
+						"show_sidebar_opened_dir_badges": {
+							"type": "boolean",
+							"default": false,
+							"markdownDescription": "Controls whether to show vcs status badges for expanded directories in the side bar if `show_sidebar_vcs_badges` is `true`."
+						},
+						"show_sidebar_ignored_label_colors": {
+							"type": "boolean",
+							"default": true,
+							"markdownDescription": "Controls whether to show vcs status of ignored files and folders by the color of their labels in the sidebar."
+						},
+						"show_sidebar_tracked_label_colors": {
+							"type": "boolean",
+							"default": true,
+							"markdownDescription": "Controls whether to show vcs status of tracked files and folders by the color of their labels in the sidebar."
+						},
+						"show_sidebar_untracked_label_colors": {
+							"type": "boolean",
+							"default": true,
+							"markdownDescription": "Controls whether to show vcs status of untracked files and folders by the color of their labels in the sidebar."
+						},
+						"thin_scroll_bars": {
+							"type": "boolean",
+							"default": false,
+							"markdownDescription": "Controls whether to render thin scroll bar puck when scrolling via mouse"
+						}
+					}
+				}
+			}
+		]
+	}
+}
