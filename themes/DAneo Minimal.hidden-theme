@@ -12,16 +12,16 @@
 		"overlay_bg-dark": "color(black blend(var(bg) 15%))",
 		"overlay_bg-light": "color(black blend(var(bg) 7.5%))",
 
-		"overlay_input_tint-dark": "color(black alpha(15%))",
-		"overlay_input_tint-light": "color(black alpha(7.5%))",
+		"overlay_input_tint-dark": "var(overlay_bg-dark)",
+		"overlay_input_tint-light": "var(overlay_bg-light)",
 
 	////// Panel Control /////////////////////////////////////////////////////////
 
 		"panel_bg-dark": "color(black blend(var(bg) 20%))",
 		"panel_bg-light": "color(black blend(var(bg) 10%))",
 
-		"panel_input_tint-dark": "color(black alpha(20%))",
-		"panel_input_tint-light": "color(black alpha(10%))"
+		"panel_input_tint-dark": "var(panel_bg-dark)",
+		"panel_input_tint-light": "var(panel_bg-light)"
 	},
 
 	"rules": [

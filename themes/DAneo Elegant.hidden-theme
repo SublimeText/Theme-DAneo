@@ -51,8 +51,8 @@
 		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
 		"overlay_bg-light": "color(black blend(var(bg) 5%))",
 
-		"overlay_input_tint-dark": "color(white alpha(5%))",
-		"overlay_input_tint-light": "color(black alpha(5%))",
+		"overlay_input_tint-dark": "var(overlay_bg-dark)",
+		"overlay_input_tint-light": "var(overlay_bg-light)",
 
 	////// Panel Controls ////////////////////////////////////////////////////////
 
@@ -68,8 +68,8 @@
 		"panel_input_bc-dark": "color(white alpha(15%))",
 		"panel_input_bc-light": "color(black alpha(10%))",
 
-		"panel_output_tint-dark": "color(white alpha(7.5%))",
-		"panel_output_tint-light": "color(black alpha(7.5%))",
+		"panel_output_tint-dark": "var(panel_bg-dark)",
+		"panel_output_tint-light": "var(panel_bg-light)",
 
 	////// Status Bar ////////////////////////////////////////////////////////////
 
