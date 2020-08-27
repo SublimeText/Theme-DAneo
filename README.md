@@ -41,7 +41,7 @@ This package is not available via Package Control at the moment, so you need to 
 
 ##### Mac OS
 
-```shell
+```sh
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 ```
@@ -49,7 +49,7 @@ git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 
 ##### Linux
 
-```shell
+```sh
 cd ~/.config/sublime-text-3/Packages
 git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 ```
@@ -57,7 +57,7 @@ git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 
 ##### Windows
 
-```shell
+```sh
 cd "%APPDATA%\Sublime Text 3\Packages"
 git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 ```
@@ -104,7 +104,7 @@ Setting                                 | Default | Description
 `"show_panel_button"`                   | `true`  | Controls whether to show the _show panel button_ in the left corner of the status bar
 `"show_panel_close_button"`             | `false` | Controls whether to show the close button of the find and replace panels
 `"tabset_size_small"`                   | `false` | Controls whether to render a smaller tabset variant
-
+`"thin_scroll_bars"`                    | `true`  | Controls whether to display a thin scrollbar by default. If `true` full sized scrollbars are displayed only if cursor is hovering.
 
 ### Editing the Theme
 

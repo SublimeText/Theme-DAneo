@@ -34,6 +34,9 @@
 		"tabset_bg-dark": "var(sidebar_bg-normal-dark)",
 		"tabset_bg-light": "var(sidebar_bg-normal-light)",
 
+		"tabset_bc-dark": "color(black blend(var(--background) 10%))",
+		"tabset_bc-light": "color(black alpha(0.25))",
+
 		// close button of hovered active tab
 		"active_tab_close_opacity-normal": "var(button_icon_opacity-normal)",
 		// hovered close button on active tab
@@ -48,8 +51,8 @@
 		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
 		"overlay_bg-light": "color(black blend(var(bg) 5%))",
 
-		"overlay_input_tint-dark": "color(white alpha(5%))",
-		"overlay_input_tint-light": "color(black alpha(5%))",
+		"overlay_input_tint-dark": "var(overlay_bg-dark)",
+		"overlay_input_tint-light": "var(overlay_bg-light)",
 
 	////// Panel Controls ////////////////////////////////////////////////////////
 
@@ -65,8 +68,8 @@
 		"panel_input_bc-dark": "color(white alpha(15%))",
 		"panel_input_bc-light": "color(black alpha(10%))",
 
-		"panel_output_tint-dark": "color(white alpha(7.5%))",
-		"panel_output_tint-light": "color(black alpha(7.5%))",
+		"panel_output_tint-dark": "var(panel_bg-dark)",
+		"panel_output_tint-light": "var(panel_bg-light)",
 
 	////// Status Bar ////////////////////////////////////////////////////////////
 
@@ -180,18 +183,25 @@
 			"class": "tabset_control",
 			"content_margin": [0, 3, 0, 5],
 			"tab_height": 34,
-			"tint_index": 0,
+			"tint_index": 2,
+			"layer0.draw_center": false,
+			"layer0.inner_margin": [0, 37, 0, 0],
+			"layer0.tint": "var(tabset_bg-dark)",
+			"layer0.opacity": 1.0,
 			"layer1.draw_center": false,
-			"layer1.inner_margin": [0, 37, 0, 0],
-			"layer1.tint": "var(tabset_bg-dark)",
-			"layer1.opacity": 1.0
+			"layer1.inner_margin": [0, 0, 0, 6],
+			"layer1.tint": "var(tabset_bc-dark)",
+			"layer1.opacity": 1.0,
+			"layer2.draw_center": false,
+			"layer2.inner_margin": [0, 0, 0, 5],
+			"layer2.opacity": 1.0
 		},
 		{
 			"class": "tabset_control",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]}
 			],
-			"layer1.tint": "var(tabset_bg-light)"
+			"layer0.tint": "var(tabset_bg-light)"
 		},
 
 		// Tabset Control (Small)
@@ -200,7 +210,7 @@
 			"class": "tabset_control",
 			"settings": ["tabset_size_small"],
 			"tab_height": 28,
-			"layer1.inner_margin": [0, 31, 0, 0]
+			"layer0.inner_margin": [0, 31, 0, 0]
 		},
 
 		// Tab Control
@@ -209,6 +219,10 @@
 			"class": "tab_control",
 			"content_margin": [16, 8, 12, 9],
 			"layer0.texture": "Theme - DAneo/textures/tabs/tab--default--mb0--bw0--br4.png",
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [0, 0, 0, 1],
+			"layer1.tint": "var(tabset_bc-dark)",
+			"layer1.opacity": 1.0,
 			"layer3.draw_center": false,
 			"layer3.inner_margin": [4, 4],
 			"layer3.texture": "Theme - DAneo/textures/tabs/tab--default--prelined--mb0--bw2--br4.png",
@@ -229,6 +243,7 @@
 		{
 			"class": "tab_control",
 			"attributes": ["selected"],
+			"layer1.opacity": 0.0,
 			"layer3.opacity": 1.0
 		},
 

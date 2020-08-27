@@ -137,6 +137,9 @@
 		"scroll_track_fg-normal-dark": "rgba(255, 255, 255, 0.2)",
 		"scroll_track_fg-normal-light": "rgba(0, 0, 0, 0.2)",
 
+		"scroll_track_opacity-invisible": {
+				"target": 0.00, "speed": 2.12, "interpolation": "smoothstep"
+			},
 		"scroll_track_opacity-inactive": {
 				"target": 0.20, "speed": 1.12, "interpolation": "smoothstep"
 			},
@@ -151,6 +154,12 @@
 
 		"scroll_puck_fg-normal-dark": "rgba(255, 255, 255, 0.3)",
 		"scroll_puck_fg-normal-light": "rgba(0, 0, 0, 0.3)",
+
+		"scroll_puck_fg-active-dark": "rgba(255, 255, 255, 0.3)",
+		"scroll_puck_fg-active-light": "rgba(0, 0, 0, 0.3)",
+
+		"scroll_puck_fg-hover-dark": "rgba(255, 255, 255, 0.3)",
+		"scroll_puck_fg-hover-light": "rgba(0, 0, 0, 0.3)",
 
 		"scroll_puck_opacity-inactive": {
 				"target": 0.40, "speed": 1.12, "interpolation": "smoothstep"
@@ -1230,6 +1239,11 @@
 			"settings": ["overlay_scroll_bars"],
 			"layer0.opacity": 0.0
 		},
+		{
+			"class": "scroll_bar_control",
+			"settings": ["thin_scroll_bars"],
+			"content_margin": 2,
+		},
 
 		// Scroll Corner Control
 
@@ -1251,14 +1265,14 @@
 			"attributes": ["!horizontal"],
 			"content_margin": 3,
 			"layer0.inner_margin": 3,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png",
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png"
 		},
 		{
 			"class": "scroll_track_control",
 			"attributes": ["horizontal"],
 			"content_margin": 3,
 			"layer0.inner_margin": 3,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png",
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png"
 		},
 		{
 			"class": "scroll_track_control",
@@ -1272,7 +1286,13 @@
 		},
 		{
 			"class": "scroll_track_control",
-			"layer0.opacity": "var(scroll_track_opacity-inactive)",
+			"settings": ["!thin_scroll_bars"],
+			"layer0.opacity": "var(scroll_track_opacity-inactive)"
+		},
+		{
+			"class": "scroll_track_control",
+			"settings": ["thin_scroll_bars"],
+			"layer0.opacity": "var(scroll_track_opacity-invisible)"
 		},
 		{
 			"class": "scroll_track_control",
@@ -1287,15 +1307,37 @@
 			"attributes": ["!horizontal"],
 			"content_margin": [0, 12],
 			"layer0.inner_margin": 3,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png",
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png"
 		},
+		{
+			"class": "puck_control",
+			"settings": ["thin_scroll_bars"],
+			"parents": [
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!horizontal"],
+			"layer0.inner_margin": [0, 0, 2, 0],
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w2--vertical--square.png"
+		},
+
 		{
 			"class": "puck_control",
 			"attributes": ["horizontal"],
 			"content_margin": [12, 0],
 			"layer0.inner_margin": 3,
-			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png",
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png"
 		},
+		{
+			"class": "puck_control",
+			"settings": ["thin_scroll_bars"],
+			"attributes": ["horizontal"],
+			"parents": [
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"layer0.inner_margin": [0, 0, 0, 2],
+			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w2--horizontal--square.png"
+		},
+
 		{
 			"class": "puck_control",
 			"attributes": ["dark"],
@@ -1308,13 +1350,25 @@
 		},
 		{
 			"class": "puck_control",
-			"layer0.opacity": "var(scroll_puck_opacity-inactive)",
+			"layer0.opacity": "var(scroll_puck_opacity-inactive)"
+		},
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "scroll_track_control", "attributes": ["hover"]}
+			],
+			"attributes": ["dark"],
+			"layer0.tint": "var(scroll_puck_fg-hover-dark)",
+			"layer0.opacity": "var(scroll_puck_opacity-hover)"
 		},
 		{
 			"class": "puck_control",
 			"parents": [
 				{"class": "scroll_track_control", "attributes": ["hover"]}
 			],
+			"attributes": ["!dark"],
+			"layer0.tint": "var(scroll_puck_fg-hover-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-hover)"
 		},
 
@@ -1345,7 +1399,7 @@
 			],
 			"content_margin": [0, 8],
 			"top_shadow_size": 4,
-			"top_shadow": "var(sidebar_bg-normal-dark)",
+			"top_shadow": "var(sidebar_bg-normal-dark)"
 		},
 		{
 			"class": "scroll_area_control",
@@ -1353,7 +1407,7 @@
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "sidebar_container"}
 			],
-			"top_shadow": "var(sidebar_bg-normal-light)",
+			"top_shadow": "var(sidebar_bg-normal-light)"
 		},
 
 		// Scroll Bar Control
@@ -1382,8 +1436,9 @@
 
 		{
 			"class": "scroll_track_control",
+			"settings": ["!thin_scroll_bars"],
 			"parents": [
-				{"class": "sidebar_container", "attributes": ["hover"]},
+				{"class": "sidebar_container", "attributes": ["hover"]}
 			],
 			"attributes": ["!hover"],
 			"layer0.opacity": "var(scroll_track_opacity-active)"
@@ -1397,6 +1452,19 @@
 				{"class": "sidebar_container", "attributes": ["hover"]},
 				{"class": "scroll_track_control", "attributes": ["!hover"]}
 			],
+			"attributes": ["dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-dark)",
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
+		},
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "sidebar_container", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-active)"
 		},
 
@@ -1565,13 +1633,850 @@
 			"fg": "var(sidebar_fg-selected-hover-light)"
 		},
 
+	////// Side Bar / Tree Items / Folder Labels /////////////////////////////////
+
+		// Side Bar Tree Item Text (Folders With Untracked Files)
+		// Note: commented out as it looks like the whole folder was ignored, which is not the case
+
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_untracked_label_colors"],
+		// 	"parents": [
+		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["untracked"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-untracked-normal-dark)"
+		// },
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_untracked_label_colors"],
+		// 	"parents": [
+		// 		{"class": "window", "attributes": ["file_light"]},
+		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["untracked"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-untracked-normal-light)"
+		// },
+
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_untracked_label_colors"],
+		// 	"parents": [
+		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["untracked"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-untracked-hover-dark)"
+		// },
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_untracked_label_colors"],
+		// 	"parents": [
+		// 		{"class": "window", "attributes": ["file_light"]},
+		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["untracked"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-untracked-hover-light)"
+		// },
+
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_untracked_label_colors"],
+		// 	"parents": [
+		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["untracked"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-untracked-selected-dark)"
+		// },
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_untracked_label_colors"],
+		// 	"parents": [
+		// 		{"class": "window", "attributes": ["file_light"]},
+		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["untracked"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-untracked-selected-light)"
+		// },
+
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_untracked_label_colors"],
+		// 	"parents": [
+		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["untracked"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-untracked-selected-hover-dark)"
+		// },
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_untracked_label_colors"],
+		// 	"parents": [
+		// 		{"class": "window", "attributes": ["file_light"]},
+		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["untracked"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-untracked-selected-hover-light)"
+		// },
+
+		// Side Bar Tree Item Text (Folders With Ignored Files)
+		// Note: commented out as it looks like the whole folder was ignored, which is not the case
+
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_ignored_label_colors"],
+		// 	"parents": [
+		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-ignored-normal-dark)"
+		// },
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_ignored_label_colors"],
+		// 	"parents": [
+		// 		{"class": "window", "attributes": ["file_light"]},
+		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-ignored-normal-light)"
+		// },
+
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_ignored_label_colors"],
+		// 	"parents": [
+		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-ignored-hover-dark)"
+		// },
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_ignored_label_colors"],
+		// 	"parents": [
+		// 		{"class": "window", "attributes": ["file_light"]},
+		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-ignored-hover-light)"
+		// },
+
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_ignored_label_colors"],
+		// 	"parents": [
+		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-ignored-selected-dark)"
+		// },
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_ignored_label_colors"],
+		// 	"parents": [
+		// 		{"class": "window", "attributes": ["file_light"]},
+		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-ignored-selected-light)"
+		// },
+
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_ignored_label_colors"],
+		// 	"parents": [
+		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-ignored-selected-hover-dark)"
+		// },
+		// {
+		// 	"class": "sidebar_label",
+		// 	"settings": ["show_sidebar_ignored_label_colors"],
+		// 	"parents": [
+		// 		{"class": "window", "attributes": ["file_light"]},
+		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
+		// 	],
+		// 	"fg": "var(sidebar_fg-ignored-selected-hover-light)"
+		// },
+
+		// Side Bar Tree Item Text (Folders With Modified Files)
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-modified-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Folders With Added Files)
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-added-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Folders With Added & Modified Files)
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["added", "modified"]}
+			],
+			"fg": "var(sidebar_fg-added_modified-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Folders With Staged Files)
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-staged-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-staged-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-staged-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-staged-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-staged-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-staged-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-staged-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
+			],
+			"fg": "var(sidebar_fg-staged-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Folders With Staged & Modified Files)
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-staged_modified-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-staged_modified-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-staged_modified-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-staged_modified-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-staged_modified-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-staged_modified-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-staged_modified-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
+			],
+			"fg": "var(sidebar_fg-staged_modified-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Folders With Deleted Files)
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["deleted"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Folder With Missing Files)
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["missing"]}
+			],
+			"fg": "var(sidebar_fg-deleted-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Folders With Unmerged Files)
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-hover-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-selected-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_tracked_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["unmerged"]}
+			],
+			"fg": "var(sidebar_fg-unmerged-selected-hover-light)"
+		},
+
+		// Side Bar Tree Item Text (Folders)
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable"]}
+			],
+			"settings": ["bold_folder_labels"],
+			"font.bold": true
+		},
+
+	////// Side Bar / Tree Items / File Labels ///////////////////////////////////
+
 		// Side Bar Tree Item Text (Untracked Files)
 
 		{
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
 			],
 			"fg": "var(sidebar_fg-untracked-normal-dark)"
@@ -1581,7 +2486,7 @@
 			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
 			],
 			"fg": "var(sidebar_fg-untracked-normal-light)"
@@ -1591,7 +2496,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
 			],
 			"fg": "var(sidebar_fg-untracked-hover-dark)"
@@ -1601,7 +2506,7 @@
 			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
 			],
 			"fg": "var(sidebar_fg-untracked-hover-light)"
@@ -1611,7 +2516,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
 			],
 			"fg": "var(sidebar_fg-untracked-selected-dark)"
@@ -1621,7 +2526,7 @@
 			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
 			],
 			"fg": "var(sidebar_fg-untracked-selected-light)"
@@ -1631,7 +2536,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
 			],
 			"fg": "var(sidebar_fg-untracked-selected-hover-dark)"
@@ -1641,7 +2546,7 @@
 			"settings": ["show_sidebar_untracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["untracked"]}
 			],
 			"fg": "var(sidebar_fg-untracked-selected-hover-light)"
@@ -1653,7 +2558,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
 			],
 			"fg": "var(sidebar_fg-ignored-normal-dark)"
@@ -1663,7 +2568,7 @@
 			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
 			],
 			"fg": "var(sidebar_fg-ignored-normal-light)"
@@ -1673,7 +2578,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
 			],
 			"fg": "var(sidebar_fg-ignored-hover-dark)"
@@ -1683,7 +2588,7 @@
 			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
 			],
 			"fg": "var(sidebar_fg-ignored-hover-light)"
@@ -1693,7 +2598,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
 			],
 			"fg": "var(sidebar_fg-ignored-selected-dark)"
@@ -1703,7 +2608,7 @@
 			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
 			],
 			"fg": "var(sidebar_fg-ignored-selected-light)"
@@ -1713,7 +2618,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
 			],
 			"fg": "var(sidebar_fg-ignored-selected-hover-dark)"
@@ -1723,7 +2628,7 @@
 			"settings": ["show_sidebar_ignored_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["ignored"]}
 			],
 			"fg": "var(sidebar_fg-ignored-selected-hover-light)"
@@ -1735,7 +2640,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-modified-normal-dark)"
@@ -1745,7 +2650,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-modified-normal-light)"
@@ -1755,7 +2660,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-modified-hover-dark)"
@@ -1765,7 +2670,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-modified-hover-light)"
@@ -1775,7 +2680,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-modified-selected-dark)"
@@ -1785,7 +2690,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-modified-selected-light)"
@@ -1795,7 +2700,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-modified-selected-hover-dark)"
@@ -1805,7 +2710,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["!added", "!staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-modified-selected-hover-light)"
@@ -1817,7 +2722,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-added-normal-dark)"
@@ -1827,7 +2732,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-added-normal-light)"
@@ -1837,7 +2742,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-added-hover-dark)"
@@ -1847,7 +2752,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-added-hover-light)"
@@ -1857,7 +2762,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-added-selected-dark)"
@@ -1867,7 +2772,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-added-selected-light)"
@@ -1877,7 +2782,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-added-selected-hover-dark)"
@@ -1887,7 +2792,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-added-selected-hover-light)"
@@ -1899,7 +2804,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
 			],
 			"fg": "var(sidebar_fg-added_modified-normal-dark)"
@@ -1909,7 +2814,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
 			],
 			"fg": "var(sidebar_fg-added_modified-normal-light)"
@@ -1919,7 +2824,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
 			],
 			"fg": "var(sidebar_fg-added_modified-hover-dark)"
@@ -1929,7 +2834,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
 			],
 			"fg": "var(sidebar_fg-added_modified-hover-light)"
@@ -1939,7 +2844,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
 			],
 			"fg": "var(sidebar_fg-added_modified-selected-dark)"
@@ -1949,7 +2854,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
 			],
 			"fg": "var(sidebar_fg-added_modified-selected-light)"
@@ -1959,7 +2864,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
 			],
 			"fg": "var(sidebar_fg-added_modified-selected-hover-dark)"
@@ -1969,7 +2874,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["added", "modified"]}
 			],
 			"fg": "var(sidebar_fg-added_modified-selected-hover-light)"
@@ -1981,7 +2886,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-staged-normal-dark)"
@@ -1991,7 +2896,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-staged-normal-light)"
@@ -2001,7 +2906,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-staged-hover-dark)"
@@ -2011,7 +2916,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-staged-hover-light)"
@@ -2021,7 +2926,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-staged-selected-dark)"
@@ -2031,7 +2936,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-staged-selected-light)"
@@ -2041,7 +2946,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-staged-selected-hover-dark)"
@@ -2051,7 +2956,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "!modified"]}
 			],
 			"fg": "var(sidebar_fg-staged-selected-hover-light)"
@@ -2063,7 +2968,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-staged_modified-normal-dark)"
@@ -2073,7 +2978,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-staged_modified-normal-light)"
@@ -2083,7 +2988,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-staged_modified-hover-dark)"
@@ -2093,7 +2998,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-staged_modified-hover-light)"
@@ -2103,7 +3008,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-staged_modified-selected-dark)"
@@ -2113,7 +3018,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-staged_modified-selected-light)"
@@ -2123,7 +3028,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-staged_modified-selected-hover-dark)"
@@ -2133,7 +3038,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["staged", "modified"]}
 			],
 			"fg": "var(sidebar_fg-staged_modified-selected-hover-light)"
@@ -2145,7 +3050,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
 			],
 			"fg": "var(sidebar_fg-deleted-normal-dark)"
@@ -2155,7 +3060,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
 			],
 			"fg": "var(sidebar_fg-deleted-normal-light)"
@@ -2165,7 +3070,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
 			],
 			"fg": "var(sidebar_fg-deleted-hover-dark)"
@@ -2175,7 +3080,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
 			],
 			"fg": "var(sidebar_fg-deleted-hover-light)"
@@ -2185,7 +3090,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
 			],
 			"fg": "var(sidebar_fg-deleted-selected-dark)"
@@ -2195,7 +3100,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
 			],
 			"fg": "var(sidebar_fg-deleted-selected-light)"
@@ -2205,7 +3110,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
 			],
 			"fg": "var(sidebar_fg-deleted-selected-hover-dark)"
@@ -2215,90 +3120,8 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["deleted"]}
-			],
-			"fg": "var(sidebar_fg-deleted-selected-hover-light)"
-		},
-
-		// Side Bar Tree Item Text (Folder With Deleted Files)
-
-		{
-			"class": "sidebar_label",
-			"settings": ["show_sidebar_tracked_label_colors"],
-			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
-				{"class": "file_system_entry", "attributes": ["missing"]}
-			],
-			"fg": "var(sidebar_fg-deleted-normal-dark)"
-		},
-		{
-			"class": "sidebar_label",
-			"settings": ["show_sidebar_tracked_label_colors"],
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
-				{"class": "file_system_entry", "attributes": ["missing"]}
-			],
-			"fg": "var(sidebar_fg-deleted-normal-light)"
-		},
-
-		{
-			"class": "sidebar_label",
-			"settings": ["show_sidebar_tracked_label_colors"],
-			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
-				{"class": "file_system_entry", "attributes": ["missing"]}
-			],
-			"fg": "var(sidebar_fg-deleted-hover-dark)"
-		},
-		{
-			"class": "sidebar_label",
-			"settings": ["show_sidebar_tracked_label_colors"],
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
-				{"class": "file_system_entry", "attributes": ["missing"]}
-			],
-			"fg": "var(sidebar_fg-deleted-hover-light)"
-		},
-
-		{
-			"class": "sidebar_label",
-			"settings": ["show_sidebar_tracked_label_colors"],
-			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
-				{"class": "file_system_entry", "attributes": ["missing"]}
-			],
-			"fg": "var(sidebar_fg-deleted-selected-dark)"
-		},
-		{
-			"class": "sidebar_label",
-			"settings": ["show_sidebar_tracked_label_colors"],
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
-				{"class": "file_system_entry", "attributes": ["missing"]}
-			],
-			"fg": "var(sidebar_fg-deleted-selected-light)"
-		},
-
-		{
-			"class": "sidebar_label",
-			"settings": ["show_sidebar_tracked_label_colors"],
-			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
-				{"class": "file_system_entry", "attributes": ["missing"]}
-			],
-			"fg": "var(sidebar_fg-deleted-selected-hover-dark)"
-		},
-		{
-			"class": "sidebar_label",
-			"settings": ["show_sidebar_tracked_label_colors"],
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
-				{"class": "file_system_entry", "attributes": ["missing"]}
 			],
 			"fg": "var(sidebar_fg-deleted-selected-hover-light)"
 		},
@@ -2309,7 +3132,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
 			],
 			"fg": "var(sidebar_fg-unmerged-normal-dark)"
@@ -2319,7 +3142,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
 			],
 			"fg": "var(sidebar_fg-unmerged-normal-light)"
@@ -2329,7 +3152,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
 			],
 			"fg": "var(sidebar_fg-unmerged-hover-dark)"
@@ -2339,7 +3162,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "!selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "!selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
 			],
 			"fg": "var(sidebar_fg-unmerged-hover-light)"
@@ -2349,7 +3172,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
 			],
 			"fg": "var(sidebar_fg-unmerged-selected-dark)"
@@ -2359,7 +3182,7 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "!hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "!hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
 			],
 			"fg": "var(sidebar_fg-unmerged-selected-light)"
@@ -2369,7 +3192,7 @@
 			"class": "sidebar_label",
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
 			],
 			"fg": "var(sidebar_fg-unmerged-selected-hover-dark)"
@@ -2379,21 +3202,10 @@
 			"settings": ["show_sidebar_tracked_label_colors"],
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["selectable", "!expanded", "selected", "hover"]},
+				{"class": "tree_row", "attributes": ["!expandable", "selected", "hover"]},
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
 			],
 			"fg": "var(sidebar_fg-unmerged-selected-hover-light)"
-		},
-
-		// Side Bar Tree Item Text (folders)
-
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "tree_row", "attributes": ["selectable", "expandable"]}
-			],
-			"settings": ["bold_folder_labels"],
-			"font.bold": true
 		},
 
 	////// Side Bar / Open Files / Close Buttons /////////////////////////////////
@@ -3385,8 +4197,9 @@
 
 		{
 			"class": "scroll_track_control",
+			"settings": ["!thin_scroll_bars"],
 			"parents": [
-				{"class": "sheet_container_control", "attributes": ["hover"]},
+				{"class": "sheet_container_control", "attributes": ["hover"]}
 			],
 			"attributes": ["!hover"],
 			"layer0.opacity": "var(scroll_track_opacity-active)"
@@ -3400,6 +4213,19 @@
 				{"class": "sheet_container_control", "attributes": ["hover"]},
 				{"class": "scroll_track_control", "attributes": ["!hover"]}
 			],
+			"attributes": ["dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-dark)",
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
+		},
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "sheet_container_control", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-active)"
 		},
 
@@ -4035,8 +4861,9 @@
 
 		{
 			"class": "scroll_track_control",
+			"settings": ["!thin_scroll_bars"],
 			"parents": [
-				{"class": "overlay_control", "attributes": ["hover"]},
+				{"class": "overlay_control", "attributes": ["hover"]}
 			],
 			"attributes": ["!hover"],
 			"layer0.opacity": "var(scroll_track_opacity-active)"
@@ -4050,6 +4877,19 @@
 				{"class": "overlay_control", "attributes": ["hover"]},
 				{"class": "scroll_track_control", "attributes": ["!hover"]}
 			],
+			"attributes": ["dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-dark)",
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
+		},
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "overlay_control", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-active)"
 		},
 
@@ -4127,7 +4967,7 @@
 				{"class": "popup_control auto_complete_popup"}
 			],
 			"attributes": ["dark"],
-			"tint_modifier": "color(white alpha(0.05))",
+			"tint_modifier": "color(white alpha(0.05))"
 		},
 		{
 			"class": "scroll_bar_control",
@@ -4135,7 +4975,7 @@
 				{"class": "popup_control auto_complete_popup"}
 			],
 			"attributes": ["!dark"],
-			"tint_modifier": "color(black alpha(0.05))",
+			"tint_modifier": "color(black alpha(0.05))"
 		},
 
 		// Auto Complete Table Control
@@ -4152,7 +4992,7 @@
 			"class": "auto_complete",
 			"attributes": ["file_light"],
 			"dark_content": false,
-			"tint_modifier": "color(black alpha(0.05))",
+			"tint_modifier": "color(black alpha(0.05))"
 		},
 
 		// Auto Complete Row (Unselected, Normal)
@@ -4448,7 +5288,7 @@
 		{
 			"class": "popup_control",
 			"platforms": ["windows"],
-			"content_margin": 1,
+			"content_margin": 1
 		},
 
 		{
@@ -4526,8 +5366,9 @@
 
 		{
 			"class": "scroll_track_control",
+			"settings": ["!thin_scroll_bars"],
 			"parents": [
-				{"class": "panel_control", "attributes": ["hover"]},
+				{"class": "panel_control", "attributes": ["hover"]}
 			],
 			"attributes": ["!hover"],
 			"layer0.opacity": "var(scroll_track_opacity-active)"
@@ -4541,6 +5382,19 @@
 				{"class": "panel_control", "attributes": ["hover"]},
 				{"class": "scroll_track_control", "attributes": ["!hover"]}
 			],
+			"attributes": ["dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-dark)",
+			"layer0.opacity": "var(scroll_puck_opacity-active)"
+		},
+
+		{
+			"class": "puck_control",
+			"parents": [
+				{"class": "panel_control", "attributes": ["hover"]},
+				{"class": "scroll_track_control", "attributes": ["!hover"]}
+			],
+			"attributes": ["!dark"],
+			"layer0.tint": "var(scroll_puck_fg-active-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-active)"
 		},
 
