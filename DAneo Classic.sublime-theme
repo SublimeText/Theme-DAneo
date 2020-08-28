@@ -63,9 +63,9 @@
 		"quick_panel_text_font_face": "var(font_face)",
 		"quick_panel_text_font_size": "var(font_size)",
 
-		"quick_panel_path_font_face": "var(font_face)",
-		"quick_panel_path_font_size": 10,
-		"quick_panel_path_font_italic": true,
+		"quick_panel_details_font_face": "var(font_face)",
+		"quick_panel_details_font_size": 10,
+		"quick_panel_details_font_italic": true,
 
 	////// Tooltips //////////////////////////////////////////////////////////////
 

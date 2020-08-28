@@ -466,31 +466,31 @@
 		"quick_panel_fg-selected-hover-match-dark": "color(var(accent) blend(var(quick_panel_fg-selected-hover-dark) 90%))",
 		"quick_panel_fg-selected-hover-match-light": "color(var(accent) blend(var(quick_panel_fg-selected-hover-light) 90%))",
 
-		// Quick Panel Description Text
+		// Quick Panel Details Text (lines below caption)
 
-		"quick_panel_path_font_face": "var(font_face)",
-		"quick_panel_path_font_size": 10,
-		"quick_panel_path_font_italic": true,
+		"quick_panel_details_font_face": "var(font_face)",
+		"quick_panel_details_font_size": 10,
+		"quick_panel_details_font_italic": true,
 
-		"quick_panel_path_fg-normal-dark": "color(var(quick_panel_fg-normal-dark) a(- 0.3))",
-		"quick_panel_path_fg-normal-light": "color(var(quick_panel_fg-normal-light) a(- 0.3))",
-		"quick_panel_path_fg-normal-match-dark": "color(var(quick_panel_fg-normal-match-dark) a(- 0.3))",
-		"quick_panel_path_fg-normal-match-light": "color(var(quick_panel_fg-normal-match-light) a(- 0.3))",
+		"quick_panel_details_fg-normal-dark": "color(var(quick_panel_fg-normal-dark) a(- 0.3))",
+		"quick_panel_details_fg-normal-light": "color(var(quick_panel_fg-normal-light) a(- 0.3))",
+		"quick_panel_details_fg-normal-match-dark": "color(var(quick_panel_fg-normal-match-dark) a(- 0.3))",
+		"quick_panel_details_fg-normal-match-light": "color(var(quick_panel_fg-normal-match-light) a(- 0.3))",
 
-		"quick_panel_path_fg-hover-dark": "color(var(quick_panel_fg-hover-dark) a(- 0.3))",
-		"quick_panel_path_fg-hover-light": "color(var(quick_panel_fg-hover-light) a(- 0.3))",
-		"quick_panel_path_fg-hover-match-dark": "color(var(quick_panel_fg-hover-match-dark) a(- 0.3))",
-		"quick_panel_path_fg-hover-match-light": "color(var(quick_panel_fg-hover-match-light) a(- 0.3))",
+		"quick_panel_details_fg-hover-dark": "color(var(quick_panel_fg-hover-dark) a(- 0.3))",
+		"quick_panel_details_fg-hover-light": "color(var(quick_panel_fg-hover-light) a(- 0.3))",
+		"quick_panel_details_fg-hover-match-dark": "color(var(quick_panel_fg-hover-match-dark) a(- 0.3))",
+		"quick_panel_details_fg-hover-match-light": "color(var(quick_panel_fg-hover-match-light) a(- 0.3))",
 
-		"quick_panel_path_fg-selected-dark": "color(var(quick_panel_fg-selected-dark) a(- 0.3))",
-		"quick_panel_path_fg-selected-light": "color(var(quick_panel_fg-selected-light) a(- 0.3))",
-		"quick_panel_path_fg-selected-match-dark": "color(var(quick_panel_fg-selected-match-dark) a(- 0.3))",
-		"quick_panel_path_fg-selected-match-light": "color(var(quick_panel_fg-selected-match-light) a(- 0.3))",
+		"quick_panel_details_fg-selected-dark": "color(var(quick_panel_fg-selected-dark) a(- 0.3))",
+		"quick_panel_details_fg-selected-light": "color(var(quick_panel_fg-selected-light) a(- 0.3))",
+		"quick_panel_details_fg-selected-match-dark": "color(var(quick_panel_fg-selected-match-dark) a(- 0.3))",
+		"quick_panel_details_fg-selected-match-light": "color(var(quick_panel_fg-selected-match-light) a(- 0.3))",
 
-		"quick_panel_path_fg-selected-hover-dark": "color(var(quick_panel_fg-selected-hover-dark) a(- 0.3))",
-		"quick_panel_path_fg-selected-hover-light": "color(var(quick_panel_fg-selected-hover-light) a(- 0.3))",
-		"quick_panel_path_fg-selected-hover-match-dark": "color(var(quick_panel_fg-selected-hover-match-dark) a(- 0.3))",
-		"quick_panel_path_fg-selected-hover-match-light": "color(var(quick_panel_fg-selected-hover-match-light) a(- 0.3))",
+		"quick_panel_details_fg-selected-hover-dark": "color(var(quick_panel_fg-selected-hover-dark) a(- 0.3))",
+		"quick_panel_details_fg-selected-hover-light": "color(var(quick_panel_fg-selected-hover-light) a(- 0.3))",
+		"quick_panel_details_fg-selected-hover-match-dark": "color(var(quick_panel_fg-selected-hover-match-dark) a(- 0.3))",
+		"quick_panel_details_fg-selected-hover-match-light": "color(var(quick_panel_fg-selected-hover-match-light) a(- 0.3))",
 
 	////// Fold Buttons //////////////////////////////////////////////////////////
 
@@ -677,6 +677,146 @@
 		{
 			"class": "text_line_control",
 			"content_margin": [8, 6]
+		},
+
+	////// Button Controls ///////////////////////////////////////////////////////
+
+		// Button (Normal)
+
+		{
+			"class": "button_control",
+			"content_margin": 8,
+			"min_size": [80, 0],
+			"layer0.inner_margin": 6,
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
+			"layer0.tint": "rgba(255, 255, 255, 0.1)",
+			"layer0.opacity": {
+				"target": 0.5, "speed": 2.25, "interpolation": "smoothstep"
+			}
+		},
+		{
+			"class": "button_control",
+			"platforms": ["osx", "linux"],
+			"content_margin": 9
+		},
+		{
+			"class": "button_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "rgba(0, 0, 0, 0.1)"
+		},
+
+		// Button (Hover)
+
+		{
+			"class": "button_control",
+			"attributes": ["hover"],
+			"layer0.opacity": {
+				"target": 1.0, "speed": 2.25, "interpolation": "smoothstep"
+			}
+		},
+
+		// Button (Pressed)
+
+		{
+			"class": "button_control",
+			"attributes": ["pressed"],
+			"layer0.opacity": {
+				"target": 0.75, "speed": 4.5, "interpolation": "smoothstep"
+			}
+		},
+
+		// Button (Normal) -> Label
+
+		{
+			"class": "label_control",
+			"parents": [
+				{"class": "button_control"}
+			],
+			"fg": "var(button_fg-normal-dark)",
+			"font.face": "var(button_font_face)",
+			"font.size": "var(button_font_size)"
+		},
+		{
+			"class": "label_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "button_control"}
+			],
+			"fg": "var(button_fg-normal-light)"
+		},
+
+		// Button (Hover) -> Label
+
+		{
+			"class": "label_control",
+			"parents": [
+				{"class": "button_control", "attributes": ["hover"]}
+			],
+			"fg": "var(button_fg-hover-dark)"
+		},
+		{
+			"class": "label_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "button_control", "attributes": ["hover"]}
+			],
+			"fg": "var(button_fg-hover-light)"
+		},
+
+		// Button (Selected) -> Label
+
+		{
+			"class": "label_control",
+			"parents": [
+				{"class": "button_control", "attributes": ["selected"]}
+			],
+			"fg": "var(button_fg-selected-dark)"
+		},
+		{
+			"class": "label_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "button_control", "attributes": ["selected"]}
+			],
+			"fg": "var(button_fg-selected-light)"
+		},
+
+	////// Dropdown Button Controls //////////////////////////////////////////////
+
+		// Dropdown Button (Normal)
+
+		{
+			"class": "dropdown_button_control",
+			"content_margin": 8,
+			"layer0.texture": "Theme - DAneo/icons/dropdown_button.png",
+			"layer0.tint": "var(button_icon_tint-normal-dark)",
+			"layer0.opacity": "var(button_icon_opacity-normal)"
+		},
+		{
+			"class": "dropdown_button_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "var(button_icon_tint-normal-light)"
+		},
+
+		// Dropdown Button (Hover)
+
+		{
+			"class": "dropdown_button_control",
+			"attributes": ["hover"],
+			"layer0.tint": "var(button_icon_tint-hover-dark)",
+			"layer0.opacity": "var(button_icon_opacity-hover)"
+		},
+		{
+			"class": "dropdown_button_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"attributes": ["hover"],
+			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
 	////// Quick Panels //////////////////////////////////////////////////////////
@@ -872,23 +1012,23 @@
 
 		{
 			"class": "quick_panel_path_label",
-			"fg": "var(quick_panel_path_fg-normal-dark)",
-			"match_fg": "var(quick_panel_path_fg-normal-match-dark)",
-			"selected_fg": "var(quick_panel_path_fg-selected-dark)",
-			"selected_match_fg": "var(quick_panel_path_fg-selected-match-dark)",
-			"font.face": "var(quick_panel_path_font_face)",
-			"font.size": "var(quick_panel_path_font_size)",
-			"font.italic": "var(quick_panel_path_font_italic)"
+			"fg": "var(quick_panel_details_fg-normal-dark)",
+			"match_fg": "var(quick_panel_details_fg-normal-match-dark)",
+			"selected_fg": "var(quick_panel_details_fg-selected-dark)",
+			"selected_match_fg": "var(quick_panel_details_fg-selected-match-dark)",
+			"font.face": "var(quick_panel_details_font_face)",
+			"font.size": "var(quick_panel_details_font_size)",
+			"font.italic": "var(quick_panel_details_font_italic)"
 		},
 		{
 			"class": "quick_panel_path_label",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]}
 			],
-			"fg": "var(quick_panel_path_fg-normal-light)",
-			"match_fg": "var(quick_panel_path_fg-normal-match-light)",
-			"selected_fg": "var(quick_panel_path_fg-selected-light)",
-			"selected_match_fg": "var(quick_panel_path_fg-selected-match-light)"
+			"fg": "var(quick_panel_details_fg-normal-light)",
+			"match_fg": "var(quick_panel_details_fg-normal-match-light)",
+			"selected_fg": "var(quick_panel_details_fg-selected-light)",
+			"selected_match_fg": "var(quick_panel_details_fg-selected-match-light)"
 		},
 
 		// Quick Panel Row (Hover) -> Description Text
@@ -898,10 +1038,10 @@
 			"parents": [
 				{"class": "quick_panel_row", "attributes": ["hover"]}
 			],
-			"fg": "var(quick_panel_path_fg-hover-dark)",
-			"match_fg": "var(quick_panel_path_fg-hover-match-dark)",
-			"selected_fg": "var(quick_panel_path_fg-selected-hover-dark)",
-			"selected_match_fg": "var(quick_panel_path_fg-selected-hover-match-dark)"
+			"fg": "var(quick_panel_details_fg-hover-dark)",
+			"match_fg": "var(quick_panel_details_fg-hover-match-dark)",
+			"selected_fg": "var(quick_panel_details_fg-selected-hover-dark)",
+			"selected_match_fg": "var(quick_panel_details_fg-selected-hover-match-dark)"
 		},
 		{
 			"class": "quick_panel_path_label",
@@ -909,20 +1049,20 @@
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "quick_panel_row", "attributes": ["hover"]}
 			],
-			"fg": "var(quick_panel_path_fg-normal-light)",
-			"match_fg": "var(quick_panel_path_fg-hover-match-light)",
-			"selected_fg": "var(quick_panel_path_fg-selected-hover-light)",
-			"selected_match_fg": "var(quick_panel_path_fg-selected-hover-match-light)"
+			"fg": "var(quick_panel_details_fg-normal-light)",
+			"match_fg": "var(quick_panel_details_fg-hover-match-light)",
+			"selected_fg": "var(quick_panel_details_fg-selected-hover-light)",
+			"selected_match_fg": "var(quick_panel_details_fg-selected-hover-match-light)"
 		},
 		{
 			"class": "quick_panel_path_label",
 			"parents": [
 				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
 			],
-			"fg": "var(quick_panel_path_fg-hover-dark)",
-			"match_fg": "var(quick_panel_path_fg-hover-match-dark)",
-			"selected_fg": "var(quick_panel_path_fg-selected-hover-dark)",
-			"selected_match_fg": "var(quick_panel_path_fg-selected-hover-match-dark)"
+			"fg": "var(quick_panel_details_fg-hover-dark)",
+			"match_fg": "var(quick_panel_details_fg-hover-match-dark)",
+			"selected_fg": "var(quick_panel_details_fg-selected-hover-dark)",
+			"selected_match_fg": "var(quick_panel_details_fg-selected-hover-match-dark)"
 		},
 		{
 			"class": "quick_panel_path_label",
@@ -930,10 +1070,10 @@
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
 			],
-			"fg": "var(quick_panel_path_fg-hover-light)",
-			"match_fg": "var(quick_panel_path_fg-hover-match-light)",
-			"selected_fg": "var(quick_panel_path_fg-selected-hover-light)",
-			"selected_match_fg": "var(quick_panel_path_fg-selected-hover-match-light)"
+			"fg": "var(quick_panel_details_fg-hover-light)",
+			"match_fg": "var(quick_panel_details_fg-hover-match-light)",
+			"selected_fg": "var(quick_panel_details_fg-selected-hover-light)",
+			"selected_match_fg": "var(quick_panel_details_fg-selected-hover-match-light)"
 		},
 
 	////// Kind Containers ///////////////////////////////////////////////////////
