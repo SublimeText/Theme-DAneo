@@ -2,8 +2,10 @@
 	"contributions": {
 		"settings": [
 			{
+				"file_patterns": [
+					"/Preferences.sublime-settings"
+				],
 				"schema": {
-				    "$id": "sublime://schemas/preferences.sublime-settings",
 					"properties": {
 						"show_disclosure_buttons": {
 							"type": "boolean",
