@@ -474,11 +474,44 @@
 		"quick_panel_fg-selected-hover-match-dark": "color(var(accent) blend(var(quick_panel_fg-selected-hover-dark) 90%))",
 		"quick_panel_fg-selected-hover-match-light": "color(var(accent) blend(var(quick_panel_fg-selected-hover-light) 90%))",
 
-		// Quick Panel Details Text (lines below caption)
+		// Quick Panel Hint Text
 
-		"quick_panel_details_font_face": "var(font_face)",
+		"quick_panel_hint_font_face": "var(quick_panel_text_font_face)",
+		"quick_panel_hint_font_size": 9,
+
+		"quick_panel_hint_fg-normal-dark": "color(var(quick_panel_fg-normal-dark) a(- 0.3))",
+		"quick_panel_hint_fg-normal-light": "color(var(quick_panel_fg-normal-light) a(- 0.3))",
+
+		"quick_panel_hint_fg-hover-dark": "color(var(quick_panel_fg-hover-dark) a(- 0.4))",
+		"quick_panel_hint_fg-hover-light": "color(var(quick_panel_fg-hover-light) a(- 0.4))",
+
+		"quick_panel_hint_fg-selected-dark": "color(var(quick_panel_fg-selected-dark) a(- 0.4))",
+		"quick_panel_hint_fg-selected-light": "color(var(quick_panel_fg-selected-light) a(- 0.4))",
+
+		"quick_panel_hint_fg-selected-hover-dark": "color(var(quick_panel_fg-selected-hover-dark) a(- 0.3))",
+		"quick_panel_hint_fg-selected-hover-light": "color(var(quick_panel_fg-selected-hover-light) a(- 0.3))",
+
+		// Quick Panel Key Binding Text
+
+		"quick_panel_binding_font_face": "var(quick_panel_text_font_face)",
+		"quick_panel_binding_font_size": 9,
+
+		"quick_panel_binding_fg-normal-dark": "color(var(quick_panel_fg-normal-dark) a(- 0.3))",
+		"quick_panel_binding_fg-normal-light": "color(var(quick_panel_fg-normal-light) a(- 0.3))",
+
+		"quick_panel_binding_fg-hover-dark": "color(var(quick_panel_fg-hover-dark) a(- 0.4))",
+		"quick_panel_binding_fg-hover-light": "color(var(quick_panel_fg-hover-light) a(- 0.4))",
+
+		"quick_panel_binding_fg-selected-dark": "color(var(quick_panel_fg-selected-dark) a(- 0.4))",
+		"quick_panel_binding_fg-selected-light": "color(var(quick_panel_fg-selected-light) a(- 0.4))",
+
+		"quick_panel_binding_fg-selected-hover-dark": "color(var(quick_panel_fg-selected-hover-dark) a(- 0.3))",
+		"quick_panel_binding_fg-selected-hover-light": "color(var(quick_panel_fg-selected-hover-light) a(- 0.3))",
+
+		// Quick Panel Detail or Path Text
+
+		"quick_panel_details_font_face": "var(quick_panel_text_font_face)",
 		"quick_panel_details_font_size": 10,
-		"quick_panel_details_font_italic": true,
 
 		"quick_panel_details_fg-normal-dark": "color(var(quick_panel_fg-normal-dark) a(- 0.3))",
 		"quick_panel_details_fg-normal-light": "color(var(quick_panel_fg-normal-light) a(- 0.3))",
@@ -499,6 +532,20 @@
 		"quick_panel_details_fg-selected-hover-light": "color(var(quick_panel_fg-selected-hover-light) a(- 0.3))",
 		"quick_panel_details_fg-selected-hover-match-dark": "color(var(quick_panel_fg-selected-hover-match-dark) a(- 0.3))",
 		"quick_panel_details_fg-selected-hover-match-light": "color(var(quick_panel_fg-selected-hover-match-light) a(- 0.3))",
+
+		// Quick Panel Link Text
+
+		"quick_panel_link_fg-normal-dark": "color(var(quick_panel_fg-normal-match-dark) a(- 0.3))",
+		"quick_panel_link_fg-normal-light": "color(var(quick_panel_fg-normal-match-light) a(- 0.3))",
+
+		"quick_panel_link_fg-hover-dark": "color(var(quick_panel_fg-selected-match-dark) a(- 0.3))",
+		"quick_panel_link_fg-hover-light": "color(var(quick_panel_fg-selected-match-light) a(- 0.3))",
+
+		"quick_panel_link_fg-selected-dark": "color(var(quick_panel_fg-selected-match-dark) a(- 0.3))",
+		"quick_panel_link_fg-selected-light": "color(var(quick_panel_fg-selected-match-light) a(- 0.3))",
+
+		"quick_panel_link_fg-selected-hover-dark": "color(var(quick_panel_fg-selected-hover-match-dark) a(- 0.3))",
+		"quick_panel_link_fg-selected-hover-light": "color(var(quick_panel_fg-selected-hover-match-light) a(- 0.3))",
 
 	////// Fold Buttons //////////////////////////////////////////////////////////
 
@@ -1116,7 +1163,9 @@
 			"content_margin": [3, 7, 12, 7]
 		},
 
-		// Quick Panel Row (Normal) -> Caption Text
+	////// Quick Panel Rows / Caption Label //////////////////////////////////////
+
+		// Quick Panel Row (Normal)
 
 		{
 			"class": "quick_panel_label",
@@ -1138,7 +1187,7 @@
 			"selected_match_fg": "var(quick_panel_fg-selected-match-light)"
 		},
 
-		// Quick Panel Row (Hover) -> Caption Text
+		// Quick Panel Row (Hover)
 
 		{
 			"class": "quick_panel_label",
@@ -1161,6 +1210,7 @@
 			"selected_fg": "var(quick_panel_fg-selected-hover-light)",
 			"selected_match_fg": "var(quick_panel_fg-selected-hover-match-light)"
 		},
+
 		{
 			"class": "quick_panel_label",
 			"parents": [
@@ -1183,22 +1233,181 @@
 			"selected_match_fg": "var(quick_panel_fg-selected-hover-match-light)"
 		},
 
-		// Quick Panel Row -> Description Text
+	////// Quick Panel Rows / Hint Label /////////////////////////////////////////
+
+		//
+		// The hint label is displayed on the right of the quick panel caption.
+		//
+		// It is used by:
+		//  - Goto Symbol Overlay
+		//  - Goto Symbol in Project Overlay
+		//  - API created quick panels with `annotation` text provided
+		//
+
+		// Quick Panel Row (Normal)
+
+		{
+			"class": "quick_panel_label hint",
+			"fg": "var(quick_panel_hint_fg-normal-dark)",
+			"selected_fg": "var(quick_panel_hint_fg-selected-dark)",
+			"font.face": "var(quick_panel_hint_font_face)",
+			"font.size": "var(quick_panel_hint_font_size)",
+			"font.italic": true
+		},
+		{
+			"class": "quick_panel_label hint",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"fg": "var(quick_panel_hint_fg-normal-light)",
+			"selected_fg": "var(quick_panel_hint_fg-selected-light)",
+		},
+
+		// Quick Panel Row (Hover)
+
+		{
+			"class": "quick_panel_label hint",
+			"parents": [
+				{"class": "quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_hint_fg-hover-dark)",
+			"selected_fg": "var(quick_panel_hint_fg-selected-hover-dark)"
+		},
+		{
+			"class": "quick_panel_label hint",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_hint_fg-normal-light)",
+			"selected_fg": "var(quick_panel_hint_fg-selected-hover-light)"
+		},
+
+		{
+			"class": "quick_panel_label hint",
+			"parents": [
+				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_hint_fg-hover-dark)",
+			"selected_fg": "var(quick_panel_hint_fg-selected-hover-dark)"
+		},
+		{
+			"class": "quick_panel_label hint",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_hint_fg-normal-light)",
+			"selected_fg": "var(quick_panel_hint_fg-selected-hover-light)"
+		},
+
+	////// Quick Panel Rows / Key Binding Label //////////////////////////////////
+
+		//
+		// The key binding is displayed on the right of the quick panel caption.
+		//
+		// It is used by:
+		//  - Command Palette
+		//
+
+		// Quick Panel Row (Normal)
+
+		{
+			"class": "quick_panel_label key_binding",
+			"fg": "var(quick_panel_binding_fg-normal-dark)",
+			"selected_fg": "var(quick_panel_binding_fg-selected-dark)",
+			"font.face": "var(quick_panel_binding_font_face)",
+			"font.size": "var(quick_panel_binding_font_size)",
+			"font.italic": true
+		},
+		{
+			"class": "quick_panel_label key_binding",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"fg": "var(quick_panel_binding_fg-normal-light)",
+			"selected_fg": "var(quick_panel_binding_fg-selected-light)",
+		},
+
+		// Quick Panel Row (Hover)
+
+		{
+			"class": "quick_panel_label key_binding",
+			"parents": [
+				{"class": "quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_binding_fg-hover-dark)",
+			"selected_fg": "var(quick_panel_binding_fg-selected-hover-dark)"
+		},
+		{
+			"class": "quick_panel_label key_binding",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_binding_fg-normal-light)",
+			"selected_fg": "var(quick_panel_binding_fg-selected-hover-light)"
+		},
+
+		{
+			"class": "quick_panel_label key_binding",
+			"parents": [
+				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_binding_fg-hover-dark)",
+			"selected_fg": "var(quick_panel_binding_fg-selected-hover-dark)"
+		},
+		{
+			"class": "quick_panel_label key_binding",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_binding_fg-normal-light)",
+			"selected_fg": "var(quick_panel_binding_fg-selected-hover-light)"
+		},
+
+	////// Quick Panel Rows / Path Label /////////////////////////////////////////
+
+		//
+		// The rules of this section are applied to the second line of quick panel
+		// rows of:
+		//  - Goto Anything Overlay
+		//  - Quick Switch Project Window
+		//  - API created quick panels with `detail` text provided
+		//
+		// Notes:
+		//
+		// 1. The rules are also applies to `quick_panel_detail_label`,
+		//    except `font.italic` which throws a warning
+		//    when matched against `quick_panel_detail_label`.
+		// 2. Explicitly addresses `quick_panel_row` to prevent the rules
+		//    from being applied to Command Palette's key binding label.
+		//
+		//    The following two patterns denote the same items:
+		//     - mini_quick_panel_row / quick_panel_path_label
+		//     - quick_panel_label key_binding
+		//
+
+		// Quick Panel Row (Normal)
 
 		{
 			"class": "quick_panel_path_label",
+			"parents": [
+				{"class": "quick_panel_row"}
+			],
 			"fg": "var(quick_panel_details_fg-normal-dark)",
 			"match_fg": "var(quick_panel_details_fg-normal-match-dark)",
 			"selected_fg": "var(quick_panel_details_fg-selected-dark)",
 			"selected_match_fg": "var(quick_panel_details_fg-selected-match-dark)",
 			"font.face": "var(quick_panel_details_font_face)",
-			"font.size": "var(quick_panel_details_font_size)",
-			"font.italic": "var(quick_panel_details_font_italic)"
+			"font.size": "var(quick_panel_details_font_size)"
 		},
 		{
 			"class": "quick_panel_path_label",
 			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "quick_panel_row"}
 			],
 			"fg": "var(quick_panel_details_fg-normal-light)",
 			"match_fg": "var(quick_panel_details_fg-normal-match-light)",
@@ -1206,7 +1415,7 @@
 			"selected_match_fg": "var(quick_panel_details_fg-selected-match-light)"
 		},
 
-		// Quick Panel Row (Hover) -> Description Text
+		// Quick Panel Row (Hover)
 
 		{
 			"class": "quick_panel_path_label",
@@ -1229,26 +1438,98 @@
 			"selected_fg": "var(quick_panel_details_fg-selected-hover-light)",
 			"selected_match_fg": "var(quick_panel_details_fg-selected-hover-match-light)"
 		},
+
+	////// Quick Panel Rows / Detail Label ///////////////////////////////////////
+
+		//
+		// The `quick_panel_detail_label` is a description text of quick panel items,
+		// which is rendered below the normal `quick_panel_label`.
+		//
+		// 1. Rules of `quick_panel_path_label` are applied.
+		// 2. Used by API created quick panels, which may or may not include kind info.
+		// 3. Requires ST 4085 or higher.
+		//
+
+		// Quick Panel Row (Normal)
+
 		{
-			"class": "quick_panel_path_label",
+			"class": "quick_panel_detail_label",
 			"parents": [
-				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
+				{"class": "quick_panel_row"}
 			],
-			"fg": "var(quick_panel_details_fg-hover-dark)",
-			"match_fg": "var(quick_panel_details_fg-hover-match-dark)",
-			"selected_fg": "var(quick_panel_details_fg-selected-hover-dark)",
-			"selected_match_fg": "var(quick_panel_details_fg-selected-hover-match-dark)"
+			"fg": "var(quick_panel_details_fg-normal-dark)",
+			"selected_fg": "var(quick_panel_details_fg-selected-dark)",
+			"link_color": "var(quick_panel_link_fg-normal-dark)",
+			"font.face": "var(quick_panel_details_font_face)",
+			"font.size": "var(quick_panel_details_font_size)"
 		},
 		{
-			"class": "quick_panel_path_label",
+			"class": "quick_panel_detail_label",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
+				{"class": "quick_panel_row"}
 			],
-			"fg": "var(quick_panel_details_fg-hover-light)",
-			"match_fg": "var(quick_panel_details_fg-hover-match-light)",
+			"fg": "var(quick_panel_details_fg-normal-light)",
+			"selected_fg": "var(quick_panel_details_fg-selected-light)",
+			"link_color": "var(quick_panel_link_fg-normal-light)"
+		},
+
+		// Quick Panel Row (Hover)
+
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_details_fg-hover-dark)",
+			"selected_fg": "var(quick_panel_details_fg-selected-hover-dark)",
+			"link_color": "var(quick_panel_link_fg-hover-dark)"
+		},
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_details_fg-normal-light)",
 			"selected_fg": "var(quick_panel_details_fg-selected-hover-light)",
-			"selected_match_fg": "var(quick_panel_details_fg-selected-hover-match-light)"
+			"link_color": "var(quick_panel_link_fg-hover-light)"
+		},
+
+		// Quick Panel Row (Selected)
+
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "quick_panel_row", "attributes": ["selected", "!hover"]}
+			],
+			"link_color": "var(quick_panel_link_fg-selected-dark)"
+		},
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "quick_panel_row", "attributes": ["selected", "!hover"]}
+			],
+			"link_color": "var(quick_panel_link_fg-selected-light)"
+		},
+
+		// Quick Panel Row (Selected, Hover)
+
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "quick_panel_row", "attributes": ["selected", "hover"]}
+			],
+			"link_color": "var(quick_panel_link_fg-selected-hover-dark)"
+		},
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "quick_panel_row", "attributes": ["selected", "hover"]}
+			],
+			"link_color": "var(quick_panel_link_fg-selected-hover-light)"
 		},
 
 	////// Scroll Bars ///////////////////////////////////////////////////////////
