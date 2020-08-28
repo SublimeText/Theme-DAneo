@@ -819,6 +819,137 @@
 			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
+	////// Kind Containers ///////////////////////////////////////////////////////
+
+		// Kind Container (All)
+
+		{
+			"class": "kind_container",
+			"content_margin": [6, 0, 7, 0],
+			"layer0.tint": "var(kind_bg_ambigious)",
+			"layer0.opacity": "var(item_bg-opacity-normal)"
+		},
+		{
+			"class": "kind_label",
+			"color": "var(kind_fg_ambigious)",
+			"font.face": "var(kind_font_face)",
+			"font.size": "var(kind_font_size)",
+			"font.bold": false,
+			"font.italic": false
+		},
+
+		// Kind Container (Function)
+
+		{
+			"class": "kind_container kind_function",
+			"layer0.tint": "var(kind_bg_function)"
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_function"}
+			],
+			"color": "var(kind_fg_function)"
+		},
+
+		// Kind Container (Keyword)
+
+		{
+			"class": "kind_container kind_keyword",
+			"layer0.tint": "var(kind_bg_keyword)"
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_keyword"}
+			],
+			"color": "var(kind_fg_keyword)"
+		},
+
+		// Kind Container (Markup)
+
+		{
+			"class": "kind_container kind_markup",
+			"layer0.tint": "var(kind_bg_markup)"
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_markup"}
+			],
+			"color": "var(kind_fg_markup)"
+		},
+
+		// Kind Container (Namespace)
+
+		{
+			"class": "kind_container kind_namespace",
+			"layer0.tint": "var(kind_bg_namespace)"
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_namespace"}
+			],
+			"color": "var(kind_fg_namespace)"
+		},
+
+		// Kind Container (Navigation)
+
+		{
+			"class": "kind_container kind_navigation",
+			"layer0.tint": "var(kind_bg_navigation)"
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_navigation"}
+			],
+			"color": "var(kind_fg_navigation)"
+		},
+
+		// Kind Container (Snippet)
+
+		{
+			"class": "kind_container kind_snippet",
+			"layer0.tint": "var(kind_bg_snippet)"
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_snippet"}
+			],
+			"color": "var(kind_fg_snippet)"
+		},
+
+		// Kind Container (Type)
+
+		{
+			"class": "kind_container kind_type",
+			"layer0.tint": "var(kind_bg_type)"
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_type"}
+			],
+			"color": "var(kind_fg_type)"
+		},
+
+		// Kind Container (Variable)
+
+		{
+			"class": "kind_container kind_variable",
+			"layer0.tint": "var(kind_bg_variable)"
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_variable"}
+			],
+			"color": "var(kind_fg_variable)"
+		},
+
 	////// Quick Panels //////////////////////////////////////////////////////////
 
 		{
@@ -1074,277 +1205,6 @@
 			"match_fg": "var(quick_panel_details_fg-hover-match-light)",
 			"selected_fg": "var(quick_panel_details_fg-selected-hover-light)",
 			"selected_match_fg": "var(quick_panel_details_fg-selected-hover-match-light)"
-		},
-
-	////// Kind Containers ///////////////////////////////////////////////////////
-
-		// Kind Container (All)
-
-		{
-			"class": "kind_container",
-			"content_margin": [6, 0, 7, 0],
-			"layer0.tint": "var(kind_bg_ambigious)",
-			"layer0.opacity": "var(item_bg-opacity-normal)"
-		},
-		{
-			"class": "kind_label",
-			"color": "var(kind_fg_ambigious)",
-			"font.face": "var(kind_font_face)",
-			"font.size": "var(kind_font_size)",
-			"font.bold": false,
-			"font.italic": false
-		},
-
-		// Kind Container (Function)
-
-		{
-			"class": "kind_container kind_function",
-			"layer0.tint": "var(kind_bg_function)"
-		},
-		{
-			"class": "kind_label",
-			"parents": [
-				{"class": "kind_container kind_function"}
-			],
-			"color": "var(kind_fg_function)"
-		},
-
-		// Kind Container (Keyword)
-
-		{
-			"class": "kind_container kind_keyword",
-			"layer0.tint": "var(kind_bg_keyword)"
-		},
-		{
-			"class": "kind_label",
-			"parents": [
-				{"class": "kind_container kind_keyword"}
-			],
-			"color": "var(kind_fg_keyword)"
-		},
-
-		// Kind Container (Markup)
-
-		{
-			"class": "kind_container kind_markup",
-			"layer0.tint": "var(kind_bg_markup)"
-		},
-		{
-			"class": "kind_label",
-			"parents": [
-				{"class": "kind_container kind_markup"}
-			],
-			"color": "var(kind_fg_markup)"
-		},
-
-		// Kind Container (Namespace)
-
-		{
-			"class": "kind_container kind_namespace",
-			"layer0.tint": "var(kind_bg_namespace)"
-		},
-		{
-			"class": "kind_label",
-			"parents": [
-				{"class": "kind_container kind_namespace"}
-			],
-			"color": "var(kind_fg_namespace)"
-		},
-
-		// Kind Container (Navigation)
-
-		{
-			"class": "kind_container kind_navigation",
-			"layer0.tint": "var(kind_bg_navigation)"
-		},
-		{
-			"class": "kind_label",
-			"parents": [
-				{"class": "kind_container kind_navigation"}
-			],
-			"color": "var(kind_fg_navigation)"
-		},
-
-		// Kind Container (Snippet)
-
-		{
-			"class": "kind_container kind_snippet",
-			"layer0.tint": "var(kind_bg_snippet)"
-		},
-		{
-			"class": "kind_label",
-			"parents": [
-				{"class": "kind_container kind_snippet"}
-			],
-			"color": "var(kind_fg_snippet)"
-		},
-
-		// Kind Container (Type)
-
-		{
-			"class": "kind_container kind_type",
-			"layer0.tint": "var(kind_bg_type)"
-		},
-		{
-			"class": "kind_label",
-			"parents": [
-				{"class": "kind_container kind_type"}
-			],
-			"color": "var(kind_fg_type)"
-		},
-
-		// Kind Container (Variable)
-
-		{
-			"class": "kind_container kind_variable",
-			"layer0.tint": "var(kind_bg_variable)"
-		},
-		{
-			"class": "kind_label",
-			"parents": [
-				{"class": "kind_container kind_variable"}
-			],
-			"color": "var(kind_fg_variable)"
-		},
-
-	////// Button Controls ///////////////////////////////////////////////////////
-
-		// Button (Normal)
-
-		{
-			"class": "button_control",
-			"content_margin": 8,
-			"min_size": [80, 0],
-			"layer0.inner_margin": 6,
-			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
-			"layer0.tint": "rgba(255, 255, 255, 0.1)",
-			"layer0.opacity": {
-				"target": 0.5, "speed": 2.25, "interpolation": "smoothstep"
-			}
-		},
-		{
-			"class": "button_control",
-			"platforms": ["osx", "linux"],
-			"content_margin": 9
-		},
-		{
-			"class": "button_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"layer0.tint": "rgba(0, 0, 0, 0.1)"
-		},
-
-		// Button (Hover)
-
-		{
-			"class": "button_control",
-			"attributes": ["hover"],
-			"layer0.opacity": {
-				"target": 1.0, "speed": 2.25, "interpolation": "smoothstep"
-			}
-		},
-
-		// Button (Pressed)
-
-		{
-			"class": "button_control",
-			"attributes": ["pressed"],
-			"layer0.opacity": {
-				"target": 0.75, "speed": 4.5, "interpolation": "smoothstep"
-			}
-		},
-
-		// Button (Normal) -> Label
-
-		{
-			"class": "label_control",
-			"parents": [
-				{"class": "button_control"}
-			],
-			"fg": "var(button_fg-normal-dark)",
-			"font.face": "var(button_font_face)",
-			"font.size": "var(button_font_size)"
-		},
-		{
-			"class": "label_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "button_control"}
-			],
-			"fg": "var(button_fg-normal-light)"
-		},
-
-		// Button (Hover) -> Label
-
-		{
-			"class": "label_control",
-			"parents": [
-				{"class": "button_control", "attributes": ["hover"]}
-			],
-			"fg": "var(button_fg-hover-dark)"
-		},
-		{
-			"class": "label_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "button_control", "attributes": ["hover"]}
-			],
-			"fg": "var(button_fg-hover-light)"
-		},
-
-		// Button (Selected) -> Label
-
-		{
-			"class": "label_control",
-			"parents": [
-				{"class": "button_control", "attributes": ["selected"]}
-			],
-			"fg": "var(button_fg-selected-dark)"
-		},
-		{
-			"class": "label_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "button_control", "attributes": ["selected"]}
-			],
-			"fg": "var(button_fg-selected-light)"
-		},
-
-	////// Dropdown Button Controls //////////////////////////////////////////////
-
-		// Dropdown Button (Normal)
-
-		{
-			"class": "dropdown_button_control",
-			"content_margin": 8,
-			"layer0.texture": "Theme - DAneo/icons/dropdown_button.png",
-			"layer0.tint": "var(button_icon_tint-normal-dark)",
-			"layer0.opacity": "var(button_icon_opacity-normal)"
-		},
-		{
-			"class": "dropdown_button_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"layer0.tint": "var(button_icon_tint-normal-light)"
-		},
-
-		// Dropdown Button (Hover)
-
-		{
-			"class": "dropdown_button_control",
-			"attributes": ["hover"],
-			"layer0.tint": "var(button_icon_tint-hover-dark)",
-			"layer0.opacity": "var(button_icon_opacity-hover)"
-		},
-		{
-			"class": "dropdown_button_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"attributes": ["hover"],
-			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
 	////// Scroll Bars ///////////////////////////////////////////////////////////
