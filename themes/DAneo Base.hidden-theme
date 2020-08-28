@@ -441,6 +441,11 @@
 		"quick_panel_bg-selected-hover-dark": "var(item_bg-selected-hover-dark)",
 		"quick_panel_bg-selected-hover-light": "var(item_bg-selected-hover-light)",
 
+		// Quick Panel Kind Info
+
+		"quick_panel_kind_font_face": "var(font_face)",
+		"quick_panel_kind_font_size": "var(font_size)",
+
 		// Quick Panel Caption Text
 
 		"quick_panel_text_font_face": "var(font_face)",
@@ -967,6 +972,13 @@
 			"dark_content": false,
 			"layer0.tint": "var(quick_panel_bg-light)"
 		},
+		{
+			"class": "quick_panel",
+			"parents": [
+				{"class": "overlay_control kind_info"}
+			],
+			"row_padding": [0, 0, 0, 0]
+		},
 
 		// Quick Panel Row (Normal)
 
@@ -1070,6 +1082,35 @@
 			],
 			"attributes": ["selected", "hover"],
 			"layer0.tint": "var(quick_panel_bg-selected-hover-light)"
+		},
+
+		// Quick Panel Row -> Kind Container
+
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "overlay_control kind_info"}
+			],
+			"content_margin": [9, 0, 7, 0],
+			"layer0.opacity": 0.0
+		},
+
+		// Quick Panel Row -> Kind Label
+
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "quick_panel"}
+			],
+			"font.face": "var(quick_panel_kind_font_face)",
+			"font.size": "var(quick_panel_kind_font_size)"
+		},
+
+		// Quick Panel Row -> Symbol Container
+
+		{
+			"class": "symbol_container",
+			"content_margin": [3, 7, 6, 7]
 		},
 
 		// Quick Panel Row (Normal) -> Caption Text
@@ -4905,65 +4946,6 @@
 			"attributes": ["!dark"],
 			"layer0.tint": "var(scroll_puck_fg-active-light)",
 			"layer0.opacity": "var(scroll_puck_opacity-active)"
-		},
-
-	////// Goto Symbol Overlay Control ///////////////////////////////////////////
-
-		{
-			"class": "quick_panel",
-			"parents": [
-				{"class": "overlay_control goto_symbol"}
-			],
-			"row_padding": [0, 0, 0, 0]
-		},
-
-		{
-			"class": "quick_panel",
-			"parents": [
-				{"class": "overlay_control goto_symbol_in_project"}
-			],
-			"row_padding": [0, 0, 0, 0]
-		},
-
-		// Quick Panel Kind Container
-
-		{
-			"class": "kind_container",
-			"parents": [
-				{"class": "mini_quick_panel_row", "attributes": ["!selected", "hover"]}
-			],
-			"layer0.opacity": "var(item_bg-opacity-hover)"
-		},
-
-		{
-			"class": "kind_container",
-			"parents": [
-				{"class": "mini_quick_panel_row", "attributes": ["selected", "!hover"]}
-			],
-			"layer0.opacity": "var(item_bg-opacity-selected)"
-		},
-
-		{
-			"class": "kind_container",
-			"parents": [
-				{"class": "mini_quick_panel_row", "attributes": ["selected", "hover"]}
-			],
-			"layer0.opacity": "var(item_bg-opacity-selected-hover)"
-		},
-
-		{
-			"class": "kind_label",
-			"parents": [
-				{"class": "quick_panel"}
-			],
-			"font.size": "var(quick_panel_text_font_size)"
-		},
-
-		// Quick Panel Symbol Container
-
-		{
-			"class": "symbol_container",
-			"content_margin": [3, 7, 6, 7]
 		},
 
 	////// Auto Complete /////////////////////////////////////////////////////////
