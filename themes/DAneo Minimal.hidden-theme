@@ -193,12 +193,12 @@
 			"layer1.inner_margin": [0, 31, 0, 0]
 		},
 
-		// Tab Control (Small)
+		// Inactive Tab (*) -> Modified Indicator
 
 		{
 			"class": "tab_control",
-			"settings": ["tabset_size_small"],
-			"content_margin": [16, 5, 10, 5]
+			"attributes": ["!selected"],
+			"layer3.opacity": "var(inactive_tab_close_opacity-clean)"
 		},
 
 	////// Overlay Controls //////////////////////////////////////////////////////
