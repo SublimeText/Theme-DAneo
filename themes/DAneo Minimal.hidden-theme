@@ -9,8 +9,11 @@
 
 	////// Overlay Controls //////////////////////////////////////////////////////
 
-		"overlay_bg-dark": "color(black blend(var(bg) 15%))",
-		"overlay_bg-light": "color(black blend(var(bg) 7.5%))",
+		"overlay_bg-dark": "color(black blend(var(bg) 35%))",
+		"overlay_bg-light": "color(black blend(var(bg) 5%))",
+
+		"overlay_bc-dark": "color(black blend(var(bg) 42.7%))",
+		"overlay_bc-light": "color(black blend(var(bg) 10%))",
 
 		"overlay_input_tint-dark": "var(overlay_bg-dark)",
 		"overlay_input_tint-light": "var(overlay_bg-light)",
@@ -188,6 +191,14 @@
 			"settings": ["tabset_size_small"],
 			"tab_height": 28,
 			"layer1.inner_margin": [0, 31, 0, 0]
+		},
+
+		// Inactive Tab (*) -> Modified Indicator
+
+		{
+			"class": "tab_control",
+			"attributes": ["!selected"],
+			"layer3.opacity": "var(inactive_tab_close_opacity-clean)"
 		},
 
 	////// Overlay Controls //////////////////////////////////////////////////////

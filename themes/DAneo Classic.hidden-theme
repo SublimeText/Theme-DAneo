@@ -178,7 +178,10 @@
 		{
 			"class": "overlay_control",
 			"content_margin": [23, 18, 23, 33],
-			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png"
+			"layer1.inner_margin": [20, 16, 20, 32],
+			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br4.png",
+			"layer2.inner_margin": [20, 16, 20, 32],
+			"layer2.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw1--br4.png"
 		},
 
 		// Scroll Bar Control

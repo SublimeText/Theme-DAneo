@@ -429,6 +429,9 @@
 		"overlay_bg-dark": "color(black blend(var(bg) 15%))",
 		"overlay_bg-light": "color(black blend(var(bg) 7.5%))",
 
+		"overlay_bc-dark": "color(black blend(var(bg) 15%))",
+		"overlay_bc-light": "color(black blend(var(bg) 12%))",
+
 		// Quick Panels Background Colors
 
 		"quick_panel_bg-dark": "var(overlay_bg-dark)",
@@ -4865,14 +4868,22 @@
 
 		{
 			"class": "overlay_control",
-			"content_margin": [15, 16, 15, 31],
-			"layer0.inner_margin": [15, 10, 15, 25],
-			"layer0.texture": "Theme - DAneo/textures/overlay/overlay_shadow--mt0.png",
+			"content_margin": [16, 16, 16, 31],
+			// shadow
+			"layer0.inner_margin": [24, 19, 24, 34],
+			"layer0.texture": "Theme - DAneo/textures/overlay/overlay_shadow--mt10.png",
 			"layer0.opacity": 1.0,
+			// background
 			"layer1.inner_margin": [20, 15, 20, 30],
 			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br0.png",
 			"layer1.tint": "var(overlay_bg-dark)",
-			"layer1.opacity": 1.0
+			"layer1.opacity": 1.0,
+			// border
+			"layer2.inner_margin": [16, 11, 16, 26],
+			"layer2.texture": "Theme - DAneo/textures/overlay/overlay--mt10--bw0--br0.png",
+			"layer2.tint": "var(overlay_bc-dark)",
+			"layer2.draw_center": false,
+			"layer2.opacity": 1.0
 		},
 		{
 			"class": "overlay_control",
@@ -4880,7 +4891,8 @@
 				{"class": "window", "attributes": ["file_light"]}
 			],
 			"layer0.opacity": 0.4,
-			"layer1.tint": "var(overlay_bg-light)"
+			"layer1.tint": "var(overlay_bg-light)",
+			"layer2.tint": "var(overlay_bc-light)"
 		},
 
 		// Text Line Control
