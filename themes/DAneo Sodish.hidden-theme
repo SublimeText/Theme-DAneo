@@ -361,7 +361,10 @@
 			"layer0.texture": "Theme - DAneo/textures/overlay/overlay_shadow--mt0.png",
 			"layer0.opacity": 0.5,
 			"layer1.inner_margin": [20, 5, 20, 30],
-			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt0--bw0--br4--dtr.png"
+			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt0--bw0--br4--dtr.png",
+			"layer2.inner_margin": [20, 5, 20, 30],
+			"layer2.texture": "Theme - DAneo/textures/overlay/overlay--mt0--bw1--br4--dtr.png",
+			"layer2.opacity": 0.2
 		},
 		{
 			"class": "overlay_control",
