@@ -357,6 +357,8 @@
 		{
 			"class": "overlay_control",
 			"content_margin": [19, 3, 19, 29],
+			"layer0.inner_margin": [15, 10, 15, 25],
+			"layer0.texture": "Theme - DAneo/textures/overlay/overlay_shadow--mt0.png",
 			"layer0.opacity": 0.5,
 			"layer1.inner_margin": [20, 5, 20, 30],
 			"layer1.texture": "Theme - DAneo/textures/overlay/overlay--mt0--bw0--br4--dtr.png"
