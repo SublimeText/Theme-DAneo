@@ -962,7 +962,7 @@
 
 		{
 			"class": "quick_panel",
-			"row_padding": [17, 7, 17, 7],
+			"row_padding": [12, 7, 12, 7],
 			"dark_content": true,
 			"layer0.tint": "var(quick_panel_bg-dark)",
 			"layer0.opacity": 0.0

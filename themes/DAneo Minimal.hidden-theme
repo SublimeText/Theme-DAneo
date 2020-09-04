@@ -68,7 +68,7 @@
 
 		{
 			"class": "scroll_bar_control",
-			"content_margin": 0
+			"content_margin": [1, 0, 0, 0]
 		},
 
 		// Scroll Bar -> Panel and Console

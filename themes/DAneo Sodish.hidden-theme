@@ -393,21 +393,7 @@
 
 		{
 			"class": "quick_panel",
-			"row_padding": [12, 7, 12, 7],
 			"layer0.opacity": 1.0
-		},
-		{
-			"class": "quick_panel",
-			"platforms": ["windows"],
-			"row_padding": [12, 7, 12, 6]
-		},
-
-		{
-			"class": "quick_panel",
-			"parents": [
-				{"class": "overlay_control kind_info"}
-			],
-			"row_padding": [0, 0, 0, 0]
 		},
 
 	////// Panel Control /////////////////////////////////////////////////////////
