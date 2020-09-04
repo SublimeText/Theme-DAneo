@@ -383,7 +383,6 @@
 
 		{
 			"class": "quick_panel",
-			"row_padding": [12, 7],
 			"layer0.opacity": 1.0
 		},
 
