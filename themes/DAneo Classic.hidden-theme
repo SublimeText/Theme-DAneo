@@ -200,11 +200,6 @@
 			"class": "quick_panel",
 			"row_padding": [8, 7, 8, 7]
 		},
-		{
-			"class": "quick_panel",
-			"platforms": ["windows"],
-			"row_padding": [8, 7, 8, 6]
-		},
 
 		{
 			"class": "quick_panel",
@@ -212,6 +207,24 @@
 				{"class": "overlay_control kind_info"}
 			],
 			"row_padding": [0, 0, 0, 0]
+		},
+
+		// Quick Panel Row -> Kind Container
+
+		{
+			"class": "kind_container",
+			"parents": [
+				{"class": "overlay_control kind_info"}
+			],
+			"content_margin": [8, 0, 7, 0],
+			"layer0.opacity": 0.0
+		},
+
+		// Quick Panel Row -> Symbol Container
+
+		{
+			"class": "symbol_container",
+			"content_margin": [3, 7, 8, 7]
 		},
 
 	////// Panel Control /////////////////////////////////////////////////////////
