@@ -31,6 +31,8 @@
 
 		"font_face": "system",
 		"font_size": 12,
+		"font_size-small": 10,
+		"font_size-tiny": 9,
 
 		"label_fg-normal-dark":          "rgba(255, 255, 255, 0.45)",
 		"label_fg-normal-light":         "rgba(000, 000, 000, 0.45)",
@@ -447,7 +449,7 @@
 		// Quick Panel Details Text (lines below caption)
 
 		"quick_panel_details_font_face": "var(font_face)",
-		"quick_panel_details_font_size": 10,
+		"quick_panel_details_font_size": "var(font_size-small)",
 		"quick_panel_details_font_italic": true,
 
 		"quick_panel_details_fg-normal-dark": "color(var(quick_panel_fg-normal-dark) a(- 0.3))",
