@@ -6,6 +6,8 @@
 
 		"font_face": "system",
 		"font_size": 12,
+		"font_size-small": 10,
+		"font_size-tiny": 9,
 
 		"accent": "var(--accent)",
 
@@ -67,13 +69,13 @@
 		"quick_panel_text_font_size": "var(font_size)",
 
 		"quick_panel_hint_font_face": "var(quick_panel_text_font_face)",
-		"quick_panel_hint_font_size": 9,
+		"quick_panel_hint_font_size": "var(font_size-tiny)",
 
 		"quick_panel_binding_font_face": "var(quick_panel_text_font_face)",
-		"quick_panel_binding_font_size": 9,
+		"quick_panel_binding_font_size": "var(font_size-tiny)",
 
 		"quick_panel_details_font_face": "var(quick_panel_text_font_face)",
-		"quick_panel_details_font_size": 10,
+		"quick_panel_details_font_size": "var(font_size-small)",
 
 	////// Tooltips //////////////////////////////////////////////////////////////
 
@@ -88,7 +90,7 @@
 		// VCS annotation
 
 		"statusbar_vcs_font_face": "var(statusbar_font_face)",
-		"statusbar_vcs_font_size": 10
+		"statusbar_vcs_font_size": "var(font_size-small)"
 	},
 	"rules": []
 }
