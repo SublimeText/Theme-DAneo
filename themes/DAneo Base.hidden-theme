@@ -1639,6 +1639,7 @@
 			],
 			"attributes": ["!horizontal"],
 			"layer0.inner_margin": [0, 0, 2, 0],
+			"layer0.draw_center": false,
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w2--vertical--square.png"
 		},
 
@@ -1656,6 +1657,7 @@
 			"parents": [
 				{"class": "scroll_track_control", "attributes": ["!hover"]}
 			],
+			"layer0.draw_center": false,
 			"layer0.inner_margin": [0, 0, 0, 2],
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w2--horizontal--square.png"
 		},
