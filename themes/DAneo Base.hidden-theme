@@ -4755,7 +4755,7 @@
 		{
 			"class": "auto_complete",
 			"dark_content": true,
-			"row_padding": [9, 6],
+			"row_padding": [4, 3],
 			"tint_index": 0,
 			"tint_modifier": "color(white alpha(0.05))",
 			"layer0.opacity": 1.0
