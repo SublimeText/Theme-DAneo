@@ -5569,14 +5569,14 @@
 
 		{
 			"class": "popup_control",
-			"content_margin": 0,
-			"layer0.tint": "color(black blend(var(bg) 15%))",
-			"layer0.opacity": 1.0
+			"content_margin": 0
 		},
 		{
 			"class": "popup_control",
 			"platforms": ["windows"],
-			"content_margin": 1
+			"content_margin": 1,
+			"layer0.tint": "black",
+			"layer0.opacity": 0.15
 		},
 
 		{
