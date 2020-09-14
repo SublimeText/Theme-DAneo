@@ -76,6 +76,7 @@
 
 		"quick_panel_details_font_face": "var(quick_panel_text_font_face)",
 		"quick_panel_details_font_size": "var(font_size-small)",
+		"quick_panel_details_font_italic": true,
 
 	////// Tooltips //////////////////////////////////////////////////////////////
 

@@ -514,6 +514,7 @@
 
 		"quick_panel_details_font_face": "var(quick_panel_text_font_face)",
 		"quick_panel_details_font_size": "var(font_size-small)",
+		"quick_panel_details_font_italic": true,
 
 		"quick_panel_details_fg-normal-dark": "color(var(quick_panel_fg-normal-dark) a(- 0.3))",
 		"quick_panel_details_fg-normal-light": "color(var(quick_panel_fg-normal-light) a(- 0.3))",
@@ -1403,7 +1404,8 @@
 			"selected_fg": "var(quick_panel_details_fg-selected-dark)",
 			"selected_match_fg": "var(quick_panel_details_fg-selected-match-dark)",
 			"font.face": "var(quick_panel_details_font_face)",
-			"font.size": "var(quick_panel_details_font_size)"
+			"font.size": "var(quick_panel_details_font_size)",
+			"font.italic": "var(quick_panel_details_font_italic)"
 		},
 		{
 			"class": "quick_panel_path_label",
