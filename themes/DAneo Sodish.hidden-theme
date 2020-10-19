@@ -111,6 +111,7 @@
 
 		{
 			"class": "button_control",
+			"min_size": [80, 16],
 			"layer3.draw_center": false,
 			"layer3.inner_margin": 6,
 			"layer3.texture": "Theme - DAneo/textures/inputs/input--bw1--br2.png",
@@ -452,6 +453,7 @@
 		{
 			"class": "icon_button_control",
 			"content_margin": 8,
+			"min_size": [16, 16],
 			// background & hover
 			"layer0.inner_margin": 6,
 			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br0.png",

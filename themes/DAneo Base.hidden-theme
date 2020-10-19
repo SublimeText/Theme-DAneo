@@ -744,7 +744,7 @@
 		{
 			"class": "button_control",
 			"content_margin": 8,
-			"min_size": [80, 0],
+			"min_size": [80, 18],
 			"layer0.inner_margin": 6,
 			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
 			"layer0.tint": "rgba(255, 255, 255, 0.1)",
@@ -5732,7 +5732,8 @@
 
 		{
 			"class": "icon_button_control",
-			"content_margin": 8
+			"content_margin": 8,
+			"min_size": [18, 18]
 		},
 
 		// Icon Button (Normal) -> Case Icon
