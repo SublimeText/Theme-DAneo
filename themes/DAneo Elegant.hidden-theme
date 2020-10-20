@@ -2,11 +2,6 @@
 	"extends": "DAneo Base.hidden-theme",
 	"variables": {
 
-	////// MacOS Title Bar ///////////////////////////////////////////////////////
-
-		"title_bg-dark": "color(black blend(var(bg) 5%))",
-		"title_bg-light": "color(black blend(var(bg) 5%))",
-
 	////// Label Controls ////////////////////////////////////////////////////////
 
 		"label_fg-normal-dark":  "rgba(255, 255, 255, 0.55)",
