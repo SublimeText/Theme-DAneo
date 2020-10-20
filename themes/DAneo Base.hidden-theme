@@ -21,11 +21,11 @@
 
 	////// MacOS Title Bar ///////////////////////////////////////////////////////
 
-		"title_bg-dark": "color(black blend(var(bg) 7.5%))",
-		"title_bg-light": "color(black blend(var(bg) 10%))",
+		"title_bg-dark": "var(sidebar_bg-normal-dark)",
+		"title_bg-light": "var(sidebar_bg-normal-light)",
 
-		"title_fg-dark": "color(white blend(var(bg) 65%))",
-		"title_fg-light": "color(black blend(var(bg) 65%))",
+		"title_fg-dark": "var(sidebar_fg-normal-dark)",
+		"title_fg-light": "var(sidebar_fg-normal-light)",
 
 	////// Label Controls ////////////////////////////////////////////////////////
 
