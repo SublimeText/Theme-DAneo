@@ -23,8 +23,8 @@
 
 		"grid_border_size": 1,
 
-		"grid_border-dark": "color(white blend(var(bg) 10%))",
-		"grid_border-light": "color(black blend(var(bg) 15%))",
+		"grid_border-dark": "var(inactive_tab_bc-dark)",
+		"grid_border-light": "var(inactive_tab_bc-light)",
 
 	////// Tabs //////////////////////////////////////////////////////////////////
 
@@ -36,8 +36,8 @@
 		"active_tab_bg-dark": "color(white blend(var(bg) 7.5%))",
 		"active_tab_bg-light": "color(black blend(var(bg) 10%))",
 
-		"active_tab_bc-dark": "var(grid_border-dark)",
-		"active_tab_bc-light": "var(grid_border-light)",
+		"active_tab_bc-dark": "color(white blend(var(bg) 11%))",
+		"active_tab_bc-light": "color(black blend(var(bg) 13%))",
 
 		// Inactive Tabs
 
@@ -150,8 +150,8 @@
 
 		{
 			"class": "tabset_control",
-			"content_margin": [0, -1, 0, 4],
-			"tab_height": 34,
+			"content_margin": [-1, 0, 0, 4],
+			"tab_height": 33,
 			"tab_overlap": 3,
 			"tint_index": -1,
 			"layer0.draw_center": false,
@@ -182,7 +182,7 @@
 		{
 			"class": "tabset_control",
 			"settings": ["tabset_size_small"],
-			"tab_height": 28,
+			"tab_height": 27,
 			"layer0.inner_margin": [0, 0, 0, 5],
 			"layer1.inner_margin": [0, 27, 0, 1],
 			"layer2.inner_margin": [0, 26, 0, 0]
