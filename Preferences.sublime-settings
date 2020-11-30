@@ -1,4 +1,9 @@
 {
+	// Controls the title bar style.
+	// If true, a themed title bar with hamburger menu is used.
+	// If false, the system default window title is displayed.
+	"themed_title_bar": true,
+
 	// Controls whether to show the disclosure buttons in the sidebar
 	"show_disclosure_buttons": true,
 

@@ -588,14 +588,18 @@
 
 		{
 			"class": "title_bar",
+			"settings": ["themed_title_bar"],
 			"bg": "var(title_bg-dark)",
-			"fg": "var(title_fg-dark)"
+			"fg": "var(title_fg-dark)",
+			"style": "system"
 		},
 		{
 			"class": "title_bar",
+			"settings": ["themed_title_bar"],
 			"attributes": ["file_light"],
 			"bg": "var(title_bg-light)",
-			"fg": "var(title_fg-light)"
+			"fg": "var(title_fg-light)",
+			"style": "light"
 		},
 
 	////// Labels ////////////////////////////////////////////////////////////////
