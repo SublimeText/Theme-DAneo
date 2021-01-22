@@ -1012,6 +1012,112 @@
 			"color": "var(kind_fg_variable)"
 		},
 
+		{
+			"class": "kind_container kind_color_redish",
+			"layer1.tint": "var(--redish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_color_redish"}
+			],
+			"color": "var(--redish)"
+		},
+
+		{
+			"class": "kind_container kind_color_orangish",
+			"layer1.tint": "var(--orangish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_color_orangish"}
+			],
+			"color": "var(--orangish)"
+		},
+
+		{
+			"class": "kind_container kind_color_yellowish",
+			"layer1.tint": "var(--yellowish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_color_yellowish"}
+			],
+			"color": "var(--yellowish)"
+		},
+
+		{
+			"class": "kind_container kind_color_greenish",
+			"layer1.tint": "var(--greenish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_color_greenish"}
+			],
+			"color": "var(--greenish)"
+		},
+
+		{
+			"class": "kind_container kind_color_cyanish",
+			"layer1.tint": "var(--cyanish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_color_cyanish"}
+			],
+			"color": "var(--cyanish)"
+		},
+
+		{
+			"class": "kind_container kind_color_bluish",
+			"layer1.tint": "var(--bluish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_color_bluish"}
+			],
+			"color": "var(--bluish)"
+		},
+
+		{
+			"class": "kind_container kind_color_purplish",
+			"layer1.tint": "var(--purplish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_color_purplish"}
+			],
+			"color": "var(--purplish)"
+		},
+
+		{
+			"class": "kind_container kind_color_pinkish",
+			"layer1.tint": "var(--pinkish)",
+		},
+		{
+			"class": "kind_label",
+			"parents": [
+				{"class": "kind_container kind_color_pinkish"}
+			],
+			"color": "var(--pinkish)"
+		},
+
+		{
+			"class": "kind_container kind_color_dark",
+			"layer1.tint": "color(black a(0.5))"
+		},
+
+		{
+			"class": "kind_container kind_color_light",
+			"layer1.tint": "color(white a(0.5))",
+		},
+
 	////// Quick Panels //////////////////////////////////////////////////////////
 
 		{
