@@ -1497,7 +1497,7 @@
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "quick_panel_row", "attributes": ["hover"]}
 			],
-			"fg": "var(quick_panel_details_fg-normal-light)",
+			"fg": "var(quick_panel_details_fg-hover-light)",
 			"selected_fg": "var(quick_panel_details_fg-selected-hover-light)",
 			"link_color": "var(quick_panel_link_fg-hover-light)"
 		},
@@ -1517,7 +1517,7 @@
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
 			],
-			"fg": "var(quick_panel_details_fg-normal-light)",
+			"fg": "var(quick_panel_details_fg-hover-light)",
 			"selected_fg": "var(quick_panel_details_fg-selected-hover-light)",
 			"link_color": "var(quick_panel_link_fg-hover-light)"
 		},
