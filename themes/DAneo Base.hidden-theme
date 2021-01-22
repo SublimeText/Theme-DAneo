@@ -1449,22 +1449,21 @@
 
 	////// Quick Panel Rows / Detail Label ///////////////////////////////////////
 
+		// The rules of this section are applied to the second line of quick panel
+		// rows of:
+		//  - Command Palette InputHandlers (ST4095+):
+		//    `mini_quick_panel_row quick_panel_detail_label`
+		//  - API created quick panels with `detail` text provided (ST4085+):
+		//    `quick_panel_row quick_panel_detail_label`
 		//
 		// The `quick_panel_detail_label` is a description text of quick panel items,
-		// which is rendered below the normal `quick_panel_label`.
-		//
-		// 1. Rules of `quick_panel_path_label` are applied.
-		// 2. Used by API created quick panels, which may or may not include kind info.
-		// 3. Requires ST 4085 or higher.
-		//
+		// which is rendered below the normal `quick_panel_label` and overrides rules
+		// of `quick_panel_path_label`.
 
 		// Quick Panel Row (Normal)
 
 		{
 			"class": "quick_panel_detail_label",
-			"parents": [
-				{"class": "quick_panel_row"}
-			],
 			"fg": "var(quick_panel_details_fg-normal-dark)",
 			"selected_fg": "var(quick_panel_details_fg-selected-dark)",
 			"link_color": "var(quick_panel_link_fg-normal-dark)",
@@ -1475,7 +1474,6 @@
 			"class": "quick_panel_detail_label",
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
-				{"class": "quick_panel_row"}
 			],
 			"fg": "var(quick_panel_details_fg-normal-light)",
 			"selected_fg": "var(quick_panel_details_fg-selected-light)",
@@ -1504,6 +1502,26 @@
 			"link_color": "var(quick_panel_link_fg-hover-light)"
 		},
 
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_details_fg-hover-dark)",
+			"selected_fg": "var(quick_panel_details_fg-selected-hover-dark)",
+			"link_color": "var(quick_panel_link_fg-hover-dark)"
+		},
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "mini_quick_panel_row", "attributes": ["hover"]}
+			],
+			"fg": "var(quick_panel_details_fg-normal-light)",
+			"selected_fg": "var(quick_panel_details_fg-selected-hover-light)",
+			"link_color": "var(quick_panel_link_fg-hover-light)"
+		},
+
 		// Quick Panel Row (Selected)
 
 		{
@@ -1522,6 +1540,22 @@
 			"link_color": "var(quick_panel_link_fg-selected-light)"
 		},
 
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "mini_quick_panel_row", "attributes": ["selected", "!hover"]}
+			],
+			"link_color": "var(quick_panel_link_fg-selected-dark)"
+		},
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "mini_quick_panel_row", "attributes": ["selected", "!hover"]}
+			],
+			"link_color": "var(quick_panel_link_fg-selected-light)"
+		},
+
 		// Quick Panel Row (Selected, Hover)
 
 		{
@@ -1536,6 +1570,22 @@
 			"parents": [
 				{"class": "window", "attributes": ["file_light"]},
 				{"class": "quick_panel_row", "attributes": ["selected", "hover"]}
+			],
+			"link_color": "var(quick_panel_link_fg-selected-hover-light)"
+		},
+
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "mini_quick_panel_row", "attributes": ["selected", "hover"]}
+			],
+			"link_color": "var(quick_panel_link_fg-selected-hover-dark)"
+		},
+		{
+			"class": "quick_panel_detail_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "mini_quick_panel_row", "attributes": ["selected", "hover"]}
 			],
 			"link_color": "var(quick_panel_link_fg-selected-hover-light)"
 		},
