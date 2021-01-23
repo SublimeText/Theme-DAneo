@@ -5721,11 +5721,6 @@
 			"font.italic": true,
 			"border_color": "color(var(--accent) a(0.8))"
 		},
-		{
-			"class": "auto_complete_description_label",
-			"font.size": "0.9rem",
-			"font.italic": true
-		},
 
 	////// Popup Control /////////////////////////////////////////////////////////
 
