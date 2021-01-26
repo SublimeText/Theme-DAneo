@@ -203,7 +203,9 @@
 
 		{
 			"class": "tabset_control",
-			"settings": ["tabset_size_small"],
+			"settings": {
+				"file_tab_size": "small"
+			},
 			"tab_height": 28,
 			"layer0.inner_margin": [0, 31, 0, 0]
 		},
@@ -226,7 +228,9 @@
 		},
 		{
 			"class": "tab_control",
-			"settings": ["!tabset_size_small", "show_tab_close_buttons_on_left"],
+			"settings": {
+				"show_tab_close_buttons_on_left": true
+			},
 			"content_margin": [10, 8, 16, 9]
 		},
 
@@ -234,12 +238,18 @@
 
 		{
 			"class": "tab_control",
-			"settings": ["tabset_size_small", "!show_tab_close_buttons_on_left"],
+			"settings": {
+				"file_tab_size": "small",
+				"show_tab_close_buttons_on_left": false
+			},
 			"content_margin": [16, 4, 10, 5]
 		},
 		{
 			"class": "tab_control",
-			"settings": ["tabset_size_small", "show_tab_close_buttons_on_left"],
+			"settings": {
+				"file_tab_size": "small",
+				"show_tab_close_buttons_on_left": true
+			},
 			"content_margin": [10, 4, 16, 5]
 		},
 

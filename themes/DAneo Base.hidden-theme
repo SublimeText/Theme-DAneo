@@ -4772,12 +4772,18 @@
 
 		{
 			"class": "tab_control",
-			"settings": ["tabset_size_small", "!show_tab_close_buttons_on_left"],
+			"settings": {
+				"file_tab_size": "small",
+				"show_tab_close_buttons_on_left": false,
+			},
 			"content_margin": [16, 5, 10, 5]
 		},
 		{
 			"class": "tab_control",
-			"settings": ["tabset_size_small", "show_tab_close_buttons_on_left"],
+			"settings": {
+				"file_tab_size": "small",
+				"show_tab_close_buttons_on_left": true,
+			},
 			"content_margin": [10, 5, 16, 5]
 		},
 

@@ -105,7 +105,7 @@ Setting                                 | Default | Description
 `"show_tabs_dropdown_button"`           | `true`  | Controls whether to show the tabs dropdown button
 `"show_panel_button"`                   | `true`  | Controls whether to show the _show panel button_ in the left corner of the status bar
 `"show_panel_close_button"`             | `false` | Controls whether to show the close button of the find and replace panels
-`"tabset_size_small"`                   | `false` | Controls whether to render a smaller tabset variant
+`"file_tab_size"`                       | `"normal"` | Controls size of file tabs. Valid values are `"normal"` and `"small"`.
 `"thin_scroll_bars"`                    | `false` | Controls whether to display a thin scrollbar by default. If `true` full sized scrollbars are displayed only if cursor is hovering.
 
 ### Editing the Theme

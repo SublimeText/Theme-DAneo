@@ -50,8 +50,8 @@
 	// Controls whether to show the close button of the find and replace panels
 	"show_panel_close_button": false,
 
-	// Controls whether to render a smaller tabset variant
-	"tabset_size_small": false,
+	// Controls size of file tabs. Valid values are "normal" and "small".
+	"file_tab_size": "normal",
 
 	// Controls whether to render thin scroll bar puck when scrolling via mouse
 	"thin_scroll_bars": false,

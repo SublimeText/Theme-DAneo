@@ -174,7 +174,9 @@
 
 		{
 			"class": "tabset_control",
-			"settings": ["tabset_size_small"],
+			"settings": {
+				"file_tab_size": "small"
+			},
 			"tab_height": 32
 		},
 
@@ -204,7 +206,9 @@
 
 		{
 			"class": "tab_control",
-			"settings": ["tabset_size_small"],
+			"settings": {
+				"file_tab_size": "small"
+			},
 			"content_margin": [8, 6, 8, 7]
 		},
 
