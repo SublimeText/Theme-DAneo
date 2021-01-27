@@ -4085,7 +4085,7 @@
 
 		{
 			"class": "tab_control",
-			"content_margin": [16, 8, 10, 7],
+			"content_margin": [16, 8, 16, 7],
 			"hit_test_level": 0.25,
 			"max_margin_trim": 2,
 			"layer0.inner_margin": [4, 4],
@@ -4105,6 +4105,24 @@
 			],
 			"attributes": ["!selected"],
 			"layer0.tint": "var(inactive_tab_bg-normal-light)"
+		},
+		{
+			"class": "tab_control",
+			"settings": ["show_tab_close_buttons", "!tabset_size_small"],
+			"content_margin": [16, 8, 10, 7],
+		},
+
+		// Tab Control (Small)
+
+		{
+			"class": "tab_control",
+			"settings": ["!show_tab_close_buttons", "tabset_size_small"],
+			"content_margin": [16, 4, 16, 5]
+		},
+		{
+			"class": "tab_control",
+			"settings": ["show_tab_close_buttons", "tabset_size_small"],
+			"content_margin": [16, 4, 8, 5]
 		},
 
 		// Inactive Tab Control (Hover)

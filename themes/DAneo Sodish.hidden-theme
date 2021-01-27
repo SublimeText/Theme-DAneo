@@ -192,7 +192,7 @@
 
 		{
 			"class": "tab_control",
-			"content_margin": [16, 4, 12, 5],
+			"content_margin": [16, 4, 16, 5],
 			"max_margin_trim": 0,
 			"tint_index": -1,
 			"layer0.inner_margin": [4, 4],
@@ -204,13 +204,23 @@
 			"layer3.opacity": 0.0,
 			"layer3.texture": null
 		},
+		{
+			"class": "tab_control",
+			"settings": ["show_tab_close_buttons", "!tabset_size_small"],
+			"content_margin": [16, 4, 12, 5],
+		},
 
 		// Tab Control (Small)
 
 		{
 			"class": "tab_control",
-			"settings": ["tabset_size_small"],
-			"content_margin": [16, 3, 10, 3]
+			"settings": ["!show_tab_close_buttons", "tabset_size_small"],
+			"content_margin": [16, 3, 16, 3]
+		},
+		{
+			"class": "tab_control",
+			"settings": ["show_tab_close_buttons", "tabset_size_small"],
+			"content_margin": [16, 3, 9, 3]
 		},
 
 		// Inctive Tab Control
