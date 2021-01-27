@@ -194,7 +194,7 @@
 
 		{
 			"class": "tab_control",
-			"content_margin": [16, 4, 12, 5],
+			"content_margin": [16, 4, 16, 5],
 			"max_margin_trim": 0,
 			"tint_index": -1,
 			"layer0.inner_margin": [4, 4],
@@ -206,9 +206,19 @@
 			"layer3.opacity": 0.0,
 			"layer3.texture": null
 		},
+		
 		{
 			"class": "tab_control",
 			"settings": {
+				"show_tab_close_buttons": true,
+				"show_tab_close_buttons_on_left": false
+			},
+			"content_margin": [16, 4, 12, 5]
+		},
+		{
+			"class": "tab_control",
+			"settings": {
+				"show_tab_close_buttons": true,
 				"show_tab_close_buttons_on_left": true
 			},
 			"content_margin": [12, 4, 16, 5]
@@ -220,17 +230,27 @@
 			"class": "tab_control",
 			"settings": {
 				"file_tab_size": "small",
-				"show_tab_close_buttons_on_left": false
+				"show_tab_close_buttons": false
 			},
-			"content_margin": [16, 3, 10, 3]
+			"content_margin": [16, 3, 16, 3]
 		},
 		{
 			"class": "tab_control",
 			"settings": {
 				"file_tab_size": "small",
+				"show_tab_close_buttons": true,
+				"show_tab_close_buttons_on_left": false
+			},
+			"content_margin": [16, 3, 9, 3]
+		},
+		{
+			"class": "tab_control",
+			"settings": {
+				"file_tab_size": "small",
+				"show_tab_close_buttons": true,
 				"show_tab_close_buttons_on_left": true
 			},
-			"content_margin": [10, 3, 16, 3]
+			"content_margin": [9, 3, 16, 3]
 		},
 
 		// Inctive Tab Control

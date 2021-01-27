@@ -4740,7 +4740,7 @@
 
 		{
 			"class": "tab_control",
-			"content_margin": [16, 8, 10, 7],
+			"content_margin": [16, 8, 16, 7],
 			"hit_test_level": 0.25,
 			"max_margin_trim": 2,
 			"layer0.inner_margin": [4, 4],
@@ -4763,7 +4763,19 @@
 		},
 		{
 			"class": "tab_control",
-			"settings": ["show_tab_close_buttons_on_left"],
+			"settings": {
+				"show_tab_close_buttons": true,
+				"show_tab_close_buttons_on_left": false
+			},
+			"close_button_side": "right",
+			"content_margin": [16, 8, 10, 7]
+		},
+		{
+			"class": "tab_control",
+			"settings": {
+				"show_tab_close_buttons": true,
+				"show_tab_close_buttons_on_left": true
+			},
 			"close_button_side": "left",
 			"content_margin": [10, 8, 16, 7]
 		},
@@ -4774,17 +4786,27 @@
 			"class": "tab_control",
 			"settings": {
 				"file_tab_size": "small",
-				"show_tab_close_buttons_on_left": false,
+				"show_tab_close_buttons": false
 			},
-			"content_margin": [16, 5, 10, 5]
+			"content_margin": [16, 5, 16, 5]
 		},
 		{
 			"class": "tab_control",
 			"settings": {
 				"file_tab_size": "small",
-				"show_tab_close_buttons_on_left": true,
+				"show_tab_close_buttons": true,
+				"show_tab_close_buttons_on_left": false
 			},
-			"content_margin": [10, 5, 16, 5]
+			"content_margin": [16, 5, 8, 5]
+		},
+		{
+			"class": "tab_control",
+			"settings": {
+				"file_tab_size": "small",
+				"show_tab_close_buttons": true,
+				"show_tab_close_buttons_on_left": true
+			},
+			"content_margin": [8, 5, 16, 5]
 		},
 
 		// Inactive Tab Control (Hover)

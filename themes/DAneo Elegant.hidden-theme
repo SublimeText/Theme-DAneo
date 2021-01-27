@@ -214,7 +214,7 @@
 
 		{
 			"class": "tab_control",
-			"content_margin": [16, 8, 10, 9],
+			"content_margin": [16, 8, 16, 9],
 			"layer0.texture": "Theme - DAneo/textures/tabs/tab--default--mb0--bw0--br4.png",
 			"layer1.draw_center": false,
 			"layer1.inner_margin": [0, 0, 0, 1],
@@ -229,6 +229,15 @@
 		{
 			"class": "tab_control",
 			"settings": {
+				"show_tab_close_buttons": true,
+				"show_tab_close_buttons_on_left": false
+			},
+			"content_margin": [16, 8, 10, 9]
+		},
+		{
+			"class": "tab_control",
+			"settings": {
+				"show_tab_close_buttons": true,
 				"show_tab_close_buttons_on_left": true
 			},
 			"content_margin": [10, 8, 16, 9]
@@ -240,17 +249,27 @@
 			"class": "tab_control",
 			"settings": {
 				"file_tab_size": "small",
-				"show_tab_close_buttons_on_left": false
+				"show_tab_close_buttons": false
 			},
-			"content_margin": [16, 4, 10, 5]
+			"content_margin": [16, 4, 16, 5]
 		},
 		{
 			"class": "tab_control",
 			"settings": {
 				"file_tab_size": "small",
+				"show_tab_close_buttons": true,
+				"show_tab_close_buttons_on_left": false
+			},
+			"content_margin": [16, 4, 8, 5]
+		},
+		{
+			"class": "tab_control",
+			"settings": {
+				"file_tab_size": "small",
+				"show_tab_close_buttons": true,
 				"show_tab_close_buttons_on_left": true
 			},
-			"content_margin": [10, 4, 16, 5]
+			"content_margin": [8, 4, 16, 5]
 		},
 
 		// Tab Control (Selected)
