@@ -52,6 +52,15 @@
 							"default": true,
 							"markdownDescription": "Controls whether to show vcs status of untracked files and folders by the color of their labels in the sidebar."
 						},
+						"file_tab_size": {
+							"type": "string",
+							"enum": [
+								"normal",
+								"small"
+							],
+							"default": "normal",
+							"markdownDescription": "Controls size of file tabs. Valid values are `\"normal\"` and `\"small\"`."
+						},
 						"thin_scroll_bars": {
 							"type": "boolean",
 							"default": false,
