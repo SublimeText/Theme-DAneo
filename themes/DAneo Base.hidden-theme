@@ -379,6 +379,8 @@
 		"active_tab_fg-normal-light": "var(label_fg-selected-light)",
 		"active_tab_fg-hover-dark": "var(label_fg-selected-hover-dark)",
 		"active_tab_fg-hover-light": "var(label_fg-selected-hover-light)",
+		"active_tab_fg-highlighted-dark": "var(label_fg-selected-hover-dark)",
+		"active_tab_fg-highlighted-light": "var(label_fg-selected-hover-light)",
 
 		// close button of saved unhovered active tab
 		"active_tab_close_opacity-clean": {
@@ -4889,6 +4891,7 @@
 			"class": "tab_label",
 			"font.face": "var(tab_font_face)",
 			"font.size": "var(tab_font_size)",
+			"font.bold": false,
 			"fg": "var(inactive_tab_fg-normal-dark)"
 		},
 		{
@@ -4949,6 +4952,24 @@
 				{"class": "tab_control", "attributes": ["selected", "hover", "file_light"]}
 			],
 			"fg": "var(active_tab_fg-hover-light)"
+		},
+
+		// Highlighted Tab Label
+
+		{
+			"class": "tab_label",
+			"parents": [
+				{"class": "tab_control", "attributes": ["highlighted"]}
+			],
+			"font.bold": true,
+			"fg": "var(active_tab_fg-highlighted-dark)"
+		},
+		{
+			"class": "tab_label",
+			"parents": [
+				{"class": "tab_control", "attributes": ["highlighted", "file_light"]}
+			],
+			"fg": "var(active_tab_fg-highlighted-light)"
 		},
 
 		// Tab Label (Transient)

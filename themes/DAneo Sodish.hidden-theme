@@ -329,6 +329,24 @@
 			"fg": "var(active_tab_fg-hover-light)"
 		},
 
+		// Highlighted Tab Label
+
+		{
+			"class": "tab_label",
+			"parents": [
+				{"class": "tab_control", "attributes": ["highlighted"]}
+			],
+			"fg": "var(active_tab_fg-highlighted-dark)"
+		},
+		{
+			"class": "tab_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tab_control", "attributes": ["highlighted"]}
+			],
+			"fg": "var(active_tab_fg-highlighted-light)"
+		},
+
 		// Active Tab (Clean) -> Close Button (Normal)
 
 		{
