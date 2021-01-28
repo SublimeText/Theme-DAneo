@@ -15,47 +15,13 @@
 		"overlay_bc-dark": "color(black blend(var(bg) 42.7%))",
 		"overlay_bc-light": "color(black blend(var(bg) 10%))",
 
-		"overlay_input_tint-dark": "var(overlay_bg-dark)",
-		"overlay_input_tint-light": "var(overlay_bg-light)",
-
 	////// Panel Control /////////////////////////////////////////////////////////
 
 		"panel_bg-dark": "color(black blend(var(bg) 20%))",
-		"panel_bg-light": "color(black blend(var(bg) 10%))",
-
-		"panel_input_tint-dark": "var(panel_bg-dark)",
-		"panel_input_tint-light": "var(panel_bg-light)"
+		"panel_bg-light": "color(black blend(var(bg) 10%))"
 	},
 
 	"rules": [
-
-	////// Text Line Control /////////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"color_scheme_tint": "var(panel_input_tint-dark)"
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(panel_input_tint-light)"
-		},
-
-		// Output Panel Text Area
-
-		{
-			"class": "text_output_control",
-			"color_scheme_tint": "var(panel_input_tint-dark)"
-		},
-		{
-			"class": "text_output_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(panel_input_tint-light)"
-		},
 
 	////// Button Control ////////////////////////////////////////////////////////
 
@@ -201,41 +167,6 @@
 			"class": "tab_control",
 			"attributes": ["!selected"],
 			"layer3.opacity": "var(inactive_tab_close_opacity-clean)"
-		},
-
-	////// Overlay Controls //////////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "overlay_control"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-dark)"
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "overlay_control"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
-		},
-
-	////// Switch Project Window /////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-dark)"
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
 		}
 	]
 }

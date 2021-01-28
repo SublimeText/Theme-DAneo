@@ -46,9 +46,6 @@
 		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
 		"overlay_bg-light": "color(black blend(var(bg) 5%))",
 
-		"overlay_input_tint-dark": "var(overlay_bg-dark)",
-		"overlay_input_tint-light": "var(overlay_bg-light)",
-
 	////// Panel Controls ////////////////////////////////////////////////////////
 
 		"panel_bg-dark": "color(white blend(var(bg) 7.5%))",
@@ -57,14 +54,8 @@
 		"panel_input_bg-dark": "color(white blend(var(bg) 5%))",
 		"panel_input_bg-light": "color(black blend(var(bg) 5%))",
 
-		"panel_input_tint-dark": "color(white alpha(5%))",
-		"panel_input_tint-light": "color(black alpha(5%))",
-
 		"panel_input_bc-dark": "color(white alpha(15%))",
 		"panel_input_bc-light": "color(black alpha(10%))",
-
-		"panel_output_tint-dark": "var(panel_bg-dark)",
-		"panel_output_tint-light": "var(panel_bg-light)",
 
 	////// Status Bar ////////////////////////////////////////////////////////////
 
@@ -81,46 +72,6 @@
 
 	},
 	"rules": [
-
-	////// Text Line Control /////////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"content_margin": [8, 6],
-			"color_scheme_tint": "var(panel_input_tint-dark)",
-			"layer0.inner_margin": 6,
-			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
-			"layer0.tint": "var(panel_input_bg-dark)",
-			"layer0.opacity": 1.0,
-			"layer1.draw_center": false,
-			"layer1.inner_margin": 6,
-			"layer1.texture": "Theme - DAneo/textures/inputs/input--bw1--br2.png",
-			"layer1.tint": "var(panel_input_bc-dark)",
-			"layer1.opacity": 1.0
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(panel_input_tint-light)",
-			"layer0.tint": "var(panel_input_bg-light)",
-			"layer1.tint": "var(panel_input_bc-light)"
-		},
-
-		// Output Panel Text Area
-
-		{
-			"class": "text_output_control",
-			"color_scheme_tint": "var(panel_output_tint-dark)"
-		},
-		{
-			"class": "text_output_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(panel_output_tint-light)"
-		},
 
 	////// Side Bar //////////////////////////////////////////////////////////////
 
@@ -297,22 +248,12 @@
 				{"class": "overlay_control"}
 			],
 			"content_margin": [52, 9, 13, 13],
-			"color_scheme_tint": "var(overlay_input_tint-dark)",
-			"layer0.draw_center": false,
-			"layer0.inner_margin": [52, 48, 0, 0],
-			"layer0.texture": "Theme - DAneo/textures/inputs/input_search.png",
-			"layer0.tint": "var(accent)",
-			"layer0.opacity": 1.0,
-			"layer1.texture": "",
-			"layer1.opacity": 0.0
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "overlay_control"}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
+			// search icon
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [52, 48, 0, 0],
+			"layer1.texture": "Theme - DAneo/textures/inputs/input_search.png",
+			"layer1.tint": "var(accent)",
+			"layer1.opacity": 1.0
 		},
 		{
 			"class": "text_line_control",
@@ -412,6 +353,21 @@
 			}
 		},
 
+		// Panel Input Control
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "panel_control"}
+			],
+			"content_margin": [8, 6],
+			"layer0.inner_margin": 6,
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
+			"layer1.inner_margin": 6,
+			"layer1.texture": "Theme - DAneo/textures/inputs/input--bw1--br2.png",
+			"layer1.opacity": 1.0
+		},
+
 	////// Status Bar ////////////////////////////////////////////////////////////
 
 		{
@@ -451,21 +407,12 @@
 				{"class": "switch_project_window"}
 			],
 			"content_margin": [52, 9, 13, 13],
-			"color_scheme_tint": "var(overlay_input_tint-dark)",
-			"layer0.draw_center": false,
-			"layer0.inner_margin": [52, 48, 0, 0],
-			"layer0.texture": "Theme - DAneo/textures/inputs/input_search.png",
-			"layer0.tint": "var(accent)",
-			"layer0.opacity": 1.0,
-			"layer1.texture": "",
-			"layer1.opacity": 0.0
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "switch_project_window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(overlay_input_tint-light)"
+			// search icon
+			"layer1.draw_center": false,
+			"layer1.inner_margin": [52, 48, 0, 0],
+			"layer1.texture": "Theme - DAneo/textures/inputs/input_search.png",
+			"layer1.tint": "var(accent)",
+			"layer1.opacity": 1.0
 		},
 		{
 			"class": "text_line_control",

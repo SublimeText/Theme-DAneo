@@ -54,6 +54,9 @@
 		"overlay_bg-dark": "var(active_tab_bg-dark)",
 		"overlay_bg-light": "var(active_tab_bg-light)",
 
+		"overlay_input_bg-dark": "var(bg)",
+		"overlay_input_bg-light": "var(bg)",
+
 		"quick_panel_bg-dark": "var(bg)",
 		"quick_panel_bg-light": "var(bg)",
 
@@ -62,11 +65,14 @@
 		"panel_bg-dark": "color(white blend(var(bg) 5%))",
 		"panel_bg-light": "color(black blend(var(bg) 7.5%))",
 
+		"panel_input_bg-dark": "var(bg)",
+		"panel_input_bg-light": "var(bg)",
+
 		"panel_input_bc-dark": "color(white alpha(7.5%))",
 		"panel_input_bc-light": "color(black alpha(10%))",
 
-		"panel_output_tint-dark": "color(white alpha(1.5%))",
-		"panel_output_tint-light": "color(black alpha(2.5%))",
+		"panel_output_bg-dark": "color(white alpha(1.5%))",
+		"panel_output_bg-light": "color(black alpha(2.5%))",
 
 	////// Status Bar ////////////////////////////////////////////////////////////
 
@@ -83,29 +89,6 @@
 
 	},
 	"rules": [
-
-	////// Text Line Control /////////////////////////////////////////////////////
-
-		{
-			"class": "text_line_control",
-			"content_margin": [8, 6],
-			"layer0.inner_margin": 6,
-			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
-			"layer0.tint": "var(bg)",
-			"layer0.opacity": 1.0,
-			"layer1.draw_center": false,
-			"layer1.inner_margin": 6,
-			"layer1.texture": "Theme - DAneo/textures/inputs/input--bw1--br2.png",
-			"layer1.tint": "var(panel_input_bc-dark)",
-			"layer1.opacity": 1.0
-		},
-		{
-			"class": "text_line_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"layer1.tint": "var(panel_input_bc-light)"
-		},
 
 	////// Button Control ////////////////////////////////////////////////////////
 
@@ -436,8 +419,8 @@
 			"parents": [
 				{"class": "overlay_control"}
 			],
-			"layer1.texture": "",
-			"layer1.opacity": 0.0
+			"layer0.inner_margin": 6,
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png"
 		},
 
 		{
@@ -473,20 +456,6 @@
 		{
 			"class": "panel_control find_in_files_panel",
 			"content_margin": [12, 12, 12, 11]
-		},
-
-		// Output Panel Text Area
-
-		{
-			"class": "text_output_control",
-			"color_scheme_tint": "var(panel_output_tint-dark)"
-		},
-		{
-			"class": "text_output_control",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]}
-			],
-			"color_scheme_tint": "var(panel_output_tint-light)"
 		},
 
 		// Icon Button Group
@@ -576,6 +545,21 @@
 			"layer2.opacity": {
 				"target": 1.0, "speed": 4.5, "interpolation": "smoothstep"
 			}
+		},
+
+		// Panel Input Control
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "panel_control"}
+			],
+			"content_margin": [8, 6],
+			"layer0.inner_margin": 6,
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
+			"layer1.inner_margin": 6,
+			"layer1.texture": "Theme - DAneo/textures/inputs/input--bw1--br2.png",
+			"layer1.opacity": 1.0
 		},
 
 	////// Status Bar ////////////////////////////////////////////////////////////

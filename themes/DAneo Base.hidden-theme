@@ -436,6 +436,9 @@
 		"overlay_bc-dark": "color(black blend(var(bg) 15%))",
 		"overlay_bc-light": "color(black blend(var(bg) 12%))",
 
+		"overlay_input_bg-dark": "var(overlay_bg-dark)",
+		"overlay_input_bg-light": "var(overlay_bg-light)",
+
 		// Quick Panels Background Colors
 
 		"quick_panel_bg-dark": "var(overlay_bg-dark)",
@@ -632,6 +635,15 @@
 		"panel_bg-dark": "color(black blend(var(bg) 20%))",
 		"panel_bg-light": "color(black blend(var(bg) 10%))",
 
+		"panel_input_bg-dark": "var(panel_bg-dark)",
+		"panel_input_bg-light": "var(panel_bg-light)",
+
+		"panel_input_bc-dark": "color(white alpha(15%))",
+		"panel_input_bc-light": "color(black alpha(10%))",
+
+		"panel_output_bg-dark": "var(panel_bg-dark)",
+		"panel_output_bg-light": "var(panel_bg-light)",
+
 	////// Status Bar ////////////////////////////////////////////////////////////
 
 		"statusbar_font_face": "var(font_face)",
@@ -740,7 +752,11 @@
 
 		{
 			"class": "text_line_control",
-			"content_margin": [8, 6]
+			"content_margin": [8, 6],
+			"tint_index": 0,
+			"layer0.texture": null,
+			"layer0.tint": null,
+			"layer0.opacity": 1.0
 		},
 
 	////// Button Controls ///////////////////////////////////////////////////////
@@ -5398,7 +5414,16 @@
 			"parents": [
 				{"class": "overlay_control"}
 			],
-			"content_margin": [16, 8]
+			"content_margin": [16, 8],
+			"color_scheme_tint": "var(overlay_input_bg-dark)"
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "overlay_control"}
+			],
+			"color_scheme_tint": "var(overlay_input_bg-light)"
 		},
 
 		// Scroll Bar Control
@@ -6472,6 +6497,42 @@
 			],
 			"attributes": ["hover"],
 			"layer0.tint": "var(button_icon_tint-hover-light)"
+		},
+
+		// Panel Input Control
+
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "panel_control"}
+			],
+			"color_scheme_tint": "var(panel_input_bg-dark)",
+			"layer1.draw_center": false,
+			"layer1.tint": "var(panel_input_bc-dark)",
+			"layer1.opacity": 0.0
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "panel_control"}
+			],
+			"color_scheme_tint": "var(panel_input_bg-light)",
+			"layer1.tint": "var(panel_input_bc-light)"
+		},
+
+		// Output Panel Text Area
+
+		{
+			"class": "text_output_control",
+			"color_scheme_tint": "var(panel_output_bg-dark)"
+		},
+		{
+			"class": "text_output_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"color_scheme_tint": "var(panel_output_bg-light)"
 		},
 
 	////// Status Bar ////////////////////////////////////////////////////////////

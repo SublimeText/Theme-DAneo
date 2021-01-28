@@ -73,6 +73,17 @@
 		"overlay_bg-dark": "color(white blend(var(bg) 5%))",
 		"overlay_bg-light": "color(black blend(var(bg) 5%))",
 
+		"overlay_input_bg-dark": "var(bg)",
+		"overlay_input_bg-light": "var(bg)",
+
+	////// Panel Controls ////////////////////////////////////////////////////////
+
+		"panel_input_bg-dark": "var(bg)",
+		"panel_input_bg-light": "var(bg)",
+
+		"panel_output_bg-dark": "var(bg)",
+		"panel_output_bg-light": "var(bg)",
+
 	////// Dialogs ///////////////////////////////////////////////////////////////
 
 		"dialog_bg-dark": "color(white blend(var(bg) 5%))",
@@ -87,9 +98,7 @@
 			"class": "text_line_control",
 			"content_margin": [8, 6],
 			"layer0.inner_margin": 6,
-			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png",
-			"layer0.tint": "var(bg)",
-			"layer0.opacity": 1.0
+			"layer0.texture": "Theme - DAneo/textures/inputs/input--bw0--br2.png"
 		},
 
 	////// Tabs //////////////////////////////////////////////////////////////////
