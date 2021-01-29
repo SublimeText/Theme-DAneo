@@ -4977,7 +4977,6 @@
 			"parents": [
 				{"class": "tab_control", "attributes": ["highlighted"]}
 			],
-			"font.bold": true,
 			"fg": "var(active_tab_fg-highlighted-dark)"
 		},
 		{
