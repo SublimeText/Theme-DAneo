@@ -59,6 +59,9 @@
 	// Controls whether to show the tab scroll buttons
 	"show_scroll_tabs_buttons": true,
 
+	// Controls whether to show the create new tabs button
+	"show_new_tab_button": true,
+
 	// Controls whether to show the tabs dropdown button
 	"show_tabs_dropdown_button": true,
 

@@ -102,6 +102,7 @@ Setting                                 | Default | Description
 `"show_sidebar_tracked_label_colors"`   | `true`  | Controls whether to show vcs status of tracked files and folders by the color of their labels in the sidebar.
 `"show_sidebar_untracked_label_colors"` | `true`  | Controls whether to show vcs status of untracked files and folders by the color of their labels in the sidebar.
 `"show_scroll_tabs_buttons"`            | `true`  | Controls whether to show the tab scroll buttons
+`"show_new_tab_button"`                 | `true`  | Controls whether to show the create new tabs button
 `"show_tabs_dropdown_button"`           | `true`  | Controls whether to show the tabs dropdown button
 `"show_panel_button"`                   | `true`  | Controls whether to show the _show panel button_ in the left corner of the status bar
 `"show_panel_close_button"`             | `false` | Controls whether to show the close button of the find and replace panels
