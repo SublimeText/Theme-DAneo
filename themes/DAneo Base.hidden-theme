@@ -710,7 +710,6 @@
 			"attributes": ["file_light"],
 			"bg": "var(title_bg-light)",
 			"fg": "var(title_fg-light)",
-			"style": "light"
 		},
 
 	////// Labels ////////////////////////////////////////////////////////////////
