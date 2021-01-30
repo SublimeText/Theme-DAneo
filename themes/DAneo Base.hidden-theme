@@ -638,6 +638,9 @@
 		"panel_input_bg-dark": "var(panel_bg-dark)",
 		"panel_input_bg-light": "var(panel_bg-light)",
 
+		"panel_input_bg-highlighted-dark": "l(+ 1%)",
+		"panel_input_bg-highlighted-light": "l(- 3%)",
+
 		"panel_input_bc-dark": "color(white alpha(15%))",
 		"panel_input_bc-light": "color(black alpha(10%))",
 
@@ -6517,6 +6520,33 @@
 			],
 			"color_scheme_tint": "var(panel_input_bg-light)",
 			"layer1.tint": "var(panel_input_bc-light)"
+		},
+
+		// Panel Input Control Text Area (Dimming)
+		{
+			"class": "text_area_control",
+			"parents": [
+				{"class": "panel_control"}
+			],
+			"background_modifier": "",
+		},
+		{
+			"class": "text_area_control",
+			"settings": ["panel_input_highlighting"],
+			"parents": [
+				{"class": "panel_control"}
+			],
+			"attributes": ["highlighted"],
+			"background_modifier": "var(panel_input_bg-highlighted-dark)",
+		},
+		{
+			"class": "text_area_control",
+			"settings": ["panel_input_highlighting"],
+			"parents": [
+				{"class": "panel_control"}
+			],
+			"attributes": ["highlighted", "file_light"],
+			"background_modifier": "var(panel_input_bg-highlighted-light)",
 		},
 
 		// Output Panel Text Area

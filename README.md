@@ -107,6 +107,7 @@ Setting                                 | Default | Description
 `"show_panel_close_button"`             | `false` | Controls whether to show the close button of the find and replace panels
 `"file_tab_size"`                       | `"normal"` | Controls size of file tabs. Valid values are `"normal"` and `"small"`.
 `"thin_scroll_bars"`                    | `false` | Controls whether to display a thin scrollbar by default. If `true` full sized scrollbars are displayed only if cursor is hovering.
+`"panel_input_highlighting"`            | `true`  | Controls whether to highlight background of highlighted panel input controls.
 
 ### Editing the Theme
 

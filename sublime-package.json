@@ -65,6 +65,11 @@
 							"type": "boolean",
 							"default": false,
 							"markdownDescription": "Controls whether to render thin scroll bar puck when scrolling via mouse"
+						},
+						"panel_input_highlighting": {
+							"type": "boolean",
+							"default": true,
+							"markdownDescription": "Controls whether to highlight background of highlighted panel input controls.",
 						}
 					}
 				}

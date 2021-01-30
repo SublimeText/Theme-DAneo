@@ -62,6 +62,14 @@
 	// Controls whether to show the tabs dropdown button
 	"show_tabs_dropdown_button": true,
 
+
+	//
+	// Panel Settings
+	//
+
+	// Controls whether to highlight background of highlighted panel input controls.
+	"panel_input_highlighting": true,
+
 	// Controls whether to show the close button of the find and replace panels
 	"show_panel_close_button": false,
 }
