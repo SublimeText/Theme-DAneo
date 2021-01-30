@@ -7,50 +7,55 @@
 				],
 				"schema": {
 					"properties": {
+						"thin_scroll_bars": {
+							"type": "boolean",
+							"default": false,
+							"markdownDescription": "Controls whether to render thin scroll bar puck when scrolling via mouse.\n\nprovided by: Theme - DAneo"
+						},
 						"show_disclosure_buttons": {
 							"type": "boolean",
 							"default": true,
-							"markdownDescription": "Controls whether to show the disclosure buttons in the sidebar"
+							"markdownDescription": "Controls whether to show the disclosure buttons in the sidebar\n\nprovided by: Theme - DAneo."
 						},
 						"align_disclosure_buttons": {
 							"type": "boolean",
 							"default": false,
-							"markdownDescription": "Controls whether to align the disclosure buttons with the file icons.\nThis setting has only effect if `show_disclosure_buttons` is `true`."
+							"markdownDescription": "Controls whether to align the disclosure buttons with the file icons.\nThis setting has only effect if `show_disclosure_buttons` is `true`\n\nprovided by: Theme - DAneo."
 						},
 						"show_sidebar_icons": {
 							"type": "boolean",
 							"default": true,
-							"markdownDescription": "Controls whether to show folder and file icons in the sidebar"
+							"markdownDescription": "Controls whether to show folder and file icons in the sidebar\n\nprovided by: Theme - DAneo."
 						},
 						"show_sidebar_vcs_badges": {
 							"type": "boolean",
 							"default": true,
-							"markdownDescription": "Controls whether to show vcs status badges in the side bar"
+							"markdownDescription": "Controls whether to show vcs status badges in the side bar\n\nprovided by: Theme - DAneo."
 						},
 						"show_sidebar_closed_dir_badges": {
 							"type": "boolean",
 							"default": true,
-							"markdownDescription": "Controls whether to show vcs status badges for collapsed directories in the side bar if `show_sidebar_vcs_badges` is `true`."
+							"markdownDescription": "Controls whether to show vcs status badges for collapsed directories in the side bar if `show_sidebar_vcs_badges` is `true`\n\nprovided by: Theme - DAneo."
 						},
 						"show_sidebar_opened_dir_badges": {
 							"type": "boolean",
 							"default": false,
-							"markdownDescription": "Controls whether to show vcs status badges for expanded directories in the side bar if `show_sidebar_vcs_badges` is `true`."
+							"markdownDescription": "Controls whether to show vcs status badges for expanded directories in the side bar if `show_sidebar_vcs_badges` is `true`\n\nprovided by: Theme - DAneo."
 						},
 						"show_sidebar_ignored_label_colors": {
 							"type": "boolean",
 							"default": true,
-							"markdownDescription": "Controls whether to show vcs status of ignored files and folders by the color of their labels in the sidebar."
+							"markdownDescription": "Controls whether to show vcs status of ignored files and folders by the color of their labels in the sidebar\n\nprovided by: Theme - DAneo."
 						},
 						"show_sidebar_tracked_label_colors": {
 							"type": "boolean",
 							"default": true,
-							"markdownDescription": "Controls whether to show vcs status of tracked files and folders by the color of their labels in the sidebar."
+							"markdownDescription": "Controls whether to show vcs status of tracked files and folders by the color of their labels in the sidebar\n\nprovided by: Theme - DAneo."
 						},
 						"show_sidebar_untracked_label_colors": {
 							"type": "boolean",
 							"default": true,
-							"markdownDescription": "Controls whether to show vcs status of untracked files and folders by the color of their labels in the sidebar."
+							"markdownDescription": "Controls whether to show vcs status of untracked files and folders by the color of their labels in the sidebar\n\nprovided by: Theme - DAneo."
 						},
 						"file_tab_size": {
 							"type": "string",
@@ -59,17 +64,32 @@
 								"small"
 							],
 							"default": "normal",
-							"markdownDescription": "Controls size of file tabs. Valid values are `\"normal\"` and `\"small\"`."
+							"markdownDescription": "Controls size of file tabs. Valid values are `\"normal\"` and `\"small\"`\n\nprovided by: Theme - DAneo."
 						},
-						"thin_scroll_bars": {
+						"show_scroll_tabs_buttons": {
 							"type": "boolean",
-							"default": false,
-							"markdownDescription": "Controls whether to render thin scroll bar puck when scrolling via mouse"
+							"default": true,
+							"markdownDescription": "Controls whether to show the tab scroll buttons.\n\nprovided by: Theme - DAneo"
+						},
+						"show_new_tab_button": {
+							"type": "boolean",
+							"default": true,
+							"markdownDescription": "Controls whether to show the create new tabs button.\n\nprovided by: Theme - DAneo"
+						},
+						"show_tabs_dropdown_button": {
+							"type": "boolean",
+							"default": true,
+							"markdownDescription": "Controls whether to show the tabs dropdown button.\n\nprovided by: Theme - DAneo"
 						},
 						"panel_input_highlighting": {
 							"type": "boolean",
 							"default": true,
-							"markdownDescription": "Controls whether to highlight background of highlighted panel input controls.",
+							"markdownDescription": "Controls whether to highlight background of highlighted panel input controls.\n\nprovided by: Theme - DAneo"
+						},
+						"show_panel_close_button": {
+							"type": "boolean",
+							"default": false,
+							"markdownDescription": "Controls whether to show the close button of the find and replace panels.\n\nprovided by: Theme - DAneo"
 						}
 					}
 				}
