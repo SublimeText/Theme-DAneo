@@ -1,4 +1,16 @@
 {
+	//
+	// Global Settings
+	//
+
+	// Controls whether to render thin scroll bar puck when scrolling via mouse
+	"thin_scroll_bars": false,
+
+
+	//
+	// Sidebar Settings
+	//
+
 	// Controls whether to show the disclosure buttons in the sidebar
 	"show_disclosure_buttons": true,
 
@@ -36,6 +48,14 @@
 	// in the left corner of the status bar
 	"show_sidebar_button": true,
 
+
+	//
+	// Tabs Settings
+	//
+
+	// Controls size of file tabs. Valid values are "normal" and "small".
+	"file_tab_size": "normal",
+
 	// Controls whether to show the tab scroll buttons
 	"show_scroll_tabs_buttons": true,
 
@@ -44,10 +64,4 @@
 
 	// Controls whether to show the close button of the find and replace panels
 	"show_panel_close_button": false,
-
-	// Controls size of file tabs. Valid values are "normal" and "small".
-	"file_tab_size": "normal",
-
-	// Controls whether to render thin scroll bar puck when scrolling via mouse
-	"thin_scroll_bars": false,
 }
