@@ -91,6 +91,14 @@ For information about them please refer to the official [Sublime Text 3 Document
 
 ### Custom Theme Settings
 
+#### Global Settings
+
+Setting                                 | Default | Description
+----------------------------------------|---------|-------------------------------------------------------------------
+`"thin_scroll_bars"`                    | `false` | Controls whether to display a thin scrollbar by default. If `true` full sized scrollbars are displayed only if cursor is hovering.
+
+#### Sidebar Settings
+
 Setting                                 | Default | Description
 ----------------------------------------|---------|-------------------------------------------------------------------
 `"show_disclosure_buttons"`             | `true`  | Controls whether to show the disclosure buttons in the sidebar
@@ -101,14 +109,22 @@ Setting                                 | Default | Description
 `"show_sidebar_ignored_label_colors"`   | `true`  | Controls whether to show vcs status of ignored files and folders by the color of their labels in the sidebar.
 `"show_sidebar_tracked_label_colors"`   | `true`  | Controls whether to show vcs status of tracked files and folders by the color of their labels in the sidebar.
 `"show_sidebar_untracked_label_colors"` | `true`  | Controls whether to show vcs status of untracked files and folders by the color of their labels in the sidebar.
+
+#### Tab Settings
+
+Setting                                 | Default | Description
+----------------------------------------|---------|-------------------------------------------------------------------
+`"file_tab_size"`                       | `"normal"` | Controls size of file tabs. Valid values are `"normal"` and `"small"`.
 `"show_scroll_tabs_buttons"`            | `true`  | Controls whether to show the tab scroll buttons
 `"show_new_tab_button"`                 | `true`  | Controls whether to show the create new tabs button
 `"show_tabs_dropdown_button"`           | `true`  | Controls whether to show the tabs dropdown button
-`"show_panel_button"`                   | `true`  | Controls whether to show the _show panel button_ in the left corner of the status bar
-`"show_panel_close_button"`             | `false` | Controls whether to show the close button of the find and replace panels
-`"file_tab_size"`                       | `"normal"` | Controls size of file tabs. Valid values are `"normal"` and `"small"`.
-`"thin_scroll_bars"`                    | `false` | Controls whether to display a thin scrollbar by default. If `true` full sized scrollbars are displayed only if cursor is hovering.
+
+#### Panel Settings
+
+Setting                                 | Default | Description
+----------------------------------------|---------|-------------------------------------------------------------------
 `"panel_input_highlighting"`            | `true`  | Controls whether to highlight background of highlighted panel input controls.
+`"show_panel_close_button"`             | `false` | Controls whether to show the close button of the find and replace panels
 
 ### Editing the Theme
 
