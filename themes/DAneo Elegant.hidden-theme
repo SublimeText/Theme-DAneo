@@ -24,6 +24,13 @@
 				"target": 1.00, "speed": 0.67, "interpolation": "smoothstep"
 			},
 
+	////// Side Bar //////////////////////////////////////////////////////////////
+
+		"sidebar_fg-expanded-normal-dark": "var(label_fg-selected-dark)",
+		"sidebar_fg-expanded-normal-light": "var(label_fg-selected-light)",
+		"sidebar_fg-expanded-hover-dark": "var(label_fg-selected-hover-dark)",
+		"sidebar_fg-expanded-hover-light": "var(label_fg-selected-hover-light)",
+
 	////// Tabs //////////////////////////////////////////////////////////////////
 
 		"tabset_bg-dark": "var(sidebar_bg-normal-dark)",
@@ -136,38 +143,6 @@
 				"class": "tree_row",
 				"attributes": ["selected"],
 				"layer0.opacity": "var(item_bg-opacity-selected)"
-		},
-
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "tree_row", "attributes": ["expandable", "expanded"]}
-			],
-			"fg": "var(sidebar_fg-selected-dark)"
-		},
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["expandable", "expanded"]}
-			],
-			"fg": "var(sidebar_fg-selected-light)"
-		},
-
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "tree_row", "attributes": ["expandable", "expanded", "hover"]}
-			],
-			"fg": "var(sidebar_fg-selected-hover-dark)"
-		},
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
-				{"class": "tree_row", "attributes": ["expandable", "expanded", "hover"]}
-			],
-			"fg": "var(sidebar_fg-selected-hover-light)"
 		},
 
 	////// Tabs //////////////////////////////////////////////////////////////////

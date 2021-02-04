@@ -187,6 +187,13 @@
 		"sidebar_fg-selected-hover-dark": "var(label_fg-selected-hover-dark)",
 		"sidebar_fg-selected-hover-light": "var(label_fg-selected-hover-light)",
 
+		// Tree Items Text Colors (Folders Expanded)
+
+		"sidebar_fg-expanded-normal-dark": "var(label_fg-normal-dark)",
+		"sidebar_fg-expanded-normal-light": "var(label_fg-normal-light)",
+		"sidebar_fg-expanded-hover-dark": "var(label_fg-hover-dark)",
+		"sidebar_fg-expanded-hover-light": "var(label_fg-hover-light)",
+
 		// Tree Items Text Colors (Added Files)
 
 		"sidebar_fg-added-normal-dark": "color(var(sidebar_fg-normal-dark) blend(var(vcs_added) 30%)",
@@ -1466,6 +1473,51 @@
 
 	////// Side Bar / Tree Items / Folder Labels /////////////////////////////////
 
+		// Side Bar Folder Text (Default)
+
+		{
+			"class": "sidebar_label",
+			"settings": ["bold_folder_labels"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable"]}
+			],
+			"font.bold": true
+		},
+
+		// Side Bar Folder Text (Expanded)
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["expanded", "!hover"]}
+			],
+			"fg": "var(sidebar_fg-expanded-normal-dark)",
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expanded", "!hover"]}
+			],
+			"fg": "var(sidebar_fg-expanded-normal-light)"
+		},
+
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "tree_row", "attributes": ["expanded", "hover"]}
+			],
+			"fg": "var(sidebar_fg-expanded-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expanded", "hover"]}
+			],
+			"fg": "var(sidebar_fg-expanded-hover-light)"
+		},
+
 		// Side Bar Tree Item Text (Folders With Untracked Files)
 		// Note: commented out as it looks like the whole folder was ignored, which is not the case
 
@@ -2286,17 +2338,6 @@
 				{"class": "file_system_entry", "attributes": ["unmerged"]}
 			],
 			"fg": "var(sidebar_fg-unmerged-selected-hover-light)"
-		},
-
-		// Side Bar Tree Item Text (Folders)
-
-		{
-			"class": "sidebar_label",
-			"parents": [
-				{"class": "tree_row", "attributes": ["expandable"]}
-			],
-			"settings": ["bold_folder_labels"],
-			"font.bold": true
 		},
 
 	////// Side Bar / Tree Items / File Labels ///////////////////////////////////
