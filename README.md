@@ -37,7 +37,14 @@ The package is built up from scratch without any runtime code. It uses the new S
 
 ## Installation
 
-This package is not available via Package Control at the moment, so you need to manually clone the repository to your Data/Packages directory.
+### Package Control:
+
+1. Open `Command Palette` using menu item `Tools → Command Palette` or <kbd>CMD/CTRL+SHIFT+P</kbd>.
+2. Choose `Package Control: Install Package`.
+3. Type `Theme - DAneo` and press <kbd>ENTER</kbd>.
+
+
+### Manually:
 
 ##### Mac OS
 
@@ -128,4 +135,4 @@ Setting                                 | Default | Description
 
 ### Editing the Theme
 
-Most relevant theme attributes are defined as "variables" in the base theme so the themes can be tweaked just like a normal preferences file. This project is in early development state so there is no stable predefined list of variables to be exposed for quick user customization so far. 
+Most relevant theme attributes are defined as "variables" in the base theme so the themes can be tweaked just like a normal preferences file. This project is in early development state so there is no stable predefined list of variables to be exposed for quick user customization so far.
