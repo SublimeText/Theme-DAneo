@@ -2276,88 +2276,87 @@
 		// 	"fg": "var(sidebar_fg-untracked-selected-hover-light)"
 		// },
 
-		// Side Bar Tree Item Text (Folders With Ignored Files)
-		// Note: commented out as it looks like the whole folder was ignored, which is not the case
+		// Side Bar Tree Item Text (Ignored Folders)
 
-		// {
-		// 	"class": "sidebar_label",
-		// 	"settings": ["show_sidebar_ignored_label_colors"],
-		// 	"parents": [
-		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
-		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
-		// 	],
-		// 	"fg": "var(sidebar_fg-ignored-normal-dark)"
-		// },
-		// {
-		// 	"class": "sidebar_label",
-		// 	"settings": ["show_sidebar_ignored_label_colors"],
-		// 	"parents": [
-		// 		{"class": "window", "attributes": ["file_light"]},
-		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
-		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
-		// 	],
-		// 	"fg": "var(sidebar_fg-ignored-normal-light)"
-		// },
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-normal-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-normal-light)"
+		},
 
-		// {
-		// 	"class": "sidebar_label",
-		// 	"settings": ["show_sidebar_ignored_label_colors"],
-		// 	"parents": [
-		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
-		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
-		// 	],
-		// 	"fg": "var(sidebar_fg-ignored-hover-dark)"
-		// },
-		// {
-		// 	"class": "sidebar_label",
-		// 	"settings": ["show_sidebar_ignored_label_colors"],
-		// 	"parents": [
-		// 		{"class": "window", "attributes": ["file_light"]},
-		// 		{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
-		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
-		// 	],
-		// 	"fg": "var(sidebar_fg-ignored-hover-light)"
-		// },
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "!selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-hover-light)"
+		},
 
-		// {
-		// 	"class": "sidebar_label",
-		// 	"settings": ["show_sidebar_ignored_label_colors"],
-		// 	"parents": [
-		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
-		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
-		// 	],
-		// 	"fg": "var(sidebar_fg-ignored-selected-dark)"
-		// },
-		// {
-		// 	"class": "sidebar_label",
-		// 	"settings": ["show_sidebar_ignored_label_colors"],
-		// 	"parents": [
-		// 		{"class": "window", "attributes": ["file_light"]},
-		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
-		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
-		// 	],
-		// 	"fg": "var(sidebar_fg-ignored-selected-light)"
-		// },
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-selected-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "!hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-selected-light)"
+		},
 
-		// {
-		// 	"class": "sidebar_label",
-		// 	"settings": ["show_sidebar_ignored_label_colors"],
-		// 	"parents": [
-		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
-		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
-		// 	],
-		// 	"fg": "var(sidebar_fg-ignored-selected-hover-dark)"
-		// },
-		// {
-		// 	"class": "sidebar_label",
-		// 	"settings": ["show_sidebar_ignored_label_colors"],
-		// 	"parents": [
-		// 		{"class": "window", "attributes": ["file_light"]},
-		// 		{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
-		// 		{"class": "file_system_entry", "attributes": ["ignored"]}
-		// 	],
-		// 	"fg": "var(sidebar_fg-ignored-selected-hover-light)"
-		// },
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
+			"parents": [
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-selected-hover-dark)"
+		},
+		{
+			"class": "sidebar_label",
+			"settings": ["show_sidebar_ignored_label_colors"],
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]},
+				{"class": "tree_row", "attributes": ["expandable", "selected", "hover"]},
+				{"class": "file_system_entry", "attributes": ["ignored"]}
+			],
+			"fg": "var(sidebar_fg-ignored-selected-hover-light)"
+		},
 
 		// Side Bar Tree Item Text (Folders With Modified Files)
 
