@@ -5560,6 +5560,16 @@
 			"layer0.tint": "var(button_icon_tint-hover-light)"
 		},
 
+		// Input History Dowpdown Button
+
+		{
+			"class": "dropdown_button_control",
+			"parents": [
+				{"class": "panel_control"}
+			],
+			"layer0.texture": "Theme - DAneo/icons/history.png"
+		},
+
 	////// Status Bar ////////////////////////////////////////////////////////////
 
 		{
