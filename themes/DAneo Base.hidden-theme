@@ -1100,14 +1100,14 @@
 			"class": "scroll_track_control",
 			"attributes": ["!horizontal"],
 			"content_margin": 3,
-			"layer0.inner_margin": 3,
+			"layer0.inner_margin": [0, 3, 6, 3],
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png"
 		},
 		{
 			"class": "scroll_track_control",
 			"attributes": ["horizontal"],
 			"content_margin": 3,
-			"layer0.inner_margin": 3,
+			"layer0.inner_margin": [0, 3, 6, 3],
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png"
 		},
 		{
@@ -1142,7 +1142,7 @@
 			"class": "puck_control",
 			"attributes": ["!horizontal"],
 			"content_margin": [0, 12],
-			"layer0.inner_margin": 3,
+			"layer0.inner_margin": [0, 3, 6, 3],
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--vertical--rounded.png"
 		},
 		{
@@ -1161,7 +1161,7 @@
 			"class": "puck_control",
 			"attributes": ["horizontal"],
 			"content_margin": [12, 0],
-			"layer0.inner_margin": 3,
+			"layer0.inner_margin": [0, 3, 6, 3],
 			"layer0.texture": "Theme - DAneo/textures/scrollbars/scroll--w6--horizontal--rounded.png"
 		},
 		{
