@@ -1078,7 +1078,7 @@
 		{
 			"class": "scroll_bar_control",
 			"settings": ["thin_scroll_bars"],
-			"content_margin": 2,
+			"content_margin": 2
 		},
 
 		// Scroll Corner Control
@@ -1325,7 +1325,7 @@
 		{
 			"class": "sidebar_tree",
 			"settings": ["show_disclosure_buttons", "!align_disclosure_buttons"],
-			"indent_offset": 14,
+			"indent_offset": 14
 		},
 		{
 			"class": "sidebar_tree",
@@ -1491,7 +1491,7 @@
 			"parents": [
 				{"class": "tree_row", "attributes": ["expanded", "!hover"]}
 			],
-			"fg": "var(sidebar_fg-expanded-normal-dark)",
+			"fg": "var(sidebar_fg-expanded-normal-dark)"
 		},
 		{
 			"class": "sidebar_label",
@@ -4149,7 +4149,7 @@
 		{
 			"class": "tab_control",
 			"settings": ["show_tab_close_buttons", "!tabset_size_small"],
-			"content_margin": [16, 8, 10, 7],
+			"content_margin": [16, 8, 10, 7]
 		},
 
 		// Tab Control (Small)
@@ -4966,7 +4966,7 @@
 			"content_margin": 8,
 			"layer0.texture": "Theme - DAneo/icons/close.png",
 			"layer0.tint": "color(var(--foreground))",
-			"layer0.opacity": { "target": 0.8, "speed": 4.0, "interpolation": "smoothstep" },
+			"layer0.opacity": { "target": 0.8, "speed": 4.0, "interpolation": "smoothstep" }
 		},
 		{
 			"class": "annotation_close_button",

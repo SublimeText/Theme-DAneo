@@ -148,7 +148,7 @@
 		{
 			"class": "tab_control",
 			"settings": ["show_tab_close_buttons", "!tabset_size_small"],
-			"content_margin": [24, 8, 20, 9],
+			"content_margin": [24, 8, 20, 9]
 		},
 
 		// Tab Control (Small)
