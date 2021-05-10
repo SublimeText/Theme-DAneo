@@ -189,7 +189,6 @@
 			"layer3.opacity": 0.0,
 			"layer3.texture": null
 		},
-		
 		{
 			"class": "tab_control",
 			"settings": {

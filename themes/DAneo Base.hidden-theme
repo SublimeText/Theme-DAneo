@@ -719,7 +719,7 @@
 			"settings": ["themed_title_bar"],
 			"attributes": ["file_light"],
 			"bg": "var(title_bg-light)",
-			"fg": "var(title_fg-light)",
+			"fg": "var(title_fg-light)"
 		},
 
 	////// Labels ////////////////////////////////////////////////////////////////
@@ -1041,7 +1041,7 @@
 
 		{
 			"class": "kind_container kind_color_redish",
-			"layer1.tint": "var(--redish)",
+			"layer1.tint": "var(--redish)"
 		},
 		{
 			"class": "kind_label",
@@ -1053,7 +1053,7 @@
 
 		{
 			"class": "kind_container kind_color_orangish",
-			"layer1.tint": "var(--orangish)",
+			"layer1.tint": "var(--orangish)"
 		},
 		{
 			"class": "kind_label",
@@ -1065,7 +1065,7 @@
 
 		{
 			"class": "kind_container kind_color_yellowish",
-			"layer1.tint": "var(--yellowish)",
+			"layer1.tint": "var(--yellowish)"
 		},
 		{
 			"class": "kind_label",
@@ -1077,7 +1077,7 @@
 
 		{
 			"class": "kind_container kind_color_greenish",
-			"layer1.tint": "var(--greenish)",
+			"layer1.tint": "var(--greenish)"
 		},
 		{
 			"class": "kind_label",
@@ -1089,7 +1089,7 @@
 
 		{
 			"class": "kind_container kind_color_cyanish",
-			"layer1.tint": "var(--cyanish)",
+			"layer1.tint": "var(--cyanish)"
 		},
 		{
 			"class": "kind_label",
@@ -1101,7 +1101,7 @@
 
 		{
 			"class": "kind_container kind_color_bluish",
-			"layer1.tint": "var(--bluish)",
+			"layer1.tint": "var(--bluish)"
 		},
 		{
 			"class": "kind_label",
@@ -1113,7 +1113,7 @@
 
 		{
 			"class": "kind_container kind_color_purplish",
-			"layer1.tint": "var(--purplish)",
+			"layer1.tint": "var(--purplish)"
 		},
 		{
 			"class": "kind_label",
@@ -1125,7 +1125,7 @@
 
 		{
 			"class": "kind_container kind_color_pinkish",
-			"layer1.tint": "var(--pinkish)",
+			"layer1.tint": "var(--pinkish)"
 		},
 		{
 			"class": "kind_label",
@@ -1142,7 +1142,7 @@
 
 		{
 			"class": "kind_container kind_color_light",
-			"layer1.tint": "color(white a(0.5))",
+			"layer1.tint": "color(white a(0.5))"
 		},
 
 	////// Quick Panels //////////////////////////////////////////////////////////
@@ -1400,7 +1400,7 @@
 				{"class": "window", "attributes": ["file_light"]}
 			],
 			"fg": "var(quick_panel_hint_fg-normal-light)",
-			"selected_fg": "var(quick_panel_hint_fg-selected-light)",
+			"selected_fg": "var(quick_panel_hint_fg-selected-light)"
 		},
 
 		// Quick Panel Row (Hover)
@@ -1466,7 +1466,7 @@
 				{"class": "window", "attributes": ["file_light"]}
 			],
 			"fg": "var(quick_panel_binding_fg-normal-light)",
-			"selected_fg": "var(quick_panel_binding_fg-selected-light)",
+			"selected_fg": "var(quick_panel_binding_fg-selected-light)"
 		},
 
 		// Quick Panel Row (Hover)
@@ -1606,7 +1606,7 @@
 		{
 			"class": "quick_panel_detail_label",
 			"parents": [
-				{"class": "window", "attributes": ["file_light"]},
+				{"class": "window", "attributes": ["file_light"]}
 			],
 			"fg": "var(quick_panel_details_fg-normal-light)",
 			"selected_fg": "var(quick_panel_details_fg-selected-light)",
@@ -6592,7 +6592,7 @@
 			],
 			"layer0.texture": "Theme - DAneo/icons/history.png"
 		},
-		
+
 		// Panel Input Control
 
 		{
@@ -6621,7 +6621,7 @@
 			"parents": [
 				{"class": "panel_control"}
 			],
-			"background_modifier": "",
+			"background_modifier": ""
 		},
 		{
 			"class": "text_area_control",
@@ -6630,7 +6630,7 @@
 				{"class": "panel_control"}
 			],
 			"attributes": ["highlighted"],
-			"background_modifier": "var(panel_input_bg-highlighted-dark)",
+			"background_modifier": "var(panel_input_bg-highlighted-dark)"
 		},
 		{
 			"class": "text_area_control",
@@ -6639,7 +6639,7 @@
 				{"class": "panel_control"}
 			],
 			"attributes": ["highlighted", "file_light"],
-			"background_modifier": "var(panel_input_bg-highlighted-light)",
+			"background_modifier": "var(panel_input_bg-highlighted-light)"
 		},
 
 		// Output Panel Text Area

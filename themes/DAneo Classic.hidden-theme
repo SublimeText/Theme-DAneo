@@ -129,7 +129,7 @@
 		{
 			"class": "tabset_control",
 			"settings": {
-				"file_tab_size": "small",
+				"file_tab_size": "small"
 			},
 			"tab_height": 28,
 			"layer1.inner_margin": [0, 32, 0, 0]
