@@ -74,5 +74,5 @@
 	"panel_input_highlighting": true,
 
 	// Controls whether to show the close button of the find and replace panels
-	"show_panel_close_button": false,
+	"show_panel_close_button": false
 }

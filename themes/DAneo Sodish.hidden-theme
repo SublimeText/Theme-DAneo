@@ -71,8 +71,8 @@
 		"panel_input_bc-dark": "color(white alpha(7.5%))",
 		"panel_input_bc-light": "color(black alpha(10%))",
 
-		"panel_output_bg-dark": "color(white alpha(1.5%))",
-		"panel_output_bg-light": "color(black alpha(2.5%))",
+		"panel_output_bg-dark": "color(white blend(var(bg) 1.5%))",
+		"panel_output_bg-light": "color(black blend(var(bg) 2.5%))",
 
 	////// Status Bar ////////////////////////////////////////////////////////////
 

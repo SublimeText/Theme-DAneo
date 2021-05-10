@@ -1753,7 +1753,7 @@
 		{
 			"class": "scroll_bar_control",
 			"settings": ["thin_scroll_bars"],
-			"content_margin": 2,
+			"content_margin": 2
 		},
 
 		// Scroll Corner Control
@@ -2166,7 +2166,7 @@
 			"parents": [
 				{"class": "tree_row", "attributes": ["expanded", "!hover"]}
 			],
-			"fg": "var(sidebar_fg-expanded-normal-dark)",
+			"fg": "var(sidebar_fg-expanded-normal-dark)"
 		},
 		{
 			"class": "sidebar_label",
