@@ -6956,6 +6956,22 @@
 			"layer0.tint": "var(quick_panel_bg-light)"
 		},
 
+		// Cancel button container (MacOS)
+
+		{
+			"class": "switch_project_panel_cancel_container",
+			"content_margin": 4,
+			"layer0.tint": "var(title_bg-dark)",
+			"layer0.opacity": 1.0
+		},
+		{
+			"class": "switch_project_panel_cancel_container",
+			"parents": [
+				{"class": "window", "attributes": ["file_light"]}
+			],
+			"layer0.tint": "var(title_bg-light)"
+		},
+
 	////// Dialogs ///////////////////////////////////////////////////////////////
 
 		{
