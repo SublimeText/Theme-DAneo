@@ -5794,7 +5794,7 @@
 			"parents": [
 				{"class": "switch_project_window"}
 			],
-			"content_margin": [0, 6],
+			"content_margin": [0, 0, 0, 6],
 			"layer0.tint": "var(overlay_bg-dark)"
 		},
 		{
@@ -5802,7 +5802,7 @@
 			"parents": [
 				{"class": "switch_project_window", "attributes": ["file_light"]}
 			],
-			"layer0.tint": "var(overlay_bg-dark)"
+			"layer0.tint": "var(overlay_bg-light)"
 		},
 
 		// Text Input Control
