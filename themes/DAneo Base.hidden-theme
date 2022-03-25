@@ -5812,7 +5812,15 @@
 			"parents": [
 				{"class": "switch_project_window"}
 			],
-			"content_margin": [16, 8]
+			"content_margin": [16, 8],
+			"color_scheme_tint": "var(overlay_input_bg-dark)"
+		},
+		{
+			"class": "text_line_control",
+			"parents": [
+				{"class": "switch_project_window", "attributes": ["file_light"]}
+			],
+			"color_scheme_tint": "var(overlay_input_bg-light)"
 		},
 
 		// Scroll Bar Control
