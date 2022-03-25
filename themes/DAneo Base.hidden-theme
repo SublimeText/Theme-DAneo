@@ -6908,6 +6908,14 @@
 			],
 			"color_scheme_tint": "var(overlay_input_bg-light)"
 		},
+		{
+			"class": "text_area_control",
+			"parents": [
+				{"class": "switch_project_window"}
+			],
+			"attributes": ["highlighted"],
+			"background_modifier": ""
+		},
 
 		// Scroll Bar Control
 
