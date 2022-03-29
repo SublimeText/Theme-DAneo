@@ -6960,7 +6960,7 @@
 
 		{
 			"class": "switch_project_panel_cancel_container",
-			"content_margin": [8, 4, 8, 8],
+			"content_margin": [8, 10, 8, 9],
 			"layer0.tint": "var(title_bg-dark)",
 			"layer0.opacity": 1.0
 		},
