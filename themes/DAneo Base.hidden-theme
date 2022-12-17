@@ -48,7 +48,7 @@
 		"kind_font_face": "monospace",
 		"kind_font_size": "1.1rem",
 
-		"kind_bg_ambigious": "color(var(kind_fg_ambigious) a(0.05))",
+		"kind_bg_ambiguous": "color(var(kind_fg_ambiguous) a(0.05))",
 		"kind_bg_function": "color(var(kind_fg_function) a(0.15))",
 		"kind_bg_keyword": "color(var(kind_fg_keyword) a(0.15))",
 		"kind_bg_markup": "color(var(kind_fg_markup) a(0.15))",
@@ -58,7 +58,7 @@
 		"kind_bg_type": "color(var(kind_fg_type) a(0.15))",
 		"kind_bg_variable": "color(var(kind_fg_variable) a(0.15))",
 
-		"kind_fg_ambigious": "var(--foreground)",
+		"kind_fg_ambiguous": "var(--foreground)",
 		"kind_fg_function": "var(--redish)",
 		"kind_fg_keyword": "var(--pinkish)",
 		"kind_fg_markup": "var(--orangish)",
@@ -915,12 +915,12 @@
 		{
 			"class": "kind_container",
 			"content_margin": [6, 0, 7, 0],
-			"layer0.tint": "var(kind_bg_ambigious)",
+			"layer0.tint": "var(kind_bg_ambiguous)",
 			"layer0.opacity": "var(item_bg-opacity-normal)"
 		},
 		{
 			"class": "kind_label",
-			"color": "var(kind_fg_ambigious)",
+			"color": "var(kind_fg_ambiguous)",
 			"font.face": "var(kind_font_face)",
 			"font.size": "var(kind_font_size)",
 			"font.bold": false,
