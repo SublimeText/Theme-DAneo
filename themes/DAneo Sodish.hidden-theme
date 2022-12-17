@@ -113,7 +113,6 @@
 
 		{
 			"class": "sidebar_container",
-			"content_margin": [0, 0, 1, 0],
 			"layer1.draw_center": false,
 			"layer1.inner_margin": [0, 0, 1, 0],
 			"layer1.tint": "var(sidebar_bc-dark)",
