@@ -6646,7 +6646,24 @@
 
 		{
 			"class": "text_output_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_dark"]}
+			],
 			"color_scheme_tint": "var(panel_output_bg-dark)"
+		},
+		{
+			"class": "text_output_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_medium_dark"]}
+			],
+			"color_scheme_tint": "var(panel_output_bg-dark)"
+		},
+		{
+			"class": "text_output_control",
+			"parents": [
+				{"class": "window", "attributes": ["file_medium"]}
+			],
+			"color_scheme_tint": "var(panel_output_bg-light)"
 		},
 		{
 			"class": "text_output_control",
