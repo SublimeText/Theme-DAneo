@@ -373,7 +373,14 @@
 
 		{
 			"class": "status_bar",
-			"content_margin": [12, 5, 4, 5]
+			"content_margin": [10, 5, 4, 5]
+		},
+
+		{
+			// add some padding to side-bar button on the right
+			"class": "status_bar",
+			"settings": ["sidebar_on_right"],
+			"content_margin": [10, 5, 10, 5]
 		},
 
 	////// Switch Project Window /////////////////////////////////////////////////
@@ -387,4 +394,3 @@
 		}
 	]
 }
-

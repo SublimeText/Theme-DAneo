@@ -6672,13 +6672,19 @@
 			"layer0.tint": "var(statusbar_bg-light)"
 		},
 		{
+			// add some padding to side-bar button on the right
+			"class": "status_bar",
+			"settings": ["sidebar_on_right"],
+			"content_margin": [10, 6, 6, 5]
+		},
+		{
 			"class": "status_container",
 			"settings": ["!show_sidebar_button"],
 			"content_margin": [0, 1, 0, 0]
 		},
 		{
 			"class": "status_container",
-			"settings": ["show_sidebar_button"],
+			"settings": ["show_sidebar_button", "!sidebar_on_right"],
 			"content_margin": [8, 1, 0, 0]
 		},
 
@@ -6701,6 +6707,11 @@
 			"content_margin": [10, 11],
 			"layer0.tint": "var(button_icon_tint-normal-dark)",
 			"layer0.opacity": "var(button_icon_opacity-normal)"
+		},
+		{
+			"class": "sidebar_button_control",
+			"settings": ["show_sidebar_button", "sidebar_on_right"],
+			"layer0.texture": "Theme - DAneo/icons/sidebar_button_right.png",
 		},
 		{
 			"class": "sidebar_button_control",

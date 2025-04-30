@@ -361,7 +361,6 @@
 
 		{
 			"class": "status_bar",
-			"content_margin": [10, 6, 0, 5],
 			"layer1.draw_center": false,
 			"layer1.inner_margin": [0, 1, 0, 0],
 			"layer1.tint": "var(statusbar_bc-dark)",
