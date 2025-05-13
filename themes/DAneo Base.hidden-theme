@@ -5993,10 +5993,13 @@
 			"content_margin": [0, 8]
 		},
 		{
-			"class": "panel_control console_panel",
-			"content_margin": 12
+			"class": "panel_control io_panel",
+			"content_margin": [12, 12, 12, 4]
 		},
-
+		{
+			"class": "panel_control console_panel",
+			"content_margin": [12, 12, 12, 4]
+		},
 
 		// Scroll Track Control
 
