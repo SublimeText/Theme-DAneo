@@ -4,7 +4,7 @@
 	//
 
 	// Controls whether to render thin scroll bar puck when scrolling via mouse
-	"thin_scroll_bars": false,
+	"thin_scroll_bars": true,
 
 
 	//
