@@ -867,6 +867,45 @@
 			"foreground": "color(var(orange) blend(var(grey) 50%))"
 		},
 
+		// Markdown: Admonitions
+
+		{
+			"name": "Markdown: Admonition Headers",
+			"scope": "markup.heading.admonition - punctuation.definition.admonition",
+			"background": "var(embedded_background)",
+			"font_style": "bold"
+		},
+		{
+			"name": "Markdown: Admonition Other Marker",
+			"scope": "markup.heading.admonition - markup.heading.admonition meta.title",
+			"foreground": "color(var(--greyish) alpha(70%))",
+		},
+		{
+			"name": "Markdown: Admonition Caution Marker",
+			"scope": "markup.heading.admonition.caution - markup.heading.admonition meta.title, markup.heading.admonition.error - markup.heading.admonition meta.title",
+			"foreground": "color(var(--redish) alpha(70%))",
+		},
+		{
+			"name": "Markdown: Admonition Important Marker",
+			"scope": "markup.heading.admonition.important - markup.heading.admonition meta.title",
+			"foreground": "color(var(--purplish) alpha(70%))",
+		},
+		{
+			"name": "Markdown: Admonition Note Marker",
+			"scope": "markup.heading.admonition.note - markup.heading.admonition meta.title",
+			"foreground": "color(var(--greenish) alpha(70%))",
+		},
+		{
+			"name": "Markdown: Admonition Tip Marker",
+			"scope": "markup.heading.admonition.tip - markup.heading.admonition meta.title",
+			"foreground": "color(var(--blueish) alpha(70%))",
+		},
+		{
+			"name": "Markdown: Admonition Warning Marker",
+			"scope": "markup.heading.admonition.warning - markup.heading.admonition meta.title",
+			"foreground": "color(var(--orangish) alpha(70%))",
+		},
+
 		// Markdown: Github Alerts
 
 		{
