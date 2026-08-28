@@ -475,6 +475,14 @@
 			"foreground": "color(var(violet) blend(var(background) 55%))"
 		},
 
+		// Mark
+
+		{
+			"name": "Mark",
+			"scope": "mark",
+			"foreground": "var(--purplish)"
+		},
+
 		// Diff Marker
 
 		{
