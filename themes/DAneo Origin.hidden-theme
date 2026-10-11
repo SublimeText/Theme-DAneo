@@ -21,9 +21,6 @@
 		"sidebar_fg-expanded-hover-dark": "var(label_fg-selected-hover-dark)",
 		"sidebar_fg-expanded-hover-light": "var(label_fg-selected-hover-light)",
 
-		"sidebar_folder_icon_tint-expanded-dark": "var(accent)",
-		"sidebar_folder_icon_tint-expanded-light": "var(accent)",
-
 	////// Grid Layout ///////////////////////////////////////////////////////////
 
 		"grid_border_size": 1,
