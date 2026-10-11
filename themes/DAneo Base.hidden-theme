@@ -6731,7 +6731,7 @@
 		{
 			"class": "sidebar_button_control",
 			"settings": ["show_sidebar_button", "sidebar_on_right"],
-			"layer0.texture": "Theme - DAneo/icons/sidebar_button_right.png",
+			"layer0.texture": "Theme - DAneo/icons/sidebar_button_right.png"
 		},
 		{
 			"class": "sidebar_button_control",
