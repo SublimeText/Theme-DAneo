@@ -1,5 +1,6 @@
 .git*               export-ignore
 
+screenshots/        export-ignore
 source/             export-ignore
 tests/              export-ignore
 

@@ -1,71 +1,69 @@
 # Theme - DAneo
 
-_Theme - DAneo_ is an adaptive theme for Sublime Text 3 inspired by the popular _DA UI_.
+_Theme - DAneo_ is an adaptive theme for Sublime Text inspired by the popular _DA UI_.
 
-The package is built up from scratch without any runtime code. It uses the new ST 3.2 _sublime-theme_ format to provide the different theme variants without duplicating every single theme rule.
+The package is built up from scratch without any runtime code. It uses _sublime-theme_ format to provide different theme variants without duplicating every single theme rule.
 
 
 ### DAneo - Classic
 
-![Classic](docs/assets/DAneo%20-%20Classic.png)
+![Classic](screenshots/DAneo%20-%20Classic.png)
 
 
 ### DAneo - Elegant
 
-![Elegant](docs/assets/DAneo%20-%20Elegant.png)
+![Elegant](screenshots/DAneo%20-%20Elegant.png)
 
 
 ### DAneo - Minimal
 
-![Minimal](docs/assets/DAneo%20-%20Minimal.png)
+![Minimal](screenshots/DAneo%20-%20Minimal.png)
 
 
 ### DAneo - Origin
 
-![Origin](docs/assets/DAneo%20-%20Origin.png)
+![Origin](screenshots/DAneo%20-%20Origin.png)
 
 
 ### DAneo - Sodish
 
-![Sodish](docs/assets/DAneo%20-%20Sodish.png)
+![Sodish](screenshots/DAneo%20-%20Sodish.png)
 
 
 ### DAneo - Sublime
 
-![Sublime](docs/assets/DAneo%20-%20Sublime.png)
+![Sublime](screenshots/DAneo%20-%20Sublime.png)
 
 
 ## Installation
 
-### Package Control:
+### Package Control
 
 1. Open `Command Palette` using menu item `Tools → Command Palette` or <kbd>CMD/CTRL+SHIFT+P</kbd>.
 2. Choose `Package Control: Install Package`.
 3. Type `Theme - DAneo` and press <kbd>ENTER</kbd>.
 
 
-### Manually:
+### Manually
 
-##### Mac OS
+#### Mac OS
 
 ```sh
-cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+cd ~/Library/Application\ Support/Sublime\ Text/Packages/
 git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 ```
 
-
-##### Linux
+#### Linux
 
 ```sh
-cd ~/.config/sublime-text-3/Packages
+cd ~/.config/sublime-text/Packages
 git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 ```
 
-
-##### Windows
+#### Windows
 
 ```sh
-cd "%APPDATA%\Sublime Text 3\Packages"
+cd "%APPDATA%\Sublime Text\Packages"
 git clone "https://github.com/SublimeText/Theme-DAneo.git" "Theme - DAneo"
 ```
 
