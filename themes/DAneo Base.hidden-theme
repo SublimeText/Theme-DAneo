@@ -31,6 +31,7 @@
 
 		"font_face": "system",
 		"font_size": 12,
+		"font_size-big": 14,
 		"font_size-small": 10,
 		"font_size-tiny": 9,
 
@@ -5499,7 +5500,8 @@
 				{"class": "overlay_control"}
 			],
 			"content_margin": [16, 8],
-			"color_scheme_tint": "var(overlay_input_bg-dark)"
+			"color_scheme_tint": "var(overlay_input_bg-dark)",
+			"font.size": "var(font_size-big)"
 		},
 		{
 			"class": "text_line_control",
@@ -6604,6 +6606,7 @@
 				{"class": "panel_control"}
 			],
 			"color_scheme_tint": "var(panel_input_bg-dark)",
+			"font.size": "var(font_size-small)",
 			"layer1.draw_center": false,
 			"layer1.tint": "var(panel_input_bc-dark)",
 			"layer1.opacity": 0.0
