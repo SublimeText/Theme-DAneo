@@ -880,6 +880,15 @@
 			"foreground": "color(var(orange) blend(var(grey) 50%))"
 		},
 
+		// Makefile
+
+		{
+			"name": "Makefile: Environment Variables",
+			"scope": "source.makefile variable.language",
+			"foreground": "var(cyan)",
+			"font_style": ""
+		},
+
 		// Markdown: Admonitions
 
 		{
