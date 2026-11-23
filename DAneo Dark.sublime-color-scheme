@@ -600,6 +600,11 @@
 			"scope": "diff & comment",
 			"foreground": "var(grey)"
 		},
+		{
+			"name": "Sublime Merge: Plain Comments in diff hunks",
+			"scope": "diff & punctuation.definition.comment",
+			"foreground": "var(grey2)"
+		},
 
 		// Linter Markup
 
